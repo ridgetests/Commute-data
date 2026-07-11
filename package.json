@@ -1,0 +1,16 @@
+{
+  "name": "commute-data",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Always-on archive of TfL live status — the reliability moat.",
+  "scripts": {
+    "archive": "tsx src/fetchStatus.ts",
+    "verify": "tsx verify.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}
