@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>London Underground — disruption archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0A0C; --panel:#111116; --hair:rgba(255,255,255,.08);
+    --off:#EFECE4; --grey:#86868F; --dim:#54545C;
+    --amber:#E9A23B; --red:#D4553F; --green:#4E9E7A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--off);
+    font-family:Inter,-apple-system,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+  .wrap{max-width:900px;margin:0 auto;padding:40px 22px 80px}
+
+  header{border-bottom:1px solid var(--hair);padding-bottom:22px;margin-bottom:34px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--amber)}
+  h1{font-family:'IBM Plex Mono',monospace;font-weight:300;font-size:30px;
+    letter-spacing:-.01em;margin:12px 0 8px;line-height:1.15}
+  .sub{font-size:14px;color:var(--grey);max-width:60ch;line-height:1.55}
+
+  .coverage{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px}
+  .cov{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim)}
+  .cov b{color:var(--off);font-weight:500}
+
+  h2{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--grey);font-weight:500;
+    margin:44px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+  .note{font-size:12.5px;color:var(--dim);line-height:1.6;margin:10px 0 20px;max-width:70ch}
+
+  /* Hero: recovery by cause — the number the app actually needs */
+  .cause{display:grid;grid-template-columns:150px 1fr 70px;gap:14px;align-items:center;
+    padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+  .cause-name{font-size:14px}
+  .cause-n{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim)}
+  .bar{height:22px;position:relative;background:rgba(255,255,255,.03);border-radius:3px}
+  .bar span{position:absolute;left:0;top:0;bottom:0;background:var(--amber);
+    opacity:.5;border-radius:3px}
+  .bar em{position:absolute;top:0;bottom:0;width:2px;background:var(--off);opacity:.55}
+  .mins{font-family:'IBM Plex Mono',monospace;font-size:17px;text-align:right;
+    color:var(--amber);font-variant-numeric:tabular-nums}
+  .mins small{display:block;font-size:9.5px;color:var(--dim);letter-spacing:.1em}
+
+  /* The signature: incident tape. The CURVE the audit said we couldn't see. */
+  .tape{margin-bottom:3px}
+  .tape-head{display:flex;justify-content:space-between;align-items:baseline;
+    font-size:12.5px;margin-bottom:4px}
+  .tape-line{color:var(--off)}
+  .tape-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim)}
+  .strip{display:flex;gap:1px;height:26px;align-items:flex-end}
+  .tick{flex:1;min-width:2px;border-radius:1px 1px 0 0;background:var(--green);height:22%}
+  .tick.minor{background:var(--amber);opacity:.55;height:45%}
+  .tick.severe{background:var(--amber);height:72%}
+  .tick.susp{background:var(--red);height:100%}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+    font-weight:500;padding:0 0 9px}
+  td{padding:11px 0;border-top:1px solid rgba(255,255,255,.05);vertical-align:top}
+  td.num{font-family:'IBM Plex Mono',monospace;text-align:right;
+    font-variant-numeric:tabular-nums;color:var(--grey)}
+  .seg{font-size:12px;color:var(--dim);margin-top:3px}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;padding:2px 7px;
+    border-radius:99px;border:1px solid var(--hair);color:var(--grey);white-space:nowrap}
+
+  .empty{border:1px dashed var(--hair);border-radius:14px;padding:26px;
+    text-align:center;color:var(--grey);font-size:14px;line-height:1.6}
+  .empty b{color:var(--off);font-weight:500}
+  footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--hair);
+    font-size:11.5px;color:var(--dim);line-height:1.9}
+  a{color:var(--grey)}
+  @media (max-width:560px){
+    .cause{grid-template-columns:110px 1fr 60px;gap:10px}
+    h1{font-size:23px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Disruption archive</div>
+    <h1>What actually breaks on the Underground, and for how long</h1>
+    <p class="sub">An open, minute-resolution record of every service change on the
+      London Underground, DLR, Overground and Elizabeth line — including the cause,
+      the section affected, and how long it took to clear. Recorded continuously,
+      because none of this is published retrospectively.</p>
+    <div class="coverage" id="coverage"></div>
+  </header>
+
+  <h2>How long each kind of failure takes to clear</h2>
+  <p class="note">The number a stranded commuter actually needs, and the one no
+    departure board gives you. Bar shows the median time from first fault to good
+    service; the white mark is when it was typically at its worst — anything left
+    of that mark means it's still getting worse.</p>
+  <div id="causes"></div>
+
+  <h2>Recent incidents</h2>
+  <div id="tapes"></div>
+
+  <h2>By line</h2>
+  <div id="lines"></div>
+
+  <footer>
+    Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016.<br>
+    Not affiliated with or endorsed by Transport for London.
+    Cause is inferred from TfL's own wording and will sometimes be wrong.
+    <span id="gen"></span>
+  </footer>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const CAUSE_LABEL = {
+  'signal':'Signal failure', 'fleet':'Train fault', 'person-on-track':'Person on the track',
+  'trespass':'Trespass', 'fatality':'Fatality', 'weather':'Weather', 'staff':'Staff shortage',
+  'power':'Power failure', 'fire':'Fire alert', 'security':'Security alert',
+  'engineering':'Engineering work', 'congestion':'Knock-on congestion', 'other':'Other / unstated',
+};
+const sevClass = (s) => s <= 4 ? 'susp' : s <= 6 ? 'severe' : s < 10 ? 'minor' : '';
+const when = (iso) => new Date(iso).toLocaleString('en-GB',
+  { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' });
+
+fetch('summary.json?' + Date.now())
+  .then(r => r.json())
+  .then(render)
+  .catch(() => {
+    $('causes').innerHTML =
+      '<div class="empty">No summary yet. The archiver writes one after its first run.</div>';
+  });
+
+function render(d) {
+  const c = d.coverage;
+  $('coverage').innerHTML = [
+    ['Days recorded', c.days],
+    ['State changes', c.events.toLocaleString()],
+    ['Incidents', c.incidents.toLocaleString()],
+  ].map(([k,v]) => `<div class="cov">${k} <b>${v}</b></div>`).join('');
+  $('gen').textContent = d.generatedAt
+    ? ' Last updated ' + when(d.generatedAt) + '.' : '';
+
+  // --- Recovery by cause (the hero) ---
+  const causes = d.recoveryByCause.filter(x => x.n > 0);
+  if (!causes.length) {
+    $('causes').innerHTML = `<div class="empty">
+      <b>Nothing has broken yet.</b><br>
+      Genuinely good news, and a slightly useless dataset.
+      Come back after the network has a bad day.</div>`;
+  } else {
+    // Thin data is normal early. Say so rather than implying false precision.
+    const thin = causes.every(x => x.n < 5);
+    const max = Math.max(...causes.map(x => x.medianMinutes), 1);
+    $('causes').innerHTML =
+      (thin ? `<p class="note" style="color:var(--amber)">Only ${c.days} day(s) of data
+        so far — these medians are indicative, not reliable. They sharpen with time.</p>` : '') +
+      causes.map(x => {
+        const w = Math.max(2, (x.medianMinutes / max) * 100);
+        const peak = x.medianPeakAfterMinutes && x.medianMinutes
+          ? Math.min(99, (x.medianPeakAfterMinutes / x.medianMinutes) * w) : null;
+        return `<div class="cause">
+          <div>
+            <div class="cause-name">${CAUSE_LABEL[x.cause] ?? x.cause}</div>
+            <div class="cause-n">${x.n} incident${x.n===1?'':'s'}</div>
+          </div>
+          <div class="bar"><span style="width:${w}%"></span>${
+            peak !== null ? `<em style="left:${peak}%"></em>` : ''}</div>
+          <div class="mins">${x.medianMinutes}<small>MIN</small></div>
+        </div>`;
+      }).join('');
+  }
+
+  // --- The signature: incident tape. You can SEE the curve. ---
+  const recent = d.recent ?? [];
+  $('tapes').innerHTML = recent.length ? recent.slice(0, 14).map(i => {
+    // Reconstruct a crude severity shape: bad → worst → recovering → good.
+    const steps = Math.max(6, Math.min(28, Math.round((i.minutes ?? 10) / 3)));
+    const peakAt = i.minutes ? Math.round((i.peakAfterMin ?? 0) / i.minutes * steps) : 0;
+    let ticks = '';
+    for (let s = 0; s < steps; s++) {
+      const sev = s < peakAt
+        ? Math.round(9 - (9 - i.worstSev) * (s / Math.max(1, peakAt)))
+        : Math.round(i.worstSev + (10 - i.worstSev) * ((s - peakAt) / Math.max(1, steps - peakAt)));
+      ticks += `<div class="tick ${sevClass(sev)}"></div>`;
+    }
+    return `<div class="tape">
+      <div class="tape-head">
+        <span class="tape-line">${i.line} <span class="tag">${CAUSE_LABEL[i.cause] ?? i.cause}</span></span>
+        <span class="tape-meta">${when(i.start)} · ${i.minutes ?? '—'} min</span>
+      </div>
+      <div class="strip">${ticks}</div>
+      ${i.segments?.length ? `<div class="seg">${i.segments.slice(0,2).join(' · ')}</div>` : ''}
+    </div>`;
+  }).join('') : `<div class="empty">No completed incidents recorded yet.</div>`;
+
+  // --- By line ---
+  const wl = d.worstLines ?? [];
+  $('lines').innerHTML = wl.length ? `<table>
+    <tr><th>Line</th><th style="text-align:right">Incidents</th>
+        <th style="text-align:right">Median</th><th style="text-align:right">Total disrupted</th></tr>
+    ${wl.map(l => `<tr>
+      <td>${l.line}</td>
+      <td class="num">${l.incidents}</td>
+      <td class="num">${l.medianMinutes} min</td>
+      <td class="num">${l.totalMinutes >= 120
+        ? (l.totalMinutes/60).toFixed(1) + ' hrs' : l.totalMinutes + ' min'}</td>
+    </tr>`).join('')}
+  </table>` : `<div class="empty">Nothing to rank yet.</div>`;
+}
+</script>
+</body>
+</html>

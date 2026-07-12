@@ -1,0 +1,47 @@
+name: Collect
+
+on:
+  # Four long-running jobs a day. GitHub caps a job at 6 hours, so each runs
+  # ~5h40m polling every 60 seconds. This sidesteps GitHub's unreliable
+  # short-interval cron and gives continuous minute resolution — free, on a
+  # public repo (Actions minutes are unlimited there).
+  schedule:
+    - cron: "2 0,6,12,18 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+
+      - name: Collect (events + run times + platforms)
+        run: npx tsx src/poll.ts
+        env:
+          TFL_APP_KEY: ${{ secrets.TFL_APP_KEY }}
+          RUN_MINUTES: "340"
+
+      - name: Rebuild the public dashboard
+        run: npx tsx src/digest.ts
+
+      - name: Commit the data
+        if: always()
+        run: |
+          git config user.name "archive-bot"
+          git config user.email "archive-bot@users.noreply.github.com"
+          git pull --rebase --autostash || true
+          git add data docs
+          git commit -m "collect $(date -u +%FT%TZ) [skip ci]" || echo "nothing new"
+          git push || true
