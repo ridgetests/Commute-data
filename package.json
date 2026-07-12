@@ -1,12 +1,13 @@
 {
   "name": "commute-data",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Always-on archive of TfL live status — the reliability moat.",
+  "description": "Event-log archive of TfL disruption, observed run times, and platform/direction history \u2014 the moat.",
   "scripts": {
-    "archive": "tsx src/fetchStatus.ts",
-    "verify": "tsx verify.ts"
+    "collect": "tsx src/poll.ts",
+    "verify": "tsx verify.ts",
+    "digest": "tsx src/digest.ts"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

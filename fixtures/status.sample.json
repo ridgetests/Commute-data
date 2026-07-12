@@ -1,27 +1,38 @@
 [
   {
     "id": "victoria",
-    "name": "Victoria",
     "lineStatuses": [
       { "statusSeverity": 10, "statusSeverityDescription": "Good Service" }
     ]
   },
   {
     "id": "central",
-    "name": "Central",
     "lineStatuses": [
       {
         "statusSeverity": 6,
         "statusSeverityDescription": "Severe Delays",
-        "reason": "Central line: Severe delays due to a signal failure at Liverpool Street."
+        "reason": "Central Line: Minor delays between White City and Ealing Broadway due to an earlier signal failure at Liverpool Street. GOOD SERVICE on the rest of the line.",
+        "disruption": {
+          "description": "Minor delays between White City and Ealing Broadway due to an earlier signal failure at Liverpool Street.",
+          "affectedRoutes": [],
+          "affectedStops": []
+        }
       }
     ]
   },
   {
     "id": "elizabeth",
-    "name": "Elizabeth line",
     "lineStatuses": [
-      { "statusSeverity": 10, "statusSeverityDescription": "Good Service" }
+      {
+        "statusSeverity": 4,
+        "statusSeverityDescription": "Part Suspended",
+        "reason": "No service between Whitechapel and Shenfield and SEVERE DELAYS between Abbey Wood and Hayes & Harlington while we respond to a fire alert at Stratford. GOOD SERVICE on the rest of the line.",
+        "disruption": {
+          "description": "No service between Whitechapel and Shenfield while we respond to a fire alert at Stratford.",
+          "affectedRoutes": [],
+          "affectedStops": [{ "naptanId": "910GWCHAPEL" }, { "naptanId": "910GSTFD" }]
+        }
+      }
     ]
   }
 ]

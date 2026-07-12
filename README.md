@@ -1,60 +1,58 @@
 # commute-data
 
-The reliability moat. Every 15 minutes this logs TfL's live line status, so from
-day one you're accumulating a historical record of what fails, where, and for how
-long — the one asset in this whole project that compounds and can't be copied,
-because it's *time* that's gone into it. Start it early; start it late and you've
-lost the months.
+The moat. Three datasets nobody else is collecting, all of them **ephemeral** —
+gone forever if not captured today.
 
-## Put this in its OWN, PUBLIC repo — this matters
+## What it collects
 
-Not in the app repo. Two reasons:
+**1. Disruption event log.** Polls every 60 seconds, writes **only when something
+changes**. Most minutes nothing happens, so storage collapses rather than explodes
+— and you get exact incident start times, the full severity trajectory, and precise
+recovery durations, grouped by **cause**. That's the difference between "the Central
+line was bad on Tuesday" and "signal failures at Liverpool Street typically peak at
+22 minutes and clear in 35."
 
-1. **Cost.** GitHub Actions is free and unlimited on **public** repos. On a
-   private repo you'd get ~2,000 free minutes a month, and polling every 15
-   minutes burns through that. Public = free forever.
-2. **It doubles as marketing.** This open dataset *is* the "most-delayed lines in
-   London" data page from the plan (growth move #3). The data is TfL open data
-   anyway, so publishing it costs you nothing and hands you a story every time
-   the network falls over.
+**2. Observed run times.** Every journey time in the app is currently a *geometric
+estimate* — straight-line distance ÷ assumed speed. This derives what trains
+**actually** do, by tracking each vehicle across stations. TfL does not publish
+historical arrival times, so this cannot be recovered retrospectively.
 
-Keeping it separate also stops 96 bot commits a day from burying your app repo's
-history.
+**3. Platform + direction history.** Which platform a service uses, and which way
+it's going ("Bakerloo northbound towards Harrow & Wealdstone"). Feeds two things:
+the direction instruction the app currently lacks, and platform prediction later.
 
-## Setup (5 minutes, once)
+## Why segment-level matters
 
-1. Create a new **public** repo called `commute-data`. Upload these files.
-2. Repo → Settings → Secrets and variables → Actions → New repository secret.
-   Name it `TFL_APP_KEY`, paste your TfL key.
-3. Repo → Actions tab → enable workflows if prompted → open "Archive TfL status"
-   → "Run workflow" to fire one now and check it works.
-4. After it runs, a `data/YYYY-MM-DD.jsonl` file appears with one line per poll.
-   That's the moat starting to fill.
+Real TfL disruption is segmental: *"Minor delays between White City and Ealing
+Broadway... GOOD SERVICE on the rest of the line."* Treating that as line-wide makes
+an app **cry wolf** — shouting about a problem at the wrong end of the line. The
+event log captures affected sections (from `affectedRoutes`, or parsed from the
+prose when TfL leaves that empty), so the app only alarms when trouble is on *your*
+track.
 
-Test the parsing locally first if you like: `npm install && npm run verify`
-(no key needed).
+## Setup
 
-## Data shape
+1. This repo must be **public** — Actions minutes are unlimited there, capped on
+   private. Polling continuously would burn a private allowance.
+2. Settings → Secrets and variables → Actions → new secret `TFL_APP_KEY`.
+3. Actions tab → "Collect" → Run workflow.
 
-One JSON object per poll, appended to a dated JSONL file:
+Test offline first (no key needed): `npm install && npm run verify`
 
-```json
-{ "t": "2026-07-10T18:30:00.000Z",
-  "lines": [ { "id": "central", "sev": 6, "desc": "Severe Delays", "reason": "..." } ] }
+## Data
+
+```
+data/events/YYYY-MM-DD.jsonl      severity transitions, cause, affected segments
+data/runtimes/YYYY-MM-DD.jsonl    observed segment run times, with direction
+data/platforms/YYYY-MM-DD.jsonl   platform + direction per line/station
 ```
 
-`sev` is TfL's severity: 10 = good service, lower = worse. Later, aggregate these
-into per-line, per-time-of-day reliability stats and feed them into the engine's
-`riskPenalties` seam — that's the "surest route" feature, fed by data you own.
+## Notes
 
-## Honest caveats
-
-- **GitHub cron isn't perfectly reliable.** Scheduled runs can lag under load or
-  occasionally skip, and GitHub pauses schedules after ~60 days of no repo
-  activity. Fine to start the moat; if the data ever becomes business-critical,
-  move the poll to a tiny always-on cron (a cheap VPS or a free serverless timer)
-  for guaranteed cadence.
-- **Attribution.** This is TfL open data — carry "Powered by TfL Open Data"
-  wherever you surface it, and don't imply it's official.
-- **Extend later.** Add National Rail Darwin polling here too, the same way, when
-  you want mainline reliability alongside the tube.
+- Four jobs a day, each ~5h40m at 60s cadence (GitHub caps a job at 6 hours). This
+  beats short-interval cron, which GitHub runs unreliably.
+- **Don't archive weather** — historical weather is retrievable retrospectively
+  (Open-Meteo, free, no key). Join it to the event log by timestamp whenever you want.
+- Attribution: "Powered by TfL Open Data" wherever this surfaces.
+- GitHub pauses schedules after ~60 days of repo inactivity — commit something
+  occasionally.
