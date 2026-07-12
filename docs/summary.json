@@ -1,13 +1,73 @@
 {
-  "generatedAt": "2026-07-12T09:08:44.919Z",
+  "generatedAt": "2026-07-12T16:10:42.879Z",
   "coverage": {
-    "days": 0,
-    "firstEvent": null,
-    "lastEvent": null,
-    "events": 0,
-    "incidents": 0
+    "days": 1,
+    "firstEvent": "2026-07-12T10:30:30.915Z",
+    "lastEvent": "2026-07-12T14:03:38.617Z",
+    "events": 22,
+    "incidents": 2
   },
-  "recoveryByCause": [],
-  "worstLines": [],
-  "recent": []
+  "recoveryByCause": [
+    {
+      "cause": "other",
+      "n": 1,
+      "medianMinutes": 80,
+      "p90Minutes": 80,
+      "medianPeakAfterMinutes": 0
+    },
+    {
+      "cause": "fire-alert",
+      "n": 1,
+      "medianMinutes": 51,
+      "p90Minutes": 51,
+      "medianPeakAfterMinutes": 0
+    }
+  ],
+  "worstLines": [
+    {
+      "line": "circle",
+      "incidents": 1,
+      "medianMinutes": 80,
+      "totalMinutes": 80
+    },
+    {
+      "line": "central",
+      "incidents": 1,
+      "medianMinutes": 51,
+      "totalMinutes": 51
+    }
+  ],
+  "recent": [
+    {
+      "line": "central",
+      "cause": "fire-alert",
+      "start": "2026-07-12T13:12:36.704Z",
+      "end": "2026-07-12T14:03:38.617Z",
+      "minutes": 51,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "segments": [
+        "West Ruislip Underground Station - Epping Underground Station",
+        "West Ruislip Underground Station - Hainault Underground Station",
+        "West Ruislip Underground Station - Hainault Underground Station",
+        "Ealing Broadway Underground Station - Epping Underground Station",
+        "Ealing Broadway Underground Station - Hainault Underground Station"
+      ],
+      "reason": "Central Line: Minor delays eastbound only while we respond to a fire alert at Woodford. GOOD SERVICE on the rest of the line. "
+    },
+    {
+      "line": "circle",
+      "cause": "other",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-12T11:50:34.528Z",
+      "minutes": 80,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "segments": [
+        "Edgware Road (Circle Line) Underground Station - Hammersmith (H&C Line) Underground Station",
+        "Hammersmith (H&C Line) Underground Station - Edgware Road (Circle Line) Underground Station"
+      ],
+      "reason": "Circle Line: Minor delays due to train cancellations. "
+    }
+  ]
 }
