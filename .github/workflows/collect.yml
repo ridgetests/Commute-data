@@ -31,6 +31,13 @@ jobs:
         run: npx tsx src/poll.ts
         env:
           TFL_APP_KEY: ${{ secrets.TFL_APP_KEY }}
+          # Cold archive. Without these the run still works — the MODEL is always
+          # written to the repo — but the raw movements are discarded rather than
+          # kept for future re-analysis.
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
           RUN_MINUTES: "340"
 
       - name: Rebuild the public dashboard

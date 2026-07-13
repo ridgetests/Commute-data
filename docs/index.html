@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>London Underground — disruption archive</title>
+<title>Pit wall — London Underground disruption archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,209 +11,293 @@
   :root{
     --ink:#0A0A0C; --panel:#111116; --hair:rgba(255,255,255,.08);
     --off:#EFECE4; --grey:#86868F; --dim:#54545C;
-    --amber:#E9A23B; --red:#D4553F; --green:#4E9E7A;
+    --amber:#E9A23B; --red:#D4553F; --green:#4E9E7A; --blue:#5BB3E8;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--ink);color:var(--off);
-    font-family:Inter,-apple-system,system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased}
+    font-family:Inter,-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
-  .wrap{max-width:900px;margin:0 auto;padding:40px 22px 80px}
+  .wrap{max-width:880px;margin:0 auto;padding:38px 20px 90px}
 
-  header{border-bottom:1px solid var(--hair);padding-bottom:22px;margin-bottom:34px}
+  header{border-bottom:1px solid var(--hair);padding-bottom:20px;margin-bottom:14px}
   .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;
     text-transform:uppercase;color:var(--amber)}
-  h1{font-family:'IBM Plex Mono',monospace;font-weight:300;font-size:30px;
-    letter-spacing:-.01em;margin:12px 0 8px;line-height:1.15}
-  .sub{font-size:14px;color:var(--grey);max-width:60ch;line-height:1.55}
-
-  .coverage{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px}
-  .cov{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim)}
+  h1{font-family:'IBM Plex Mono',monospace;font-weight:300;font-size:27px;
+    margin:11px 0 8px;line-height:1.18;letter-spacing:-.01em}
+  .sub{font-size:13.5px;color:var(--grey);max-width:62ch;line-height:1.55;margin:0}
+  .cov{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px;
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--dim)}
   .cov b{color:var(--off);font-weight:500}
 
-  h2{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;
+  h2{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.18em;
     text-transform:uppercase;color:var(--grey);font-weight:500;
-    margin:44px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
-  .note{font-size:12.5px;color:var(--dim);line-height:1.6;margin:10px 0 20px;max-width:70ch}
+    margin:42px 0 5px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+  .note{font-size:12.5px;color:var(--dim);line-height:1.6;margin:9px 0 18px;max-width:72ch}
+  .note b{color:var(--grey);font-weight:400}
 
-  /* Hero: recovery by cause — the number the app actually needs */
-  .cause{display:grid;grid-template-columns:150px 1fr 70px;gap:14px;align-items:center;
-    padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04)}
-  .cause-name{font-size:14px}
-  .cause-n{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim)}
-  .bar{height:22px;position:relative;background:rgba(255,255,255,.03);border-radius:3px}
-  .bar span{position:absolute;left:0;top:0;bottom:0;background:var(--amber);
-    opacity:.5;border-radius:3px}
-  .bar em{position:absolute;top:0;bottom:0;width:2px;background:var(--off);opacity:.55}
-  .mins{font-family:'IBM Plex Mono',monospace;font-size:17px;text-align:right;
-    color:var(--amber);font-variant-numeric:tabular-nums}
-  .mins small{display:block;font-size:9.5px;color:var(--dim);letter-spacing:.1em}
+  /* READINESS — the hero */
+  .rd{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05);
+    display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}
+  .rd-f{font-size:14.5px;line-height:1.35}
+  .rd-s{font-size:12.5px;color:var(--grey);margin-top:5px;line-height:1.5}
+  .rd-eta{font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right;
+    white-space:nowrap;color:var(--amber)}
+  .rd-eta small{display:block;font-size:9.5px;color:var(--dim);letter-spacing:.1em;margin-top:3px}
+  .ready .rd-eta{color:var(--green)}
+  .bar{height:4px;border-radius:2px;background:rgba(255,255,255,.06);margin-top:9px;
+    max-width:260px;overflow:hidden}
+  .bar span{display:block;height:100%;background:var(--amber);border-radius:2px}
+  .ready .bar span{background:var(--green)}
 
-  /* The signature: incident tape. The CURVE the audit said we couldn't see. */
-  .tape{margin-bottom:3px}
-  .tape-head{display:flex;justify-content:space-between;align-items:baseline;
-    font-size:12.5px;margin-bottom:4px}
-  .tape-line{color:var(--off)}
-  .tape-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim)}
-  .strip{display:flex;gap:1px;height:26px;align-items:flex-end}
-  .tick{flex:1;min-width:2px;border-radius:1px 1px 0 0;background:var(--green);height:22%}
-  .tick.minor{background:var(--amber);opacity:.55;height:45%}
-  .tick.severe{background:var(--amber);height:72%}
-  .tick.susp{background:var(--red);height:100%}
+  /* LEAD TIME */
+  .lead{border:1px solid rgba(91,179,232,.25);background:rgba(91,179,232,.06);
+    border-radius:14px;padding:20px}
+  .lead .big{font-family:'IBM Plex Mono',monospace;font-size:40px;font-weight:300;
+    color:var(--blue);line-height:1}
+  .lead .big small{font-size:13px;color:var(--grey);margin-left:8px;font-family:Inter,sans-serif}
+
+  /* INCIDENTS */
+  .inc{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+  .inc-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .inc-l{font-size:15px}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;padding:2px 8px;
+    border-radius:99px;border:1px solid var(--hair);color:var(--grey);margin-left:7px}
+  .inc-t{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--dim)}
+  .trace{display:flex;gap:2px;height:22px;align-items:flex-end;margin:11px 0 8px}
+  .trace div{border-radius:1px 1px 0 0}
+  .impact{font-size:13px;color:var(--off);margin-top:4px}
+  .impact b{font-family:'IBM Plex Mono',monospace;color:var(--red);font-weight:500}
+  .split{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--grey);margin-top:5px}
+  .seg{font-size:12px;color:var(--dim);margin-top:5px}
 
   table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
-    font-weight:500;padding:0 0 9px}
-  td{padding:11px 0;border-top:1px solid rgba(255,255,255,.05);vertical-align:top}
-  td.num{font-family:'IBM Plex Mono',monospace;text-align:right;
-    font-variant-numeric:tabular-nums;color:var(--grey)}
-  .seg{font-size:12px;color:var(--dim);margin-top:3px}
-  .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;padding:2px 7px;
-    border-radius:99px;border:1px solid var(--hair);color:var(--grey);white-space:nowrap}
+  th{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:10px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500;padding:0 0 9px}
+  th:first-child{text-align:left}
+  td{padding:11px 0;border-top:1px solid rgba(255,255,255,.05);text-align:right}
+  td:first-child{text-align:left}
+  td.n{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;color:var(--grey)}
+  .sbar{display:inline-flex;height:8px;border-radius:2px;overflow:hidden;width:110px;
+    background:rgba(255,255,255,.05)}
+  .sbar i{display:block;height:100%}
 
-  .empty{border:1px dashed var(--hair);border-radius:14px;padding:26px;
-    text-align:center;color:var(--grey);font-size:14px;line-height:1.6}
+  .empty{border:1px dashed var(--hair);border-radius:13px;padding:24px;text-align:center;
+    color:var(--grey);font-size:13.5px;line-height:1.6}
   .empty b{color:var(--off);font-weight:500}
-  footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--hair);
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--hair);
     font-size:11.5px;color:var(--dim);line-height:1.9}
-  a{color:var(--grey)}
-  @media (max-width:560px){
-    .cause{grid-template-columns:110px 1fr 60px;gap:10px}
-    h1{font-size:23px}
-  }
+  @media(max-width:560px){h1{font-size:21px}.rd{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <header>
-    <div class="eyebrow">Disruption archive</div>
-    <h1>What actually breaks on the Underground, and for how long</h1>
-    <p class="sub">An open, minute-resolution record of every service change on the
-      London Underground, DLR, Overground and Elizabeth line — including the cause,
-      the section affected, and how long it took to clear. Recorded continuously,
-      because none of this is published retrospectively.</p>
-    <div class="coverage" id="coverage"></div>
+    <div class="eyebrow">Pit wall</div>
+    <h1>What breaks on the Underground — and can we predict it yet?</h1>
+    <p class="sub">Not a museum. This page answers two questions: <b>what should I build
+      next</b>, and <b>is the data any good yet</b>. Everything here is measured from a
+      minute-resolution archive of the live network — none of it is published
+      retrospectively, so it only exists because it's being recorded.</p>
+    <div class="cov" id="cov"></div>
   </header>
 
-  <h2>How long each kind of failure takes to clear</h2>
-  <p class="note">The number a stranded commuter actually needs, and the one no
-    departure board gives you. Bar shows the median time from first fault to good
-    service; the white mark is when it was typically at its worst — anything left
-    of that mark means it's still getting worse.</p>
-  <div id="causes"></div>
+  <h2>Can we make the call yet?</h2>
+  <p class="note">Each row is a feature the app can't honestly ship until the data
+    supports it. <b>~20 incidents per cause</b> before a median stops being noise —
+    a rule of thumb, not a law. Forecasts assume incidents keep arriving at the rate
+    they have so far; real life is bursty, so read the range, not the number.</p>
+  <div id="readiness"></div>
+
+  <h2>Lead time over TfL — the moat, and the number that could prove us wrong</h2>
+  <p class="note">TfL's status feed is human-curated and therefore <b>lagging</b>: someone
+    decides the line is bad and updates it. Train movements are the <b>leading</b> indicator.
+    Two signals — trains running slow, and trains not running at all. <b>Absence is the
+    stronger one</b>: in a suspension trains don't slow down, they stop, and the gap in
+    the data <i>is</i> the event. If this number isn't positive, the thesis is weaker
+    than we think.</p>
+  <div id="lead"></div>
 
   <h2>Recent incidents</h2>
-  <div id="tapes"></div>
+  <p class="note">The trace is the <b>real</b> severity log — timestamped steps, not a
+    drawn curve. <b>Trains lost</b> compares what actually ran against the same line,
+    same hour, same day-type on other days; it's suppressed until there are at least
+    three comparable days.</p>
+  <div id="incidents"></div>
 
   <h2>By line</h2>
+  <p class="note">"Total minutes disrupted" is a <b>bad metric</b> — it treats a slightly
+    late Circle line the same as a suspended Northern line. So it's split by severity.</p>
   <div id="lines"></div>
+
+  <h2>Storage</h2>
+  <div id="storage"></div>
 
   <footer>
     Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016.<br>
-    Not affiliated with or endorsed by Transport for London.
+    Not affiliated with, or endorsed by, Transport for London.
     Cause is inferred from TfL's own wording and will sometimes be wrong.
     <span id="gen"></span>
   </footer>
 </div>
 
 <script>
-const $ = (id) => document.getElementById(id);
-const CAUSE_LABEL = {
-  'signal':'Signal failure', 'fleet':'Train fault', 'person-on-track':'Person on the track',
-  'trespass':'Trespass', 'fatality':'Fatality', 'weather':'Weather', 'staff':'Staff shortage',
-  'power':'Power failure', 'fire':'Fire alert', 'security':'Security alert',
-  'engineering':'Engineering work', 'congestion':'Knock-on congestion', 'other':'Other / unstated',
-};
-const sevClass = (s) => s <= 4 ? 'susp' : s <= 6 ? 'severe' : s < 10 ? 'minor' : '';
+const $ = (i) => document.getElementById(i);
+const CAUSE = {signal:'Signal failure',fleet:'Broken-down train','person-on-track':'Someone on the track',
+  trespass:'Trespass',fatality:'Emergency services',weather:'Weather',staff:'Staff shortage',
+  power:'Power failure',fire:'Fire alert',security:'Security alert',engineering:'Engineering work',
+  congestion:'Knock-on delays',other:'Unclassified'};
+const sevCol = (s) => s<=4 ? 'var(--red)' : s<=6 ? 'var(--amber)' : s<10 ? 'rgba(233,162,59,.5)' : 'var(--green)';
+const sevH   = (s) => s<=4 ? 100 : s<=6 ? 72 : s<10 ? 45 : 22;
 const when = (iso) => new Date(iso).toLocaleString('en-GB',
-  { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' });
+  {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+const mb = (b) => b >= 1e6 ? (b/1e6).toFixed(1)+' MB' : (b/1e3).toFixed(0)+' KB';
 
-fetch('summary.json?' + Date.now())
-  .then(r => r.json())
-  .then(render)
-  .catch(() => {
-    $('causes').innerHTML =
-      '<div class="empty">No summary yet. The archiver writes one after its first run.</div>';
-  });
+fetch('summary.json?'+Date.now()).then(r=>r.json()).then(render)
+  .catch(()=>{ $('readiness').innerHTML =
+    '<div class="empty">No summary yet. The archiver writes one after its first run.</div>'; });
 
-function render(d) {
+function render(d){
   const c = d.coverage;
-  $('coverage').innerHTML = [
-    ['Days recorded', c.days],
+  $('cov').innerHTML = [
+    ['Days', c.days], ['Incidents', c.incidents],
     ['State changes', c.events.toLocaleString()],
-    ['Incidents', c.incidents.toLocaleString()],
-  ].map(([k,v]) => `<div class="cov">${k} <b>${v}</b></div>`).join('');
-  $('gen').textContent = d.generatedAt
-    ? ' Last updated ' + when(d.generatedAt) + '.' : '';
+    ['Train movements', (c.runObservations||0).toLocaleString()],
+  ].map(([k,v])=>`<div>${k} <b>${v}</b></div>`).join('');
+  $('gen').textContent = d.generatedAt ? ' Updated '+when(d.generatedAt)+'.' : '';
 
-  // --- Recovery by cause (the hero) ---
-  const causes = d.recoveryByCause.filter(x => x.n > 0);
-  if (!causes.length) {
-    $('causes').innerHTML = `<div class="empty">
-      <b>Nothing has broken yet.</b><br>
-      Genuinely good news, and a slightly useless dataset.
-      Come back after the network has a bad day.</div>`;
-  } else {
-    // Thin data is normal early. Say so rather than implying false precision.
-    const thin = causes.every(x => x.n < 5);
-    const max = Math.max(...causes.map(x => x.medianMinutes), 1);
-    $('causes').innerHTML =
-      (thin ? `<p class="note" style="color:var(--amber)">Only ${c.days} day(s) of data
-        so far — these medians are indicative, not reliable. They sharpen with time.</p>` : '') +
-      causes.map(x => {
-        const w = Math.max(2, (x.medianMinutes / max) * 100);
-        const peak = x.medianPeakAfterMinutes && x.medianMinutes
-          ? Math.min(99, (x.medianPeakAfterMinutes / x.medianMinutes) * w) : null;
-        return `<div class="cause">
-          <div>
-            <div class="cause-name">${CAUSE_LABEL[x.cause] ?? x.cause}</div>
-            <div class="cause-n">${x.n} incident${x.n===1?'':'s'}</div>
-          </div>
-          <div class="bar"><span style="width:${w}%"></span>${
-            peak !== null ? `<em style="left:${peak}%"></em>` : ''}</div>
-          <div class="mins">${x.medianMinutes}<small>MIN</small></div>
-        </div>`;
-      }).join('');
+  // ---- READINESS ----
+  const rows = [];
+
+  // Run times first — usually the one that's already unblocked, and the biggest win.
+  const rr = d.runReadiness || [];
+  const totalRuns = rr.reduce((a,b)=>a+b.n,0);
+  const runReady = rr.filter(x=>x.ready).length;
+  if (rr.length) {
+    const ready = runReady > 0;
+    rows.push(`<div class="rd ${ready?'ready':''}">
+      <div>
+        <div class="rd-f">${ready?'✅':'⚠️'} <b>“How long is this journey, really?”</b></div>
+        <div class="rd-s">Journey times in the app are still straight-line distance ÷ an assumed
+          speed — a fiction. ${totalRuns.toLocaleString()} real observed run times recorded;
+          <b>${runReady} of ${rr.length} lines</b> past the ${d.minRunsReady.toLocaleString()} needed.
+          ${ready?'<b style="color:var(--green)">Biggest accuracy win available. Build it next.</b>':''}
+        </div>
+        <div class="bar"><span style="width:${Math.min(100, 100*runReady/Math.max(1,rr.length))}%"></span></div>
+      </div>
+      <div class="rd-eta">${ready?'READY':'…'}<small>RUN TIMES</small></div>
+    </div>`);
   }
 
-  // --- The signature: incident tape. You can SEE the curve. ---
-  const recent = d.recent ?? [];
-  $('tapes').innerHTML = recent.length ? recent.slice(0, 14).map(i => {
-    // Reconstruct a crude severity shape: bad → worst → recovering → good.
-    const steps = Math.max(6, Math.min(28, Math.round((i.minutes ?? 10) / 3)));
-    const peakAt = i.minutes ? Math.round((i.peakAfterMin ?? 0) / i.minutes * steps) : 0;
-    let ticks = '';
-    for (let s = 0; s < steps; s++) {
-      const sev = s < peakAt
-        ? Math.round(9 - (9 - i.worstSev) * (s / Math.max(1, peakAt)))
-        : Math.round(i.worstSev + (10 - i.worstSev) * ((s - peakAt) / Math.max(1, steps - peakAt)));
-      ticks += `<div class="tick ${sevClass(sev)}"></div>`;
-    }
-    return `<div class="tape">
-      <div class="tape-head">
-        <span class="tape-line">${i.line} <span class="tag">${CAUSE_LABEL[i.cause] ?? i.cause}</span></span>
-        <span class="tape-meta">${when(i.start)} · ${i.minutes ?? '—'} min</span>
+  for (const r of (d.readiness||[])) {
+    const pct = Math.min(100, 100*r.have/r.need);
+    const eta = r.ready ? 'READY'
+      : r.etaDays ? `~${r.etaDays[0]}–${r.etaDays[1]}` : '—';
+    rows.push(`<div class="rd ${r.ready?'ready':''}">
+      <div>
+        <div class="rd-f">${r.ready?'✅':'⚠️'} ${r.feature}</div>
+        <div class="rd-s">
+          <b>${r.have} of ~${r.need} incidents</b> · arriving ${r.perDay}/day
+          ${r.ready && r.medianMin!=null
+            ? ` · median <b class="mono">${r.medianMin} min</b>, 9-in-10 under <b class="mono">${r.p90Min} min</b>`
+            : ' · not enough to trust a median yet'}
+        </div>
+        <div class="bar"><span style="width:${pct}%"></span></div>
       </div>
-      <div class="strip">${ticks}</div>
-      ${i.segments?.length ? `<div class="seg">${i.segments.slice(0,2).join(' · ')}</div>` : ''}
-    </div>`;
-  }).join('') : `<div class="empty">No completed incidents recorded yet.</div>`;
+      <div class="rd-eta">${eta}<small>${r.ready?'':'DAYS'}</small></div>
+    </div>`);
+  }
+  $('readiness').innerHTML = rows.length ? rows.join('')
+    : '<div class="empty"><b>Nothing recorded yet.</b><br>Come back after the network has a bad day.</div>';
 
-  // --- By line ---
-  const wl = d.worstLines ?? [];
+  // ---- LEAD TIME ----
+  const lt = d.leadTime || {n:0};
+  $('lead').innerHTML = lt.n
+    ? `<div class="lead">
+        <div class="big">${lt.medianMinutes}<small>min before TfL declared it</small></div>
+        <div class="rd-s" style="margin-top:12px">
+          Measured on ${lt.n} incident${lt.n===1?'':'s'}.
+          ${lt.n < 5 ? '<b style="color:var(--amber)">Far too few to trust — directional only.</b>' : ''}
+        </div>
+        <div class="split" style="margin-top:10px">
+          ${(lt.samples||[]).map(s=>`${s.line} · ${CAUSE[s.cause]||s.cause} · <b style="color:var(--blue)">${s.minutes} min</b> (${s.signal})`).join('<br>')}
+        </div>
+      </div>`
+    : `<div class="empty">No lead time detected yet.<br>
+        Needs enough train-movement history to know what "normal" looks like on a line
+        before we can spot it breaking.</div>`;
+
+  // ---- INCIDENTS ----
+  const rec = d.recent || [];
+  $('incidents').innerHTML = rec.length ? rec.map(i=>{
+    const trace = (i.trace||[]);
+    let bars = '';
+    for (let k=0;k<trace.length-1;k++){
+      const dur = (Date.parse(trace[k+1].t)-Date.parse(trace[k].t))/60000;
+      const w = Math.max(2, Math.round(dur));
+      bars += `<div style="flex:${w};background:${sevCol(trace[k].sev)};height:${sevH(trace[k].sev)}%"></div>`;
+    }
+    const im = i.impact;
+    const impact = im && im.pctLost!=null
+      ? `<div class="impact"><b>${im.pctLost}% fewer trains</b> than normal — ${im.during} ran, ~${im.expected} expected</div>`
+      : im
+        ? `<div class="impact" style="color:var(--dim)">Trains lost: needs ${3-(im.baselineDays||0)} more comparable day(s) of history</div>`
+        : '';
+    const split = [
+      i.suspendedMin ? `<span style="color:var(--red)">${i.suspendedMin} min suspended</span>` : '',
+      i.severeMin ? `<span style="color:var(--amber)">${i.severeMin} min severe</span>` : '',
+      i.minorMin ? `<span style="color:var(--grey)">${i.minorMin} min minor</span>` : '',
+    ].filter(Boolean).join(' · ');
+    return `<div class="inc">
+      <div class="inc-h">
+        <div class="inc-l">${i.line}<span class="tag">${CAUSE[i.cause]||i.cause}</span></div>
+        <div class="inc-t">${when(i.start)} · ${i.minutes} min · worst after ${i.peakAfterMin} min</div>
+      </div>
+      <div class="trace">${bars}</div>
+      <div class="split">${split}</div>
+      ${impact}
+      ${i.segments && i.segments.length ? `<div class="seg">${i.segments.join(' · ')}</div>` : ''}
+    </div>`;
+  }).join('') : '<div class="empty">No completed incidents yet.</div>';
+
+  // ---- BY LINE ----
+  const wl = d.worstLines || [];
+  const maxTot = Math.max(1, ...wl.map(l=>l.suspendedMin+l.severeMin+l.minorMin));
   $('lines').innerHTML = wl.length ? `<table>
-    <tr><th>Line</th><th style="text-align:right">Incidents</th>
-        <th style="text-align:right">Median</th><th style="text-align:right">Total disrupted</th></tr>
-    ${wl.map(l => `<tr>
-      <td>${l.line}</td>
-      <td class="num">${l.incidents}</td>
-      <td class="num">${l.medianMinutes} min</td>
-      <td class="num">${l.totalMinutes >= 120
-        ? (l.totalMinutes/60).toFixed(1) + ' hrs' : l.totalMinutes + ' min'}</td>
-    </tr>`).join('')}
-  </table>` : `<div class="empty">Nothing to rank yet.</div>`;
+    <tr><th>Line</th><th>Incidents</th><th>Median</th><th style="text-align:left;padding-left:18px">Severity split</th></tr>
+    ${wl.map(l=>{
+      const tot = l.suspendedMin+l.severeMin+l.minorMin;
+      const w = 110*tot/maxTot;
+      return `<tr>
+        <td>${l.line}</td>
+        <td class="n">${l.incidents}</td>
+        <td class="n">${l.medianMin} min</td>
+        <td style="text-align:left;padding-left:18px">
+          <span class="sbar" style="width:${Math.max(12,w)}px">
+            <i style="background:var(--red);flex:${l.suspendedMin||0}"></i>
+            <i style="background:var(--amber);flex:${l.severeMin||0}"></i>
+            <i style="background:rgba(233,162,59,.4);flex:${l.minorMin||0}"></i>
+          </span>
+          <span class="n" style="margin-left:9px;font-size:11.5px">${tot} min</span>
+        </td>
+      </tr>`;
+    }).join('')}
+  </table>` : '<div class="empty">Nothing to rank yet.</div>';
+
+  // ---- STORAGE ----
+  const s = d.storage || {};
+  const perDay = s.perDayBytes || 0;
+  const yearGb = (perDay*365)/1e9;
+  const warn = yearGb > 0.8;
+  $('storage').innerHTML = `<div class="rd-s" style="line-height:1.7">
+    Growing at <b class="mono" style="color:${warn?'var(--amber)':'var(--off)'}">${mb(perDay)}/day</b>
+    — about <b class="mono">${yearGb.toFixed(1)} GB/year</b>.
+    ${warn ? '<b style="color:var(--amber)">Git will choke on this.</b> Raw movements need to move to object storage; aggregates stay in the repo.'
+           : 'Comfortable for now. Watch it.'}
+    <div class="split" style="margin-top:9px">
+      events ${mb(s.eventsBytes||0)} · run times ${mb(s.runtimesBytes||0)} ·
+      platforms ${mb(s.platformsBytes||0)} · crowding ${mb(s.crowdingBytes||0)}
+    </div>
+  </div>`;
 }
 </script>
 </body>

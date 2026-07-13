@@ -1,8 +1,10 @@
-import { appendFileSync, mkdirSync } from 'node:fs';
+import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { toStates, diff, type LineState } from './events';
 import { RunTracker, toPredictions } from './runtimes';
 import { toCrowdSample, shouldRecord, CROWD_STATIONS, type CrowdRecord } from './crowding';
+import { putRaw, sinkConfigured } from './sink';
+import { loadModel, mergeObservations, saveModel, exportForApp } from './model';
 
 // One long-running collector. GitHub Actions caps a job at 6 hours, so we run four
 // a day, each polling for ~5h50m at 60-second cadence. That sidesteps GitHub's
@@ -42,6 +44,7 @@ async function main() {
   const tracker = new RunTracker();
   const deadline = Date.now() + RUN_MINUTES * 60_000;
   let polls = 0, events = 0, runs = 0, plats = 0, crowds = 0;
+  const rawRuns: any[] = [];
   // Crowding moves slowly; TfL's own live feed updates every 5 min. Match it.
   const CROWD_EVERY = Number(process.env.CROWD_EVERY_POLLS ?? 5);
 
@@ -69,7 +72,12 @@ async function main() {
         catch (e) { /* one line failing shouldn't kill the poll */ }
       }
       const out = tracker.ingest(preds);
-      write('runtimes', out.runs);
+      // RAW RUN TIMES NO LONGER GO INTO GIT. They accumulate in memory for this
+      // job, then: the MODEL (histograms) is merged into the repo, and the RAW is
+      // pushed to object storage. Git is not a time-series database, and raw
+      // movements would strangle the repo within months — permanently, because
+      // git history can't be deleted your way out of.
+      rawRuns.push(...out.runs);
       write('platforms', out.platforms);
       runs += out.runs.length;
       plats += out.platforms.length;
@@ -112,6 +120,28 @@ async function main() {
 
     const wait = INTERVAL_MS - (Date.now() - started);
     if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+  }
+
+  // ---- MODEL: histograms into git. Bounded, and gets BETTER not BIGGER. ----
+  const modelPath = join(process.cwd(), 'data', 'model', 'runtimes.json');
+  const model = loadModel(modelPath);
+  const added = mergeObservations(model, rawRuns);
+  saveModel(modelPath, model);
+
+  // The artefact the app ships: p50 / p90 per segment per time band.
+  const appPath = join(process.cwd(), 'data', 'model', 'app-runtimes.json');
+  writeFileSync(appPath, JSON.stringify(exportForApp(model)));
+
+  const cells = Object.keys(model.cells).length;
+  console.log(`\nModel: +${added} observations → ${cells} segment×band cells`);
+
+  // ---- RAW: cold archive, object storage, never git. ----
+  const key = `raw/runtimes/${new Date().toISOString().slice(0, 13)}.jsonl.gz`;
+  const r = await putRaw(key, rawRuns);
+  console.log(`Raw: ${(r.bytes / 1e6).toFixed(2)} MB → ${r.where}`);
+  if (!sinkConfigured()) {
+    console.log('  ⚠️  Set R2_ACCOUNT_ID / R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY / R2_BUCKET');
+    console.log('     to keep the raw archive. The model is safe either way.');
   }
 
   console.log(`\nDone. ${polls} polls · ${events} events · ${runs} run times · ` +
