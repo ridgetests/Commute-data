@@ -1,0 +1,55 @@
+name: Collect rail
+
+# National Rail / Darwin. Separate from the TfL collector on purpose: a different
+# API, a different key, and it must be able to fail without taking the tube
+# archive down with it.
+#
+# WHY THIS HAS A CLOCK: HSP gives you punctuality retrospectively, so reliability
+# data can wait. But HSP does NOT keep PLATFORM history — Darwin publishes the
+# platform, the train leaves, and it's gone. Every day this doesn't run is a day
+# of platform allocations that can never be recovered.
+
+on:
+  schedule:
+    # Four long jobs a day, each ~5h50m (GitHub caps a job at 6 hours).
+    - cron: "7 0,6,12,18 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: rail
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  rail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+
+      - name: Collect Darwin boards
+        run: npx tsx src/railPoll.ts
+        env:
+          RAIL_API_KEY: ${{ secrets.RAIL_API_KEY }}
+          RUN_MINUTES: "340"
+          POLL_SECONDS: "60"
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "archive-bot"
+          git config user.email "archive-bot@users.noreply.github.com"
+          git pull --rebase --autostash || true
+          git add data
+          git commit -m "rail $(date -u +%FT%TZ) [skip ci]" || echo "nothing new"
+          git push || true
