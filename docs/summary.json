@@ -1,43 +1,260 @@
 {
-  "generatedAt": "2026-07-12T16:10:42.879Z",
+  "generatedAt": "2026-07-13T03:31:37.330Z",
   "coverage": {
-    "days": 1,
+    "days": 2,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-07-12T14:03:38.617Z",
-    "events": 22,
-    "incidents": 2
+    "lastEvent": "2026-07-13T03:23:36.686Z",
+    "events": 122,
+    "incidents": 12
   },
   "recoveryByCause": [
     {
+      "cause": "weather",
+      "n": 8,
+      "medianMinutes": 819,
+      "p90Minutes": 840,
+      "medianPeakAfterMinutes": 0
+    },
+    {
       "cause": "other",
-      "n": 1,
-      "medianMinutes": 80,
-      "p90Minutes": 80,
+      "n": 2,
+      "medianMinutes": 61,
+      "p90Minutes": 61,
       "medianPeakAfterMinutes": 0
     },
     {
       "cause": "fire-alert",
-      "n": 1,
-      "medianMinutes": 51,
-      "p90Minutes": 51,
+      "n": 2,
+      "medianMinutes": 58,
+      "p90Minutes": 58,
       "medianPeakAfterMinutes": 0
     }
   ],
   "worstLines": [
     {
-      "line": "circle",
+      "line": "district",
       "incidents": 1,
-      "medianMinutes": 80,
-      "totalMinutes": 80
+      "medianMinutes": 840,
+      "totalMinutes": 840
+    },
+    {
+      "line": "dlr",
+      "incidents": 1,
+      "medianMinutes": 840,
+      "totalMinutes": 840
+    },
+    {
+      "line": "metropolitan",
+      "incidents": 1,
+      "medianMinutes": 840,
+      "totalMinutes": 840
+    },
+    {
+      "line": "piccadilly",
+      "incidents": 1,
+      "medianMinutes": 840,
+      "totalMinutes": 840
+    },
+    {
+      "line": "elizabeth",
+      "incidents": 1,
+      "medianMinutes": 797,
+      "totalMinutes": 797
+    },
+    {
+      "line": "waterloo-city",
+      "incidents": 1,
+      "medianMinutes": 797,
+      "totalMinutes": 797
+    },
+    {
+      "line": "circle",
+      "incidents": 2,
+      "medianMinutes": 95,
+      "totalMinutes": 190
+    },
+    {
+      "line": "weaver",
+      "incidents": 1,
+      "medianMinutes": 116,
+      "totalMinutes": 116
+    },
+    {
+      "line": "mildmay",
+      "incidents": 1,
+      "medianMinutes": 65,
+      "totalMinutes": 65
     },
     {
       "line": "central",
       "incidents": 1,
       "medianMinutes": 51,
       "totalMinutes": 51
+    },
+    {
+      "line": "suffragette",
+      "incidents": 1,
+      "medianMinutes": 41,
+      "totalMinutes": 41
     }
   ],
   "recent": [
+    {
+      "line": "piccadilly",
+      "cause": "weather",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-13T00:30:30.719Z",
+      "minutes": 840,
+      "worstSev": 5,
+      "peakAfterMin": 0,
+      "segments": [
+        "Cockfosters Underground Station - Uxbridge Underground Station",
+        "Uxbridge Underground Station - Cockfosters Underground Station",
+        "Cockfosters Underground Station - Heathrow Terminal 5 Underground Station",
+        "Heathrow Terminal 4 Underground Station - Cockfosters Underground Station",
+        "Heathrow Terminal 5 Underground Station - Cockfosters Underground Station",
+        "Cockfosters Underground Station - Heathrow Terminal 4 Underground Station"
+      ],
+      "reason": "PICCADILLY LINE: Saturday 11, from 0045, and all day Sunday 12 July, no service between Hammersmith and Heathrow (all terminals) / Uxbridge. The METROPOLITAN LINE will also be suspended between Harrow-on-the-Hill and Uxbridge. Use HEATHROW EXPRESS and ELIZABETH LINE for transfers between Heathrow terminals. Replacement bus services operate."
+    },
+    {
+      "line": "metropolitan",
+      "cause": "weather",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-13T00:30:30.719Z",
+      "minutes": 840,
+      "worstSev": 5,
+      "peakAfterMin": 0,
+      "segments": [
+        "Aldgate Underground Station - Uxbridge Underground Station",
+        "Uxbridge Underground Station - Aldgate Underground Station"
+      ],
+      "reason": "METROPOLITAN LINE: Saturday 11 and Sunday 12 July, no service between Harrow-on-the-Hill and Uxbridge. There will also be no PICCADILLY LINE service between Hammersmith and Uxbridge. Replacement bus service ML1 operates between Harrow-on-the-Hill and Uxbridge via West Harrow (Treve Avenue), Rayners Lane, Eastcote, Ruislip Manor, Ruislip, West Ruislip (for Central line and Chiltern Railways), Ickenham and Hillingdon."
+    },
+    {
+      "line": "dlr",
+      "cause": "weather",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-13T00:30:30.719Z",
+      "minutes": 840,
+      "worstSev": 5,
+      "peakAfterMin": 0,
+      "segments": [
+        "Beckton DLR Station - Tower Gateway DLR Station",
+        "Tower Gateway DLR Station - Beckton DLR Station"
+      ],
+      "reason": "DOCKLANDS LIGHT RAILWAY: Sunday 12 July, no service between Shadwell and Tower Gateway."
+    },
+    {
+      "line": "district",
+      "cause": "weather",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-13T00:30:30.719Z",
+      "minutes": 840,
+      "worstSev": 5,
+      "peakAfterMin": 0,
+      "segments": [
+        "Upminster Underground Station - Ealing Broadway Underground Station",
+        "Ealing Broadway Underground Station - Upminster Underground Station",
+        "Edgware Road (Circle Line) Underground Station - Ealing Broadway Underground Station",
+        "Ealing Broadway Underground Station - Edgware Road (Circle Line) Underground Station"
+      ],
+      "reason": "DISTRICT LINE: Saturday 11 and Sunday 12 July, no service between Turnham Green and Ealing Broadway. Replacement bus services operate: Service PL3 operates between Hammersmith and Osterley via Turnham Green (Chiswick High Road), Chiswick Park, Gunnersbury, Acton Town, Ealing Common, Ealing Broadway, South Ealing, Northfields and Boston Manor. Service PL4: Gunnersbury (for District line) - Acton Town - Ealing Common - North Ealing - Hanger Lane (for Central line and Park Royal) - Alperton (Bridgewater Road) - Sudbury Town (Whitton Avenue East) - Sudbury Hill - South Harrow - Rayners Lane;"
+    },
+    {
+      "line": "weaver",
+      "cause": "weather",
+      "start": "2026-07-12T21:51:24.764Z",
+      "end": "2026-07-12T23:47:29.192Z",
+      "minutes": 116,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "segments": [
+        "Cheshunt Rail Station - London Liverpool Street Rail Station",
+        "London Liverpool Street Rail Station - Cheshunt Rail Station",
+        "Enfield Town Rail Station - London Liverpool Street Rail Station",
+        "London Liverpool Street Rail Station - Enfield Town Rail Station",
+        "Chingford Rail Station - London Liverpool Street Rail Station",
+        "London Liverpool Street Rail Station - Chingford Rail Station"
+      ],
+      "reason": "Weaver Line: No service between Hackney Downs and Chingford and SEVERE DELAYS on the rest of the line while we remove a tree from the track at Walthamstow Central. London Underground are accepting tickets via any reasonable route.  "
+    },
+    {
+      "line": "waterloo-city",
+      "cause": "weather",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-12T23:47:29.192Z",
+      "minutes": 797,
+      "worstSev": 4,
+      "peakAfterMin": 0,
+      "segments": [
+        "Bank Underground Station - Waterloo Underground Station",
+        "Waterloo Underground Station - Bank Underground Station"
+      ],
+      "reason": "Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sundays and on bank/public holidays."
+    },
+    {
+      "line": "elizabeth",
+      "cause": "weather",
+      "start": "2026-07-12T10:30:30.915Z",
+      "end": "2026-07-12T23:47:29.192Z",
+      "minutes": 797,
+      "worstSev": 7,
+      "peakAfterMin": 0,
+      "segments": [
+        "Heathrow Terminal 4 Rail Station - Shenfield Rail Station",
+        "Heathrow Terminal 5 Rail Station - Shenfield Rail Station",
+        "Shenfield Rail Station - Heathrow Terminal 4 Rail Station",
+        "Shenfield Rail Station - Heathrow Terminal 5 Rail Station",
+        "Paddington - Shenfield Rail Station",
+        "London Liverpool Street Rail Station - Shenfield Rail Station",
+        "Shenfield Rail Station - London Liverpool Street Rail Station"
+      ],
+      "reason": "Elizabeth line: All day on Sunday, 12 July, service will operate at a reduced frequency between Whitechapel and Shenfield while we undertake repairs following a line side fire at Stratford on Friday. Normal service will operate on the of the line."
+    },
+    {
+      "line": "circle",
+      "cause": "weather",
+      "start": "2026-07-12T21:55:25.087Z",
+      "end": "2026-07-12T23:45:29.178Z",
+      "minutes": 110,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "segments": [
+        "Edgware Road (Circle Line) Underground Station - Hammersmith (H&C Line) Underground Station",
+        "Hammersmith (H&C Line) Underground Station - Edgware Road (Circle Line) Underground Station"
+      ],
+      "reason": "Circle Line: Minor delays due to train cancellations anticlockwise only. GOOD SERVICE on the rest of the line. "
+    },
+    {
+      "line": "suffragette",
+      "cause": "other",
+      "start": "2026-07-12T22:20:26.242Z",
+      "end": "2026-07-12T23:01:27.332Z",
+      "minutes": 41,
+      "worstSev": 7,
+      "peakAfterMin": 0,
+      "segments": [
+        "Barking Riverside - Gospel Oak Rail Station"
+      ],
+      "reason": "SUFFRAGETTE LINE: Sunday 12 July, the 2324 train from Barking Riverside to Willesden Junction will not run. Customers should use the previous train at 2301"
+    },
+    {
+      "line": "mildmay",
+      "cause": "fire-alert",
+      "start": "2026-07-12T21:51:24.764Z",
+      "end": "2026-07-12T22:56:27.197Z",
+      "minutes": 65,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "segments": [
+        "Richmond (London) Rail Station - Stratford (London) Rail Station",
+        "Clapham Junction Rail Station - Stratford (London) Rail Station",
+        "Stratford (London) Rail Station - Richmond (London) Rail Station",
+        "Stratford (London) Rail Station - Clapham Junction Rail Station"
+      ],
+      "reason": "Mildmay Line: Severe delays due to an earlier fire alert at Imperial Wharf. "
+    },
     {
       "line": "central",
       "cause": "fire-alert",
