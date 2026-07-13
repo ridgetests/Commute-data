@@ -28,11 +28,28 @@ const MIN_INCIDENTS = 20;
 const MIN_BASELINE = 3;
 const MIN_RUNS_READY = 2000;
 
+// THE SHAPE THE COLLECTOR ACTUALLY WRITES.
+//
+// This was the bug: the digest read `e.sev`, the collector writes `e.to`. So every
+// event parsed as severity `undefined` → defaulted to GOOD → no incident ever
+// opened → "122 state changes, 0 incidents". Data was being collected perfectly;
+// the digest simply couldn't read it. Accepts both spellings now, defensively.
 interface Event {
-  t: string; line: string; sev: number; desc?: string;
-  reason?: string; cause?: string; prevSev?: number;
+  t: string;
+  line: string;
+  to?: number;          // new severity  ← what the collector writes
+  from?: number | null; // previous severity
+  sev?: number;         // legacy
+  prevSev?: number;     // legacy
+  desc?: string;
+  reason?: string;
+  cause?: string;
   routes?: string[]; stops?: string[]; segments?: string[];
 }
+
+const sevOf = (e: Event): number => e.to ?? e.sev ?? GOOD;
+const prevOf = (e: Event): number | undefined =>
+  e.from ?? e.prevSev ?? undefined;
 interface Run { line: string; from: string; to: string; dep: string; sec: number; }
 
 const readJsonl = <T,>(dir: string): T[] => {
@@ -92,7 +109,7 @@ function buildIncidents(events: Event[]): Incident[] {
   const done: Incident[] = [];
 
   for (const e of events) {
-    const sev = e.sev ?? GOOD;
+    const sev = sevOf(e);
     const cur = open.get(e.line);
 
     if (sev < GOOD) {
@@ -192,20 +209,24 @@ function forecastDays(need: number, perDay: number): [number, number] | null {
   return [Math.max(1, Math.round(mean - 1.64 * sd)), Math.round(mean + 1.64 * sd)];
 }
 
+// These keys must match the collector's taxonomy EXACTLY, or every cause falls
+// through to its raw slug and the page reads like a database dump.
 const FEATURE: Record<string, string> = {
-  signal: 'Signal failure — “how long will this last?”',
-  fleet: 'Broken-down train — “how long will this last?”',
+  'signal-failure': 'Signal failure — “how long will this last?”',
+  'train-fault': 'Broken-down train — “how long will this last?”',
   'person-on-track': 'Someone on the track — “is it worth waiting?”',
-  trespass: 'Trespass — “is it worth waiting?”',
-  fatality: 'Emergency services — “is it worth waiting?”',
-  weather: 'Weather — “how long will this last?”',
-  staff: 'Staff shortage — “how long will this last?”',
-  power: 'Power failure — “how long will this last?”',
-  fire: 'Fire alert — “how long will this last?”',
-  security: 'Security alert — “how long will this last?”',
-  engineering: 'Engineering work',
-  congestion: 'Knock-on delays',
-  other: 'Unclassified disruption',
+  'trespass': 'Trespass — “is it worth waiting?”',
+  'customer-incident': 'Customer taken ill — “is it worth waiting?”',
+  'staff-shortage': 'Staff shortage — “how long will this last?”',
+  'weather': 'Weather — “how long will this last?”',
+  'fire-alert': 'Fire alert — “is it worth waiting?”',
+  'security-alert': 'Security alert — “is it worth waiting?”',
+  'power-failure': 'Power failure — “how long will this last?”',
+  'congestion': 'Knock-on congestion',
+  'engineering': 'Engineering work',
+  'earlier-incident': 'Knock-on from an earlier incident',
+  'other': 'Unclassified disruption',
+  'none': 'No cause given',
 };
 
 const cleanSegment = (s: string): string =>
@@ -222,7 +243,13 @@ function main() {
   // MODEL. This loses per-incident train counting (which needed the raw), and the
   // page says so rather than quietly showing a worse number.
   const model = loadModel(join(DATA, 'model', 'runtimes.json'));
-  const runs: Run[] = [];   // kept for shape; raw no longer in-repo
+  // Raw movements now live in object storage, not git — so we count them from the
+  // model instead. "Train movements: 0" was misleading: they WERE being collected,
+  // just not into the repo.
+  const modelCells = Object.values(model.cells);
+  const modelObservations = Math.round(
+    modelCells.reduce((a, c) => a + c.n, 0));
+  const runs: Run[] = [];
   const incidents = buildIncidents(events);
 
   const days = new Set([
@@ -258,9 +285,12 @@ function main() {
   }).sort((a, b) => (a.ready === b.ready ? b.have - a.have : a.ready ? -1 : 1));
 
   const runsByLine = new Map<string, number>();
-  for (const r of runs) runsByLine.set(r.line, (runsByLine.get(r.line) ?? 0) + 1);
+  for (const [key, cell] of Object.entries(model.cells)) {
+    const line = key.split('|')[0];
+    runsByLine.set(line, (runsByLine.get(line) ?? 0) + cell.n);
+  }
   const runReadiness = [...runsByLine.entries()]
-    .map(([line, n]) => ({ line, n, ready: n >= MIN_RUNS_READY }))
+    .map(([line, n]) => ({ line, n: Math.round(n), ready: n >= MIN_RUNS_READY }))
     .sort((a, b) => b.n - a.n);
 
   // --- LEAD TIME over TfL — the moat, and the number that could prove us WRONG ---
@@ -358,7 +388,8 @@ function main() {
       lastEvent: events[events.length - 1]?.t ?? null,
       events: events.length,
       incidents: incidents.length,
-      runObservations: runs.length,
+      runObservations: modelObservations,
+      modelCells: modelCells.length,
     },
     storage: {
       eventsBytes: dirBytes('events'),
