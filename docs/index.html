@@ -69,6 +69,10 @@
   .impact b{font-family:'IBM Plex Mono',monospace;color:var(--red);font-weight:500}
   .split{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--grey);margin-top:5px}
   .seg{font-size:12px;color:var(--dim);margin-top:5px}
+  /* TfL's OWN WORDS. Without them you can't audit the cause classifier — you just
+     have to trust that "weather" really meant weather. */
+  .why{font-size:12.5px;color:var(--grey);margin-top:7px;line-height:1.5;
+    padding-left:11px;border-left:2px solid var(--hair);font-style:italic}
 
   table{width:100%;border-collapse:collapse;font-size:13.5px}
   th{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:10px;
@@ -119,9 +123,11 @@
 
   <h2>Recent incidents</h2>
   <p class="note">The trace is the <b>real</b> severity log — timestamped steps, not a
-    drawn curve. <b>Trains lost</b> compares what actually ran against the same line,
-    same hour, same day-type on other days; it's suppressed until there are at least
-    three comparable days.</p>
+    drawn curve. TfL's own words are quoted underneath, so you can <b>audit the cause
+    classifier</b> rather than trust it. <b>Planned closures, engineering work and
+    overnight closures are excluded</b> — they are the timetable, not incidents, and
+    they were previously producing 14-hour "disruptions" on lines that simply don't
+    run at night.</p>
   <div id="incidents"></div>
 
   <h2>By line</h2>
@@ -249,12 +255,13 @@ function render(d){
     ].filter(Boolean).join(' · ');
     return `<div class="inc">
       <div class="inc-h">
-        <div class="inc-l">${i.line}<span class="tag">${CAUSE[i.cause]||i.cause}</span></div>
-        <div class="inc-t">${when(i.start)} · ${i.minutes} min · worst after ${i.peakAfterMin} min</div>
+        <div class="inc-l">${i.lineName || i.line}<span class="tag">${CAUSE[i.cause]||i.cause}</span></div>
+        <div class="inc-t">${when(i.start)} · ${i.minutes} min</div>
       </div>
       <div class="trace">${bars}</div>
       <div class="split">${split}</div>
       ${impact}
+      ${i.reason ? `<div class="why">“${i.reason}”</div>` : ''}
       ${i.segments && i.segments.length ? `<div class="seg">${i.segments.join(' · ')}</div>` : ''}
     </div>`;
   }).join('') : '<div class="empty">No completed incidents yet.</div>';

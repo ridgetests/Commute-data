@@ -24,6 +24,49 @@ import { loadModel, statsFor, percentile, bandOf, type RunModel } from './model'
 
 const DATA = join(process.cwd(), 'data');
 const GOOD = 10;
+
+// TfL SEVERITY CODES — and the bug this fixes.
+//
+//   0 Special Service    1 Closed          2 Suspended
+//   3 Part Suspended     4 Planned Closure 5 Part Closure
+//   6 Severe Delays      7 Reduced Service 8 Bus Service
+//   9 Minor Delays      10 Good Service   20 Service Closed
+//
+// The old code treated ANYTHING below 10 as an incident. So Planned Closure (4),
+// Part Closure (5) and Bus Service (8) — all SCHEDULED ENGINEERING WORK — were
+// logged as incidents. And overnight "Service Closed" on the Waterloo & City,
+// which doesn't run at night or on Sundays, became a 797-MINUTE "DISRUPTION".
+//
+// Planned closures are not incidents. They are the timetable. They were polluting
+// every median on the page.
+//
+// An incident is UNPLANNED disruption to a service that was supposed to be running:
+const DISRUPTION = new Set([2, 3, 6, 7, 9]);
+//   2 Suspended · 3 Part Suspended · 6 Severe Delays · 7 Reduced Service · 9 Minor Delays
+//
+// Everything else — good service, planned closures, overnight closures, bus
+// replacement, station-level notices — is not an incident and CLOSES an open one.
+const isDisruption = (sev: number): boolean => DISRUPTION.has(sev);
+
+// Proper names. "mildmay" and "suffragette" are the 2024 Overground line names —
+// nobody knows them, and a dashboard that makes you Google its own labels has
+// failed. Say what they actually are.
+const LINE_NAME: Record<string, string> = {
+  bakerloo: 'Bakerloo', central: 'Central', circle: 'Circle', district: 'District',
+  'hammersmith-city': 'Hammersmith & City', jubilee: 'Jubilee',
+  metropolitan: 'Metropolitan', northern: 'Northern', piccadilly: 'Piccadilly',
+  victoria: 'Victoria', 'waterloo-city': 'Waterloo & City',
+  dlr: 'DLR', elizabeth: 'Elizabeth line', 'elizabeth-line': 'Elizabeth line',
+  tram: 'Tram',
+  // London Overground, renamed 2024. Nobody calls them this yet.
+  liberty: 'Liberty (Overground · Romford–Upminster)',
+  lioness: 'Lioness (Overground · Euston–Watford)',
+  mildmay: 'Mildmay (Overground · Richmond/Clapham Jn–Stratford)',
+  suffragette: 'Suffragette (Overground · Gospel Oak–Barking Riverside)',
+  weaver: 'Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)',
+  windrush: 'Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)',
+};
+const lineName = (id: string) => LINE_NAME[id] ?? id;
 const MIN_INCIDENTS = 20;
 const MIN_BASELINE = 3;
 const MIN_RUNS_READY = 2000;
@@ -99,7 +142,10 @@ interface Incident {
 }
 
 const bandOf = (sev: number) =>
-  sev <= 4 ? 'suspended' : sev <= 6 ? 'severe' : sev < GOOD ? 'minor' : 'good';
+  sev === 2 || sev === 3 ? 'suspended'
+    : sev === 6 ? 'severe'
+    : sev === 7 || sev === 9 ? 'minor'
+    : 'good';
 
 function buildIncidents(events: Event[]): Incident[] {
   const open = new Map<string, {
@@ -112,7 +158,7 @@ function buildIncidents(events: Event[]): Incident[] {
     const sev = sevOf(e);
     const cur = open.get(e.line);
 
-    if (sev < GOOD) {
+    if (isDisruption(sev)) {
       const segs = e.segments ?? e.routes ?? [];
       if (!cur) {
         open.set(e.line, {
@@ -412,7 +458,7 @@ function main() {
     worstLines: [...new Set(incidents.map((i) => i.line))].map((line) => {
       const list = incidents.filter((i) => i.line === line);
       return {
-        line,
+        line: lineName(line),
         incidents: list.length,
         minorMin: list.reduce((a, b) => a + b.minorMin, 0),
         severeMin: list.reduce((a, b) => a + b.severeMin, 0),
@@ -423,10 +469,15 @@ function main() {
       (b.suspendedMin * 3 + b.severeMin * 2 + b.minorMin)
       - (a.suspendedMin * 3 + a.severeMin * 2 + a.minorMin)),
     recent: incidents.slice(-25).reverse().map((i) => ({
-      line: i.line, cause: i.cause, start: i.start, end: i.end,
+      line: i.line,
+      lineName: lineName(i.line),
+      cause: i.cause,
+      start: i.start, end: i.end,
       minutes: i.minutes,
       minorMin: i.minorMin, severeMin: i.severeMin, suspendedMin: i.suspendedMin,
       worstSev: i.worstSev, peakAfterMin: i.peakAfterMin,
+      // TfL's OWN WORDS. Without this you can't audit the cause classifier — you
+      // just have to trust that "weather" really meant weather. Show the source.
       reason: i.reason,
       impact: trainsLost(runs, i),
       trace: i.trace.slice(0, 60),

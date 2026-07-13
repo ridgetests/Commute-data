@@ -51,6 +51,7 @@ async function main() {
   const deadline = Date.now() + RUN_MINUTES * 60_000;
   let polls = 0, events = 0, runs = 0, plats = 0, crowds = 0;
   const rawRuns: any[] = [];
+  const rawPlatforms: any[] = [];
   // Crowding moves slowly; TfL's own live feed updates every 5 min. Match it.
   const CROWD_EVERY = Number(process.env.CROWD_EVERY_POLLS ?? 5);
 
@@ -84,7 +85,10 @@ async function main() {
       // movements would strangle the repo within months — permanently, because
       // git history can't be deleted your way out of.
       rawRuns.push(...out.runs);
-      write('platforms', out.platforms);
+      // Platform observations are RAW too — thousands a day, append-only, and they
+      // were quietly adding megabytes to git every day. They belong with the run
+      // times: aggregated into the model, raw to object storage.
+      rawPlatforms.push(...out.platforms);
       runs += out.runs.length;
       plats += out.platforms.length;
 
@@ -142,9 +146,10 @@ async function main() {
   console.log(`\nModel: +${added} observations → ${cells} segment×band cells`);
 
   // ---- RAW: cold archive, object storage, never git. ----
-  const key = `raw/runtimes/${new Date().toISOString().slice(0, 13)}.jsonl.gz`;
-  const r = await putRaw(key, rawRuns);
-  console.log(`Raw: ${(r.bytes / 1e6).toFixed(2)} MB → ${r.where}`);
+  const stamp = new Date().toISOString().slice(0, 13);
+  const r = await putRaw(`raw/runtimes/${stamp}.jsonl.gz`, rawRuns);
+  const rp = await putRaw(`raw/platforms/${stamp}.jsonl.gz`, rawPlatforms);
+  console.log(`Raw: ${((r.bytes + rp.bytes) / 1e6).toFixed(2)} MB → ${r.where}`);
   if (!sinkConfigured()) {
     console.log('  ⚠️  Set R2_ACCOUNT_ID / R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY / R2_BUCKET');
     console.log('     to keep the raw archive. The model is safe either way.');
