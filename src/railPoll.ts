@@ -8,6 +8,7 @@ import {
   loadPlatformModel, mergePlatforms, savePlatformModel, predictions, benchmark,
 } from './platformModel';
 import { putRaw, sinkConfigured } from './sink';
+import { refreshBankHolidays } from './calendar';
 
 // Darwin collector. Same shape as the TfL one: a long-running job that polls
 // often and writes only when something CHANGES.
@@ -54,6 +55,9 @@ async function main() {
 
   console.log(`Darwin: watching ${STATIONS.length} stations for ${MINUTES} min ` +
     `at ${INTERVAL / 1000}s cadence.`);
+
+  const bh = await refreshBankHolidays();
+  console.log(`Bank holidays: ${bh.n} known${bh.ok ? '' : ' (from cache — refresh failed)'}`);
 
   const prev = new Map<string, Service>();
   const allChanges: RailChange[] = [];

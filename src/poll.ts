@@ -4,6 +4,7 @@ import { toStates, diff, type LineState } from './events';
 import { RunTracker, toPredictions } from './runtimes';
 import { toCrowdSample, shouldRecord, CROWD_STATIONS, type CrowdRecord } from './crowding';
 import { putRaw, sinkConfigured } from './sink';
+import { refreshBankHolidays } from './calendar';
 import { loadModel, mergeObservations, saveModel, exportForApp } from './model';
 
 // One long-running collector. GitHub Actions caps a job at 6 hours, so we run four
@@ -39,6 +40,11 @@ async function main() {
   const lines: any[] = await get(`/Line/Mode/${MODES}`);
   const lineIds: string[] = lines.map((l) => l.id);
   console.log(`Collecting ${lineIds.length} lines for ${RUN_MINUTES} min at 60s cadence.`);
+
+  // Bank holidays, from gov.uk's official feed. Free, no key. Cached to the repo
+  // so a network blip can't silently mislabel Boxing Day as a normal Friday.
+  const bh = await refreshBankHolidays();
+  console.log(`Bank holidays: ${bh.n} known${bh.ok ? '' : ' (from cache — refresh failed)'}`);
 
   const prev = new Map<string, LineState>();
   const tracker = new RunTracker();

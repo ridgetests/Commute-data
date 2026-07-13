@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { bandOf as calendarBand, dateOf } from './calendar';
 
 // THE MODEL — what the app actually ships.
 //
@@ -42,15 +43,69 @@ export interface RunModel {
   version: 1;
   updatedAt: string;
   bucketSeconds: number;
+  // The London date of the last decay pass. Decay is applied per-day, once —
+  // not per-run, or an hourly job would forget 24× faster than a daily one.
+  decayedOn?: string;
   // key = `${line}|${from}|${to}|${band}`
   cells: Record<string, Cell>;
 }
 
-export const bandOf = (iso: string): string => {
-  const d = new Date(iso);
-  const we = d.getUTCDay() === 0 || d.getUTCDay() === 6;
-  return `${we ? 'we' : 'wd'}-${String(d.getUTCHours()).padStart(2, '0')}`;
-};
+// EXPONENTIAL FORGETTING — the fix for drift, and it's the whole safety story.
+//
+// The timetable changes twice a year. Platforms get resurfaced. Engineering works
+// reroute things for a month. If the model remembers everything equally forever,
+// old evidence quietly poisons the new pattern — and the failure mode is the
+// worst one available: CONFIDENTLY WRONG.
+//
+// Decay fixes it without ever needing to detect WHY things changed. Every day,
+// all counts are multiplied by a factor slightly below 1, so recent evidence
+// steadily outweighs old. When a pattern breaks, the old votes fade, the new ones
+// take over, and — crucially — during the changeover CONFIDENCE COLLAPSES,
+// because the votes are split. So the app goes SILENT rather than wrong.
+//
+// That is the property that matters. A model that degrades to silence is safe.
+// A model that degrades to confident nonsense is a product that gets deleted.
+//
+// HALF_LIFE_DAYS = 28: after four weeks an observation carries half its original
+// weight; after twelve, an eighth. Fast enough to adapt to a timetable change
+// within a few weeks, slow enough not to be blown about by one odd Tuesday.
+export const HALF_LIFE_DAYS = 28;
+const DECAY_PER_DAY = Math.pow(0.5, 1 / HALF_LIFE_DAYS);   // ≈ 0.9755
+
+// Cells nobody has seen in this long are dead — a withdrawn service, a closed
+// segment. Prune them or the model grows forever with ghosts.
+const PRUNE_AFTER_DAYS = 180;
+const PRUNE_BELOW_N = 0.5;
+
+export function applyDecay(model: RunModel, today: string): number {
+  if (model.decayedOn === today) return 0;   // once a day, no matter how many runs
+
+  const last = model.decayedOn ? Date.parse(model.decayedOn) : Date.parse(today);
+  const days = Math.max(0, Math.round((Date.parse(today) - last) / 86400000));
+  model.decayedOn = today;
+  if (days === 0) return 0;
+
+  const factor = Math.pow(DECAY_PER_DAY, days);
+  let pruned = 0;
+
+  for (const [key, cell] of Object.entries(model.cells)) {
+    cell.n *= factor;
+    for (const b of Object.keys(cell.h)) {
+      cell.h[b] *= factor;
+      if (cell.h[b] < 0.01) delete cell.h[b];
+    }
+    if (cell.n < PRUNE_BELOW_N || Object.keys(cell.h).length === 0) {
+      delete model.cells[key];
+      pruned++;
+    }
+  }
+  void PRUNE_AFTER_DAYS;
+  return pruned;
+}
+
+// Day-type × London-local hour. Was getUTCHours(), which shifted every band by
+// an hour for seven months of the year, and filed bank holidays as weekdays.
+export const bandOf = calendarBand;
 
 const bucketOf = (sec: number): number =>
   Math.min(N_BUCKETS - 1, Math.max(0, Math.floor(sec / BUCKET_SECONDS)));
@@ -76,6 +131,8 @@ export interface Observation { line: string; from: string; to: string; dep: stri
 // histogram merge is, which is why this works across jobs, days and machines
 // with no coordination whatsoever.
 export function mergeObservations(model: RunModel, obs: Observation[]): number {
+  // Forget a little, before remembering more.
+  if (obs.length) applyDecay(model, dateOf(obs[0].dep));
   let added = 0;
   for (const o of obs) {
     if (!Number.isFinite(o.sec) || o.sec <= 0) continue;
