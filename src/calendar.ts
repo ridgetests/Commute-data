@@ -26,12 +26,14 @@ const CACHE = join(process.cwd(), 'data', 'reference', 'bank-holidays.json');
 export type DayType = 'wd' | 'we' | 'bh';
 
 // London local time, properly. Intl knows about BST; we don't have to.
-export function londonParts(iso: string | Date): { date: string; hour: number; dow: number } {
+export function londonParts(iso: string | Date): {
+  date: string; hour: number; minute: number; dow: number;
+} {
   const d = typeof iso === 'string' ? new Date(iso) : iso;
   const fmt = new Intl.DateTimeFormat('en-GB', {
     timeZone: 'Europe/London',
     year: 'numeric', month: '2-digit', day: '2-digit',
-    hour: '2-digit', hour12: false, weekday: 'short',
+    hour: '2-digit', minute: '2-digit', hour12: false, weekday: 'short',
   });
   const parts = Object.fromEntries(fmt.formatToParts(d).map((p) => [p.type, p.value]));
   const DOW: Record<string, number> = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 };
@@ -39,6 +41,7 @@ export function londonParts(iso: string | Date): { date: string; hour: number; d
     date: `${parts.year}-${parts.month}-${parts.day}`,
     // Intl renders midnight as "24" in some locales — normalise it.
     hour: Number(parts.hour) % 24,
+    minute: Number(parts.minute),
     dow: DOW[parts.weekday as string] ?? 0,
   };
 }
@@ -92,3 +95,13 @@ export function bandOf(iso: string | Date): string {
 }
 
 export const dateOf = (iso: string | Date): string => londonParts(iso).date;
+
+
+// Minutes-of-day, LONDON LOCAL. Needed because Darwin's std ("23:22") is London
+// time, while GitHub Actions runners are UTC — so naive setHours() put every
+// departure an hour later than it really was in summer, and inflated every
+// measured lead time by exactly 60 minutes.
+export const londonMinutesOfDay = (iso: string | Date): number => {
+  const p = londonParts(iso);
+  return p.hour * 60 + p.minute;
+};

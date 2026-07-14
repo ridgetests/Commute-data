@@ -19,12 +19,14 @@
 // evidence-based rather than optimistic.
 //
 // ENDPOINT (the RDM docs are, by community consensus, poor — so, precisely):
-//   GET https://api1.raildata.org.uk/1010-live-departure-board-dep1_2/LDBWS/api/20220120/GetDepBoardWithDetails/{CRS}
+//   GET https://api1.raildata.org.uk/1010-live-departure-board-dep/LDBWS/api/20220120/GetDepBoardWithDetails/{CRS}
 //   Header: x-apikey: <CONSUMER KEY>   ← the consumer KEY, not the secret.
 //   The key lives on the product's "Specification" tab in the Marketplace.
 
+import { londonMinutesOfDay } from './calendar';
+
 export const RAIL_BASE =
-  'https://api1.raildata.org.uk/1010-live-departure-board-dep1_2/LDBWS/api/20220120';
+  'https://api1.raildata.org.uk/1010-live-departure-board-dep/LDBWS/api/20220120';
 
 // London termini + the big commuter interchanges. These are where people get
 // stranded, and where the platform question actually matters.
@@ -117,13 +119,20 @@ export interface RailChange {
   minsBeforeDeparture?: number | null;
 }
 
+// How many minutes until this train departs.
+//
+// THE BUG THIS FIXES: setHours() uses the RUNNER's timezone, and GitHub Actions
+// runs in UTC. But Darwin's `std` is LONDON local. In British Summer Time, 23:22
+// London is 22:22 UTC — so building the departure with UTC hours put it an hour
+// LATER than it really was, and inflated every measured Darwin lead time by
+// exactly 60 minutes. It reported 73 minutes. The truth was 13.
 export function minsUntil(std: string, now: Date): number | null {
   if (!/^\d{2}:\d{2}$/.test(std)) return null;
   const [h, m] = std.split(':').map(Number);
-  const dep = new Date(now);
-  dep.setHours(h, m, 0, 0);
-  let diff = (dep.getTime() - now.getTime()) / 60000;
-  if (diff < -720) diff += 1440;
+  const depMin = h * 60 + m;
+  const nowMin = londonMinutesOfDay(now);
+  let diff = depMin - nowMin;
+  if (diff < -720) diff += 1440;   // over midnight
   if (diff > 720) diff -= 1440;
   return Math.round(diff);
 }
