@@ -5,6 +5,9 @@ import { RunTracker, toPredictions } from './runtimes';
 import { toCrowdSample, shouldRecord, CROWD_STATIONS, type CrowdRecord } from './crowding';
 import { putRaw, sinkConfigured } from './sink';
 import { refreshBankHolidays } from './calendar';
+import { LIFTS_V2, LIFTS_V1, parseLifts, diffLifts, type LiftOutage } from './lifts';
+import { loadHeadwayModel, mergeHeadways, saveHeadwayModel,
+  exportForApp as exportHeadways } from './headway';
 import { loadModel, mergeObservations, saveModel, exportForApp } from './model';
 
 // One long-running collector. GitHub Actions caps a job at 6 hours, so we run four
@@ -52,6 +55,14 @@ async function main() {
   let polls = 0, events = 0, runs = 0, plats = 0, crowds = 0;
   const rawRuns: any[] = [];
   const rawPlatforms: any[] = [];
+  // LIFTS. A step-free route is worthless if the lift is broken — that's not a
+  // slower journey, it's a person stranded at the bottom of a staircase. And lift
+  // OUTAGE HISTORY is unpublished and ephemeral: which lifts break, how often,
+  // for how long, exists nowhere. Same clock as platforms.
+  const prevLifts = new Map<string, LiftOutage>();
+  let liftEvents = 0;
+  let liftFailures = 0;
+  const LIFT_EVERY = Number(process.env.LIFT_EVERY_POLLS ?? 5);
   // Crowding moves slowly; TfL's own live feed updates every 5 min. Match it.
   const CROWD_EVERY = Number(process.env.CROWD_EVERY_POLLS ?? 5);
 
@@ -119,6 +130,24 @@ async function main() {
         if (rows.length) { write('crowding', rows); crowds += rows.length; }
       }
 
+      // Lifts, every ~5 min. The endpoint is genuinely flaky — TfL took it offline
+      // for a spell in 2025, and ~8% of calls fail. A FAILED CALL IS NOT "ALL
+      // LIFTS WORKING", so we count failures and never infer health from silence.
+      if (polls % LIFT_EVERY === 0) {
+        try {
+          let raw: any;
+          try { raw = await get(LIFTS_V2.replace('https://api.tfl.gov.uk', '')); }
+          catch { raw = await get(LIFTS_V1.replace('https://api.tfl.gov.uk', '')); }
+          const outages = parseLifts(raw);
+          const evts = diffLifts(prevLifts, outages, new Date());
+          if (evts.length) { write('lifts', evts); liftEvents += evts.length; }
+          prevLifts.clear();
+          for (const o of outages) prevLifts.set(`${o.naptan || o.station}~${o.lift}`, o);
+        } catch {
+          liftFailures++;
+        }
+      }
+
       polls++;
       if (polls % 30 === 0) {
         console.log(`[${polls} polls] ${events} events · ${runs} run times · ` +
@@ -144,6 +173,20 @@ async function main() {
 
   const cells = Object.keys(model.cells).length;
   console.log(`\nModel: +${added} observations → ${cells} segment×band cells`);
+
+  // ---- HEADWAY MODEL: the "three-train wait". Derived from the SAME run
+  //      observations — no new collection, and it works on data already banked.
+  const hwPath = join(process.cwd(), 'data', 'model', 'headways.json');
+  const hw = loadHeadwayModel(hwPath);
+  const hwAdded = mergeHeadways(hw, rawRuns);
+  saveHeadwayModel(hwPath, hw);
+  writeFileSync(
+    join(process.cwd(), 'data', 'model', 'app-headways.json'),
+    JSON.stringify(exportHeadways(hw)),
+  );
+  console.log(`Headways: +${hwAdded} gaps → ${Object.keys(hw.cells).length} cells`);
+  console.log(`Lifts: ${liftEvents} change(s)` +
+    (liftFailures ? ` · ⚠️ ${liftFailures} failed calls (endpoint is flaky)` : ''));
 
   // ---- RAW: cold archive, object storage, never git. ----
   const stamp = new Date().toISOString().slice(0, 13);

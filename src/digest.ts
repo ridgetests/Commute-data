@@ -1,6 +1,9 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadModel, statsFor, percentile, bandOf, type RunModel } from './model';
+import { loadModel, statsFor, percentile, type RunModel } from './model';
+import { classify, isPlanned } from './taxonomy';
+import { loadPlatformModel, predictions, benchmark } from './platformModel';
+import { loadHeadwayModel, percentile as hwPercentile } from './headway';
 
 // THE PIT WALL.
 //
@@ -130,6 +133,14 @@ const quantile = (xs: number[], q: number): number => {
 
 interface Incident {
   line: string; cause: string; start: string; end: string; minutes: number;
+  // PLANNED disruption — pre-announced engineering, an all-day reduced service.
+  // The 797 minutes on the Elizabeth line was CORRECT: it really was disrupted all
+  // day. But taking a median across a pre-announced all-day reduced service AND a
+  // 30-minute signal failure compares unlike things. One is a surprise you must
+  // react to; the other is a fact you could have planned around. The app only
+  // cares about the first kind — so planned disruption is shown, but kept OUT of
+  // the recovery medians.
+  planned: boolean;
   // SEVERITY-SPLIT. "80 minutes disrupted" is a bad metric — it treats a slightly
   // late Circle line the same as a suspended Northern line. These say what
   // actually happened.
@@ -162,7 +173,15 @@ function buildIncidents(events: Event[]): Incident[] {
       const segs = e.segments ?? e.routes ?? [];
       if (!cur) {
         open.set(e.line, {
-          line: e.line, cause: e.cause ?? 'other', start: e.t,
+          // RE-CLASSIFY FROM THE SOURCE TEXT, ignoring the stored cause.
+          //
+          // The collector's old classifier matched "ice" inside "service", so
+          // nearly every historical event is labelled 'weather'. But TfL's actual
+          // words ARE stored on every event — so the whole backlog can be repaired
+          // retrospectively, just by classifying again from the reason. Nothing is
+          // lost. The stored cause is simply ignored.
+          cause: classify(e.reason) ?? 'other',
+          start: e.t,
           worstSev: sev, worstAt: e.t, segments: [...segs], reason: e.reason,
           trace: [{ t: e.t, sev }],
         });
@@ -170,7 +189,10 @@ function buildIncidents(events: Event[]): Incident[] {
         cur.trace.push({ t: e.t, sev });
         if (sev < cur.worstSev) { cur.worstSev = sev; cur.worstAt = e.t; }
         for (const s of segs) if (!cur.segments.includes(s)) cur.segments.push(s);
-        if (cur.cause === 'other' && e.cause && e.cause !== 'other') cur.cause = e.cause;
+        if ((cur.cause === 'other' || cur.cause === 'none') && e.reason) {
+          const c = classify(e.reason);
+          if (c !== 'other' && c !== 'none') cur.cause = c;
+        }
         if (!cur.reason && e.reason) cur.reason = e.reason;
       }
     } else if (cur) {
@@ -188,6 +210,7 @@ function buildIncidents(events: Event[]): Incident[] {
 
       done.push({
         line: cur.line, cause: cur.cause, start: cur.start, end: e.t,
+        planned: isPlanned(cur.reason),
         minutes: Math.round((Date.parse(e.t) - startMs) / 60000),
         minorMin: Math.round(minorMin),
         severeMin: Math.round(severeMin),
@@ -305,8 +328,12 @@ function main() {
   const nDays = Math.max(1, days.size);
 
   // --- READINESS: the hero ---
+  // Recovery statistics use UNPLANNED incidents only. A pre-announced all-day
+  // reduced service tells you nothing about how long a signal failure lasts.
+  const unplanned = incidents.filter((i) => !i.planned);
+
   const byCause = new Map<string, Incident[]>();
-  for (const i of incidents) {
+  for (const i of unplanned) {
     const l = byCause.get(i.cause) ?? [];
     l.push(i);
     byCause.set(i.cause, l);
@@ -426,14 +453,81 @@ function main() {
     }
   }
 
+  // ---- NATIONAL RAIL: the platform prediction, and the number to beat ----
+  //
+  // The whole feature in one line: Darwin only confirms the platform a few
+  // minutes before departure. If we can say it — confidently — twenty minutes
+  // out, that's the difference between standing in the right place and running.
+  //
+  // This panel exists because the collector was working perfectly for five hours
+  // and the dashboard wasn't looking at it.
+  const platModel = loadPlatformModel(join(DATA, 'model', 'rail-platforms.json'));
+  const preds = predictions(platModel, 5);
+  const bench = benchmark(platModel, 5);
+  const platCells = Object.keys(platModel.cells).length;
+
+  // Readiness: a service needs ~5 sightings before a platform is a pattern rather
+  // than an anecdote. How many are there, and how long until the rest arrive?
+  const CONFIDENT = 0.8;
+  const rail = {
+    servicesSeen: platCells,
+    modelled: preds.length,                                   // ≥5 observations
+    confident: preds.filter((p) => p.confidence >= CONFIDENT).length,
+    darwinLeadMin: bench.darwinMedianLeadMin,
+    ready: preds.filter((p) => p.confidence >= CONFIDENT).length >= 50,
+    examples: preds
+      .filter((p) => p.confidence >= CONFIDENT)
+      .slice(0, 8)
+      .map((p) => ({
+        crs: p.crs, std: p.std, dest: p.destination,
+        platform: p.platform, confidence: p.confidence, n: p.n,
+      })),
+  };
+
+  // ---- HEADWAYS: the three-train wait ----
+  const hwModel = loadHeadwayModel(join(DATA, 'model', 'headways.json'));
+  const hwCells = Object.entries(hwModel.cells).filter(([, c]) => c.n >= 20);
+  const headway = {
+    cells: Object.keys(hwModel.cells).length,
+    usable: hwCells.length,
+    ready: hwCells.length >= 100,
+    examples: hwCells.slice(0, 6).map(([k, c]) => {
+      const [line, station, , band] = k.split('|');
+      return {
+        line, station, band,
+        n: Math.round(c.n),
+        p50: hwPercentile(c, 0.5),
+        p90: hwPercentile(c, 0.9),
+      };
+    }),
+  };
+
+  // ---- NATIONAL RAIL: the platform model ----
+  //
+  // THE HEADLINE IS THE LEAD TIME, not the number of predictions.
+  //
+  // Darwin itself announces the platform only a few minutes before departure.
+  // That's the number to beat. If our model can say it with confidence TWENTY
+  // minutes out, we've given the traveller sixteen minutes of standing in the
+  // right place — which is the entire feature, and most of what Realtime Trains
+  // does with a signalling feed we don't have.
+  const railModel = loadPlatformModel(join(DATA, 'model', 'rail-platforms.json'));
+  const railPreds = predictions(railModel, 5);
+  const railBench = benchmark(railModel, 5);
+  const railCells = Object.keys(railModel.cells).length;
+
   const summary = {
     generatedAt: new Date().toISOString(),
+    rail,
+    headway,
     coverage: {
       days: nDays,
       firstEvent: events[0]?.t ?? null,
       lastEvent: events[events.length - 1]?.t ?? null,
       events: events.length,
       incidents: incidents.length,
+      unplanned: unplanned.length,
+      planned: incidents.length - unplanned.length,
       runObservations: modelObservations,
       modelCells: modelCells.length,
     },
@@ -445,6 +539,19 @@ function main() {
       perDayBytes: Math.round(
         (dirBytes('events') + dirBytes('runtimes')
           + dirBytes('platforms') + dirBytes('crowding')) / nDays),
+    },
+    rail: {
+      servicesTracked: railCells,
+      modelled: railBench.servicesModelled,     // enough observations to predict
+      confident: railBench.confident,           // ≥80% confidence — what we'd SHOW
+      darwinLeadMin: railBench.darwinMedianLeadMin,
+      // The best examples, so you can eyeball whether it's sane.
+      samples: railPreds.slice(0, 12).map((p) => ({
+        crs: p.crs, std: p.std, destination: p.destination,
+        platform: p.platform,
+        confidence: p.confidence,
+        n: p.n,
+      })),
     },
     readiness,
     runReadiness,
@@ -472,6 +579,7 @@ function main() {
       line: i.line,
       lineName: lineName(i.line),
       cause: i.cause,
+      planned: i.planned,
       start: i.start, end: i.end,
       minutes: i.minutes,
       minorMin: i.minorMin, severeMin: i.severeMin, suspendedMin: i.suspendedMin,
@@ -494,6 +602,20 @@ function main() {
   for (const r of readiness.slice(0, 8)) {
     console.log(`  ${r.ready ? '✅' : '⚠️'} ${r.cause.padEnd(17)} ${r.have}/${r.need}` +
       `${r.etaDays && !r.ready ? `  → ready in ~${r.etaDays[0]}–${r.etaDays[1]} days` : ''}`);
+  }
+  console.log(`Rail: ${rail.servicesSeen} services seen · ${rail.modelled} modelled · ` +
+    `${rail.confident} confident` +
+    (rail.darwinLeadMin !== null
+      ? ` · Darwin announces ~${rail.darwinLeadMin} min out`
+      : ''));
+  console.log(`Headways: ${headway.usable} usable cells of ${headway.cells}`);
+  if (railCells) {
+    console.log(`  🚆 rail: ${railBench.confident}/${railBench.servicesModelled} services ` +
+      `predictable at ≥80% (from ${railCells} tracked)`);
+    if (railBench.darwinMedianLeadMin !== null) {
+      console.log(`     Darwin announces the platform ~${railBench.darwinMedianLeadMin} min ` +
+        `before departure — that's the number to beat.`);
+    }
   }
   if (summary.leadTime.medianMinutes !== null) {
     console.log(`  📡 lead time over TfL: ~${summary.leadTime.medianMinutes} min ` +

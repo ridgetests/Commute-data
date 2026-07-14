@@ -1,39 +1,137 @@
 {
-  "generatedAt": "2026-07-14T04:46:32.951Z",
+  "generatedAt": "2026-07-14T05:15:40.647Z",
+  "rail": {
+    "servicesTracked": 463,
+    "modelled": 45,
+    "confident": 43,
+    "darwinLeadMin": 73,
+    "samples": [
+      {
+        "crs": "PAD",
+        "std": "23:22",
+        "destination": "Shenfield",
+        "platform": "A",
+        "confidence": 1,
+        "n": 7
+      },
+      {
+        "crs": "STP",
+        "std": "22:38",
+        "destination": "Bedford",
+        "platform": "B",
+        "confidence": 1,
+        "n": 15
+      },
+      {
+        "crs": "STP",
+        "std": "22:54",
+        "destination": "Bedford",
+        "platform": "B",
+        "confidence": 1,
+        "n": 7
+      },
+      {
+        "crs": "STP",
+        "std": "23:12",
+        "destination": "Sutton (London)",
+        "platform": "A",
+        "confidence": 1,
+        "n": 16
+      },
+      {
+        "crs": "LBG",
+        "std": "23:05",
+        "destination": "Brighton",
+        "platform": "4",
+        "confidence": 1,
+        "n": 5
+      },
+      {
+        "crs": "BFR",
+        "std": "22:26",
+        "destination": "Bedford",
+        "platform": "2",
+        "confidence": 1,
+        "n": 13
+      },
+      {
+        "crs": "BFR",
+        "std": "22:45",
+        "destination": "Bedford",
+        "platform": "2",
+        "confidence": 1,
+        "n": 6
+      },
+      {
+        "crs": "BFR",
+        "std": "23:12",
+        "destination": "Bedford",
+        "platform": "2",
+        "confidence": 1,
+        "n": 5
+      },
+      {
+        "crs": "ECR",
+        "std": "23:12",
+        "destination": "London Victoria",
+        "platform": "1",
+        "confidence": 1,
+        "n": 6
+      },
+      {
+        "crs": "ECR",
+        "std": "23:15",
+        "destination": "London Victoria",
+        "platform": "4",
+        "confidence": 1,
+        "n": 12
+      },
+      {
+        "crs": "SRA",
+        "std": "23:11",
+        "destination": "London Paddington",
+        "platform": "5",
+        "confidence": 1,
+        "n": 6
+      },
+      {
+        "crs": "STP",
+        "std": "23:15",
+        "destination": "Horsham",
+        "platform": "A",
+        "confidence": 1,
+        "n": 12
+      }
+    ]
+  },
+  "headway": {
+    "cells": 0,
+    "usable": 0,
+    "ready": false,
+    "examples": []
+  },
   "coverage": {
     "days": 3,
     "firstEvent": "2026-07-12T10:30:30.915Z",
     "lastEvent": "2026-07-14T04:28:32.318Z",
     "events": 199,
     "incidents": 9,
+    "unplanned": 8,
+    "planned": 1,
     "runObservations": 0,
     "modelCells": 0
   },
   "storage": {
     "eventsBytes": 71119,
-    "runtimesBytes": 2959483,
-    "platformsBytes": 0,
+    "runtimesBytes": 10136947,
+    "platformsBytes": 1027813,
     "crowdingBytes": 512455,
-    "perDayBytes": 1181019
+    "perDayBytes": 3916111
   },
   "readiness": [
     {
-      "cause": "weather",
-      "feature": "Weather — “how long will this last?”",
-      "have": 4,
-      "need": 20,
-      "perDay": 1.33,
-      "ready": false,
-      "etaDays": [
-        7,
-        17
-      ],
-      "medianMin": 435,
-      "p90Min": 797
-    },
-    {
-      "cause": "other",
-      "feature": "Unclassified disruption",
+      "cause": "train-fault",
+      "feature": "Broken-down train — “how long will this last?”",
       "have": 3,
       "need": 20,
       "perDay": 1,
@@ -42,8 +140,8 @@
         10,
         24
       ],
-      "medianMin": 68,
-      "p90Min": 80
+      "medianMin": 110,
+      "p90Min": 754
     },
     {
       "cause": "fire-alert",
@@ -58,6 +156,48 @@
       ],
       "medianMin": 58,
       "p90Min": 65
+    },
+    {
+      "cause": "other",
+      "feature": "Unclassified disruption",
+      "have": 1,
+      "need": 20,
+      "perDay": 0.33,
+      "ready": false,
+      "etaDays": [
+        36,
+        78
+      ],
+      "medianMin": 41,
+      "p90Min": 41
+    },
+    {
+      "cause": "obstruction",
+      "feature": "obstruction",
+      "have": 1,
+      "need": 20,
+      "perDay": 0.33,
+      "ready": false,
+      "etaDays": [
+        36,
+        78
+      ],
+      "medianMin": 116,
+      "p90Min": 116
+    },
+    {
+      "cause": "signal-failure",
+      "feature": "Signal failure — “how long will this last?”",
+      "have": 1,
+      "need": 20,
+      "perDay": 0.33,
+      "ready": false,
+      "etaDays": [
+        36,
+        78
+      ],
+      "medianMin": 68,
+      "p90Min": 68
     }
   ],
   "runReadiness": [],
@@ -70,75 +210,17 @@
   },
   "worstLines": [
     {
-      "line": "Elizabeth line",
-      "incidents": 1,
-      "minorMin": 797,
-      "severeMin": 0,
+      "incidents": 9,
+      "minorMin": 1878,
+      "severeMin": 204,
       "suspendedMin": 0,
-      "medianMin": 797
-    },
-    {
-      "line": "Metropolitan",
-      "incidents": 1,
-      "minorMin": 754,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "medianMin": 754
-    },
-    {
-      "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
-      "incidents": 1,
-      "minorMin": 0,
-      "severeMin": 116,
-      "suspendedMin": 0,
-      "medianMin": 116
-    },
-    {
-      "line": "Circle",
-      "incidents": 2,
-      "minorMin": 190,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "medianMin": 95
-    },
-    {
-      "line": "Victoria",
-      "incidents": 1,
-      "minorMin": 0,
-      "severeMin": 68,
-      "suspendedMin": 0,
-      "medianMin": 68
-    },
-    {
-      "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
-      "incidents": 1,
-      "minorMin": 45,
-      "severeMin": 20,
-      "suspendedMin": 0,
-      "medianMin": 65
-    },
-    {
-      "line": "Central",
-      "incidents": 1,
-      "minorMin": 51,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "medianMin": 51
-    },
-    {
-      "line": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
-      "incidents": 1,
-      "minorMin": 41,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "medianMin": 41
+      "medianMin": 80
     }
   ],
   "recent": [
     {
-      "line": "victoria",
-      "lineName": "Victoria",
-      "cause": "other",
+      "cause": "signal-failure",
+      "planned": false,
       "start": "2026-07-13T23:06:21.440Z",
       "end": "2026-07-14T00:14:24.065Z",
       "minutes": 68,
@@ -170,9 +252,8 @@
       ]
     },
     {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "weather",
+      "cause": "train-fault",
+      "planned": false,
       "start": "2026-07-13T11:40:01.118Z",
       "end": "2026-07-14T00:14:24.065Z",
       "minutes": 754,
@@ -209,9 +290,8 @@
       ]
     },
     {
-      "line": "weaver",
-      "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
-      "cause": "weather",
+      "cause": "obstruction",
+      "planned": false,
       "start": "2026-07-12T21:51:24.764Z",
       "end": "2026-07-12T23:47:29.192Z",
       "minutes": 116,
@@ -244,9 +324,8 @@
       ]
     },
     {
-      "line": "elizabeth",
-      "lineName": "Elizabeth line",
-      "cause": "weather",
+      "cause": "fire-alert",
+      "planned": true,
       "start": "2026-07-12T10:30:30.915Z",
       "end": "2026-07-12T23:47:29.192Z",
       "minutes": 797,
@@ -283,9 +362,8 @@
       ]
     },
     {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "weather",
+      "cause": "train-fault",
+      "planned": false,
       "start": "2026-07-12T21:55:25.087Z",
       "end": "2026-07-12T23:45:29.178Z",
       "minutes": 110,
@@ -317,9 +395,8 @@
       ]
     },
     {
-      "line": "suffragette",
-      "lineName": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
       "cause": "other",
+      "planned": false,
       "start": "2026-07-12T22:20:26.242Z",
       "end": "2026-07-12T23:01:27.332Z",
       "minutes": 41,
@@ -350,9 +427,8 @@
       ]
     },
     {
-      "line": "mildmay",
-      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
       "cause": "fire-alert",
+      "planned": false,
       "start": "2026-07-12T21:51:24.764Z",
       "end": "2026-07-12T22:56:27.197Z",
       "minutes": 65,
@@ -389,9 +465,8 @@
       ]
     },
     {
-      "line": "central",
-      "lineName": "Central",
       "cause": "fire-alert",
+      "planned": false,
       "start": "2026-07-12T13:12:36.704Z",
       "end": "2026-07-12T14:03:38.617Z",
       "minutes": 51,
@@ -424,9 +499,8 @@
       ]
     },
     {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "other",
+      "cause": "train-fault",
+      "planned": false,
       "start": "2026-07-12T10:30:30.915Z",
       "end": "2026-07-12T11:50:34.528Z",
       "minutes": 80,

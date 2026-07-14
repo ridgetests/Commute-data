@@ -62,6 +62,8 @@
   .inc-l{font-size:15px}
   .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;padding:2px 8px;
     border-radius:99px;border:1px solid var(--hair);color:var(--grey);margin-left:7px}
+  /* Pre-announced disruption. Real, but a different animal from a surprise. */
+  .tag.planned{border-color:rgba(91,179,232,.3);color:var(--blue)}
   .inc-t{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--dim)}
   .trace{display:flex;gap:2px;height:22px;align-items:flex-end;margin:11px 0 8px}
   .trace div{border-radius:1px 1px 0 0}
@@ -121,6 +123,15 @@
     than we think.</p>
   <div id="lead"></div>
 
+  <h2>National Rail — can we beat the departure board?</h2>
+  <p class="note">Darwin announces the platform only a few minutes before departure.
+    <b>That's the number to beat.</b> If we can say it with confidence twenty minutes out,
+    we've given someone sixteen minutes of standing in the right place — which is most of
+    what Realtime Trains does with a signalling feed we don't have, from history nobody
+    else bothers to keep. Platform allocations are <b>ephemeral and unpublished</b>: HSP
+    keeps punctuality, not platforms.</p>
+  <div id="rail"></div>
+
   <h2>Recent incidents</h2>
   <p class="note">The trace is the <b>real</b> severity log — timestamped steps, not a
     drawn curve. TfL's own words are quoted underneath, so you can <b>audit the cause
@@ -148,10 +159,16 @@
 
 <script>
 const $ = (i) => document.getElementById(i);
-const CAUSE = {signal:'Signal failure',fleet:'Broken-down train','person-on-track':'Someone on the track',
-  trespass:'Trespass',fatality:'Emergency services',weather:'Weather',staff:'Staff shortage',
-  power:'Power failure',fire:'Fire alert',security:'Security alert',engineering:'Engineering work',
-  congestion:'Knock-on delays',other:'Unclassified'};
+const CAUSE = {
+  'signal-failure':'Signal failure', 'train-fault':'Broken-down train',
+  'person-on-track':'Someone on the track', trespass:'Trespass',
+  fatality:'Emergency services', 'customer-incident':'Customer taken ill',
+  'staff-shortage':'Staff shortage', weather:'Weather', 'fire-alert':'Fire alert',
+  'security-alert':'Security alert', 'power-failure':'Power failure',
+  obstruction:'Obstruction on the track', congestion:'Knock-on delays',
+  engineering:'Engineering work', 'earlier-incident':'Earlier incident',
+  other:'Unclassified', none:'No cause given',
+};
 const sevCol = (s) => s<=4 ? 'var(--red)' : s<=6 ? 'var(--amber)' : s<10 ? 'rgba(233,162,59,.5)' : 'var(--green)';
 const sevH   = (s) => s<=4 ? 100 : s<=6 ? 72 : s<10 ? 45 : 22;
 const when = (iso) => new Date(iso).toLocaleString('en-GB',
@@ -166,6 +183,8 @@ function render(d){
   const c = d.coverage;
   $('cov').innerHTML = [
     ['Days', c.days], ['Incidents', c.incidents],
+    ['Unplanned', c.unplanned ?? c.incidents],
+    ['Planned', c.planned ?? 0],
     ['State changes', c.events.toLocaleString()],
     ['Train movements', (c.runObservations||0).toLocaleString()],
   ].map(([k,v])=>`<div>${k} <b>${v}</b></div>`).join('');
@@ -232,6 +251,32 @@ function render(d){
         Needs enough train-movement history to know what "normal" looks like on a line
         before we can spot it breaking.</div>`;
 
+  // ---- RAIL ----
+  const rail = d.rail;
+  $('rail').innerHTML = (rail && rail.servicesTracked)
+    ? `<div class="lead">
+        <div class="big">${rail.darwinLeadMin ?? '—'}<small>min — how early DARWIN says it</small></div>
+        <div class="rd-s" style="margin-top:14px">
+          <b style="color:var(--off)">${rail.confident}</b> of ${rail.modelled} services
+          predictable at ≥80% confidence · ${rail.servicesTracked.toLocaleString()} tracked
+          ${rail.modelled < 20
+            ? '<br><b style="color:var(--amber)">Early days — needs about a week before the confidence figures mean much.</b>'
+            : ''}
+        </div>
+        ${rail.samples && rail.samples.length ? `
+          <table style="margin-top:16px">
+            <tr><th>Service</th><th>Platform</th><th>Confidence</th><th>Seen</th></tr>
+            ${rail.samples.map(s => `<tr>
+              <td>${s.crs} ${s.std} → ${s.destination}</td>
+              <td class="n" style="color:var(--blue)">${s.platform}</td>
+              <td class="n">${Math.round(s.confidence*100)}%</td>
+              <td class="n">${s.n}×</td>
+            </tr>`).join('')}
+          </table>` : ''}
+      </div>`
+    : `<div class="empty">No rail data yet.<br>
+        Run the <b>Collect rail</b> workflow — it needs a full ~5.5 hour job to write the model.</div>`;
+
   // ---- INCIDENTS ----
   const rec = d.recent || [];
   $('incidents').innerHTML = rec.length ? rec.map(i=>{
@@ -255,7 +300,8 @@ function render(d){
     ].filter(Boolean).join(' · ');
     return `<div class="inc">
       <div class="inc-h">
-        <div class="inc-l">${i.lineName || i.line}<span class="tag">${CAUSE[i.cause]||i.cause}</span></div>
+        <div class="inc-l">${i.lineName || i.line}<span class="tag">${CAUSE[i.cause]||i.cause}</span>${
+          i.planned ? '<span class="tag planned">planned</span>' : ''}</div>
         <div class="inc-t">${when(i.start)} · ${i.minutes} min</div>
       </div>
       <div class="trace">${bars}</div>

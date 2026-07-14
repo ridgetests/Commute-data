@@ -1,3 +1,6 @@
+import { classify, type Cause } from './taxonomy';
+export { classify };
+export type { Cause };
 // Status → EVENTS, not snapshots.
 //
 // The old archiver wrote a poll every 15 min. Two problems: a 12-minute delay was
@@ -13,34 +16,17 @@
 
 export type Severity = number; // TfL statusSeverity: 10 = good, lower = worse
 
-export type Cause =
-  | 'signal-failure' | 'train-fault' | 'person-on-track' | 'trespass'
-  | 'customer-incident' | 'staff-shortage' | 'weather' | 'fire-alert'
-  | 'security-alert' | 'power-failure' | 'congestion' | 'engineering'
-  | 'earlier-incident' | 'other' | 'none';
 
 // Classify from TfL's free-text description. Ordered — first match wins, so more
 // specific patterns come first.
-const CAUSE_PATTERNS: [Cause, RegExp][] = [
-  ['signal-failure', /signal(ling)?\s+(failure|fault|problem)/i],
-  ['power-failure', /power\s+(failure|supply|fault)/i],
-  ['train-fault', /(faulty|defective|broken[- ]down)\s+train|train\s+fault/i],
-  ['person-on-track', /person\s+(on|under)\s+the?\s*track|casualty\s+on\s+the\s+track/i],
-  ['trespass', /trespass/i],
-  ['fire-alert', /fire\s+(alert|alarm)/i],
-  ['security-alert', /(security\s+alert|police|suspicious)/i],
-  ['customer-incident', /(customer\s+incident|ill\s+customer|passenger\s+taken\s+ill)/i],
-  ['staff-shortage', /(shortage\s+of\s+(train\s+)?(operators|staff)|staff\s+shortage|industrial\s+action|strike)/i],
-  ['weather', /(weather|flood|ice|snow|lightning|heat|leaves\s+on\s+the\s+line|high\s+winds)/i],
-  ['engineering', /(engineering\s+work|planned\s+(closure|work)|improvement\s+work)/i],
-  ['congestion', /congestion|service\s+recovery/i],
-  ['earlier-incident', /earlier\s+(incident|signal|problem)/i],
-];
 
 export function classifyCause(text?: string): Cause {
-  if (!text || !text.trim()) return 'none';
-  for (const [cause, re] of CAUSE_PATTERNS) if (re.test(text)) return cause;
-  return 'other';
+  // Delegates to the ONE taxonomy. There used to be a second copy here, whose
+  // weather regex had no word boundaries — so "ice" matched inside "serv-ICE",
+  // and since every TfL message contains the word "service", almost EVERY
+  // incident was classified as weather. One copy now, and it's audited on the
+  // dashboard against TfL's own words.
+  return classify(text);
 }
 
 // Pull "between X and Y" segment mentions out of the description. TfL's structured
