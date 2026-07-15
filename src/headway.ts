@@ -96,6 +96,7 @@ export function mergeHeadways(model: HeadwayModel, obs: Observation[]): number {
   const groups = new Map<string, Observation[]>();
   for (const o of obs) {
     const k = `${o.line}|${o.from}|${o.to}`;
+    if (!o.dep) continue;
     (groups.get(k) ?? groups.set(k, []).get(k)!).push(o);
   }
 
