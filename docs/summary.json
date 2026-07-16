@@ -1,108 +1,11 @@
 {
-  "generatedAt": "2026-07-15T14:51:17.271Z",
+  "generatedAt": "2026-07-16T02:12:14.018Z",
   "rail": {
-    "servicesTracked": 463,
-    "modelled": 45,
-    "confident": 43,
-    "darwinLeadMin": 73,
-    "samples": [
-      {
-        "crs": "PAD",
-        "std": "23:22",
-        "destination": "Shenfield",
-        "platform": "A",
-        "confidence": 1,
-        "n": 7
-      },
-      {
-        "crs": "STP",
-        "std": "22:38",
-        "destination": "Bedford",
-        "platform": "B",
-        "confidence": 1,
-        "n": 15
-      },
-      {
-        "crs": "STP",
-        "std": "22:54",
-        "destination": "Bedford",
-        "platform": "B",
-        "confidence": 1,
-        "n": 7
-      },
-      {
-        "crs": "STP",
-        "std": "23:12",
-        "destination": "Sutton (London)",
-        "platform": "A",
-        "confidence": 1,
-        "n": 16
-      },
-      {
-        "crs": "LBG",
-        "std": "23:05",
-        "destination": "Brighton",
-        "platform": "4",
-        "confidence": 1,
-        "n": 5
-      },
-      {
-        "crs": "BFR",
-        "std": "22:26",
-        "destination": "Bedford",
-        "platform": "2",
-        "confidence": 1,
-        "n": 13
-      },
-      {
-        "crs": "BFR",
-        "std": "22:45",
-        "destination": "Bedford",
-        "platform": "2",
-        "confidence": 1,
-        "n": 6
-      },
-      {
-        "crs": "BFR",
-        "std": "23:12",
-        "destination": "Bedford",
-        "platform": "2",
-        "confidence": 1,
-        "n": 5
-      },
-      {
-        "crs": "ECR",
-        "std": "23:12",
-        "destination": "London Victoria",
-        "platform": "1",
-        "confidence": 1,
-        "n": 6
-      },
-      {
-        "crs": "ECR",
-        "std": "23:15",
-        "destination": "London Victoria",
-        "platform": "4",
-        "confidence": 1,
-        "n": 12
-      },
-      {
-        "crs": "SRA",
-        "std": "23:11",
-        "destination": "London Paddington",
-        "platform": "5",
-        "confidence": 1,
-        "n": 6
-      },
-      {
-        "crs": "STP",
-        "std": "23:15",
-        "destination": "Horsham",
-        "platform": "A",
-        "confidence": 1,
-        "n": 12
-      }
-    ]
+    "servicesTracked": 0,
+    "modelled": 0,
+    "confident": 0,
+    "darwinLeadMin": null,
+    "samples": []
   },
   "headway": {
     "cells": 0,
@@ -111,36 +14,36 @@
     "examples": []
   },
   "coverage": {
-    "days": 4,
+    "days": 5,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-07-15T14:02:15.392Z",
-    "events": 363,
-    "incidents": 26,
-    "unplanned": 24,
+    "lastEvent": "2026-07-16T00:30:10.161Z",
+    "events": 429,
+    "incidents": 32,
+    "unplanned": 30,
     "planned": 2,
     "runObservations": 0,
     "modelCells": 0
   },
   "storage": {
-    "eventsBytes": 137407,
+    "eventsBytes": 161784,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 1084419,
-    "perDayBytes": 1045327
+    "crowdingBytes": 1201404,
+    "perDayBytes": 864534
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 11,
+      "have": 14,
       "need": 20,
-      "perDay": 2.75,
+      "perDay": 2.8,
       "ready": false,
       "etaDays": [
         1,
-        5
+        4
       ],
-      "medianMin": 181,
+      "medianMin": 146,
       "p90Min": 754
     },
     {
@@ -148,11 +51,11 @@
       "feature": "Signal failure — “how long will this last?”",
       "have": 6,
       "need": 20,
-      "perDay": 1.5,
+      "perDay": 1.2,
       "ready": false,
       "etaDays": [
-        5,
-        13
+        7,
+        17
       ],
       "medianMin": 61,
       "p90Min": 140
@@ -160,41 +63,41 @@
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
-      "have": 3,
+      "have": 5,
       "need": 20,
-      "perDay": 0.75,
+      "perDay": 1,
       "ready": false,
       "etaDays": [
-        14,
-        32
+        9,
+        21
       ],
-      "medianMin": 65,
+      "medianMin": 72,
       "p90Min": 2700
     },
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 1,
+      "have": 2,
       "need": 20,
-      "perDay": 0.25,
+      "perDay": 0.4,
       "ready": false,
       "etaDays": [
-        47,
-        105
+        28,
+        62
       ],
-      "medianMin": 41,
-      "p90Min": 41
+      "medianMin": 51,
+      "p90Min": 61
     },
     {
       "cause": "obstruction",
       "feature": "obstruction",
       "have": 1,
       "need": 20,
-      "perDay": 0.25,
+      "perDay": 0.2,
       "ready": false,
       "etaDays": [
-        47,
-        105
+        59,
+        131
       ],
       "medianMin": 116,
       "p90Min": 116
@@ -204,11 +107,11 @@
       "feature": "Trespass — “is it worth waiting?”",
       "have": 1,
       "need": 20,
-      "perDay": 0.25,
+      "perDay": 0.2,
       "ready": false,
       "etaDays": [
-        47,
-        105
+        59,
+        131
       ],
       "medianMin": 51,
       "p90Min": 51
@@ -218,11 +121,11 @@
       "feature": "Customer taken ill — “is it worth waiting?”",
       "have": 1,
       "need": 20,
-      "perDay": 0.25,
+      "perDay": 0.2,
       "ready": false,
       "etaDays": [
-        47,
-        105
+        59,
+        131
       ],
       "medianMin": 148,
       "p90Min": 148
@@ -238,14 +141,239 @@
   },
   "worstLines": [
     {
-      "incidents": 26,
-      "minorMin": 4147,
-      "severeMin": 1606,
-      "suspendedMin": 2184,
-      "medianMin": 95
+      "incidents": 32,
+      "minorMin": 5018,
+      "severeMin": 2867,
+      "suspendedMin": 2185,
+      "medianMin": 76
     }
   ],
   "recent": [
+    {
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-07-15T03:15:27.913Z",
+      "end": "2026-07-16T00:17:09.401Z",
+      "minutes": 1262,
+      "minorMin": 0,
+      "severeMin": 1261,
+      "suspendedMin": 1,
+      "worstSev": 3,
+      "peakAfterMin": 1186,
+      "reason": "Weaver Line: Until Thursday 16th July, there will be no service between Walthamstow Central and Chingford while we conduct urgent repairs to the track following a line side fire near Wood Street. Please use London Underground and London Buses to complete your journey. SEVERE DELAYS on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-15T03:15:27.913Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-15T09:09:11.556Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-15T09:10:23.774Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-15T20:32:01.642Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-15T23:01:06.780Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-07-15T23:02:06.790Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-16T00:17:09.401Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cheshunt → London Liverpool Street",
+        "London Liverpool Street → Cheshunt",
+        "Enfield Town → London Liverpool Street"
+      ]
+    },
+    {
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-15T13:34:33.345Z",
+      "end": "2026-07-16T00:16:09.686Z",
+      "minutes": 642,
+      "minorMin": 642,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Minor delays due to train cancellations.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-15T13:34:33.345Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-15T20:32:01.642Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T00:16:09.686Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
+    {
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-15T22:26:05.651Z",
+      "end": "2026-07-15T23:22:07.632Z",
+      "minutes": 56,
+      "minorMin": 56,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Moor Park and Chesham due to train cancellations. The next southbound train will be at 23:30. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-15T22:26:05.651Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-15T23:22:07.632Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-15T21:46:04.075Z",
+      "end": "2026-07-15T22:47:06.188Z",
+      "minutes": 61,
+      "minorMin": 61,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 7,
+      "peakAfterMin": 0,
+      "reason": "MILDMAY LINE: Monday 13, Tuesday 14, Wednesday 15 and Thursday 16 July, the 2229 train from Stratford to Richmond will terminate at Camden Road at 2249",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-15T21:46:04.075Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-07-15T22:47:06.188Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stratford (London) → Richmond (London)",
+        "Stratford (London) → Clapham Junction"
+      ]
+    },
+    {
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-07-15T20:32:01.642Z",
+      "end": "2026-07-15T21:44:04.027Z",
+      "minutes": 72,
+      "minorMin": 72,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays due to an earlier fire alert at Northwood. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-15T20:32:01.642Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-15T21:44:04.027Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-15T20:32:01.642Z",
+      "end": "2026-07-15T21:11:03.134Z",
+      "minutes": 39,
+      "minorMin": 39,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Victoria Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-15T20:32:01.642Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-15T21:11:03.134Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
+      ]
+    },
     {
       "cause": "train-fault",
       "planned": false,
@@ -282,10 +410,10 @@
     {
       "cause": "train-fault",
       "planned": false,
-      "start": "2026-07-15T09:10:23.774Z",
+      "start": "2026-07-15T09:09:11.556Z",
       "end": "2026-07-15T13:01:33.712Z",
-      "minutes": 231,
-      "minorMin": 231,
+      "minutes": 232,
+      "minorMin": 232,
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
@@ -298,6 +426,10 @@
         "baselineDays": 0
       },
       "trace": [
+        {
+          "t": "2026-07-15T09:09:11.556Z",
+          "sev": 9
+        },
         {
           "t": "2026-07-15T09:10:23.774Z",
           "sev": 9
@@ -1047,215 +1179,6 @@
         "Amersham → Aldgate",
         "Aldgate → Chesham",
         "Aldgate → Amersham"
-      ]
-    },
-    {
-      "cause": "obstruction",
-      "planned": false,
-      "start": "2026-07-12T21:51:24.764Z",
-      "end": "2026-07-12T23:47:29.192Z",
-      "minutes": 116,
-      "minorMin": 0,
-      "severeMin": 116,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Weaver Line: No service between Hackney Downs and Chingford and SEVERE DELAYS on the rest of the line while we remove a tree from the track at Walthamstow Central. London Underground are accepting tickets via any reasonable route.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-12T21:51:24.764Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-07-12T23:47:29.192Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cheshunt → London Liverpool Street",
-        "London Liverpool Street → Cheshunt",
-        "Enfield Town → London Liverpool Street"
-      ]
-    },
-    {
-      "cause": "fire-alert",
-      "planned": true,
-      "start": "2026-07-12T10:30:30.915Z",
-      "end": "2026-07-12T23:47:29.192Z",
-      "minutes": 797,
-      "minorMin": 797,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 7,
-      "peakAfterMin": 0,
-      "reason": "Elizabeth line: All day on Sunday, 12 July, service will operate at a reduced frequency between Whitechapel and Shenfield while we undertake repairs following a line side fire at Stratford on Friday. Normal service will operate on the of the line.",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-12T10:30:30.915Z",
-          "sev": 7
-        },
-        {
-          "t": "2026-07-12T21:51:24.764Z",
-          "sev": 7
-        },
-        {
-          "t": "2026-07-12T23:47:29.192Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Heathrow Terminal 4 → Shenfield",
-        "Heathrow Terminal 5 → Shenfield",
-        "Shenfield → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-07-12T21:55:25.087Z",
-      "end": "2026-07-12T23:45:29.178Z",
-      "minutes": 110,
-      "minorMin": 110,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Circle Line: Minor delays due to train cancellations anticlockwise only. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-12T21:55:25.087Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-12T23:45:29.178Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
-    },
-    {
-      "cause": "other",
-      "planned": false,
-      "start": "2026-07-12T22:20:26.242Z",
-      "end": "2026-07-12T23:01:27.332Z",
-      "minutes": 41,
-      "minorMin": 41,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 7,
-      "peakAfterMin": 0,
-      "reason": "SUFFRAGETTE LINE: Sunday 12 July, the 2324 train from Barking Riverside to Willesden Junction will not run. Customers should use the previous train at 2301",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-12T22:20:26.242Z",
-          "sev": 7
-        },
-        {
-          "t": "2026-07-12T23:01:27.332Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking Riverside → Gospel Oak"
-      ]
-    },
-    {
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-07-12T21:51:24.764Z",
-      "end": "2026-07-12T22:56:27.197Z",
-      "minutes": 65,
-      "minorMin": 45,
-      "severeMin": 20,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Mildmay Line: Severe delays due to an earlier fire alert at Imperial Wharf. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-12T21:51:24.764Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-07-12T22:11:25.750Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-12T22:56:27.197Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Richmond (London) → Stratford (London)",
-        "Clapham Junction → Stratford (London)",
-        "Stratford (London) → Richmond (London)"
-      ]
-    },
-    {
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-07-12T13:12:36.704Z",
-      "end": "2026-07-12T14:03:38.617Z",
-      "minutes": 51,
-      "minorMin": 51,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays eastbound only while we respond to a fire alert at Woodford. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-12T13:12:36.704Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-12T14:03:38.617Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "West Ruislip → Epping",
-        "West Ruislip → Hainault",
-        "Ealing Broadway → Epping"
       ]
     }
   ]
