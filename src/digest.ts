@@ -173,6 +173,7 @@ function buildIncidents(events: Event[]): Incident[] {
       const segs = e.segments ?? e.routes ?? [];
       if (!cur) {
         open.set(e.line, {
+          line: e.line,
           // RE-CLASSIFY FROM THE SOURCE TEXT, ignoring the stored cause.
           //
           // The collector's old classifier matched "ice" inside "service", so

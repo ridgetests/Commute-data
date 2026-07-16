@@ -279,6 +279,14 @@ function render(d){
 
   // ---- INCIDENTS ----
   const rec = d.recent || [];
+  const LINE_COLOUR={bakerloo:'#B36305',central:'#E32017',circle:'#FFD300',district:'#00782A','hammersmith-city':'#F3A9BB',jubilee:'#A0A5A9',metropolitan:'#9B0056',northern:'#c9c9c9',piccadilly:'#4d7fc4',victoria:'#0098D4','waterloo-city':'#95CDBA',elizabeth:'#8f7dd1',dlr:'#00A4A7',tram:'#84B817',lioness:'#FAA61A',mildmay:'#2f9fd6',windrush:'#ED1B00',weaver:'#b06088',suffragette:'#5BBD72',liberty:'#8d9093'};
+  const guessLine=(i)=>{
+    if(i.line) return i.line;
+    const m=/^([A-Za-z&' \-]+?) line/i.exec(i.reason||'');
+    if(!m) return null;
+    return m[1].trim().toLowerCase().replace(/ & /g,'-').replace(/ /g,'-');
+  };
+  const lineLabel=(i,lid)=>i.lineName||(lid==='dlr'?'DLR':lid?lid.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):'Line unknown');
   $('incidents').innerHTML = rec.length ? rec.map(i=>{
     const trace = (i.trace||[]);
     let bars = '';
@@ -298,17 +306,20 @@ function render(d){
       i.severeMin ? `<span style="color:var(--amber)">${i.severeMin} min severe</span>` : '',
       i.minorMin ? `<span style="color:var(--grey)">${i.minorMin} min minor</span>` : '',
     ].filter(Boolean).join(' · ');
-    return `<div class="inc">
+    const lid=guessLine(i);
+    const col=(lid&&LINE_COLOUR[lid])||'#6b7280';
+    return `<div class="inc" style="border-left:3px solid ${col};padding-left:10px">
       <div class="inc-h">
-        <div class="inc-l">${i.lineName || i.line}<span class="tag">${CAUSE[i.cause]||i.cause}</span>${
-          i.planned ? '<span class="tag planned">planned</span>' : ''}</div>
-        <div class="inc-t">${when(i.start)} · ${i.minutes} min</div>
+        <div class="inc-l"><b style="color:${col}">${lineLabel(i,lid)}</b></div>
+        <div class="inc-t">${when(i.start)}</div>
       </div>
+      ${i.segments && i.segments.length ? `<div class="seg">${i.segments.join(' · ')}</div>` : ''}
+      <div class="split">${split ? split + ' · ' : ''}${i.minutes} min total</div>
+      <div style="margin:4px 0"><span class="tag">${CAUSE[i.cause]||i.cause}</span>${
+        i.planned ? '<span class="tag planned">planned</span>' : ''}</div>
       <div class="trace">${bars}</div>
-      <div class="split">${split}</div>
       ${impact}
       ${i.reason ? `<div class="why">“${i.reason}”</div>` : ''}
-      ${i.segments && i.segments.length ? `<div class="seg">${i.segments.join(' · ')}</div>` : ''}
     </div>`;
   }).join('') : '<div class="empty">No completed incidents yet.</div>';
 
