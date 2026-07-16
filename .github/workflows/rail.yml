@@ -49,7 +49,9 @@ jobs:
         run: |
           git config user.name "archive-bot"
           git config user.email "archive-bot@users.noreply.github.com"
-          git pull --rebase --autostash || true
           git add data
           git commit -m "rail $(date -u +%FT%TZ) [skip ci]" || echo "nothing new"
-          git push || true
+         for i in 1 2 3; do
+  git pull --rebase -X theirs && git push && break
+  git rebase --abort 2>/dev/null || true
+done
