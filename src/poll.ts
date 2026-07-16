@@ -172,6 +172,9 @@ async function main() {
   writeFileSync(appPath, JSON.stringify(exportForApp(model)));
 
   const cells = Object.keys(model.cells).length;
+  if (rawRuns.length > 0 && added === 0) {
+    console.log(`\nWARNING: collected ${rawRuns.length} run times but merged 0 into the model — field mismatch or filter bug. INVESTIGATE.`);
+  }
   console.log(`\nModel: +${added} observations → ${cells} segment×band cells`);
 
   // ---- HEADWAY MODEL: the "three-train wait". Derived from the SAME run

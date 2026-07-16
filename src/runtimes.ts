@@ -130,6 +130,8 @@ export class RunTracker {
             if (secs >= MIN_RUN && secs <= MAX_RUN && a.station !== b.station) {
               runs.push({
                 t: new Date(b.at).toISOString(),
+                dep: new Date(a.at).toISOString(),
+                sec: secs,
                 line: b.line,
                 from: a.station,
                 to: b.station,
