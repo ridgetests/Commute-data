@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T02:12:14.018Z",
+  "generatedAt": "2026-07-16T08:17:08.465Z",
   "rail": {
     "servicesTracked": 0,
     "modelled": 0,
@@ -16,35 +16,49 @@
   "coverage": {
     "days": 5,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-07-16T00:30:10.161Z",
-    "events": 429,
-    "incidents": 32,
-    "unplanned": 30,
+    "lastEvent": "2026-07-16T08:01:07.754Z",
+    "events": 484,
+    "incidents": 38,
+    "unplanned": 36,
     "planned": 2,
     "runObservations": 0,
     "modelCells": 0
   },
   "storage": {
-    "eventsBytes": 161784,
+    "eventsBytes": 184690,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 1201404,
-    "perDayBytes": 864534
+    "crowdingBytes": 1321839,
+    "perDayBytes": 893202
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 14,
+      "have": 15,
       "need": 20,
-      "perDay": 2.8,
+      "perDay": 3,
       "ready": false,
       "etaDays": [
         1,
-        4
+        3
       ],
-      "medianMin": 146,
+      "medianMin": 110,
       "p90Min": 754
+    },
+    {
+      "cause": "other",
+      "feature": "Unclassified disruption",
+      "have": 7,
+      "need": 20,
+      "perDay": 1.4,
+      "ready": false,
+      "etaDays": [
+        5,
+        14
+      ],
+      "medianMin": 26,
+      "p90Min": 90
     },
     {
       "cause": "signal-failure",
@@ -73,20 +87,6 @@
       ],
       "medianMin": 72,
       "p90Min": 2700
-    },
-    {
-      "cause": "other",
-      "feature": "Unclassified disruption",
-      "have": 2,
-      "need": 20,
-      "perDay": 0.4,
-      "ready": false,
-      "etaDays": [
-        28,
-        62
-      ],
-      "medianMin": 51,
-      "p90Min": 61
     },
     {
       "cause": "obstruction",
@@ -141,14 +141,221 @@
   },
   "worstLines": [
     {
-      "incidents": 32,
-      "minorMin": 5018,
+      "incidents": 38,
+      "minorMin": 5221,
       "severeMin": 2867,
-      "suspendedMin": 2185,
-      "medianMin": 76
+      "suspendedMin": 2215,
+      "medianMin": 70
     }
   ],
   "recent": [
+    {
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-16T06:41:05.619Z",
+      "end": "2026-07-16T08:01:07.754Z",
+      "minutes": 80,
+      "minorMin": 80,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between White City and Ealing Broadway/West Ruislip, and MINOR DELAYS between Leytonstone and Epping/Hainault via Newbury Park due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T06:41:05.619Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T08:01:07.754Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T04:46:00.587Z",
+      "end": "2026-07-16T06:16:03.891Z",
+      "minutes": 90,
+      "minorMin": 70,
+      "severeMin": 0,
+      "suspendedMin": 20,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Jubilee Line: No service between Wembley Park and Stanmore northbound only while we fix a track failure at Neasden. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T04:46:00.587Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-07-16T05:06:01.439Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T06:16:03.891Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stratford → Stanmore",
+        "Stanmore → Stratford"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T05:18:01.960Z",
+      "end": "2026-07-16T05:36:04.227Z",
+      "minutes": 18,
+      "minorMin": 18,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate due to a track fault at Neasden. Tickets are being accepted on London Buses, Lioness line, London Northwestern Railway, Chiltern Railway and Thameslink. MINOR DELAYS on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T05:18:01.960Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T05:36:04.227Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T04:51:00.833Z",
+      "end": "2026-07-16T05:17:01.832Z",
+      "minutes": 26,
+      "minorMin": 26,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate while we fix a track fault at Neasden. Tickets are being accepted on London Buses, Lioness line, London Northwestern Railway, Chiltern Railway and Thameslink. MINOR DELAYS on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T04:51:00.833Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T05:17:01.832Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T04:41:00.394Z",
+      "end": "2026-07-16T04:50:00.765Z",
+      "minutes": 9,
+      "minorMin": 9,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate while we fix a track fault at Neasden. MINOR DELAYS on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T04:41:00.394Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T04:50:00.765Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T04:28:59.875Z",
+      "end": "2026-07-16T04:39:01.087Z",
+      "minutes": 10,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 10,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: No service between Wembley Park and Aldgate while we fix a track fault at Neasden. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T04:28:59.875Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-07-16T04:39:01.087Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
     {
       "cause": "fire-alert",
       "planned": false,
@@ -961,224 +1168,6 @@
       "segments": [
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
-      ]
-    },
-    {
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-07-14T16:51:50.558Z",
-      "end": "2026-07-14T17:31:51.833Z",
-      "minutes": 40,
-      "minorMin": 40,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Piccadilly Line: Minor delays between Acton Town and Cockfosters eastbound only while we fix a faulty train at Piccadilly Circus. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-14T16:51:50.558Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-14T17:31:51.833Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Uxbridge → Cockfosters",
-        "Heathrow Terminal 4 → Cockfosters",
-        "Heathrow Terminal 5 → Cockfosters"
-      ]
-    },
-    {
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-07-14T15:25:28.563Z",
-      "end": "2026-07-14T16:30:49.576Z",
-      "minutes": 65,
-      "minorMin": 65,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Piccadilly Line: Minor delays between Acton Town and Uxbridge due to an earlier signal failure at Osterley. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-14T15:25:28.563Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-14T16:07:44.593Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-14T16:30:49.576Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cockfosters → Uxbridge",
-        "Uxbridge → Cockfosters"
-      ]
-    },
-    {
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-07-14T11:38:20.802Z",
-      "end": "2026-07-14T12:34:22.999Z",
-      "minutes": 56,
-      "minorMin": 56,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Piccadilly Line: Minor delays between Acton Town and Heathrow Terminals while we fix a signal failure at Osterley. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-14T11:38:20.802Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-14T12:34:22.999Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cockfosters → Heathrow Terminal 5",
-        "Heathrow Terminal 4 → Cockfosters",
-        "Heathrow Terminal 5 → Cockfosters"
-      ]
-    },
-    {
-      "cause": "engineering",
-      "planned": true,
-      "start": "2026-07-14T03:38:30.647Z",
-      "end": "2026-07-14T10:27:18.403Z",
-      "minutes": 409,
-      "minorMin": 0,
-      "severeMin": 407,
-      "suspendedMin": 2,
-      "worstSev": 3,
-      "peakAfterMin": 48,
-      "reason": "No service between Abbey Wood and Paddington and SEVERE DELAYS between Paddington and Heathrow Terminals due to a late finish of engineering work. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-14T03:38:30.647Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-07-14T04:26:32.347Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-07-14T04:28:32.318Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-07-14T10:27:18.403Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Heathrow Terminal 4 → Shenfield",
-        "Heathrow Terminal 5 → Shenfield",
-        "Shenfield → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-07-13T23:06:21.440Z",
-      "end": "2026-07-14T00:14:24.065Z",
-      "minutes": 68,
-      "minorMin": 0,
-      "severeMin": 68,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Victoria Line: Severe delays due to an earlier points failure at Brixton. Tickets are being accepted on London Buses, South Western Railway and Southeastern.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-13T23:06:21.440Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-07-14T00:14:24.065Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Walthamstow Central → Brixton",
-        "Brixton → Walthamstow Central"
-      ]
-    },
-    {
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-07-13T11:40:01.118Z",
-      "end": "2026-07-14T00:14:24.065Z",
-      "minutes": 754,
-      "minorMin": 754,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. The next southbound train will be at 13:22. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-13T11:40:01.118Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-13T23:06:21.440Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-14T00:14:24.065Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
       ]
     }
   ]
