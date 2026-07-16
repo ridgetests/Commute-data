@@ -589,6 +589,7 @@ function main() {
       const list = incidents.filter((i) => i.line === line);
       return {
         line: lineName(line),
+        lineId: line,
         incidents: list.length,
         minorMin: list.reduce((a, b) => a + b.minorMin, 0),
         severeMin: list.reduce((a, b) => a + b.severeMin, 0),

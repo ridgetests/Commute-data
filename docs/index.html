@@ -123,10 +123,7 @@
     run at night.</p>
   <div id="incidents"></div>
 
-  <h2>By line</h2>
-  <p class="note">"Total minutes disrupted" is a <b>bad metric</b> — it treats a slightly
-    late Circle line the same as a suspended Northern line. So it's split by severity.</p>
-  <div id="lines"></div>
+
 
   <h2>Can we make the call yet?</h2>
   <p class="note">Each row is a feature the app can't honestly ship until the data
@@ -391,12 +388,34 @@ function showPane(w){
   document.getElementById('tb-rail').classList.toggle('on',w==='rail');
 }
 fetch('summary.json').then(r=>r.json()).then(d=>{
-  const el=document.getElementById('windows');if(!el)return;
+  const LC={bakerloo:'#B36305',central:'#E32017',circle:'#FFD300','hammersmith-city':'#F3A9BB',jubilee:'#A0A5A9',metropolitan:'#9B0056',northern:'#c9c9c9',piccadilly:'#4d7fc4',victoria:'#0098D4','waterloo-city':'#95CDBA',elizabeth:'#8f7dd1',dlr:'#00A4A7',district:'#00782A',tram:'#84B817',lioness:'#FAA61A',mildmay:'#2f9fd6',windrush:'#ED1B00',weaver:'#b06088',suffragette:'#5BBD72',liberty:'#8d9093'};
   const w=d.windows;
-  if(!w){el.innerHTML='<div class="empty">Day / week / all-time summaries arrive with the next digest run.</div>';return;}
-  const col=(t,x)=>`<div class="wcol"><div class="wt">${t}</div><b>${x.incidents}</b> incidents (${x.unplanned} unplanned)<br>${x.suspendedMin} min suspended &middot; ${x.severeMin} severe &middot; ${x.minorMin} minor${x.worstLine?`<br>worst: ${x.worstLine}`:''}</div>`;
-  el.innerHTML=`<div class="wrow">${col('Today',w.today)+col('7 days',w.week)+col('All time',w.all)}</div>`;
+  const tot=x=>x.suspendedMin+x.severeMin+x.minorMin;
+  const sc=Math.max(1,tot(w.today),tot(w.week),tot(w.all));
+  const sg=(v,c)=>v>0?'<i style="background:'+c+';flex:'+v+'"></i>':'';
+  const bar=(t,x)=>'<div class="wb"><div class="wbh"><span class="wt">'+t+'</span><span class="wn"><b>'+x.incidents+'</b> incidents · '+tot(x)+' min</span></div><div class="sbar" style="width:'+(100*tot(x)/sc).toFixed(1)+'%">'+sg(x.suspendedMin,'var(--red)')+sg(x.severeMin,'var(--amber)')+sg(x.minorMin,'#6b7280')+'</div>'+(x.worstLine?'<div class="ws">worst: '+x.worstLine+'</div>':'')+'</div>';
+  const A='<div class="leg"><i style="background:var(--red)"></i>suspended <i style="background:var(--amber)"></i>severe <i style="background:#6b7280"></i>minor</div>'+bar('Today',w.today)+bar('7 days',w.week)+bar('All time',w.all);
+  const wl=(d.worstLines||[]).slice().sort((a,b)=>(b.suspendedMin+b.severeMin+b.minorMin)-(a.suspendedMin+a.severeMin+a.minorMin));
+  const lm=Math.max(1,...wl.map(l=>l.suspendedMin+l.severeMin+l.minorMin));
+  const B=wl.length?'<div class="blabel">By line · minutes lost</div>'+wl.map(l=>{var t=l.suspendedMin+l.severeMin+l.minorMin;var c=LC[l.lineId]||'#6b7280';return '<div class="lb"><div class="lbn">'+l.line+'</div><div class="lbbar"><span style="width:'+(100*t/lm).toFixed(1)+'%;background:'+c+'"></span></div><div class="lbv">'+t+'</div></div>';}).join(''):'';
+  el.innerHTML=A+B;
 });
 </script>
-</body>
+<style>
+.leg{font-size:11px;opacity:.7;margin:2px 0 12px;display:flex;gap:14px;align-items:center}
+.leg i{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:-1px}
+.wb{margin:0 0 16px}
+.wbh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+.wt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.wn{font-size:12.5px}
+.wb .sbar{display:flex;height:22px;min-width:2px;overflow:hidden}
+.wb .sbar i{display:block}
+.ws{font-size:11px;opacity:.6;margin-top:4px}
+.blabel{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin:22px 0 10px}
+.lb{display:flex;align-items:center;gap:10px;margin:0 0 7px;font-size:12.5px}
+.lbn{flex:0 0 40%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lbbar{flex:1;background:rgba(255,255,255,.06);height:14px}
+.lbbar span{display:block;height:100%}
+.lbv{flex:0 0 auto;font-family:"IBM Plex Mono",monospace;font-size:11px;opacity:.8;min-width:38px;text-align:right}
+</style></body>
 </html>
