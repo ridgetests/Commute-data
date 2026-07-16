@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "generatedAt": "2026-07-16T12:24:15.244Z",
+=======
+  "generatedAt": "2026-07-16T13:57:40.394Z",
+>>>>>>> Stashed changes
   "rail": {
     "servicesTracked": 0,
     "modelled": 0,
@@ -16,25 +20,41 @@
   "coverage": {
     "days": 5,
     "firstEvent": "2026-07-12T10:30:30.915Z",
+<<<<<<< Updated upstream
     "lastEvent": "2026-07-16T08:01:07.754Z",
     "events": 484,
     "incidents": 38,
     "unplanned": 36,
+=======
+    "lastEvent": "2026-07-16T13:44:35.443Z",
+    "events": 473,
+    "incidents": 41,
+    "unplanned": 39,
+>>>>>>> Stashed changes
     "planned": 2,
     "runObservations": 0,
     "modelCells": 0
   },
   "storage": {
+<<<<<<< Updated upstream
     "eventsBytes": 184690,
     "runtimesBytes": 10136947,
     "platformsBytes": 1027813,
     "crowdingBytes": 1321839,
     "perDayBytes": 2534258
+=======
+    "eventsBytes": 178780,
+    "runtimesBytes": 2959483,
+    "platformsBytes": 0,
+    "crowdingBytes": 1362898,
+    "perDayBytes": 900232
+>>>>>>> Stashed changes
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
+<<<<<<< Updated upstream
       "have": 15,
       "need": 20,
       "perDay": 3,
@@ -44,6 +64,17 @@
         3
       ],
       "medianMin": 110,
+=======
+      "have": 16,
+      "need": 20,
+      "perDay": 3.2,
+      "ready": false,
+      "etaDays": [
+        1,
+        2
+      ],
+      "medianMin": 112,
+>>>>>>> Stashed changes
       "p90Min": 754
     },
     {
@@ -63,16 +94,30 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 6,
+      "have": 8,
       "need": 20,
-      "perDay": 1.2,
+      "perDay": 1.6,
       "ready": false,
       "etaDays": [
-        7,
-        17
+        4,
+        11
       ],
-      "medianMin": 61,
+      "medianMin": 43,
       "p90Min": 140
+    },
+    {
+      "cause": "other",
+      "feature": "Unclassified disruption",
+      "have": 7,
+      "need": 20,
+      "perDay": 1.4,
+      "ready": false,
+      "etaDays": [
+        5,
+        14
+      ],
+      "medianMin": 41,
+      "p90Min": 166
     },
     {
       "cause": "fire-alert",
@@ -167,6 +212,7 @@
   },
   "worstLines": [
     {
+<<<<<<< Updated upstream
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
       "incidents": 3,
       "minorMin": 0,
@@ -269,10 +315,18 @@
       "severeMin": 0,
       "suspendedMin": 0,
       "medianMin": 41
+=======
+      "incidents": 41,
+      "minorMin": 5203,
+      "severeMin": 3126,
+      "suspendedMin": 2185,
+      "medianMin": 65
+>>>>>>> Stashed changes
     }
   ],
   "recent": [
     {
+<<<<<<< Updated upstream
       "line": "central",
       "lineName": "Central",
       "cause": "train-fault",
@@ -281,11 +335,23 @@
       "end": "2026-07-16T08:01:07.754Z",
       "minutes": 80,
       "minorMin": 80,
+=======
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T11:58:31.070Z",
+      "end": "2026-07-16T12:11:31.598Z",
+      "minutes": 13,
+      "minorMin": 13,
+>>>>>>> Stashed changes
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
       "peakAfterMin": 0,
+<<<<<<< Updated upstream
       "reason": "Central Line: Minor delays between White City and Ealing Broadway/West Ruislip, and MINOR DELAYS between Leytonstone and Epping/Hainault via Newbury Park due to train cancellations. GOOD SERVICE on the rest of the line. ",
+=======
+      "reason": "Northern Line: Minor delays between Kennington and Camden Town via Bank northbound only due to an earlier person ill on a train at Kennington. GOOD SERVICE on the rest of the line. ",
+>>>>>>> Stashed changes
       "impact": {
         "during": 0,
         "expected": null,
@@ -294,15 +360,24 @@
       },
       "trace": [
         {
+<<<<<<< Updated upstream
           "t": "2026-07-16T06:41:05.619Z",
           "sev": 9
         },
         {
           "t": "2026-07-16T08:01:07.754Z",
+=======
+          "t": "2026-07-16T11:58:31.070Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T12:11:31.598Z",
+>>>>>>> Stashed changes
           "sev": 10
         }
       ],
       "segments": [
+<<<<<<< Updated upstream
         "Epping → West Ruislip",
         "West Ruislip → Epping",
         "Hainault → West Ruislip"
@@ -322,6 +397,25 @@
       "worstSev": 3,
       "peakAfterMin": 0,
       "reason": "Jubilee Line: No service between Wembley Park and Stanmore northbound only while we fix a track failure at Neasden. GOOD SERVICE on the rest of the line.  ",
+=======
+        "Morden → High Barnet",
+        "Morden → Edgware",
+        "Morden → Mill Hill East"
+      ]
+    },
+    {
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-16T10:02:27.270Z",
+      "end": "2026-07-16T11:56:30.996Z",
+      "minutes": 114,
+      "minorMin": 114,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: Minor delays between Morden and Kennington northbound only due to an earlier faulty train at South Wimbledon. GOOD SERVICE on the rest of the line. ",
+>>>>>>> Stashed changes
       "impact": {
         "during": 0,
         "expected": null,
@@ -330,6 +424,7 @@
       },
       "trace": [
         {
+<<<<<<< Updated upstream
           "t": "2026-07-16T04:46:00.587Z",
           "sev": 3
         },
@@ -339,6 +434,114 @@
         },
         {
           "t": "2026-07-16T06:16:03.891Z",
+=======
+          "t": "2026-07-16T10:02:27.270Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T11:56:30.996Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Morden → High Barnet",
+        "Morden → Edgware",
+        "Morden → Mill Hill East"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T08:17:23.426Z",
+      "end": "2026-07-16T11:03:29.121Z",
+      "minutes": 166,
+      "minorMin": 0,
+      "severeMin": 166,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Severe delays due to an earlier track fault at Neasden. Tickets are being accepted on London Buses, Lioness line, London Northwestern Railway, Chiltern Railway and Thameslink via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T08:17:23.426Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-16T11:03:29.121Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T09:20:25.414Z",
+      "end": "2026-07-16T10:25:28.190Z",
+      "minutes": 65,
+      "minorMin": 0,
+      "severeMin": 65,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Severe delays due to an earlier track fault at Waterloo. Tickets will be accepted on London Buses, Lioness line, London Northwestern and Thameslink via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T09:20:25.414Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-16T10:25:28.190Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
+    {
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-07-16T09:53:26.816Z",
+      "end": "2026-07-16T10:02:27.270Z",
+      "minutes": 9,
+      "minorMin": 9,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Jubilee Line: Minor delays while we fix a points failure at Stratford.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T09:53:26.816Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T10:02:27.270Z",
+>>>>>>> Stashed changes
           "sev": 10
         }
       ],
@@ -348,6 +551,7 @@
       ]
     },
     {
+<<<<<<< Updated upstream
       "line": "metropolitan",
       "lineName": "Metropolitan",
       "cause": "other",
@@ -356,11 +560,23 @@
       "end": "2026-07-16T05:36:04.227Z",
       "minutes": 18,
       "minorMin": 18,
+=======
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-07-16T09:47:26.561Z",
+      "end": "2026-07-16T09:52:26.749Z",
+      "minutes": 5,
+      "minorMin": 5,
+>>>>>>> Stashed changes
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
       "peakAfterMin": 0,
+<<<<<<< Updated upstream
       "reason": "Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate due to a track fault at Neasden. Tickets are being accepted on London Buses, Lioness line, London Northwestern Railway, Chiltern Railway and Thameslink. MINOR DELAYS on the rest of the line. ",
+=======
+      "reason": "Jubilee Line: Minor delays between Stratford and North Greenwich while we fix a points failure at Stratford. GOOD SERVICE on the rest of the line.  ",
+>>>>>>> Stashed changes
       "impact": {
         "during": 0,
         "expected": null,
@@ -369,15 +585,24 @@
       },
       "trace": [
         {
+<<<<<<< Updated upstream
           "t": "2026-07-16T05:18:01.960Z",
           "sev": 9
         },
         {
           "t": "2026-07-16T05:36:04.227Z",
+=======
+          "t": "2026-07-16T09:47:26.561Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T09:52:26.749Z",
+>>>>>>> Stashed changes
           "sev": 10
         }
       ],
       "segments": [
+<<<<<<< Updated upstream
         "Amersham → Aldgate",
         "Aldgate → Chesham",
         "Aldgate → Amersham"
@@ -469,6 +694,24 @@
       "worstSev": 3,
       "peakAfterMin": 0,
       "reason": "Metropolitan Line: No service between Wembley Park and Aldgate while we fix a track fault at Neasden. GOOD SERVICE on the rest of the line. ",
+=======
+        "Stratford → Stanmore",
+        "Stanmore → Stratford"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T08:51:24.860Z",
+      "end": "2026-07-16T09:19:25.485Z",
+      "minutes": 28,
+      "minorMin": 0,
+      "severeMin": 28,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Severe delays while we fix a track fault at Waterloo. Tickets will be accepted on London Buses, Lioness line, London Northwestern and Thameslink via any reasonable route. ",
+>>>>>>> Stashed changes
       "impact": {
         "during": 0,
         "expected": null,
@@ -477,15 +720,24 @@
       },
       "trace": [
         {
+<<<<<<< Updated upstream
           "t": "2026-07-16T04:28:59.875Z",
           "sev": 3
         },
         {
           "t": "2026-07-16T04:39:01.087Z",
+=======
+          "t": "2026-07-16T08:51:24.860Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-16T09:19:25.485Z",
+>>>>>>> Stashed changes
           "sev": 10
         }
       ],
       "segments": [
+<<<<<<< Updated upstream
         "Amersham → Aldgate",
         "Aldgate → Chesham",
         "Aldgate → Amersham"
@@ -494,6 +746,79 @@
     {
       "line": "weaver",
       "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
+=======
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
+    {
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-16T08:17:23.426Z",
+      "end": "2026-07-16T08:54:24.876Z",
+      "minutes": 37,
+      "minorMin": 37,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Victoria Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T08:17:23.426Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T08:54:24.876Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
+      ]
+    },
+    {
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-16T08:43:24.511Z",
+      "end": "2026-07-16T08:50:24.541Z",
+      "minutes": 7,
+      "minorMin": 7,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Minor delays between Elephant & Castle and Queen's Park while we fix a track fault at Lambeth North. GOOD service on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-16T08:43:24.511Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-16T08:50:24.541Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
+    {
+>>>>>>> Stashed changes
       "cause": "fire-alert",
       "planned": false,
       "start": "2026-07-15T03:15:27.913Z",
@@ -1208,6 +1533,7 @@
         "Edgware → Morden",
         "Mill Hill East → Morden"
       ]
+<<<<<<< Updated upstream
     },
     {
       "line": "piccadilly",
@@ -1342,6 +1668,8 @@
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
       ]
+=======
+>>>>>>> Stashed changes
     }
   ]
 }
