@@ -563,6 +563,28 @@ function main() {
       medianMinutes: leadTimes.length ? median(leadTimes.map((l) => l.minutes)) : null,
       samples: leadTimes.slice(-12),
     },
+    windows: (() => {
+      const nowMs = Date.now();
+      const stats = (list: typeof incidents) => {
+        const byLine = new Map<string, number>();
+        for (const i of list) byLine.set(i.line, (byLine.get(i.line) ?? 0) + i.minutes);
+        const worst = [...byLine.entries()].sort((a, b) => b[1] - a[1])[0];
+        return {
+          incidents: list.length,
+          unplanned: list.filter((i) => !i.planned).length,
+          minorMin: list.reduce((a, b) => a + b.minorMin, 0),
+          severeMin: list.reduce((a, b) => a + b.severeMin, 0),
+          suspendedMin: list.reduce((a, b) => a + b.suspendedMin, 0),
+          worstLine: worst ? lineName(worst[0]) : null,
+        };
+      };
+      const today = new Date().toISOString().slice(0, 10);
+      return {
+        today: stats(incidents.filter((i) => i.start.slice(0, 10) === today)),
+        week: stats(incidents.filter((i) => nowMs - Date.parse(i.start) < 7 * 86400000)),
+        all: stats(incidents),
+      };
+    })(),
     worstLines: [...new Set(incidents.map((i) => i.line))].map((line) => {
       const list = incidents.filter((i) => i.line === line);
       return {

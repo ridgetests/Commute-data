@@ -107,6 +107,27 @@
     <div class="cov" id="cov"></div>
   </header>
 
+  <div class="tabs">
+    <button class="tabbtn on" id="tb-tfl" onclick="showPane('tfl')">TfL &middot; Underground</button>
+    <button class="tabbtn" id="tb-rail" onclick="showPane('rail')">National Rail</button>
+  </div>
+  <div id="pane-tfl">
+  <h2>What&rsquo;s happening</h2>
+  <div id="windows"></div>
+  <h2>Recent incidents</h2>
+  <p class="note">The trace is the <b>real</b> severity log — timestamped steps, not a
+    drawn curve. TfL's own words are quoted underneath, so you can <b>audit the cause
+    classifier</b> rather than trust it. <b>Planned closures, engineering work and
+    overnight closures are excluded</b> — they are the timetable, not incidents, and
+    they were previously producing 14-hour "disruptions" on lines that simply don't
+    run at night.</p>
+  <div id="incidents"></div>
+
+  <h2>By line</h2>
+  <p class="note">"Total minutes disrupted" is a <b>bad metric</b> — it treats a slightly
+    late Circle line the same as a suspended Northern line. So it's split by severity.</p>
+  <div id="lines"></div>
+
   <h2>Can we make the call yet?</h2>
   <p class="note">Each row is a feature the app can't honestly ship until the data
     supports it. <b>~20 incidents per cause</b> before a median stops being noise —
@@ -123,6 +144,8 @@
     than we think.</p>
   <div id="lead"></div>
 
+  </div>
+  <div id="pane-rail" style="display:none">
   <h2>National Rail — can we beat the departure board?</h2>
   <p class="note">Darwin announces the platform only a few minutes before departure.
     <b>That's the number to beat.</b> If we can say it with confidence twenty minutes out,
@@ -132,20 +155,7 @@
     keeps punctuality, not platforms.</p>
   <div id="rail"></div>
 
-  <h2>Recent incidents</h2>
-  <p class="note">The trace is the <b>real</b> severity log — timestamped steps, not a
-    drawn curve. TfL's own words are quoted underneath, so you can <b>audit the cause
-    classifier</b> rather than trust it. <b>Planned closures, engineering work and
-    overnight closures are excluded</b> — they are the timetable, not incidents, and
-    they were previously producing 14-hour "disruptions" on lines that simply don't
-    run at night.</p>
-  <div id="incidents"></div>
-
-  <h2>By line</h2>
-  <p class="note">"Total minutes disrupted" is a <b>bad metric</b> — it treats a slightly
-    late Circle line the same as a suspended Northern line. So it's split by severity.</p>
-  <div id="lines"></div>
-
+  </div>
   <h2>Storage</h2>
   <div id="storage"></div>
 
@@ -363,6 +373,30 @@ function render(d){
     </div>
   </div>`;
 }
+</script>
+<style>
+.tabs{display:flex;gap:8px;margin:6px 0 18px}
+.tabbtn{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;background:none;border:1px solid rgba(255,255,255,.25);color:inherit;cursor:pointer}
+.tabbtn.on{border-color:var(--amber);color:var(--amber)}
+.wrow{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 22px}
+.wcol{flex:1;min-width:150px;border:1px solid rgba(255,255,255,.15);padding:10px 12px;font-size:13px;line-height:1.55}
+.wt{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:4px}
+.tag{border-color:rgba(255,255,255,.65)}
+</style>
+<script>
+function showPane(w){
+  document.getElementById('pane-tfl').style.display=w==='tfl'?'':'none';
+  document.getElementById('pane-rail').style.display=w==='rail'?'':'none';
+  document.getElementById('tb-tfl').classList.toggle('on',w==='tfl');
+  document.getElementById('tb-rail').classList.toggle('on',w==='rail');
+}
+fetch('summary.json').then(r=>r.json()).then(d=>{
+  const el=document.getElementById('windows');if(!el)return;
+  const w=d.windows;
+  if(!w){el.innerHTML='<div class="empty">Day / week / all-time summaries arrive with the next digest run.</div>';return;}
+  const col=(t,x)=>`<div class="wcol"><div class="wt">${t}</div><b>${x.incidents}</b> incidents (${x.unplanned} unplanned)<br>${x.suspendedMin} min suspended &middot; ${x.severeMin} severe &middot; ${x.minorMin} minor${x.worstLine?`<br>worst: ${x.worstLine}`:''}</div>`;
+  el.innerHTML=`<div class="wrow">${col('Today',w.today)+col('7 days',w.week)+col('All time',w.all)}</div>`;
+});
 </script>
 </body>
 </html>

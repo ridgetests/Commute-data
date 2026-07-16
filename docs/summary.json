@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T08:17:08.465Z",
+  "generatedAt": "2026-07-16T12:24:15.244Z",
   "rail": {
     "servicesTracked": 0,
     "modelled": 0,
@@ -26,10 +26,10 @@
   },
   "storage": {
     "eventsBytes": 184690,
-    "runtimesBytes": 2959483,
-    "platformsBytes": 0,
+    "runtimesBytes": 10136947,
+    "platformsBytes": 1027813,
     "crowdingBytes": 1321839,
-    "perDayBytes": 893202
+    "perDayBytes": 2534258
   },
   "readiness": [
     {
@@ -139,17 +139,142 @@
     "medianMinutes": null,
     "samples": []
   },
-  "worstLines": [
-    {
+  "windows": {
+    "today": {
+      "incidents": 6,
+      "unplanned": 6,
+      "minorMin": 203,
+      "severeMin": 0,
+      "suspendedMin": 30,
+      "worstLine": "Jubilee"
+    },
+    "week": {
       "incidents": 38,
+      "unplanned": 36,
       "minorMin": 5221,
       "severeMin": 2867,
       "suspendedMin": 2215,
-      "medianMin": 70
+      "worstLine": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)"
+    },
+    "all": {
+      "incidents": 38,
+      "unplanned": 36,
+      "minorMin": 5221,
+      "severeMin": 2867,
+      "suspendedMin": 2215,
+      "worstLine": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)"
+    }
+  },
+  "worstLines": [
+    {
+      "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
+      "incidents": 3,
+      "minorMin": 0,
+      "severeMin": 1933,
+      "suspendedMin": 2145,
+      "medianMin": 1262
+    },
+    {
+      "line": "Metropolitan",
+      "incidents": 9,
+      "minorMin": 1592,
+      "severeMin": 32,
+      "suspendedMin": 11,
+      "medianMin": 28
+    },
+    {
+      "line": "Elizabeth line",
+      "incidents": 2,
+      "minorMin": 797,
+      "severeMin": 407,
+      "suspendedMin": 2,
+      "medianMin": 603
+    },
+    {
+      "line": "Central",
+      "incidents": 4,
+      "minorMin": 937,
+      "severeMin": 251,
+      "suspendedMin": 0,
+      "medianMin": 156
+    },
+    {
+      "line": "Bakerloo",
+      "incidents": 1,
+      "minorMin": 642,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "medianMin": 642
+    },
+    {
+      "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
+      "incidents": 3,
+      "minorMin": 165,
+      "severeMin": 109,
+      "suspendedMin": 0,
+      "medianMin": 65
+    },
+    {
+      "line": "Piccadilly",
+      "incidents": 4,
+      "minorMin": 381,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "medianMin": 61
+    },
+    {
+      "line": "Victoria",
+      "incidents": 3,
+      "minorMin": 220,
+      "severeMin": 68,
+      "suspendedMin": 0,
+      "medianMin": 68
+    },
+    {
+      "line": "Circle",
+      "incidents": 3,
+      "minorMin": 247,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "medianMin": 80
+    },
+    {
+      "line": "Northern",
+      "incidents": 3,
+      "minorMin": 129,
+      "severeMin": 50,
+      "suspendedMin": 3,
+      "medianMin": 30
+    },
+    {
+      "line": "DLR",
+      "incidents": 1,
+      "minorMin": 0,
+      "severeMin": 17,
+      "suspendedMin": 34,
+      "medianMin": 51
+    },
+    {
+      "line": "Jubilee",
+      "incidents": 1,
+      "minorMin": 70,
+      "severeMin": 0,
+      "suspendedMin": 20,
+      "medianMin": 90
+    },
+    {
+      "line": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
+      "incidents": 1,
+      "minorMin": 41,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "medianMin": 41
     }
   ],
   "recent": [
     {
+      "line": "central",
+      "lineName": "Central",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-16T06:41:05.619Z",
@@ -184,6 +309,8 @@
       ]
     },
     {
+      "line": "jubilee",
+      "lineName": "Jubilee",
       "cause": "other",
       "planned": false,
       "start": "2026-07-16T04:46:00.587Z",
@@ -221,6 +348,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "other",
       "planned": false,
       "start": "2026-07-16T05:18:01.960Z",
@@ -255,6 +384,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "other",
       "planned": false,
       "start": "2026-07-16T04:51:00.833Z",
@@ -289,6 +420,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "other",
       "planned": false,
       "start": "2026-07-16T04:41:00.394Z",
@@ -323,6 +456,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "other",
       "planned": false,
       "start": "2026-07-16T04:28:59.875Z",
@@ -357,6 +492,8 @@
       ]
     },
     {
+      "line": "weaver",
+      "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
       "cause": "fire-alert",
       "planned": false,
       "start": "2026-07-15T03:15:27.913Z",
@@ -411,6 +548,8 @@
       ]
     },
     {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-15T13:34:33.345Z",
@@ -448,6 +587,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-15T22:26:05.651Z",
@@ -482,6 +623,8 @@
       ]
     },
     {
+      "line": "mildmay",
+      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
       "cause": "other",
       "planned": false,
       "start": "2026-07-15T21:46:04.075Z",
@@ -515,6 +658,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "fire-alert",
       "planned": false,
       "start": "2026-07-15T20:32:01.642Z",
@@ -549,6 +694,8 @@
       ]
     },
     {
+      "line": "victoria",
+      "lineName": "Victoria",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-15T20:32:01.642Z",
@@ -582,6 +729,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-15T13:34:33.345Z",
@@ -615,6 +764,8 @@
       ]
     },
     {
+      "line": "central",
+      "lineName": "Central",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-15T09:09:11.556Z",
@@ -653,6 +804,8 @@
       ]
     },
     {
+      "line": "circle",
+      "lineName": "Circle",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-15T09:13:23.953Z",
@@ -685,6 +838,8 @@
       ]
     },
     {
+      "line": "weaver",
+      "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
       "cause": "fire-alert",
       "planned": false,
       "start": "2026-07-13T03:15:37.162Z",
@@ -743,6 +898,8 @@
       ]
     },
     {
+      "line": "northern",
+      "lineName": "Northern",
       "cause": "signal-failure",
       "planned": false,
       "start": "2026-07-14T21:55:15.939Z",
@@ -785,6 +942,8 @@
       ]
     },
     {
+      "line": "mildmay",
+      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
       "cause": "customer-incident",
       "planned": false,
       "start": "2026-07-14T21:47:01.408Z",
@@ -827,6 +986,8 @@
       ]
     },
     {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-14T13:13:24.105Z",
@@ -897,6 +1058,8 @@
       ]
     },
     {
+      "line": "central",
+      "lineName": "Central",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-14T10:27:18.403Z",
@@ -955,6 +1118,8 @@
       ]
     },
     {
+      "line": "northern",
+      "lineName": "Northern",
       "cause": "signal-failure",
       "planned": false,
       "start": "2026-07-14T21:24:00.488Z",
@@ -1009,6 +1174,8 @@
       ]
     },
     {
+      "line": "northern",
+      "lineName": "Northern",
       "cause": "signal-failure",
       "planned": false,
       "start": "2026-07-14T21:11:00.009Z",
@@ -1043,6 +1210,8 @@
       ]
     },
     {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-14T17:32:51.977Z",
@@ -1097,6 +1266,8 @@
       ]
     },
     {
+      "line": "dlr",
+      "lineName": "DLR",
       "cause": "trespass",
       "planned": false,
       "start": "2026-07-14T19:15:55.902Z",
@@ -1134,6 +1305,8 @@
       ]
     },
     {
+      "line": "victoria",
+      "lineName": "Victoria",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-07-14T15:53:29.367Z",
