@@ -19,14 +19,14 @@
 // evidence-based rather than optimistic.
 //
 // ENDPOINT (the RDM docs are, by community consensus, poor — so, precisely):
-//   GET https://api1.raildata.org.uk/1010-live-departure-board-dep/LDBWS/api/20220120/GetDepBoardWithDetails/{CRS}
+//   GET https://api1.raildata.org.uk/1010-live-departure-board-dep1_2/LDBWS/api/20220120/GetDepBoardWithDetails/{CRS}
 //   Header: x-apikey: <CONSUMER KEY>   ← the consumer KEY, not the secret.
 //   The key lives on the product's "Specification" tab in the Marketplace.
 
 import { londonMinutesOfDay } from './calendar';
 
 export const RAIL_BASE =
-  'https://api1.raildata.org.uk/1010-live-departure-board-dep/LDBWS/api/20220120';
+  'https://api1.raildata.org.uk/1010-live-departure-board-dep1_2/LDBWS/api/20220120';
 
 // London termini + the big commuter interchanges. These are where people get
 // stranded, and where the platform question actually matters.

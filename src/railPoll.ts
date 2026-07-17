@@ -99,6 +99,10 @@ async function main() {
     if (wait > 0) await sleep(wait);
   }
 
+  if (changes === 0 && failures > 0) {
+    console.error(`FATAL: ${failures} failures and 0 changes — the feed is dead (key or endpoint). Failing loudly.`);
+    process.exit(1);
+  }
   // ---- MODEL: the platform frequency table. Small, bounded, goes in git. ----
   const modelPath = join(process.cwd(), 'data', 'model', 'rail-platforms.json');
   const model = loadPlatformModel(modelPath);
