@@ -398,7 +398,8 @@ fetch('summary.json').then(r=>r.json()).then(d=>{
   const wl=(d.worstLines||[]).slice().sort((a,b)=>(b.suspendedMin+b.severeMin+b.minorMin)-(a.suspendedMin+a.severeMin+a.minorMin));
   const lm=Math.max(1,...wl.map(l=>l.suspendedMin+l.severeMin+l.minorMin));
   const B=wl.length?'<div class="blabel">By line · minutes lost</div>'+wl.map(l=>{var t=l.suspendedMin+l.severeMin+l.minorMin;var c=LC[l.lineId]||'#6b7280';return '<div class="lb"><div class="lbn">'+l.line+'</div><div class="lbbar"><span style="width:'+(100*t/lm).toFixed(1)+'%;background:'+c+'"></span></div><div class="lbv">'+t+'</div></div>';}).join(''):'';
-  el.innerHTML=A+B;
+  const el=document.getElementById("windows");
+  if(el)el.innerHTML=A+B;
 });
 </script>
 <style>
