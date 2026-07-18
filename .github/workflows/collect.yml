@@ -41,7 +41,9 @@ jobs:
           RUN_MINUTES: "340"
 
       - name: Rebuild the public dashboard
-        run: npx tsx src/digest.ts
+        run: |
+          git pull --rebase -X theirs || true
+          npx tsx src/digest.ts
 
       - name: Commit the data
         if: always()
