@@ -1,34 +1,18 @@
 {
-  "generatedAt": "2026-07-18T19:32:24.222Z",
+  "generatedAt": "2026-07-19T01:13:03.995Z",
   "rail": {
-    "servicesTracked": 1157,
-    "modelled": 104,
-    "confident": 93,
-    "darwinLeadMin": 15,
+    "servicesTracked": 2846,
+    "modelled": 277,
+    "confident": 268,
+    "darwinLeadMin": 10,
     "samples": [
-      {
-        "crs": "FST",
-        "std": "22:54",
-        "destination": "Grays",
-        "platform": "3",
-        "confidence": 1,
-        "n": 5
-      },
-      {
-        "crs": "BFR",
-        "std": "22:37",
-        "destination": "Peterborough",
-        "platform": "2",
-        "confidence": 1,
-        "n": 5
-      },
       {
         "crs": "BFR",
         "std": "22:42",
         "destination": "Bedford",
         "platform": "2",
         "confidence": 1,
-        "n": 8
+        "n": 7.7
       },
       {
         "crs": "CLJ",
@@ -36,15 +20,7 @@
         "destination": "Stratford (London)",
         "platform": "1",
         "confidence": 1,
-        "n": 8
-      },
-      {
-        "crs": "ECR",
-        "std": "22:30",
-        "destination": "London Victoria",
-        "platform": "4",
-        "confidence": 1,
-        "n": 5
+        "n": 7.7
       },
       {
         "crs": "SRA",
@@ -52,7 +28,7 @@
         "destination": "Richmond",
         "platform": "1",
         "confidence": 1,
-        "n": 7
+        "n": 6.8
       },
       {
         "crs": "VXH",
@@ -60,7 +36,7 @@
         "destination": "London Waterloo",
         "platform": "7",
         "confidence": 1,
-        "n": 6
+        "n": 5.8
       },
       {
         "crs": "VXH",
@@ -68,31 +44,7 @@
         "destination": "London Waterloo",
         "platform": "7",
         "confidence": 1,
-        "n": 7
-      },
-      {
-        "crs": "ECR",
-        "std": "22:45",
-        "destination": "London Victoria",
-        "platform": "4",
-        "confidence": 1,
-        "n": 5
-      },
-      {
-        "crs": "PAD",
-        "std": "22:30",
-        "destination": "Bedwyn",
-        "platform": "10",
-        "confidence": 1,
-        "n": 5
-      },
-      {
-        "crs": "LBG",
-        "std": "22:36",
-        "destination": "Bedford",
-        "platform": "5",
-        "confidence": 1,
-        "n": 5
+        "n": 6.8
       },
       {
         "crs": "STP",
@@ -100,13 +52,61 @@
         "destination": "Bedford",
         "platform": "B",
         "confidence": 1,
-        "n": 7
+        "n": 6.8
+      },
+      {
+        "crs": "SRA",
+        "std": "22:51",
+        "destination": "London Liverpool Street",
+        "platform": "9",
+        "confidence": 1,
+        "n": 5.8
+      },
+      {
+        "crs": "BFR",
+        "std": "23:04",
+        "destination": "West Hampstead Thameslink",
+        "platform": "2",
+        "confidence": 1,
+        "n": 13.5
+      },
+      {
+        "crs": "LBG",
+        "std": "22:58",
+        "destination": "West Hampstead Thameslink",
+        "platform": "5",
+        "confidence": 1,
+        "n": 10.6
+      },
+      {
+        "crs": "BFR",
+        "std": "23:12",
+        "destination": "Bedford",
+        "platform": "2",
+        "confidence": 1,
+        "n": 10.6
+      },
+      {
+        "crs": "STP",
+        "std": "23:13",
+        "destination": "West Hampstead Thameslink",
+        "platform": "B",
+        "confidence": 1,
+        "n": 8.7
+      },
+      {
+        "crs": "WIM",
+        "std": "23:11",
+        "destination": "Bedford",
+        "platform": "9",
+        "confidence": 1,
+        "n": 13.5
       }
     ]
   },
   "headway": {
-    "cells": 20747,
-    "usable": 45,
+    "cells": 20969,
+    "usable": 46,
     "ready": false,
     "examples": [
       {
@@ -160,44 +160,44 @@
     ]
   },
   "coverage": {
-    "days": 7,
+    "days": 8,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-07-18T19:12:11.236Z",
-    "events": 734,
-    "incidents": 85,
+    "lastEvent": "2026-07-19T00:51:54.849Z",
+    "events": 727,
+    "incidents": 84,
     "unplanned": 80,
-    "planned": 5,
-    "runObservations": 176951,
-    "modelCells": 84278
+    "planned": 4,
+    "runObservations": 179337,
+    "modelCells": 85774
   },
   "storage": {
-    "eventsBytes": 287456,
+    "eventsBytes": 284202,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 2309670,
-    "perDayBytes": 793801
+    "crowdingBytes": 2333147,
+    "perDayBytes": 697104
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 29,
+      "have": 27,
       "need": 20,
-      "perDay": 4.14,
+      "perDay": 3.38,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 80,
-      "p90Min": 754
+      "medianMin": 181,
+      "p90Min": 825
     },
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
       "have": 19,
       "need": 20,
-      "perDay": 2.71,
+      "perDay": 2.38,
       "ready": false,
       "etaDays": [
         1,
@@ -209,43 +209,43 @@
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 14,
+      "have": 15,
       "need": 20,
-      "perDay": 2,
+      "perDay": 1.88,
       "ready": false,
       "etaDays": [
         1,
         5
       ],
-      "medianMin": 27,
-      "p90Min": 326
+      "medianMin": 41,
+      "p90Min": 514
     },
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
-      "have": 11,
+      "have": 12,
       "need": 20,
-      "perDay": 1.57,
+      "perDay": 1.5,
       "ready": false,
       "etaDays": [
-        3,
-        9
+        2,
+        8
       ],
-      "medianMin": 80,
-      "p90Min": 1431
+      "medianMin": 257,
+      "p90Min": 2405
     },
     {
       "cause": "trespass",
       "feature": "Trespass — “is it worth waiting?”",
-      "have": 2,
+      "have": 3,
       "need": 20,
-      "perDay": 0.29,
+      "perDay": 0.38,
       "ready": false,
       "etaDays": [
-        39,
-        87
+        27,
+        63
       ],
-      "medianMin": 94,
+      "medianMin": 98,
       "p90Min": 136
     },
     {
@@ -253,25 +253,25 @@
       "feature": "Customer taken ill — “is it worth waiting?”",
       "have": 2,
       "need": 20,
-      "perDay": 0.29,
+      "perDay": 0.25,
       "ready": false,
       "etaDays": [
-        39,
-        87
+        44,
+        100
       ],
-      "medianMin": 90,
-      "p90Min": 148
+      "medianMin": 334,
+      "p90Min": 519
     },
     {
       "cause": "obstruction",
       "feature": "obstruction",
       "have": 1,
       "need": 20,
-      "perDay": 0.14,
+      "perDay": 0.13,
       "ready": false,
       "etaDays": [
-        83,
-        183
+        95,
+        209
       ],
       "medianMin": 116,
       "p90Min": 116
@@ -281,11 +281,11 @@
       "feature": "Power failure — “how long will this last?”",
       "have": 1,
       "need": 20,
-      "perDay": 0.14,
+      "perDay": 0.13,
       "ready": false,
       "etaDays": [
-        83,
-        183
+        95,
+        209
       ],
       "medianMin": 45,
       "p90Min": 45
@@ -294,92 +294,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 27927,
+      "n": 28491,
       "ready": true
     },
     {
       "line": "district",
-      "n": 22246,
+      "n": 22751,
       "ready": true
     },
     {
       "line": "central",
-      "n": 20960,
+      "n": 21588,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 16981,
+      "n": 17042,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 13883,
+      "n": 13842,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 12644,
+      "n": 12434,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 9302,
+      "n": 9257,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 9054,
+      "n": 9115,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 8527,
+      "n": 8837,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 8079,
+      "n": 8314,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 7979,
+      "n": 8293,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 7093,
+      "n": 7007,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 4627,
+      "n": 4645,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 3116,
+      "n": 3072,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 2629,
+      "n": 2757,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 1657,
+      "n": 1651,
       "ready": false
     },
     {
       "line": "waterloo-city",
-      "n": 182,
+      "n": 170,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 64,
+      "n": 70,
       "ready": false
     }
   ],
@@ -392,27 +392,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 12,
-      "unplanned": 10,
-      "minorMin": 1213,
-      "severeMin": 178,
-      "suspendedMin": 156,
-      "worstLine": "Metropolitan"
+      "incidents": 0,
+      "unplanned": 0,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstLine": null
     },
     "week": {
-      "incidents": 85,
+      "incidents": 84,
       "unplanned": 80,
-      "minorMin": 13134,
-      "severeMin": 5605,
-      "suspendedMin": 3452,
+      "minorMin": 18087,
+      "severeMin": 6600,
+      "suspendedMin": 3790,
       "worstLine": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)"
     },
     "all": {
-      "incidents": 85,
+      "incidents": 84,
       "unplanned": 80,
-      "minorMin": 13134,
-      "severeMin": 5605,
-      "suspendedMin": 3452,
+      "minorMin": 18087,
+      "severeMin": 6600,
+      "suspendedMin": 3790,
       "worstLine": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)"
     }
   },
@@ -421,19 +421,19 @@
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
       "lineId": "weaver",
       "incidents": 5,
-      "minorMin": 2309,
+      "minorMin": 3624,
       "severeMin": 1933,
       "suspendedMin": 2145,
-      "medianMin": 1219
+      "medianMin": 1262
     },
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 15,
-      "minorMin": 2972,
-      "severeMin": 465,
+      "incidents": 14,
+      "minorMin": 2503,
+      "severeMin": 1017,
       "suspendedMin": 11,
-      "medianMin": 59
+      "medianMin": 58
     },
     {
       "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
@@ -454,67 +454,31 @@
       "medianMin": 160
     },
     {
+      "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
+      "lineId": "windrush",
+      "incidents": 3,
+      "minorMin": 18,
+      "severeMin": 81,
+      "suspendedMin": 784,
+      "medianMin": 136
+    },
+    {
       "line": "Central",
       "lineId": "central",
-      "incidents": 8,
-      "minorMin": 1430,
+      "incidents": 7,
+      "minorMin": 1879,
       "severeMin": 251,
       "suspendedMin": 17,
-      "medianMin": 79
+      "medianMin": 193
     },
     {
       "line": "Elizabeth line",
       "lineId": "elizabeth",
       "incidents": 5,
-      "minorMin": 812,
-      "severeMin": 435,
-      "suspendedMin": 91,
-      "medianMin": 126
-    },
-    {
-      "line": "Victoria",
-      "lineId": "victoria",
-      "incidents": 8,
-      "minorMin": 814,
-      "severeMin": 290,
-      "suspendedMin": 41,
-      "medianMin": 55
-    },
-    {
-      "line": "Piccadilly",
-      "lineId": "piccadilly",
-      "incidents": 5,
-      "minorMin": 1221,
-      "severeMin": 79,
-      "suspendedMin": 0,
-      "medianMin": 65
-    },
-    {
-      "line": "Bakerloo",
-      "lineId": "bakerloo",
-      "incidents": 5,
-      "minorMin": 652,
-      "severeMin": 361,
-      "suspendedMin": 0,
-      "medianMin": 65
-    },
-    {
-      "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
-      "lineId": "windrush",
-      "incidents": 2,
-      "minorMin": 18,
-      "severeMin": 78,
-      "suspendedMin": 689,
-      "medianMin": 393
-    },
-    {
-      "line": "Central",
-      "lineId": "central",
-      "incidents": 6,
-      "minorMin": 1686,
-      "severeMin": 251,
-      "suspendedMin": 17,
-      "medianMin": 156
+      "minorMin": 1171,
+      "severeMin": 425,
+      "suspendedMin": 23,
+      "medianMin": 388
     },
     {
       "line": "Piccadilly",
@@ -535,13 +499,22 @@
       "medianMin": 150
     },
     {
-      "line": "Elizabeth line",
-      "lineId": "elizabeth",
-      "incidents": 3,
-      "minorMin": 801,
-      "severeMin": 407,
-      "suspendedMin": 2,
-      "medianMin": 409
+      "line": "Northern",
+      "lineId": "northern",
+      "incidents": 7,
+      "minorMin": 1119,
+      "severeMin": 76,
+      "suspendedMin": 66,
+      "medianMin": 114
+    },
+    {
+      "line": "Jubilee",
+      "lineId": "jubilee",
+      "incidents": 5,
+      "minorMin": 1140,
+      "severeMin": 112,
+      "suspendedMin": 20,
+      "medianMin": 90
     },
     {
       "line": "Victoria",
@@ -553,13 +526,13 @@
       "medianMin": 68
     },
     {
-      "line": "Northern",
-      "lineId": "northern",
-      "incidents": 8,
-      "minorMin": 666,
-      "severeMin": 101,
-      "suspendedMin": 31,
-      "medianMin": 31
+      "line": "Lioness (Overground · Euston–Watford)",
+      "lineId": "lioness",
+      "incidents": 1,
+      "minorMin": 725,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "medianMin": 725
     },
     {
       "line": "DLR",
@@ -571,13 +544,13 @@
       "medianMin": 51
     },
     {
-      "line": "Jubilee",
-      "lineId": "jubilee",
-      "incidents": 5,
-      "minorMin": 310,
-      "severeMin": 67,
-      "suspendedMin": 20,
-      "medianMin": 50
+      "line": "Hammersmith & City",
+      "lineId": "hammersmith-city",
+      "incidents": 2,
+      "minorMin": 454,
+      "severeMin": 45,
+      "suspendedMin": 0,
+      "medianMin": 250
     },
     {
       "line": "Hammersmith & City",
@@ -591,11 +564,11 @@
     {
       "line": "Circle",
       "lineId": "circle",
-      "incidents": 3,
-      "minorMin": 247,
+      "incidents": 4,
+      "minorMin": 493,
       "severeMin": 0,
       "suspendedMin": 0,
-      "medianMin": 80
+      "medianMin": 95
     },
     {
       "line": "District",
@@ -609,9 +582,452 @@
   ],
   "recent": [
     {
+      "line": "jubilee",
+      "lineName": "Jubilee",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-18T08:11:17.347Z",
+      "end": "2026-07-19T00:49:54.337Z",
+      "minutes": 999,
+      "minorMin": 954,
+      "severeMin": 45,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 954,
+      "reason": "Jubilee Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T08:11:17.347Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-19T00:04:52.469Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-19T00:49:54.337Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stratford → Stanmore",
+        "Stanmore → Stratford"
+      ]
+    },
+    {
+      "line": "weaver",
+      "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-07-17T08:20:26.416Z",
+      "end": "2026-07-19T00:25:53.715Z",
+      "minutes": 2405,
+      "minorMin": 2405,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Weaver Line: Minor delays due to a line side fire near Wood Street on Sunday.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-17T08:20:26.416Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-17T19:42:36.929Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T08:11:17.347Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-19T00:25:53.715Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cheshunt → London Liverpool Street",
+        "London Liverpool Street → Cheshunt",
+        "Enfield Town → London Liverpool Street"
+      ]
+    },
+    {
       "line": "metropolitan",
       "lineName": "Metropolitan",
       "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-18T08:11:17.347Z",
+      "end": "2026-07-19T00:21:53.213Z",
+      "minutes": 971,
+      "minorMin": 293,
+      "severeMin": 677,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 4,
+      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T08:11:17.347Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T08:15:17.833Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-19T00:21:53.213Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Aldgate → Uxbridge",
+        "Uxbridge → Aldgate",
+        "Aldgate → Watford"
+      ]
+    },
+    {
+      "line": "windrush",
+      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
+      "cause": "trespass",
+      "planned": false,
+      "start": "2026-07-18T22:34:49.125Z",
+      "end": "2026-07-19T00:12:52.908Z",
+      "minutes": 98,
+      "minorMin": 0,
+      "severeMin": 3,
+      "suspendedMin": 95,
+      "worstSev": 3,
+      "peakAfterMin": 3,
+      "reason": "Windrush Line: Severe delays between Surrey Quays and Clapham Junction while we deal with a trespasser on the track at Peckham Rye. London Underground accepting tickets via any reasonable routes. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T22:34:49.125Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-18T22:37:49.499Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-07-19T00:12:52.908Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Clapham Junction → Highbury & Islington",
+        "Highbury & Islington → Clapham Junction"
+      ]
+    },
+    {
+      "line": "circle",
+      "lineName": "Circle",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-18T19:32:42.815Z",
+      "end": "2026-07-18T23:38:51.558Z",
+      "minutes": 246,
+      "minorMin": 246,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Circle Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T23:38:51.558Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-18T19:32:42.815Z",
+      "end": "2026-07-18T22:45:49.469Z",
+      "minutes": 193,
+      "minorMin": 193,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between Leytonstone and Epping/ Hainault via Newbury Park due to train cancellations. GOOD SERVICE on the rest of the line  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T22:45:49.469Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-07-18T21:32:47.191Z",
+      "end": "2026-07-18T21:53:47.400Z",
+      "minutes": 21,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 21,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "No service between Hayes & Harlington and Heathrow terminals due to planned engineering work. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T21:32:47.191Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-07-18T21:53:47.400Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
+    {
+      "line": "lioness",
+      "lineName": "Lioness (Overground · Euston–Watford)",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-18T08:11:17.347Z",
+      "end": "2026-07-18T20:16:44.032Z",
+      "minutes": 725,
+      "minorMin": 725,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 7,
+      "peakAfterMin": 0,
+      "reason": "LIONESS LINE: Saturday 18 and Sunday 19 July: On Saturday and Sunday a reduced service will run at certain times between Kilburn High Road and Euston. On Saturday, trains departing Watford Junction, between 0630 and 2030, at 30 minutes past each hour, will terminate at Kilburn High Road. Trains departing Euston, between 0715 and 2115, at 15 minutes each hour will start from Kilburn High Road. On Sunday, trains departing Watford Junction, between 1130 and 2030, at 30 minutes past each hour, will terminate at Kilburn High Road. Trains departing Euston, between 1215 and 2115, at 15 minutes each hour will start from Kilburn High Road.",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T08:11:17.347Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-07-18T20:16:44.032Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Watford Junction → London Euston",
+        "London Euston → Watford Junction"
+      ]
+    },
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-07-18T10:53:23.046Z",
+      "end": "2026-07-18T19:32:42.815Z",
+      "minutes": 519,
+      "minorMin": 484,
+      "severeMin": 0,
+      "suspendedMin": 35,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: No service between Archway and High Barnet while we deal with a customer incident at East Finchley. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T10:53:23.046Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-07-18T11:28:24.078Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T12:03:25.374Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "High Barnet → Morden",
+        "Morden → High Barnet",
+        "Mill Hill East → Morden"
+      ]
+    },
+    {
+      "line": "hammersmith-city",
+      "lineName": "Hammersmith & City",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-18T12:33:26.202Z",
+      "end": "2026-07-18T19:32:42.815Z",
+      "minutes": 419,
+      "minorMin": 419,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Hammersmith and City Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T12:33:26.202Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Barking"
+      ]
+    },
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-07-18T13:04:27.913Z",
+      "end": "2026-07-18T19:32:42.815Z",
+      "minutes": 388,
+      "minorMin": 370,
+      "severeMin": 18,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 4,
+      "reason": "Minor delays between Paddington and Abbey Wood while we fix a fault with the overhead power lines at Woolwich. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-18T13:04:27.913Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T13:08:27.507Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-18T13:26:28.110Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-18T19:32:42.815Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
+    {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
+      "cause": "signal-failure",
       "planned": false,
       "start": "2026-07-18T04:46:47.978Z",
       "end": "2026-07-18T18:26:09.785Z",
@@ -1220,9 +1636,8 @@
         }
       ],
       "segments": [
-        "Cockfosters → Uxbridge",
-        "Uxbridge → Cockfosters",
-        "Cockfosters → Heathrow Terminal 5"
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
       ]
     },
     {
@@ -1451,6 +1866,50 @@
         "Lewisham DLR Station → Stratford DLR Station",
         "Lewisham DLR Station → Bank DLR Station",
         "Bank DLR Station → Lewisham DLR Station"
+      ]
+    },
+    {
+      "line": "windrush",
+      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
+      "cause": "trespass",
+      "planned": false,
+      "start": "2026-07-17T08:20:26.416Z",
+      "end": "2026-07-17T10:36:30.644Z",
+      "minutes": 136,
+      "minorMin": 18,
+      "severeMin": 78,
+      "suspendedMin": 40,
+      "worstSev": 2,
+      "peakAfterMin": 0,
+      "reason": "Windrush Line: No service while we deal with a trespasser at Whitechapel. Tickets are being accepted on London Underground. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-17T08:20:26.416Z",
+          "sev": 2
+        },
+        {
+          "t": "2026-07-17T09:00:29.150Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-07-17T10:18:30.226Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-17T10:36:30.644Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "West Croydon → Highbury & Islington",
+        "Highbury & Islington → West Croydon",
+        "Clapham Junction → Highbury & Islington"
       ]
     }
   ]
