@@ -151,6 +151,7 @@
     else bothers to keep. Platform allocations are <b>ephemeral and unpublished</b>: HSP
     keeps punctuality, not platforms.</p>
   <div id="rail"></div>
+  <div id="punct"></div>
 
   </div>
   <h2>Storage</h2>
@@ -283,6 +284,29 @@ function render(d){
       </div>`
     : `<div class="empty">No rail data yet.<br>
         Run the <b>Collect rail</b> workflow — it needs a full ~5.5 hour job to write the model.</div>`;
+
+  // ---- RAIL PUNCTUALITY — who actually runs late, from our own log. ----
+  // Full station names, because CRS codes are for machines. HSP keeps monthly
+  // averages; nobody keeps peak-observed lateness per service. We do now.
+  const CRS_NAMES={WAT:'Waterloo',VIC:'Victoria',LST:'Liverpool Street',PAD:'Paddington',KGX:"King's Cross",EUS:'Euston',STP:'St Pancras',CHX:'Charing Cross',CST:'Cannon Street',FST:'Fenchurch Street',LBG:'London Bridge',MYB:'Marylebone',BFR:'Blackfriars',CLJ:'Clapham Junction',ECR:'East Croydon',SRA:'Stratford',WIM:'Wimbledon',SUR:'Surbiton',RMD:'Richmond',VXH:'Vauxhall'};
+  const rel = d.railReliability;
+  $('punct').innerHTML = (rel && rel.worst && rel.worst.length)
+    ? `<h2 style="margin-top:28px">Punctuality — who actually runs late</h2>
+      <div class="rd-s">Peak observed lateness per service, from our own log —
+        p50 typical, p90 a bad day. ${rel.days} day(s) of log ·
+        ${rel.servicesSeen.toLocaleString()} services seen · ${rel.cellsReady} modelled</div>
+      <table style="margin-top:12px">
+        <tr><th>Service</th><th>Typical</th><th>Bad day</th><th>Cancelled</th></tr>
+        ${rel.worst.map(w => `<tr>
+          <td>${CRS_NAMES[w.crs] || w.crs} ${w.std} → ${w.destination}</td>
+          <td class="n">${w.p50Late}m late</td>
+          <td class="n" style="color:var(--amber)">${w.p90Late}m</td>
+          <td class="n">${w.cancelPct}%</td>
+        </tr>`).join('')}
+      </table>`
+    : `<h2 style="margin-top:28px">Punctuality — who actually runs late</h2>
+      <div class="empty">No punctuality model yet — the rail log banks its first
+        day, then the <b>Punctuality model</b> workflow speaks. Correct, not broken.</div>`;
 
   // ---- INCIDENTS ----
   const rec = d.recent || [];
