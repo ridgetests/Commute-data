@@ -20,6 +20,13 @@ jobs:
         run: |
           git config user.name "archive-bot"
           git config user.email "archive-bot@users.noreply.github.com"
+          # The model script exits gracefully when the rail log doesn't exist
+          # yet — the workflow must match it. Half a graceful path is a red
+          # run every six hours for no reason.
+          if [ ! -f data/model/rail-reliability.json ]; then
+            echo "No model file yet — the rail log hasn't banked its first day. Nothing to commit."
+            exit 0
+          fi
           git add data/model/rail-reliability.json
           git commit -m "punctuality model rebuild" || exit 0
           for i in 1 2 3; do
