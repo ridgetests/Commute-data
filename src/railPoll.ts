@@ -12,7 +12,6 @@ import {
   loadPlatformModel, mergePlatforms, savePlatformModel, predictions, benchmark,
 } from './platformModel';
 import { refreshBankHolidays } from './calendar';
-import { putRaw, sinkConfigured } from './r2';
 
 // The stations we watch. Termini + the busy interchanges where platform
 // knowledge pays. Override with CRS env (comma-separated) for experiments.
@@ -28,6 +27,29 @@ const INTERVAL = Number(process.env.POLL_SECONDS ?? 60) * 1000;
 
 // Raw tier: everything we saw, for R2. Bounded models go to git; raw is the
 // archaeology layer.
+//
+// INLINED 23 Jul, after an outage this file must remember: an edit imported
+// these two helpers from a './r2' module that never existed, and every rail
+// run died in 15 seconds until it was caught — zero collection, zero log.
+// They live HERE now; this file has no imports that can vanish. The R2
+// upload itself is deliberately not wired (the four R2_* secrets have never
+// been set on this repo) — when the R2 move happens, aws4fetch goes here,
+// and until then the on-disk rail log + the models are the durable copies.
+const sinkConfigured = (): boolean =>
+  Boolean(process.env.R2_ACCOUNT_ID && process.env.R2_ACCESS_KEY_ID
+    && process.env.R2_SECRET_ACCESS_KEY && process.env.R2_BUCKET);
+async function putRaw(
+  _kind: string, lines: string[],
+): Promise<{ bytes: number; where: string }> {
+  const bytes = lines.reduce((n, l) => n + l.length + 1, 0);
+  return {
+    bytes,
+    where: sinkConfigured()
+      ? 'R2 configured but upload not wired in this build — raw discarded'
+      : 'R2 not configured — raw discarded (set R2_* secrets to keep it)',
+  };
+}
+
 const rawBuf: string[] = [];
 function write(kind: string, recs: unknown[]) {
   for (const r of recs) rawBuf.push(JSON.stringify({ kind, ...(r as object) }));
