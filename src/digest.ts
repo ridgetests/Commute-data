@@ -618,6 +618,21 @@ function main() {
   };
 
   mkdirSync(join(process.cwd(), 'docs'), { recursive: true });
+  // ---- RAIL PUNCTUALITY: surface the reliability model when it exists.
+  // Rebuilt by the Punctuality workflow from data/rail/*.jsonl; absent until
+  // the log banks its first day — the panel says so rather than pretending.
+  try {
+    const rel = JSON.parse(readFileSync(
+      join(process.cwd(), 'data', 'model', 'rail-reliability.json'), 'utf8'));
+    (summary as any).railReliability = {
+      generatedAt: rel.generatedAt,
+      days: rel.days,
+      servicesSeen: rel.servicesSeen,
+      cellsReady: rel.cellsReady,
+      worst: (rel.services ?? []).filter((x: any) => x.p90Late !== null).slice(0, 12),
+    };
+  } catch { /* no model yet — the panel shows its empty state */ }
+
   writeFileSync(join(process.cwd(), 'docs', 'summary.json'), JSON.stringify(summary, null, 2));
 
   console.log(`Pit wall: ${events.length} events → ${incidents.length} incidents, ` +
