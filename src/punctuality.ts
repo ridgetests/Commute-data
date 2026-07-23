@@ -1,22 +1,21 @@
 // PUNCTUALITY — the model the harvest was always feeding, finally built.
 //
-// The collector has been banking rich per-service events all along: etd,
-// lateMin, cancellations, reasons — written on every CHANGE into
-// data/rail/*.jsonl (in git, daily). Only platforms ever got a model; the
-// punctuality story sat unmodelled in the log. This closes that gap.
+// The collector extracts rich per-service events every poll: etd, lateMin,
+// cancellations, reasons. Until 20 Jul those events lived only in memory and
+// went to R2 or the void — so this model reads the on-disk log that railPoll
+// now persists to data/rail/*.jsonl, and REBUILDS FROM IT: the model is a
+// pure function of the log — rerun any time, idempotent, no merge state to
+// corrupt. Services are grouped across the WHOLE log by serviceId, so run
+// boundaries can't double-count.
 //
-// ARCHITECTURE: rebuild-from-log, not incremental. The full event log lives
-// in git, so the model is a PURE FUNCTION of it — rerun any time, idempotent,
-// no merge state to corrupt (this week taught us what incremental state costs
-// when workflows fight). Services are grouped across the WHOLE log by
-// serviceId, so run boundaries can't double-count.
-//
-// OUTCOME per service = the PEAK numeric lateness we observed (delays rarely
+// OUTCOME per service = the PEAK numeric lateness observed (delays rarely
 // recover; the worst state seen is the honest summary of the pain), or
-// cancellation. "Delayed" with no number is counted as UNKNOWN — reported,
-// never guessed into the percentiles. Old days decay: half-life ~21 days,
-// same philosophy as the platform model, so a timetable change washes out.
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+// cancellation. "Delayed" with no number = UNKNOWN — reported, never guessed
+// into the percentiles. Old days decay: half-life ~21 days, same philosophy
+// as the platform model, so a timetable change washes out.
+import {
+  existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync,
+} from 'node:fs';
 import { join } from 'node:path';
 import { dayType } from './calendar';
 
@@ -27,16 +26,21 @@ const LATE_CLAMP = 90;         // minutes; beyond this it's "a very bad day"
 interface Outcome {
   crs: string; std: string; dest: string;
   day: string; dt: string;
-  peakLate: number | null;     // max numeric lateMin seen, if any
+  peakLate: number | null;
   cancelled: boolean;
-  delayedUnknown: boolean;     // saw "Delayed" but never a number
+  delayedUnknown: boolean;
 }
 
 const railDir = join(process.cwd(), 'data', 'rail');
+if (!existsSync(railDir)) {
+  console.log('No rail log yet — data/rail/ starts accumulating with the next');
+  console.log('collector run now that railPoll persists it. Correct, not broken.');
+  process.exit(0);
+}
 const files = readdirSync(railDir).filter((f) => f.endsWith('.jsonl')).sort();
 if (files.length === 0) {
-  console.error('No data/rail/*.jsonl found — nothing to model.');
-  process.exit(1);
+  console.log('data/rail/ exists but holds no days yet. Come back after a run.');
+  process.exit(0);
 }
 
 // ---- group the whole log by serviceId ----

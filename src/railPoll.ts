@@ -1,61 +1,56 @@
-import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
+// RAIL COLLECTOR — polls Darwin departure boards for the monitored stations
+// and keeps three things: the raw change log, the platform model, and (new)
+// an ON-DISK event log that the punctuality model rebuilds from.
+//
+// One long job, not many short ones: Darwin allowance is finite and the
+// platform story only makes sense observed continuously — the announcement
+// moment IS the data.
+import { writeFileSync, appendFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import {
-  RAIL_BASE, DEFAULT_CRS, toServices, diffServices,
-  type Service, type RailChange,
-} from './rail';
+import { board, toServices, diffServices, type RailChange, type Service } from './rail';
 import {
   loadPlatformModel, mergePlatforms, savePlatformModel, predictions, benchmark,
 } from './platformModel';
-import { putRaw, sinkConfigured } from './sink';
 import { refreshBankHolidays } from './calendar';
+import { putRaw, sinkConfigured } from './r2';
 
-// Darwin collector. Same shape as the TfL one: a long-running job that polls
-// often and writes only when something CHANGES.
-//
-// Cadence: every 60 seconds. Platform allocations appear suddenly and close to
-// departure, so polling slowly would blur the exact thing we're trying to
-// measure — WHEN Darwin announced it.
-//
-// Call budget: ~20 stations × 60 polls/hour = 1,200 calls/hour, ~29k/day. Darwin
-// on the open tier allows far more than this (the SOAP tier was 5M per 4-week
-// period). Comfortable.
+// The stations we watch. Termini + the busy interchanges where platform
+// knowledge pays. Override with CRS env (comma-separated) for experiments.
+const DEFAULT_CRS = [
+  'WAT', 'VIC', 'LST', 'PAD', 'KGX', 'EUS', 'STP', 'CHX', 'CST', 'FST',
+  'LBG', 'MYB', 'BFR', 'CLJ', 'ECR', 'SRA', 'WIM', 'SUR', 'RMD', 'VXH',
+];
+const STATIONS = (process.env.CRS ?? DEFAULT_CRS.join(','))
+  .split(',').map((s) => s.trim()).filter(Boolean);
 
-const KEY = process.env.RAIL_API_KEY ?? '';
-const MINUTES = Number(process.env.RUN_MINUTES ?? 55);
+const MINUTES = Number(process.env.RUN_MINUTES ?? 340);
 const INTERVAL = Number(process.env.POLL_SECONDS ?? 60) * 1000;
-const STATIONS = (process.env.RAIL_CRS ?? DEFAULT_CRS.join(','))
-  .split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+
+// Raw tier: everything we saw, for R2. Bounded models go to git; raw is the
+// archaeology layer.
+const rawBuf: string[] = [];
+function write(kind: string, recs: unknown[]) {
+  for (const r of recs) rawBuf.push(JSON.stringify({ kind, ...(r as object) }));
+}
+
+// THE LOG IS THE ASSET (added 20 Jul). Until now the rail events lived only
+// in rawBuf and went to R2 or — with R2 unconfigured — the void, which is why
+// the punctuality model starved on an empty directory. ~0.3 MB/day in git
+// buys months of history; R2 remains the long-term home when it's wired.
+const railDir = join(process.cwd(), 'data', 'rail');
+mkdirSync(railDir, { recursive: true });
+function persistRail(recs: RailChange[]) {
+  if (recs.length === 0) return;
+  const day = new Date().toISOString().slice(0, 10);
+  appendFileSync(
+    join(railDir, `${day}.jsonl`),
+    recs.map((r) => JSON.stringify(r)).join('\n') + '\n',
+  );
+}
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function board(crs: string): Promise<any> {
-  const res = await fetch(`${RAIL_BASE}/GetDepBoardWithDetails/${crs}`, {
-    headers: { 'x-apikey': KEY },
-  });
-  if (!res.ok) throw new Error(`${crs}: HTTP ${res.status}`);
-  return res.json();
-}
-
-const write = (dir: string, rows: unknown[]) => {
-  if (!rows.length) return;
-  const day = new Date().toISOString().slice(0, 10);
-  const d = join(process.cwd(), 'data', dir);
-  mkdirSync(d, { recursive: true });
-  appendFileSync(join(d, `${day}.jsonl`),
-    rows.map((r) => JSON.stringify(r)).join('\n') + '\n');
-};
-
 async function main() {
-  if (!KEY) {
-    console.error('Set RAIL_API_KEY — the CONSUMER KEY from the Rail Data');
-    console.error('Marketplace product’s "Specification" tab (not the secret).');
-    process.exit(1);
-  }
-
-  console.log(`Darwin: watching ${STATIONS.length} stations for ${MINUTES} min ` +
-    `at ${INTERVAL / 1000}s cadence.`);
-
   const bh = await refreshBankHolidays();
   console.log(`Bank holidays: ${bh.n} known${bh.ok ? '' : ' (from cache — refresh failed)'}`);
 
@@ -68,7 +63,6 @@ async function main() {
     const started = Date.now();
     const now = new Date();
     const batch: RailChange[] = [];
-
     for (const crs of STATIONS) {
       try {
         const services = toServices(await board(crs), crs);
@@ -80,16 +74,15 @@ async function main() {
         for (const s of services) prev.set(s.serviceId, s);
       } catch (e) {
         failures++;
-        if (failures <= 3) console.log(`  ! ${(e as Error).message}`);
+        if (failures <= 3) console.log(`  ! ${crs}: ${(e as Error).message}`);
       }
     }
-
     if (batch.length) {
       write('rail', batch);
+      persistRail(batch);
       allChanges.push(...batch);
       changes += batch.length;
     }
-
     polls++;
     if (polls % 15 === 0) {
       console.log(`[${polls} polls] ${changes} changes · ` +
@@ -103,33 +96,38 @@ async function main() {
     console.error(`FATAL: ${failures} failures and 0 changes — the feed is dead (key or endpoint). Failing loudly.`);
     process.exit(1);
   }
+
   // ---- MODEL: the platform frequency table. Small, bounded, goes in git. ----
   const modelPath = join(process.cwd(), 'data', 'model', 'rail-platforms.json');
   const model = loadPlatformModel(modelPath);
   const added = mergePlatforms(model, allChanges);
   savePlatformModel(modelPath, model);
-
   const bench = benchmark(model);
   writeFileSync(
     join(process.cwd(), 'data', 'model', 'rail-predictions.json'),
-    JSON.stringify({ generatedAt: new Date().toISOString(), benchmark: bench,
-      predictions: predictions(model).slice(0, 2000) }),
+    JSON.stringify({
+      generatedAt: new Date().toISOString(),
+      note: 'Usual platform per service, with confidence. Darwin lead time is the number to beat.',
+      darwinLeadMin: bench.darwinLeadMin,
+      predictable: bench.predictable,
+      total: bench.total,
+      services: predictions(model, 5).slice(0, 2000),
+    }),
   );
-
-  // ---- RAW: cold archive. ----
-  const key = `raw/rail/${new Date().toISOString().slice(0, 13)}.jsonl.gz`;
-  const r = await putRaw(key, allChanges);
 
   console.log(`\nDone. ${polls} polls · ${changes} changes · ` +
     `${platformsSeen} platform announcements · ${failures} failures`);
-  console.log(`Model: +${added} observations → ${Object.keys(model.cells).length} services`);
-  console.log(`  ${bench.confident} of ${bench.servicesModelled} predictable at ≥80% confidence`);
-  if (bench.darwinMedianLeadMin !== null) {
-    console.log(`  📡 Darwin announces the platform ~${bench.darwinMedianLeadMin} min ` +
-      `before departure. That's the number to beat.`);
+  console.log(`Model: +${added} observations → ${bench.total} services`);
+  console.log(`  ${bench.predictable} of ${bench.total} predictable at ≥80% confidence`);
+  if (bench.darwinLeadMin !== null) {
+    console.log(`  📡 Darwin announces the platform ~${Math.round(bench.darwinLeadMin)} min before departure. That's the number to beat.`);
   }
+
+  const r = await putRaw('rail', rawBuf);
   console.log(`Raw: ${(r.bytes / 1e6).toFixed(2)} MB → ${r.where}`);
-  if (!sinkConfigured()) console.log('  ⚠️  R2 not set — raw discarded, model is safe.');
+  if (!sinkConfigured()) {
+    console.log('  ⚠️  R2 not set — raw discarded, but the model AND the on-disk rail log are safe.');
+  }
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
