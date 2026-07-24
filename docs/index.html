@@ -151,6 +151,7 @@
     else bothers to keep. Platform allocations are <b>ephemeral and unpublished</b>: HSP
     keeps punctuality, not platforms.</p>
   <div id="rail"></div>
+  <div id="board"></div>
   <div id="punct"></div>
 
   </div>
@@ -307,6 +308,61 @@ function render(d){
     : `<h2 style="margin-top:28px">Punctuality — who actually runs late</h2>
       <div class="empty">No punctuality model yet — the rail log banks its first
         day, then the <b>Punctuality model</b> workflow speaks. Correct, not broken.</div>`;
+
+  // ---- STATION BOARD — every modelled service for YOUR station. ----
+  // The taster table above shows a dozen rows; the model holds thousands.
+  // This fetches the FULL predictions file and shows one station completely —
+  // pick it, it sticks. The answer to "where are ALL my Waterloo services?"
+  (async () => {
+    const el = document.getElementById('board');
+    try {
+      const res = await fetch('https://raw.githubusercontent.com/ridgetests/Commute-data/main/data/model/rail-predictions.json');
+      if (!res.ok) throw new Error(String(res.status));
+      const model = await res.json();
+      const services = model.services ?? [];
+      if (!services.length) { el.innerHTML = ''; return; }
+      const byCrs = {};
+      for (const s of services) (byCrs[s.crs] = byCrs[s.crs] ?? []).push(s);
+      const stations = Object.keys(byCrs).sort(
+        (a, b) => (CRS_NAMES[a] || a).localeCompare(CRS_NAMES[b] || b));
+      const saved = localStorage.getItem('board-crs');
+      let crs = stations.includes(saved) ? saved
+        : stations.includes('WAT') ? 'WAT' : stations[0];
+      const draw = () => {
+        const rows = [...byCrs[crs]].sort((a, b) => (a.std || '').localeCompare(b.std || ''));
+        document.getElementById('board-body').innerHTML =
+          `<div class="rd-s">${rows.length} services modelled at ${CRS_NAMES[crs] || crs}</div>
+          <table style="margin-top:10px">
+            <tr><th>Departs</th><th>To</th><th>Usual platform</th><th>Confidence</th><th>Seen</th></tr>
+            ${rows.map(w => `<tr>
+              <td class="n">${w.std}</td>
+              <td>${w.destination ?? '?'}</td>
+              <td class="n">${w.platform ?? '—'}</td>
+              <td class="n">${Math.round((w.confidence ?? 0) * 100)}%</td>
+              <td class="n">${(w.n ?? 0).toFixed(1)}×</td>
+            </tr>`).join('')}
+          </table>`;
+      };
+      el.innerHTML =
+        `<h2 style="margin-top:28px">Station board — the whole picture</h2>
+        <div class="rd-s">Every service the platform model knows, one station at a
+          time. Your choice sticks.</div>
+        <select id="board-pick" style="margin-top:12px;background:#101014;color:var(--off);
+          border:1px solid var(--hair);border-radius:8px;padding:9px 12px;font:inherit">
+          ${stations.map(c =>
+            `<option value="${c}" ${c === crs ? 'selected' : ''}>${CRS_NAMES[c] || c}</option>`).join('')}
+        </select>
+        <div id="board-body"></div>`;
+      document.getElementById('board-pick').onchange = (e) => {
+        crs = e.target.value;
+        localStorage.setItem('board-crs', crs);
+        draw();
+      };
+      draw();
+    } catch (err) {
+      el.innerHTML = '';
+    }
+  })();
 
   // ---- INCIDENTS ----
   const rec = d.recent || [];
