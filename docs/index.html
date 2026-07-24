@@ -316,7 +316,7 @@ function render(d){
   (async () => {
     const el = document.getElementById('board');
     try {
-      const res = await fetch('https://raw.githubusercontent.com/ridgetests/Commute-data/main/data/model/rail-predictions.json');
+      const res = await fetch('rail-predictions.json?' + Date.now());
       if (!res.ok) throw new Error(String(res.status));
       const model = await res.json();
       const services = model.services ?? [];

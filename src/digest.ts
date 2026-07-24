@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, statSync, copyFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadModel, statsFor, percentile, type RunModel } from './model';
 import { classify, isPlanned } from './taxonomy';
@@ -634,6 +634,12 @@ function main() {
   } catch { /* no model yet — the panel shows its empty state */ }
 
   writeFileSync(join(process.cwd(), 'docs', 'summary.json'), JSON.stringify(summary, null, 2));
+
+  // Publish the predictions NEXT TO the wall so the station board reads
+  // same-origin — the cross-origin raw.githubusercontent fetch was silently
+  // blocked in-browser and the board blanked by design.
+  copyFileSync(join(process.cwd(), 'data', 'model', 'rail-predictions.json'),
+    join(process.cwd(), 'docs', 'rail-predictions.json'));
 
   console.log(`Pit wall: ${events.length} events → ${incidents.length} incidents, ` +
     `${runs.length} run observations over ${nDays} day(s)`);
