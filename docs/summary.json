@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-24T14:25:30.923Z",
+  "generatedAt": "2026-07-24T19:40:02.243Z",
   "rail": {
-    "servicesTracked": 12543,
-    "modelled": 2758,
-    "confident": 2455,
-    "darwinLeadMin": 10.8,
+    "servicesTracked": 12567,
+    "modelled": 3162,
+    "confident": 2799,
+    "darwinLeadMin": 10.6,
     "samples": [
       {
         "crs": "LST",
@@ -12,7 +12,7 @@
         "destination": "London Paddington",
         "platform": "B",
         "confidence": 1,
-        "n": 5.5
+        "n": 5.3
       },
       {
         "crs": "LST",
@@ -20,7 +20,7 @@
         "destination": "Shenfield",
         "platform": "A",
         "confidence": 1,
-        "n": 5.6
+        "n": 5.4
       },
       {
         "crs": "PAD",
@@ -28,7 +28,7 @@
         "destination": "Abbey Wood",
         "platform": "A",
         "confidence": 1,
-        "n": 6.5
+        "n": 6.3
       },
       {
         "crs": "STP",
@@ -36,7 +36,7 @@
         "destination": "Sutton (London)",
         "platform": "A",
         "confidence": 1,
-        "n": 5.5
+        "n": 5.3
       },
       {
         "crs": "STP",
@@ -44,7 +44,7 @@
         "destination": "Cambridge",
         "platform": "B",
         "confidence": 1,
-        "n": 7.5
+        "n": 7.2
       },
       {
         "crs": "STP",
@@ -52,7 +52,7 @@
         "destination": "Three Bridges",
         "platform": "A",
         "confidence": 1,
-        "n": 20.9
+        "n": 20.2
       },
       {
         "crs": "STP",
@@ -60,7 +60,7 @@
         "destination": "Bedford",
         "platform": "B",
         "confidence": 1,
-        "n": 8.4
+        "n": 8.1
       },
       {
         "crs": "STP",
@@ -68,7 +68,7 @@
         "destination": "Sutton (London)",
         "platform": "A",
         "confidence": 1,
-        "n": 13.6
+        "n": 13.2
       },
       {
         "crs": "CST",
@@ -76,7 +76,7 @@
         "destination": "Dartford",
         "platform": "1",
         "confidence": 1,
-        "n": 5.5
+        "n": 5.3
       },
       {
         "crs": "FST",
@@ -84,7 +84,7 @@
         "destination": "Grays",
         "platform": "1",
         "confidence": 1,
-        "n": 5.9
+        "n": 5.7
       },
       {
         "crs": "FST",
@@ -92,7 +92,7 @@
         "destination": "Grays",
         "platform": "1",
         "confidence": 1,
-        "n": 8.6
+        "n": 8.3
       },
       {
         "crs": "LBG",
@@ -100,7 +100,7 @@
         "destination": "London Cannon Street",
         "platform": "3",
         "confidence": 1,
-        "n": 5.5
+        "n": 5.3
       }
     ]
   },
@@ -134,12 +134,12 @@
         "p90": 683
       },
       {
-        "line": "piccadilly",
-        "station": "940GZZLUCAR",
-        "band": "wd-21",
-        "n": 24,
-        "p50": 308,
-        "p90": 653
+        "line": "northern",
+        "station": "940GZZLUGDG",
+        "band": "wd-00",
+        "n": 21,
+        "p50": 338,
+        "p90": 728
       },
       {
         "line": "piccadilly",
@@ -172,10 +172,10 @@
   },
   "storage": {
     "eventsBytes": 541233,
-    "runtimesBytes": 2959483,
-    "platformsBytes": 0,
+    "runtimesBytes": 10136947,
+    "platformsBytes": 1027813,
     "crowdingBytes": 4398539,
-    "perDayBytes": 607635
+    "perDayBytes": 1238810
   },
   "readiness": [
     {
@@ -197,7 +197,7 @@
       "feature": "Signal failure — “how long will this last?”",
       "have": 40,
       "need": 20,
-      "perDay": 2.85,
+      "perDay": 3.08,
       "ready": true,
       "etaDays": [
         0,
@@ -239,11 +239,11 @@
       "feature": "Trespass — “is it worth waiting?”",
       "have": 6,
       "need": 20,
-      "perDay": 0.31,
+      "perDay": 0.46,
       "ready": false,
       "etaDays": [
-        31,
-        73
+        17,
+        44
       ],
       "medianMin": 70,
       "p90Min": 136
@@ -251,15 +251,15 @@
     {
       "cause": "customer-incident",
       "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 4,
+      "have": 3,
       "need": 20,
-      "perDay": 0.31,
+      "perDay": 0.23,
       "ready": false,
       "etaDays": [
-        31,
-        73
+        44,
+        103
       ],
-      "medianMin": 113,
+      "medianMin": 148,
       "p90Min": 519
     },
     {
@@ -447,7 +447,7 @@
       "minorMin": 4330,
       "severeMin": 3079,
       "suspendedMin": 11,
-      "medianMin": 72
+      "medianMin": 70
     },
     {
       "line": "Central",
@@ -470,20 +470,20 @@
     {
       "line": "Circle",
       "lineId": "circle",
-      "incidents": 10,
-      "minorMin": 1086,
-      "severeMin": 622,
+      "incidents": 11,
+      "minorMin": 713,
+      "severeMin": 710,
       "suspendedMin": 581,
-      "medianMin": 100
+      "medianMin": 88
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "lineId": "windrush",
-      "incidents": 5,
-      "minorMin": 86,
+      "incidents": 4,
+      "minorMin": 18,
       "severeMin": 81,
       "suspendedMin": 1183,
-      "medianMin": 136
+      "medianMin": 268
     },
     {
       "line": "Piccadilly",
@@ -522,15 +522,6 @@
       "medianMin": 114
     },
     {
-      "line": "Jubilee",
-      "lineId": "jubilee",
-      "incidents": 14,
-      "minorMin": 1883,
-      "severeMin": 222,
-      "suspendedMin": 68,
-      "medianMin": 61
-    },
-    {
       "line": "Victoria",
       "lineId": "victoria",
       "incidents": 13,
@@ -549,6 +540,24 @@
       "medianMin": 63
     },
     {
+      "line": "Jubilee",
+      "lineId": "jubilee",
+      "incidents": 11,
+      "minorMin": 1758,
+      "severeMin": 122,
+      "suspendedMin": 36,
+      "medianMin": 52
+    },
+    {
+      "line": "Hammersmith & City",
+      "lineId": "hammersmith-city",
+      "incidents": 5,
+      "minorMin": 1246,
+      "severeMin": 45,
+      "suspendedMin": 0,
+      "medianMin": 103
+    },
+    {
       "line": "Lioness (Overground · Euston–Watford)",
       "lineId": "lioness",
       "incidents": 2,
@@ -556,15 +565,6 @@
       "severeMin": 0,
       "suspendedMin": 0,
       "medianMin": 655
-    },
-    {
-      "line": "District",
-      "lineId": "district",
-      "incidents": 11,
-      "minorMin": 819,
-      "severeMin": 66,
-      "suspendedMin": 30,
-      "medianMin": 49
     },
     {
       "line": "DLR",
@@ -576,13 +576,13 @@
       "medianMin": 203
     },
     {
-      "line": "Hammersmith & City",
-      "lineId": "hammersmith-city",
-      "incidents": 5,
-      "minorMin": 670,
-      "severeMin": 45,
+      "line": "District",
+      "lineId": "district",
+      "incidents": 10,
+      "minorMin": 796,
+      "severeMin": 0,
       "suspendedMin": 0,
-      "medianMin": 95
+      "medianMin": 43
     },
     {
       "line": "Waterloo & City",
@@ -1530,5 +1530,12 @@
         "Hammersmith (H&C Line) → Barking"
       ]
     }
-  ]
+  ],
+  "railReliability": {
+    "generatedAt": "2026-07-24T16:58:47.400Z",
+    "days": 1,
+    "servicesSeen": 4057,
+    "cellsReady": 0,
+    "worst": []
+  }
 }
