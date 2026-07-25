@@ -319,7 +319,7 @@ function render(d){
       const res = await fetch('rail-predictions.json?' + Date.now());
       if (!res.ok) throw new Error(String(res.status));
       const model = await res.json();
-      const services = model.services ?? [];
+      const services = model.services ?? model.predictions ?? [];
       if (!services.length) { el.innerHTML = ''; return; }
       const byCrs = {};
       for (const s of services) (byCrs[s.crs] = byCrs[s.crs] ?? []).push(s);
