@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-26T01:22:44.842Z",
+  "generatedAt": "2026-07-26T08:28:44.978Z",
   "rail": {
-    "servicesTracked": 14787,
-    "modelled": 3907,
-    "confident": 3437,
+    "servicesTracked": 15791,
+    "modelled": 4090,
+    "confident": 3599,
     "darwinLeadMin": 10.6,
     "samples": [
       {
@@ -105,15 +105,15 @@
     ]
   },
   "headway": {
-    "cells": 38520,
-    "usable": 5889,
+    "cells": 40602,
+    "usable": 5739,
     "ready": true,
     "examples": [
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 42,
+        "n": 41,
         "p50": 218,
         "p90": 488
       },
@@ -121,7 +121,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 49,
+        "n": 48,
         "p50": 233,
         "p90": 503
       },
@@ -129,17 +129,9 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 39,
+        "n": 38,
         "p50": 338,
         "p90": 683
-      },
-      {
-        "line": "northern",
-        "station": "940GZZLUGDG",
-        "band": "wd-00",
-        "n": 20,
-        "p50": 338,
-        "p90": 728
       },
       {
         "line": "piccadilly",
@@ -153,43 +145,51 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-23",
-        "n": 26,
+        "n": 25,
         "p50": 473,
         "p90": 818
+      },
+      {
+        "line": "piccadilly",
+        "station": "940GZZLULSQ",
+        "band": "wd-21",
+        "n": 23,
+        "p50": 368,
+        "p90": 848
       }
     ]
   },
   "coverage": {
     "days": 15,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-07-26T00:36:35.874Z",
-    "events": 1501,
-    "incidents": 189,
-    "unplanned": 183,
+    "lastEvent": "2026-07-26T07:46:35.448Z",
+    "events": 1539,
+    "incidents": 190,
+    "unplanned": 184,
     "planned": 6,
-    "runObservations": 720521,
-    "modelCells": 239003
+    "runObservations": 720616,
+    "modelCells": 246060
   },
   "storage": {
-    "eventsBytes": 605264,
+    "eventsBytes": 619578,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 5012751,
-    "perDayBytes": 571833
+    "crowdingBytes": 5178551,
+    "perDayBytes": 583841
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 78,
+      "have": 79,
       "need": 20,
-      "perDay": 5.2,
+      "perDay": 5.27,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 179,
+      "medianMin": 177,
       "p90Min": 791
     },
     {
@@ -223,7 +223,7 @@
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
-      "have": 17,
+      "have": 16,
       "need": 20,
       "perDay": 1.07,
       "ready": false,
@@ -231,7 +231,7 @@
         1,
         7
       ],
-      "medianMin": 241,
+      "medianMin": 295,
       "p90Min": 2405
     },
     {
@@ -308,92 +308,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 110698,
+      "n": 111292,
       "ready": true
     },
     {
       "line": "district",
-      "n": 87057,
+      "n": 86942,
       "ready": true
     },
     {
       "line": "central",
-      "n": 85672,
+      "n": 85952,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 77381,
+      "n": 78925,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 60132,
+      "n": 59163,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 48201,
+      "n": 47681,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 36189,
+      "n": 36002,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 35664,
+      "n": 35840,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 35620,
+      "n": 35816,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 34938,
+      "n": 34730,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 30987,
+      "n": 31160,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 27563,
+      "n": 26994,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 17553,
+      "n": 17579,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 13695,
+      "n": 13637,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 11373,
+      "n": 11256,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 6767,
+      "n": 6633,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 817,
+      "n": 806,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 214,
+      "n": 209,
       "ready": false
     }
   ],
@@ -406,25 +406,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
+      "incidents": 1,
+      "unplanned": 1,
+      "minorMin": 38,
       "severeMin": 0,
       "suspendedMin": 0,
-      "worstLine": null
-    },
-    "week": {
-      "incidents": 104,
-      "unplanned": 102,
-      "minorMin": 15441,
-      "severeMin": 9041,
-      "suspendedMin": 2114,
       "worstLine": "Metropolitan"
     },
+    "week": {
+      "incidents": 101,
+      "unplanned": 99,
+      "minorMin": 15376,
+      "severeMin": 7554,
+      "suspendedMin": 1690,
+      "worstLine": "Central"
+    },
     "all": {
-      "incidents": 189,
-      "unplanned": 183,
-      "minorMin": 33981,
+      "incidents": 190,
+      "unplanned": 184,
+      "minorMin": 34019,
       "severeMin": 15641,
       "suspendedMin": 5904,
       "worstLine": "Metropolitan"
@@ -443,11 +443,11 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 28,
-      "minorMin": 4984,
+      "incidents": 29,
+      "minorMin": 5022,
       "severeMin": 4239,
       "suspendedMin": 11,
-      "medianMin": 105
+      "medianMin": 72
     },
     {
       "line": "Central",
@@ -567,15 +567,6 @@
       "medianMin": 655
     },
     {
-      "line": "District",
-      "lineId": "district",
-      "incidents": 11,
-      "minorMin": 873,
-      "severeMin": 72,
-      "suspendedMin": 0,
-      "medianMin": 49
-    },
-    {
       "line": "DLR",
       "lineId": "dlr",
       "incidents": 5,
@@ -604,6 +595,42 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-07-26T06:47:32.748Z",
+      "end": "2026-07-26T07:25:34.346Z",
+      "minutes": 38,
+      "minorMin": 38,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. After the XX:XX departure from Amersham, the next southbound train will be at 08:22. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-07-26T06:47:32.748Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-07-26T07:25:34.346Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
     {
       "line": "victoria",
       "lineName": "Victoria",
@@ -1623,49 +1650,25 @@
       "segments": [
         "Edgware Road (Circle Line) → Hammersmith (H&C Line)"
       ]
-    },
-    {
-      "line": "northern",
-      "lineName": "Northern",
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-07-24T14:17:18.340Z",
-      "end": "2026-07-24T20:06:46.896Z",
-      "minutes": 349,
-      "minorMin": 349,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Northern Line: Minor delays between Camden Town and Edgware while we deal with a fire alert at Edgware. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-07-24T14:17:18.340Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-07-24T20:06:46.896Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware → Morden",
-        "Morden → Edgware",
-        "Edgware → Battersea Power Station"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-07-25T16:13:07.518Z",
+    "generatedAt": "2026-07-25T22:12:04.106Z",
     "days": 2,
-    "servicesSeen": 9946,
-    "cellsReady": 0,
-    "worst": []
+    "servicesSeen": 12943,
+    "cellsReady": 1,
+    "worst": [
+      {
+        "crs": "CLJ",
+        "std": "06:54",
+        "destination": "London Waterloo",
+        "dayType": "we",
+        "n": 3,
+        "p50Late": 0,
+        "p90Late": 0,
+        "cancelPct": 0,
+        "unknownPct": 0
+      }
+    ]
   }
 }
