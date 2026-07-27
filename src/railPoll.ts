@@ -113,7 +113,7 @@ async function main() {
   writeFileSync(
     join(process.cwd(), 'data', 'model', 'rail-predictions.json'),
     JSON.stringify({ generatedAt: new Date().toISOString(), benchmark: bench,
-      predictions: predictions(model).slice(0, 2000) }),
+      predictions: predictions(model) }),
   );
 
   // ---- RAW: cold archive. ----
