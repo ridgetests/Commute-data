@@ -11,10 +11,28 @@ name: Collect rail
 
 on:
   schedule:
-    # Four long jobs a day, each ~5h50m (GitHub caps a job at 6 hours).
-    - cron: "7 0,6,12,18 * * *"
+    # WHY NOT FOUR LONG JOBS: the obvious design is 4 x ~5h50m jobs to blanket
+    # the day (GitHub caps a job at 6 hours). It failed silently for weeks. The
+    # problem is GitHub delays scheduled triggers by 1.5-3.5h under load, and a
+    # 340-min run leaves only ~20 min of slack before the next 6-hourly slot. A
+    # delayed run therefore overlaps the next one; the concurrency group below
+    # serialises them, and the collision eats a whole slot's collection window.
+    # The SAME two slots got starved almost every day — including the one that
+    # covers the 04-09 morning peak, so the busiest departures were never
+    # observed enough to clear the model's confidence floor, and vanished from
+    # the board.
+    #
+    # Fix: short runs, well inside the interval. Every 2h, ~100-min run = 20 min
+    # of real slack, so a moderately delayed trigger still finishes before the
+    # next slot and never collides. A dropped run now costs one 2h window, not a
+    # cascade, and every slot — mornings included — collects every day. The
+    # residual ~20-min gap drifts with GitHub's own start jitter, so no departure
+    # sits in a permanent blind spot.
+    - cron: "7 */2 * * *"
   workflow_dispatch: {}
 
+# Still serialise (a straggler must not double-poll a station), but with runs
+# now far shorter than the interval this queue almost never has anything in it.
 concurrency:
   group: rail
   cancel-in-progress: false
@@ -25,7 +43,7 @@ permissions:
 jobs:
   rail:
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,7 +55,7 @@ jobs:
         run: npx tsx src/railPoll.ts
         env:
           RAIL_API_KEY: ${{ secrets.RAIL_API_KEY }}
-          RUN_MINUTES: "340"
+          RUN_MINUTES: "100"
           POLL_SECONDS: "60"
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
