@@ -117,6 +117,62 @@ const dirBytes = (dir: string): number => {
   return readdirSync(p).reduce((n, f) => n + statSync(join(p, f)).size, 0);
 };
 
+// ---- COLLECTION CONTINUITY — method rule 5: watch for GAPS, not totals. ----
+//
+// The cumulative counts all looked healthy (1.27M movements, 294 services at
+// Waterloo) while whole daily collection slots quietly banked NOTHING — the rail
+// morning peak and the TfL evening peak both went dark for weeks, and the boards
+// rendered the holes as if they were the timetable. A running total cannot show
+// that; only continuity can.
+//
+// A dense change/observation log (Darwin platform changes, TfL crowding polls)
+// writes hundreds of rows an hour while the collector is up, so an hour with
+// almost nothing recorded is an hour the collector wasn't there. Bucket the last
+// fortnight into per-UTC-hour counts and, for the always-busy service window,
+// count how many hours cleared a floor. Nights are genuinely quiet — shown but
+// never scored.
+interface DayCoverage { date: string; counts: number[]; covered: number; }
+interface Continuity {
+  tz: 'UTC'; serviceWindow: [number, number]; serviceHours: number;
+  coveredFloor: number; days: DayCoverage[];
+  lastRecord: string | null; minutesSinceLast: number | null;
+}
+const continuityOf = (
+  dirName: string, serviceFrom: number, serviceTo: number, floor: number, keepDays = 14,
+): Continuity | null => {
+  const dir = join(DATA, dirName);
+  if (!existsSync(dir)) return null;
+  const files = readdirSync(dir)
+    .filter((f) => f.endsWith('.jsonl')).sort().slice(-keepDays);
+  if (!files.length) return null;
+  let lastRecord = '';
+  const days = files.map((f) => {
+    const counts = new Array(24).fill(0);
+    for (const line of readFileSync(join(dir, f), 'utf8').split('\n')) {
+      if (!line.trim()) continue;
+      let t: string | undefined;
+      try { t = (JSON.parse(line) as { t?: string }).t; } catch { continue; }
+      if (!t || t[10] !== 'T') continue;
+      const h = Number(t.slice(11, 13));
+      if (h >= 0 && h < 24) counts[h]++;
+      if (t > lastRecord) lastRecord = t;
+    }
+    let covered = 0;
+    for (let h = serviceFrom; h <= serviceTo; h++) if (counts[h] >= floor) covered++;
+    return { date: f.replace('.jsonl', ''), counts, covered };
+  });
+  return {
+    tz: 'UTC',
+    serviceWindow: [serviceFrom, serviceTo],
+    serviceHours: serviceTo - serviceFrom + 1,
+    coveredFloor: floor,
+    days,
+    lastRecord: lastRecord || null,
+    minutesSinceLast: lastRecord
+      ? Math.round((Date.now() - Date.parse(lastRecord)) / 60000) : null,
+  };
+};
+
 const median = (xs: number[]): number => {
   if (!xs.length) return 0;
   const s = [...xs].sort((a, b) => a - b);
@@ -517,61 +573,19 @@ function main() {
   const railBench = benchmark(railModel, 5);
   const railCells = Object.keys(railModel.cells).length;
 
-  // ---- COLLECTION CONTINUITY — method rule 5: watch for GAPS, not totals. ----
-  //
-  // The cumulative counts all looked healthy (1.27M movements, 294 services at
-  // Waterloo) while two of the four daily Darwin slots were quietly collecting
-  // NOTHING — including the one covering the 04-09 morning peak, which is why
-  // those departures never reached the board. A running total cannot show that;
-  // only continuity can.
-  //
-  // The Darwin change-log is dense during service hours (hundreds of writes an
-  // hour), so an hour with almost nothing recorded is an hour the collector
-  // wasn't there. We bucket the last fortnight into per-UTC-hour counts and, for
-  // the always-busy 06:00-21:59 window, count how many hours actually cleared a
-  // floor. Nights are genuinely quiet and are shown but never scored.
-  const continuity = (() => {
-    const dir = join(DATA, 'rail');
-    if (!existsSync(dir)) return null;
-    const SERVICE_FROM = 6, SERVICE_TO = 21;   // UTC hours rail is always busy
-    const COVERED_FLOOR = 20;                   // >=20 writes in an hour = we polled
-    const KEEP_DAYS = 14;
-    const files = readdirSync(dir)
-      .filter((f) => f.endsWith('.jsonl')).sort().slice(-KEEP_DAYS);
-    let lastRecord = '';
-    const days = files.map((f) => {
-      const counts = new Array(24).fill(0);
-      for (const line of readFileSync(join(dir, f), 'utf8').split('\n')) {
-        if (!line.trim()) continue;
-        let t: string | undefined;
-        try { t = (JSON.parse(line) as { t?: string }).t; } catch { continue; }
-        if (!t || t[10] !== 'T') continue;
-        const h = Number(t.slice(11, 13));
-        if (h >= 0 && h < 24) counts[h]++;
-        if (t > lastRecord) lastRecord = t;
-      }
-      let covered = 0;
-      for (let h = SERVICE_FROM; h <= SERVICE_TO; h++) {
-        if (counts[h] >= COVERED_FLOOR) covered++;
-      }
-      return { date: f.replace('.jsonl', ''), counts, covered };
-    });
-    return {
-      tz: 'UTC',
-      serviceWindow: [SERVICE_FROM, SERVICE_TO] as [number, number],
-      serviceHours: SERVICE_TO - SERVICE_FROM + 1,
-      coveredFloor: COVERED_FLOOR,
-      days,
-      lastRecord: lastRecord || null,
-      minutesSinceLast: lastRecord
-        ? Math.round((Date.now() - Date.parse(lastRecord)) / 60000) : null,
-    };
-  })();
+  // Continuity for both collectors, over the always-busy 06:00-21:59 UTC window.
+  // Rail is measured from the Darwin change-log; TfL from the crowding poll
+  // stream (the densest committed TfL signal — events are too sparse to tell a
+  // quiet line from a dead collector).
+  const continuity = {
+    rail: continuityOf('rail', 6, 21, 20),
+    tfl: continuityOf('crowding', 6, 21, 20),
+  };
 
   const summary = {
     generatedAt: new Date().toISOString(),
     rail,
-    continuity: { rail: continuity },
+    continuity,
     headway,
     coverage: {
       days: nDays,

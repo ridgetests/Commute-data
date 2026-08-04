@@ -1,14 +1,25 @@
 name: Collect
 
 on:
-  # Four long-running jobs a day. GitHub caps a job at 6 hours, so each runs
-  # ~5h40m polling every 60 seconds. This sidesteps GitHub's unreliable
-  # short-interval cron and gives continuous minute resolution — free, on a
-  # public repo (Actions minutes are unlimited there).
+  # WHY NOT FOUR LONG JOBS: the original design was 4 x ~5h40m jobs (GitHub caps
+  # a job at 6 hours) to blanket the day. It looked continuous but wasn't. GitHub
+  # delays scheduled triggers by 1.5-3.5h under load, and a 340-min run leaves
+  # only ~18 min of slack before the next 6-hourly slot — so delayed runs overlap,
+  # the concurrency group serialises them, and the collision eats a whole slot.
+  # Measured on the crowding log, the 12:07 slot collected almost nothing on most
+  # days: the 15:00-19:00 evening peak, when disruption matters most, went dark.
+  # (The rail collector had the identical bug; this is the same fix.)
+  #
+  # Short runs, well inside the interval: every 2h, ~100-min run = 20 min of real
+  # slack, so a delayed trigger still finishes before the next slot. A dropped run
+  # costs one 2h window, not a cascade, and every slot collects every day. As a
+  # bonus the pit wall (rebuilt at the end of each run) now refreshes every 2h.
   schedule:
-    - cron: "2 0,6,12,18 * * *"
+    - cron: "2 */2 * * *"
   workflow_dispatch: {}
 
+# Still serialise (a straggler must not double-poll), but with runs now far
+# shorter than the interval this queue almost never has anything in it.
 concurrency:
   group: collect
   cancel-in-progress: false
@@ -19,7 +30,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -38,7 +49,7 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          RUN_MINUTES: "340"
+          RUN_MINUTES: "100"
 
       - name: Rebuild the public dashboard
         run: |

@@ -300,18 +300,19 @@ function render(d){
         Run the <b>Collect rail</b> workflow — it polls for ~100 minutes, then writes the model.</div>`;
 
   // ---- COLLECTION CONTINUITY — method rule 5: watch for GAPS, not totals. ----
-  // The cumulative counts looked healthy while two of the four daily Darwin slots
-  // silently collected nothing — including the morning peak, which is why those
-  // departures never reached the board. This makes an absent collection hour LOUD.
-  const cont = d.continuity && d.continuity.rail;
-  $('railcont').innerHTML = (cont && cont.days && cont.days.length) ? (() => {
+  // The cumulative counts looked healthy while whole daily collection slots
+  // silently banked nothing — the rail morning peak and the TfL evening peak both
+  // went dark, and the boards rendered the holes as if they were the timetable.
+  // This makes an absent collection hour LOUD, for both collectors.
+  const contPanel = (cont, feed, tail) => {
+    if (!cont || !cont.days || !cont.days.length) return '';
     const [sf, st] = cont.serviceWindow;
     const fresh = cont.minutesSinceLast;
     const freshCol = fresh == null ? 'var(--dim)'
       : fresh <= 180 ? 'var(--green)' : fresh <= 480 ? 'var(--amber)' : 'var(--red)';
-    const freshTxt = fresh == null ? 'no Darwin records yet'
-      : fresh < 120 ? `last Darwin event ${fresh} min before this snapshot`
-      : `last Darwin event ${(fresh/60).toFixed(1)}h before this snapshot`;
+    const freshTxt = fresh == null ? `no ${feed} records yet`
+      : fresh < 120 ? `last ${feed} record ${fresh} min before this snapshot`
+      : `last ${feed} record ${(fresh / 60).toFixed(1)}h before this snapshot`;
     const cell = (h, n) => {
       if (h >= sf && h <= st && n < cont.coveredFloor)
         return `<div class="cont-c gap" title="${h}:00 UTC · ${n} records · service-hour GAP"></div>`;
@@ -326,16 +327,26 @@ function render(d){
         <span class="cont-lab">${day.date.slice(5)} · ${day.covered}/${cont.serviceHours}</span>
         ${day.counts.map((n, h) => cell(h, n)).join('')}
       </div>`).join('');
-    return `<h2 style="margin-top:28px">Collection continuity — is Darwin actually being recorded?</h2>
+    return `<div class="rd-s" style="margin:18px 0 8px;color:var(--off)">${feed}</div>
       <div class="rd-s" style="margin:0 0 10px;color:${freshCol}">● ${freshTxt}</div>
       <div class="cont">${ruler}${rows}</div>
-      <p class="note" style="margin-top:12px">One cell per hour (UTC), one row per day; brighter =
-        more platform and time updates banked that hour. A <b style="color:var(--red)">red</b> cell in the
+      <p class="note" style="margin-top:12px">A <b style="color:var(--red)">red</b> cell in the
         ${String(sf).padStart(2, '0')}:00&ndash;${String(st).padStart(2, '0')}:00 service window is an hour
-        the collector wasn't there &mdash; the silent failure that kept the morning peak off the board.
-        The <b>${cont.serviceHours}</b> in each row's count is how many of those service hours were
-        covered. Nights are legitimately quiet, shown but never scored.</p>`;
-  })() : '';
+        the collector wasn't there &mdash; ${tail} The <b>${cont.serviceHours}</b> in each row's count is
+        how many service hours were covered.</p>`;
+  };
+  const cy = d.continuity || {};
+  const railP = contPanel(cy.rail, 'National Rail · Darwin',
+    'the silent failure that kept the morning peak off the board.');
+  const tflP = contPanel(cy.tfl, 'TfL · crowding poll',
+    'the same collision on the tube collector, which dropped the evening peak.');
+  $('railcont').innerHTML = (railP || tflP)
+    ? `<h2 style="margin-top:28px">Collection continuity — is the feed actually being recorded?</h2>
+       <p class="note" style="margin:9px 0 4px">One cell per hour (UTC), one row per day; brighter =
+         more updates banked that hour. Nights are legitimately quiet, shown but never scored. As the
+         schedule fixes collect the missing hours, the red cells fill in &mdash; the panel is its own proof.</p>
+       ${railP}${tflP}`
+    : '';
 
   // ---- RAIL PUNCTUALITY — who actually runs late, from our own log. ----
   // Full station names, because CRS codes are for machines. HSP keeps monthly
