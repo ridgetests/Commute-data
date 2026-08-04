@@ -517,9 +517,61 @@ function main() {
   const railBench = benchmark(railModel, 5);
   const railCells = Object.keys(railModel.cells).length;
 
+  // ---- COLLECTION CONTINUITY — method rule 5: watch for GAPS, not totals. ----
+  //
+  // The cumulative counts all looked healthy (1.27M movements, 294 services at
+  // Waterloo) while two of the four daily Darwin slots were quietly collecting
+  // NOTHING — including the one covering the 04-09 morning peak, which is why
+  // those departures never reached the board. A running total cannot show that;
+  // only continuity can.
+  //
+  // The Darwin change-log is dense during service hours (hundreds of writes an
+  // hour), so an hour with almost nothing recorded is an hour the collector
+  // wasn't there. We bucket the last fortnight into per-UTC-hour counts and, for
+  // the always-busy 06:00-21:59 window, count how many hours actually cleared a
+  // floor. Nights are genuinely quiet and are shown but never scored.
+  const continuity = (() => {
+    const dir = join(DATA, 'rail');
+    if (!existsSync(dir)) return null;
+    const SERVICE_FROM = 6, SERVICE_TO = 21;   // UTC hours rail is always busy
+    const COVERED_FLOOR = 20;                   // >=20 writes in an hour = we polled
+    const KEEP_DAYS = 14;
+    const files = readdirSync(dir)
+      .filter((f) => f.endsWith('.jsonl')).sort().slice(-KEEP_DAYS);
+    let lastRecord = '';
+    const days = files.map((f) => {
+      const counts = new Array(24).fill(0);
+      for (const line of readFileSync(join(dir, f), 'utf8').split('\n')) {
+        if (!line.trim()) continue;
+        let t: string | undefined;
+        try { t = (JSON.parse(line) as { t?: string }).t; } catch { continue; }
+        if (!t || t[10] !== 'T') continue;
+        const h = Number(t.slice(11, 13));
+        if (h >= 0 && h < 24) counts[h]++;
+        if (t > lastRecord) lastRecord = t;
+      }
+      let covered = 0;
+      for (let h = SERVICE_FROM; h <= SERVICE_TO; h++) {
+        if (counts[h] >= COVERED_FLOOR) covered++;
+      }
+      return { date: f.replace('.jsonl', ''), counts, covered };
+    });
+    return {
+      tz: 'UTC',
+      serviceWindow: [SERVICE_FROM, SERVICE_TO] as [number, number],
+      serviceHours: SERVICE_TO - SERVICE_FROM + 1,
+      coveredFloor: COVERED_FLOOR,
+      days,
+      lastRecord: lastRecord || null,
+      minutesSinceLast: lastRecord
+        ? Math.round((Date.now() - Date.parse(lastRecord)) / 60000) : null,
+    };
+  })();
+
   const summary = {
     generatedAt: new Date().toISOString(),
     rail,
+    continuity: { rail: continuity },
     headway,
     coverage: {
       days: nDays,

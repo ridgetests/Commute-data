@@ -90,6 +90,18 @@
   .empty{border:1px dashed var(--hair);border-radius:13px;padding:24px;text-align:center;
     color:var(--grey);font-size:13.5px;line-height:1.6}
   .empty b{color:var(--off);font-weight:500}
+
+  /* COLLECTION CONTINUITY — a per-hour heatmap so an absent slot is loud, not silent. */
+  .cont{overflow-x:auto}
+  .cont-ruler,.cont-row{display:grid;grid-template-columns:96px repeat(24,minmax(7px,1fr));
+    gap:2px;align-items:center}
+  .cont-ruler{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--dim);margin-bottom:5px}
+  .cont-ruler span{text-align:center}
+  .cont-row{margin-bottom:2px}
+  .cont-lab{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--grey);
+    white-space:nowrap;text-align:left}
+  .cont-c{height:13px;border-radius:2px;background:rgba(255,255,255,.035)}
+  .cont-c.gap{background:rgba(212,85,63,.22);box-shadow:inset 0 0 0 1px rgba(212,85,63,.7)}
   footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--hair);
     font-size:11.5px;color:var(--dim);line-height:1.9}
   @media(max-width:560px){h1{font-size:21px}.rd{grid-template-columns:1fr}}
@@ -151,6 +163,7 @@
     else bothers to keep. Platform allocations are <b>ephemeral and unpublished</b>: HSP
     keeps punctuality, not platforms.</p>
   <div id="rail"></div>
+  <div id="railcont"></div>
   <div id="board"></div>
   <div id="punct"></div>
 
@@ -284,7 +297,45 @@ function render(d){
           </table>` : ''}
       </div>`
     : `<div class="empty">No rail data yet.<br>
-        Run the <b>Collect rail</b> workflow — it needs a full ~5.5 hour job to write the model.</div>`;
+        Run the <b>Collect rail</b> workflow — it polls for ~100 minutes, then writes the model.</div>`;
+
+  // ---- COLLECTION CONTINUITY — method rule 5: watch for GAPS, not totals. ----
+  // The cumulative counts looked healthy while two of the four daily Darwin slots
+  // silently collected nothing — including the morning peak, which is why those
+  // departures never reached the board. This makes an absent collection hour LOUD.
+  const cont = d.continuity && d.continuity.rail;
+  $('railcont').innerHTML = (cont && cont.days && cont.days.length) ? (() => {
+    const [sf, st] = cont.serviceWindow;
+    const fresh = cont.minutesSinceLast;
+    const freshCol = fresh == null ? 'var(--dim)'
+      : fresh <= 180 ? 'var(--green)' : fresh <= 480 ? 'var(--amber)' : 'var(--red)';
+    const freshTxt = fresh == null ? 'no Darwin records yet'
+      : fresh < 120 ? `last Darwin event ${fresh} min before this snapshot`
+      : `last Darwin event ${(fresh/60).toFixed(1)}h before this snapshot`;
+    const cell = (h, n) => {
+      if (h >= sf && h <= st && n < cont.coveredFloor)
+        return `<div class="cont-c gap" title="${h}:00 UTC · ${n} records · service-hour GAP"></div>`;
+      const i = n <= 0 ? 0 : Math.min(1, 0.16 + Math.log10(n + 1) / Math.log10(600));
+      return `<div class="cont-c" title="${h}:00 UTC · ${n} records"`
+        + (i ? ` style="background:rgba(78,158,122,${i.toFixed(2)})"` : '') + `></div>`;
+    };
+    const ruler = `<div class="cont-ruler"><span></span>${
+      Array.from({ length: 24 }, (_, h) =>
+        `<span>${h % 6 === 0 ? String(h).padStart(2, '0') : ''}</span>`).join('')}</div>`;
+    const rows = cont.days.map((day) => `<div class="cont-row">
+        <span class="cont-lab">${day.date.slice(5)} · ${day.covered}/${cont.serviceHours}</span>
+        ${day.counts.map((n, h) => cell(h, n)).join('')}
+      </div>`).join('');
+    return `<h2 style="margin-top:28px">Collection continuity — is Darwin actually being recorded?</h2>
+      <div class="rd-s" style="margin:0 0 10px;color:${freshCol}">● ${freshTxt}</div>
+      <div class="cont">${ruler}${rows}</div>
+      <p class="note" style="margin-top:12px">One cell per hour (UTC), one row per day; brighter =
+        more platform and time updates banked that hour. A <b style="color:var(--red)">red</b> cell in the
+        ${String(sf).padStart(2, '0')}:00&ndash;${String(st).padStart(2, '0')}:00 service window is an hour
+        the collector wasn't there &mdash; the silent failure that kept the morning peak off the board.
+        The <b>${cont.serviceHours}</b> in each row's count is how many of those service hours were
+        covered. Nights are legitimately quiet, shown but never scored.</p>`;
+  })() : '';
 
   // ---- RAIL PUNCTUALITY — who actually runs late, from our own log. ----
   // Full station names, because CRS codes are for machines. HSP keeps monthly
