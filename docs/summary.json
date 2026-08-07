@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-07T12:34:12.382Z",
+  "generatedAt": "2026-08-07T14:47:44.415Z",
   "rail": {
     "servicesTracked": 23318,
-    "modelled": 8630,
-    "confident": 7485,
+    "modelled": 8483,
+    "confident": 7364,
     "darwinLeadMin": 10.4,
     "samples": [
       {
@@ -514,12 +514,12 @@
             540,
             1080,
             242,
-            719,
-            1550,
-            409,
             0,
             0,
-            0,
+            1174,
+            1601,
+            1738,
+            1241,
             0,
             0,
             0,
@@ -532,11 +532,11 @@
             0,
             0
           ],
-          "covered": 4
+          "covered": 5
         }
       ],
-      "lastRecord": "2026-08-07T09:17:03.856Z",
-      "minutesSinceLast": 197
+      "lastRecord": "2026-08-07T12:42:33.222Z",
+      "minutesSinceLast": 125
     },
     "tfl": {
       "tz": "UTC",
@@ -953,8 +953,8 @@
             180,
             216,
             108,
-            0,
-            0,
+            198,
+            162,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 6
+          "covered": 8
         }
       ],
-      "lastRecord": "2026-08-07T12:29:15.405Z",
+      "lastRecord": "2026-08-07T14:42:46.451Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 52133,
-    "usable": 11457,
+    "cells": 52295,
+    "usable": 11541,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 27,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-07T12:32:04.639Z",
-    "events": 3068,
-    "incidents": 379,
-    "unplanned": 369,
+    "lastEvent": "2026-08-07T14:39:38.006Z",
+    "events": 3093,
+    "incidents": 380,
+    "unplanned": 370,
     "planned": 10,
-    "runObservations": 1412054,
-    "modelCells": 377140
+    "runObservations": 1425125,
+    "modelCells": 379039
   },
   "storage": {
-    "eventsBytes": 1275445,
+    "eventsBytes": 1284301,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 9628006,
-    "perDayBytes": 513442
+    "crowdingBytes": 9676572,
+    "perDayBytes": 515569
   },
   "readiness": [
     {
@@ -1063,9 +1063,9 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 93,
+      "have": 94,
       "need": 20,
-      "perDay": 3.44,
+      "perDay": 3.48,
       "ready": true,
       "etaDays": [
         0,
@@ -1190,92 +1190,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 218210,
+      "n": 220124,
       "ready": true
     },
     {
       "line": "district",
-      "n": 171617,
+      "n": 173329,
       "ready": true
     },
     {
       "line": "central",
-      "n": 170152,
+      "n": 171743,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 129940,
+      "n": 131666,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 119656,
+      "n": 120552,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 98685,
+      "n": 99610,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 73024,
+      "n": 73708,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 72657,
+      "n": 73306,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 69790,
+      "n": 70498,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 67906,
+      "n": 68451,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 59306,
+      "n": 59732,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 55804,
+      "n": 56329,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 36736,
+      "n": 36881,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 29605,
+      "n": 29868,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 23008,
+      "n": 23210,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 13839,
+      "n": 13978,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1625,
+      "n": 1639,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 493,
+      "n": 500,
       "ready": false
     }
   ],
@@ -1288,25 +1288,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 15,
-      "unplanned": 15,
-      "minorMin": 733,
+      "incidents": 16,
+      "unplanned": 16,
+      "minorMin": 829,
       "severeMin": 144,
       "suspendedMin": 41,
       "worstLine": "Jubilee"
     },
     "week": {
-      "incidents": 100,
-      "unplanned": 99,
-      "minorMin": 13365,
-      "severeMin": 4845,
-      "suspendedMin": 1957,
+      "incidents": 97,
+      "unplanned": 96,
+      "minorMin": 12860,
+      "severeMin": 4379,
+      "suspendedMin": 1567,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 379,
-      "unplanned": 369,
-      "minorMin": 62995,
+      "incidents": 380,
+      "unplanned": 370,
+      "minorMin": 63091,
       "severeMin": 26830,
       "suspendedMin": 9838,
       "worstLine": "Central"
@@ -1379,11 +1379,11 @@
     {
       "line": "Northern",
       "lineId": "northern",
-      "incidents": 23,
-      "minorMin": 2403,
+      "incidents": 24,
+      "minorMin": 2499,
       "severeMin": 1637,
       "suspendedMin": 553,
-      "medianMin": 114
+      "medianMin": 105
     },
     {
       "line": "Elizabeth line",
@@ -1477,6 +1477,42 @@
     }
   ],
   "recent": [
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-07T11:31:55.881Z",
+      "end": "2026-08-07T13:07:32.423Z",
+      "minutes": 96,
+      "minorMin": 96,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: Minor delays between Camden Town and Edgware due to an earlier points failure at Golders Green. GOOD SERVICE on the rest on the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-07T11:31:55.881Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-07T13:07:32.423Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Edgware → Morden",
+        "Morden → Edgware",
+        "Edgware → Battersea Power Station"
+      ]
+    },
     {
       "line": "central",
       "lineName": "Central",
@@ -2381,41 +2417,6 @@
         "Upminster → Ealing Broadway",
         "Ealing Broadway → Upminster",
         "Upminster → Richmond"
-      ]
-    },
-    {
-      "line": "victoria",
-      "lineName": "Victoria",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-06T06:32:56.561Z",
-      "end": "2026-08-06T07:05:57.422Z",
-      "minutes": 33,
-      "minorMin": 33,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Victoria Line: Minor delays due to an earlier faulty train at Victoria.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-06T06:32:56.561Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-06T07:05:57.422Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Walthamstow Central → Brixton",
-        "Brixton → Walthamstow Central"
       ]
     }
   ],
