@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T08:36:33.774Z",
+  "generatedAt": "2026-08-08T10:23:43.781Z",
   "rail": {
     "servicesTracked": 25396,
     "modelled": 9036,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-08T06:46:32.151Z",
-      "minutesSinceLast": 110
+      "minutesSinceLast": 217
     },
     "tfl": {
       "tz": "UTC",
@@ -948,9 +948,9 @@
             198,
             180,
             216,
-            126,
-            0,
-            0,
+            198,
+            216,
+            72,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 3
+          "covered": 5
         }
       ],
-      "lastRecord": "2026-08-08T08:31:48.514Z",
+      "lastRecord": "2026-08-08T10:18:40.235Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 56311,
-    "usable": 12003,
+    "cells": 56509,
+    "usable": 12144,
     "ready": true,
     "examples": [
       {
@@ -1030,34 +1030,34 @@
   "coverage": {
     "days": 28,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-08T08:22:24.593Z",
-    "events": 3303,
-    "incidents": 401,
-    "unplanned": 391,
+    "lastEvent": "2026-08-08T09:07:31.790Z",
+    "events": 3323,
+    "incidents": 402,
+    "unplanned": 392,
     "planned": 10,
-    "runObservations": 1481091,
-    "modelCells": 406007
+    "runObservations": 1494458,
+    "modelCells": 408724
   },
   "storage": {
-    "eventsBytes": 1352606,
+    "eventsBytes": 1358753,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 10028598,
-    "perDayBytes": 512167
+    "crowdingBytes": 10077261,
+    "perDayBytes": 514125
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 160,
+      "have": 161,
       "need": 20,
-      "perDay": 5.71,
+      "perDay": 5.75,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 167,
+      "medianMin": 166,
       "p90Min": 749
     },
     {
@@ -1190,72 +1190,72 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 229170,
+      "n": 231267,
       "ready": true
     },
     {
       "line": "district",
-      "n": 180474,
+      "n": 182124,
       "ready": true
     },
     {
       "line": "central",
-      "n": 178423,
+      "n": 180082,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 139204,
+      "n": 140852,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 125810,
+      "n": 127004,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 103336,
+      "n": 104287,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 76580,
+      "n": 77332,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 75506,
+      "n": 76005,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 73305,
+      "n": 73997,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 70801,
+      "n": 71305,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 61792,
+      "n": 62423,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 58498,
+      "n": 59009,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 36929,
+      "n": 37093,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 31001,
+      "n": 31265,
       "ready": true
     },
     {
@@ -1265,7 +1265,7 @@
     },
     {
       "line": "suffragette",
-      "n": 14465,
+      "n": 14604,
       "ready": true
     },
     {
@@ -1275,7 +1275,7 @@
     },
     {
       "line": "liberty",
-      "n": 530,
+      "n": 542,
       "ready": false
     }
   ],
@@ -1288,27 +1288,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 4,
-      "unplanned": 4,
+      "incidents": 5,
+      "unplanned": 5,
       "minorMin": 395,
       "severeMin": 23,
-      "suspendedMin": 0,
+      "suspendedMin": 24,
       "worstLine": "Northern"
     },
     "week": {
       "incidents": 110,
       "unplanned": 109,
-      "minorMin": 14012,
-      "severeMin": 5304,
-      "suspendedMin": 1444,
+      "minorMin": 13610,
+      "severeMin": 4940,
+      "suspendedMin": 1468,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 401,
-      "unplanned": 391,
+      "incidents": 402,
+      "unplanned": 392,
       "minorMin": 64915,
       "severeMin": 28287,
-      "suspendedMin": 9896,
+      "suspendedMin": 9920,
       "worstLine": "Central"
     }
   },
@@ -1433,11 +1433,11 @@
     {
       "line": "District",
       "lineId": "district",
-      "incidents": 28,
+      "incidents": 29,
       "minorMin": 1965,
       "severeMin": 260,
-      "suspendedMin": 415,
-      "medianMin": 50
+      "suspendedMin": 439,
+      "medianMin": 49
     },
     {
       "line": "Hammersmith & City",
@@ -1477,6 +1477,41 @@
     }
   ],
   "recent": [
+    {
+      "line": "district",
+      "lineName": "District",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-08-08T08:43:31.106Z",
+      "end": "2026-08-08T09:07:31.790Z",
+      "minutes": 24,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 24,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "District Line: No service between Earl's Court and Kensington (Olympia) due to train cancellations. Tickets will be accepted on London Buses, Mildmay line and Southern. Please board the first train to West Brompton and change for Mildmay line / Southern services towards Kensington (Olympia). GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-08T08:43:31.106Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-08-08T09:07:31.790Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Edgware Road (Circle Line) → Kensington (Olympia)",
+        "Kensington (Olympia) → Edgware Road (Circle Line)"
+      ]
+    },
     {
       "line": "hammersmith-city",
       "lineName": "Hammersmith & City",
@@ -2491,42 +2526,6 @@
         "Woolwich Arsenal DLR Station → Bank DLR Station",
         "Bank DLR Station → Woolwich Arsenal DLR Station",
         "Woolwich Arsenal DLR Station → Stratford International DLR Station"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-08-07T11:44:58.067Z",
-      "end": "2026-08-07T11:56:04.636Z",
-      "minutes": 11,
-      "minorMin": 11,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: No service between Woodford and Hainault via Grange Hill and between Leytonstone and Epping while we respond to a fire alert at Woodford. MINOR DELAYS on the rest of the line. Tickets are being accepted on London Buses. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-07T11:44:58.067Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-07T11:56:04.636Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
       ]
     }
   ],
