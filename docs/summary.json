@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T08:48:12.632Z",
+  "generatedAt": "2026-08-09T10:29:35.280Z",
   "rail": {
     "servicesTracked": 29601,
     "modelled": 9638,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-09T06:53:33.335Z",
-      "minutesSinceLast": 115
+      "minutesSinceLast": 216
     },
     "tfl": {
       "tz": "UTC",
@@ -947,12 +947,10 @@
             0,
             126,
             216,
-            90,
-            0,
+            18,
+            54,
             198,
-            162,
-            0,
-            0,
+            108,
             0,
             0,
             0,
@@ -967,16 +965,16 @@
             0,
             0
           ],
-          "covered": 2
+          "covered": 4
         }
       ],
-      "lastRecord": "2026-08-09T08:44:13.174Z",
+      "lastRecord": "2026-08-09T10:25:38.630Z",
       "minutesSinceLast": 4
     }
   },
   "headway": {
-    "cells": 61446,
-    "usable": 12477,
+    "cells": 61289,
+    "usable": 12440,
     "ready": true,
     "examples": [
       {
@@ -1032,34 +1030,34 @@
   "coverage": {
     "days": 29,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-09T08:47:04.049Z",
-    "events": 3580,
-    "incidents": 416,
-    "unplanned": 406,
+    "lastEvent": "2026-08-09T10:28:29.472Z",
+    "events": 3579,
+    "incidents": 417,
+    "unplanned": 407,
     "planned": 10,
-    "runObservations": 1557283,
-    "modelCells": 438362
+    "runObservations": 1561341,
+    "modelCells": 438407
   },
   "storage": {
-    "eventsBytes": 1462532,
+    "eventsBytes": 1462201,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 10689777,
-    "perDayBytes": 521096
+    "crowdingBytes": 10691374,
+    "perDayBytes": 521140
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 171,
+      "have": 172,
       "need": 20,
-      "perDay": 5.9,
+      "perDay": 5.93,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 170,
+      "medianMin": 169,
       "p90Min": 748
     },
     {
@@ -1192,72 +1190,72 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 241267,
+      "n": 241724,
       "ready": true
     },
     {
       "line": "district",
-      "n": 189204,
+      "n": 190116,
       "ready": true
     },
     {
       "line": "central",
-      "n": 188097,
+      "n": 188565,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 151731,
+      "n": 152207,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 131834,
+      "n": 132118,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 108423,
+      "n": 108888,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 81328,
+      "n": 81053,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 78237,
+      "n": 78336,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 77094,
+      "n": 77278,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 73262,
+      "n": 73533,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 65600,
+      "n": 65899,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 60955,
+      "n": 61404,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 37179,
+      "n": 37201,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 32760,
+      "n": 32623,
       "ready": true
     },
     {
@@ -1267,17 +1265,17 @@
     },
     {
       "line": "suffragette",
-      "n": 15082,
+      "n": 15160,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1673,
+      "n": 1674,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 572,
+      "n": 577,
       "ready": false
     }
   ],
@@ -1290,25 +1288,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
+      "incidents": 1,
+      "unplanned": 1,
+      "minorMin": 6,
       "severeMin": 0,
       "suspendedMin": 0,
-      "worstLine": null
+      "worstLine": "Metropolitan"
     },
     "week": {
       "incidents": 110,
       "unplanned": 109,
-      "minorMin": 10786,
-      "severeMin": 6019,
+      "minorMin": 10529,
+      "severeMin": 5629,
       "suspendedMin": 1683,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 416,
-      "unplanned": 406,
-      "minorMin": 66685,
+      "incidents": 417,
+      "unplanned": 407,
+      "minorMin": 66691,
       "severeMin": 29613,
       "suspendedMin": 10135,
       "worstLine": "Central"
@@ -1318,11 +1316,11 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 60,
-      "minorMin": 9837,
+      "incidents": 61,
+      "minorMin": 9843,
       "severeMin": 5766,
       "suspendedMin": 53,
-      "medianMin": 108
+      "medianMin": 103
     },
     {
       "line": "Central",
@@ -1479,6 +1477,42 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-08-09T08:49:26.334Z",
+      "end": "2026-08-09T08:55:26.405Z",
+      "minutes": 6,
+      "minorMin": 6,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Moor Park and Chesham due to train cancellations. After the 09:30 departure from Chesham, the next southbound train will be at 10:30. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-09T08:49:26.334Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-09T08:55:26.405Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
     {
       "line": "metropolitan",
       "lineName": "Metropolitan",
@@ -2499,45 +2533,6 @@
         "Upminster → Ealing Broadway",
         "Ealing Broadway → Upminster",
         "Upminster → Richmond"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-08-07T18:59:59.563Z",
-      "end": "2026-08-07T21:39:30.293Z",
-      "minutes": 160,
-      "minorMin": 160,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: Minor delays between Moor Park and Amersham/Chesham/Watford while we fix a signal failure at Moor Park. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-07T18:59:59.563Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-07T20:42:27.990Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-07T21:39:30.293Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Aldgate → Watford",
-        "Watford → Aldgate"
       ]
     }
   ],
