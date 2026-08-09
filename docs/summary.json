@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T14:34:17.512Z",
+  "generatedAt": "2026-08-09T16:16:26.410Z",
   "rail": {
     "servicesTracked": 30261,
     "modelled": 9930,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-09T12:26:31.513Z",
-      "minutesSinceLast": 128
+      "minutesSinceLast": 230
     },
     "tfl": {
       "tz": "UTC",
@@ -954,9 +954,9 @@
             216,
             90,
             216,
-            108,
-            0,
-            0,
+            198,
+            216,
+            54,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 8
+          "covered": 10
         }
       ],
-      "lastRecord": "2026-08-09T14:29:16.958Z",
+      "lastRecord": "2026-08-09T16:11:34.457Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 61739,
-    "usable": 12598,
+    "cells": 62158,
+    "usable": 12683,
     "ready": true,
     "examples": [
       {
@@ -1030,34 +1030,34 @@
   "coverage": {
     "days": 29,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-09T14:28:08.371Z",
-    "events": 3624,
-    "incidents": 420,
-    "unplanned": 410,
+    "lastEvent": "2026-08-09T16:15:19.425Z",
+    "events": 3645,
+    "incidents": 421,
+    "unplanned": 411,
     "planned": 10,
-    "runObservations": 1586222,
-    "modelCells": 443580
+    "runObservations": 1598752,
+    "modelCells": 447600
   },
   "storage": {
-    "eventsBytes": 1482973,
+    "eventsBytes": 1492060,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 10826927,
-    "perDayBytes": 526530
+    "crowdingBytes": 10894756,
+    "perDayBytes": 529183
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 174,
+      "have": 175,
       "need": 20,
-      "perDay": 6,
+      "perDay": 6.03,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 167,
+      "medianMin": 166,
       "p90Min": 748
     },
     {
@@ -1190,72 +1190,72 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 245813,
+      "n": 247802,
       "ready": true
     },
     {
       "line": "district",
-      "n": 193370,
+      "n": 195008,
       "ready": true
     },
     {
       "line": "central",
-      "n": 191505,
+      "n": 192973,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 155465,
+      "n": 157188,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 134601,
+      "n": 135990,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 110645,
+      "n": 111523,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 82526,
+      "n": 83262,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 78789,
+      "n": 79517,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 78540,
+      "n": 78650,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 74471,
+      "n": 74905,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 66973,
+      "n": 67442,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 62453,
+      "n": 62990,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 37210,
+      "n": 37233,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 33168,
+      "n": 33436,
       "ready": true
     },
     {
@@ -1265,17 +1265,17 @@
     },
     {
       "line": "suffragette",
-      "n": 15440,
+      "n": 15573,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1676,
+      "n": 1680,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 592,
+      "n": 595,
       "ready": false
     }
   ],
@@ -1288,39 +1288,39 @@
   },
   "windows": {
     "today": {
-      "incidents": 4,
-      "unplanned": 4,
-      "minorMin": 344,
-      "severeMin": 0,
+      "incidents": 5,
+      "unplanned": 5,
+      "minorMin": 438,
+      "severeMin": 65,
       "suspendedMin": 0,
-      "worstLine": "Suffragette (Overground · Gospel Oak–Barking Riverside)"
+      "worstLine": "Metropolitan"
     },
     "week": {
-      "incidents": 111,
-      "unplanned": 110,
-      "minorMin": 10133,
-      "severeMin": 5292,
+      "incidents": 112,
+      "unplanned": 111,
+      "minorMin": 10227,
+      "severeMin": 5357,
       "suspendedMin": 1290,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 420,
-      "unplanned": 410,
-      "minorMin": 67029,
-      "severeMin": 29613,
+      "incidents": 421,
+      "unplanned": 411,
+      "minorMin": 67123,
+      "severeMin": 29678,
       "suspendedMin": 10135,
-      "worstLine": "Central"
+      "worstLine": "Metropolitan"
     }
   },
   "worstLines": [
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 62,
-      "minorMin": 9941,
-      "severeMin": 5766,
+      "incidents": 63,
+      "minorMin": 10035,
+      "severeMin": 5831,
       "suspendedMin": 53,
-      "medianMin": 101
+      "medianMin": 103
     },
     {
       "line": "Central",
@@ -1477,6 +1477,54 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-08-09T13:36:06.903Z",
+      "end": "2026-08-09T16:15:19.425Z",
+      "minutes": 159,
+      "minorMin": 94,
+      "severeMin": 65,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 94,
+      "reason": "Metropolitan Line: Minor delays between Moor Park and Chesham due to train cancellations. The next southbound train will be at 15:30. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-09T13:36:06.903Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-09T14:28:08.371Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-09T14:36:15.052Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-09T15:10:16.907Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-09T16:15:19.425Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
     {
       "line": "metropolitan",
       "lineName": "Metropolitan",
@@ -2484,62 +2532,6 @@
       ],
       "segments": [
         "Barking Riverside → Gospel Oak"
-      ]
-    },
-    {
-      "line": "mildmay",
-      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-07T15:24:06.850Z",
-      "end": "2026-08-07T22:37:50.094Z",
-      "minutes": 434,
-      "minorMin": 102,
-      "severeMin": 331,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Mildmay Line: Severe delays due to unavailability of train drivers ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-07T15:24:06.850Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-07T16:08:08.273Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-07T16:55:52.924Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-07T18:59:59.563Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-07T20:42:27.990Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-07T20:55:29.664Z",
-          "sev": 7
-        },
-        {
-          "t": "2026-08-07T22:37:50.094Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Richmond (London) → Stratford (London)",
-        "Clapham Junction → Stratford (London)",
-        "Stratford (London) → Richmond (London)"
       ]
     }
   ],
