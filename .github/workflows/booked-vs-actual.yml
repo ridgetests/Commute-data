@@ -1,0 +1,63 @@
+# .github/workflows/booked-vs-actual.yml
+#
+# TASK 1 — the decisive measurement: does the Network Rail BOOKED platform match
+# what actually departed? Read-only. Downloads the schedule at runtime, writes
+# the answer to the job summary, and COMMITS NOTHING derived from the feed.
+#
+# Run it from the phone: Actions -> "Booked vs actual platform" -> "Run workflow".
+#
+# Why runtime download + job-summary only: the Network Rail redistribution
+# licence has not been read yet. Nothing derived from the feed is written to the
+# repo, so the licence question is sidestepped entirely. Keep it that way.
+
+name: Booked vs actual platform
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read          # read-only: this job cannot write to the repo
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out the archive
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download today's CIF schedule (runtime only — never committed)
+        env:
+          NR_USERNAME: ${{ secrets.NR_USERNAME }}
+          NR_PASSWORD: ${{ secrets.NR_PASSWORD }}
+        run: |
+          if [ -z "$NR_USERNAME" ] || [ -z "$NR_PASSWORD" ]; then
+            echo "::error::NR_USERNAME / NR_PASSWORD are not set in repo secrets." ; exit 1
+          fi
+          # -L follows the auth redirect to the signed download URL. curl drops the
+          # basic-auth header on the cross-host redirect, which is what the signed
+          # URL wants. Streams straight to disk — never held in memory.
+          curl -sS -L --fail --retry 3 --retry-delay 5 \
+            -u "$NR_USERNAME:$NR_PASSWORD" \
+            "https://publicdatafeeds.networkrail.co.uk/ntrod/CifFileAuthenticate?type=CIF_ALL_FULL_DAILY&day=toc-full" \
+            -o toc-full.gz
+          sz=$(stat -c%s toc-full.gz)
+          echo "Downloaded toc-full.gz: $sz bytes"
+          # A tiny file is almost always an auth/error page, not the ~128 MB feed.
+          # Fail loudly rather than silently back-testing against nothing.
+          if [ "$sz" -lt 10000000 ]; then
+            echo "::error::schedule download is only $sz bytes — likely an auth error page, not the feed."
+            echo '--- first bytes ---'; head -c 300 toc-full.gz || true
+            exit 1
+          fi
+
+      - name: Booked vs actual  ->  job summary
+        run: python3 bookedVsActual.py toc-full.gz >> "$GITHUB_STEP_SUMMARY"
+
+      # toc-full.gz is never `git add`ed; it dies with the runner. Nothing derived
+      # from the Network Rail feed is committed.
