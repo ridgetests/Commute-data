@@ -32,6 +32,14 @@ CRS_OVERRIDES = {
     "AON": "ALTON",
     "SUR": "SURBITN",
     "CLJ": "CLPHMJC",   # CORPUS says CLPHMJN; schedules use CLPHMJC
+    # Added after a run returned 0 booked departures for these CRS: the schedule
+    # TIPLOC is not the CRS code. Read from the origin TIPLOC embedded in the
+    # Darwin service IDs in data/rail (VXH -> VAUXHLM etc.), which are the same
+    # TIPLOCs the schedules use for WAT/SUR. If any still returns 0, the feed's
+    # own TiplocV1 records are the ground truth to check next.
+    "VXH": "VAUXHLM",
+    "WIM": "WIMBLDN",
+    "RMD": "RICHMND",
 }
 
 # STP indicator precedence when several schedules cover the same date.
