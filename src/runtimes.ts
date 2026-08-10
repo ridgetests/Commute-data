@@ -67,6 +67,17 @@ export class RunTracker {
   private arrived = new Map<string, { station: string; at: number; line: string;
     towards?: string; direction?: string }[]>();
   private seenPlatforms = new Set<string>();
+  // DIAGNOSTIC (read-only, changes nothing recorded): consecutive pairs rejected
+  // by MIN_RUN/MAX_RUN. The bounds guard against vanish/reappear gaps, but a too-
+  // tight MAX_RUN silently drops genuine long hops (Metropolitan, Elizabeth,
+  // Overground). This lets the collector log the rejected distribution so the
+  // bounds can be tuned from evidence rather than guessed.
+  readonly rejects = {
+    short: 0,
+    long: 0,
+    longByLine: new Map<string, number>(),
+    longHist: new Map<number, number>(),   // 60s bucket start → count
+  };
 
   // Feed one poll's worth of predictions. Returns anything newly observed.
   ingest(preds: Prediction[], now = Date.now()): {
@@ -127,6 +138,18 @@ export class RunTracker {
             const a = list[i - 1];
             const b = list[i];
             const secs = Math.round((b.at - a.at) / 1000);
+            // Instrument the rejects (adjacent pairs only; ignore >1h vanish gaps
+            // which are obviously not a hop). Does not change what gets recorded.
+            if (a.station !== b.station && (secs < MIN_RUN || secs > MAX_RUN)) {
+              if (secs < MIN_RUN) this.rejects.short++;
+              else if (secs <= 3600) {
+                this.rejects.long++;
+                this.rejects.longByLine.set(b.line,
+                  (this.rejects.longByLine.get(b.line) ?? 0) + 1);
+                const bkt = Math.floor(secs / 60) * 60;
+                this.rejects.longHist.set(bkt, (this.rejects.longHist.get(bkt) ?? 0) + 1);
+              }
+            }
             if (secs >= MIN_RUN && secs <= MAX_RUN && a.station !== b.station) {
               runs.push({
                 t: new Date(b.at).toISOString(),
