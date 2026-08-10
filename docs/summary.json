@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T03:36:37.154Z",
+  "generatedAt": "2026-08-10T05:38:54.339Z",
   "rail": {
     "servicesTracked": 32011,
     "modelled": 10311,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-10T00:23:00.647Z",
-      "minutesSinceLast": 194
+      "minutesSinceLast": 316
     },
     "tfl": {
       "tz": "UTC",
@@ -943,9 +943,9 @@
             36,
             0,
             0,
-            54,
-            0,
-            0,
+            72,
+            216,
+            126,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-10T03:31:35.462Z",
+      "lastRecord": "2026-08-10T05:33:53.112Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 62903,
-    "usable": 12723,
+    "cells": 62941,
+    "usable": 12761,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 30,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-10T03:21:30.055Z",
-    "events": 3806,
-    "incidents": 438,
-    "unplanned": 428,
-    "planned": 10,
-    "runObservations": 1596282,
-    "modelCells": 456592
+    "lastEvent": "2026-08-10T05:31:45.960Z",
+    "events": 3833,
+    "incidents": 441,
+    "unplanned": 429,
+    "planned": 12,
+    "runObservations": 1602801,
+    "modelCells": 457071
   },
   "storage": {
-    "eventsBytes": 1565757,
+    "eventsBytes": 1573149,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 11165551,
-    "perDayBytes": 523026
+    "crowdingBytes": 11210655,
+    "perDayBytes": 524776
   },
   "readiness": [
     {
@@ -1091,15 +1091,15 @@
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 51,
+      "have": 52,
       "need": 20,
-      "perDay": 1.7,
+      "perDay": 1.73,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 106,
+      "medianMin": 102,
       "p90Min": 681
     },
     {
@@ -1204,92 +1204,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 247859,
+      "n": 248666,
       "ready": true
     },
     {
       "line": "district",
-      "n": 195087,
+      "n": 196014,
       "ready": true
     },
     {
       "line": "central",
-      "n": 192380,
+      "n": 193110,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 158400,
+      "n": 159168,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 136474,
+      "n": 137007,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 111136,
+      "n": 111673,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 83397,
+      "n": 83668,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 79450,
+      "n": 79683,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 77190,
+      "n": 77610,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 74397,
+      "n": 74699,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 67472,
+      "n": 67873,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 62867,
+      "n": 63015,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 36391,
+      "n": 36521,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 33518,
+      "n": 33667,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 22423,
+      "n": 22533,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 15605,
+      "n": 15650,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1645,
+      "n": 1651,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 591,
+      "n": 593,
       "ready": false
     }
   ],
@@ -1302,27 +1302,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "incidents": 3,
+      "unplanned": 1,
+      "minorMin": 35,
+      "severeMin": 64,
+      "suspendedMin": 5,
+      "worstLine": "Central"
     },
     "week": {
-      "incidents": 128,
-      "unplanned": 127,
-      "minorMin": 13309,
-      "severeMin": 5587,
-      "suspendedMin": 1290,
+      "incidents": 129,
+      "unplanned": 126,
+      "minorMin": 13266,
+      "severeMin": 5651,
+      "suspendedMin": 1295,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 438,
-      "unplanned": 428,
-      "minorMin": 70360,
-      "severeMin": 29908,
-      "suspendedMin": 10135,
+      "incidents": 441,
+      "unplanned": 429,
+      "minorMin": 70395,
+      "severeMin": 29972,
+      "suspendedMin": 10140,
       "worstLine": "Central"
     }
   },
@@ -1339,20 +1339,20 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 48,
+      "incidents": 49,
       "minorMin": 13378,
-      "severeMin": 3028,
+      "severeMin": 3092,
       "suspendedMin": 156,
-      "medianMin": 239
+      "medianMin": 232
     },
     {
       "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
       "lineId": "mildmay",
-      "incidents": 28,
-      "minorMin": 6847,
+      "incidents": 29,
+      "minorMin": 6882,
       "severeMin": 3354,
       "suspendedMin": 1524,
-      "medianMin": 262
+      "medianMin": 239
     },
     {
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
@@ -1375,11 +1375,11 @@
     {
       "line": "Victoria",
       "lineId": "victoria",
-      "incidents": 35,
+      "incidents": 36,
       "minorMin": 5178,
       "severeMin": 2516,
-      "suspendedMin": 96,
-      "medianMin": 110
+      "suspendedMin": 101,
+      "medianMin": 108
     },
     {
       "line": "Northern",
@@ -1491,6 +1491,112 @@
     }
   ],
   "recent": [
+    {
+      "line": "mildmay",
+      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-08-10T04:56:44.586Z",
+      "end": "2026-08-10T05:31:45.960Z",
+      "minutes": 35,
+      "minorMin": 35,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 7,
+      "peakAfterMin": 0,
+      "reason": "MILDMAY LINE: Monday 10, Tuesday 11, Wednesday 12, Thursday 13 and Friday 14 August, the 0558 first train from Richmond to Stratford will start from Camden Road at 0636. Customers from Richmond should use the next train at 0608.",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-10T04:56:44.586Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-08-10T05:31:45.960Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Richmond (London) → Stratford (London)",
+        "Clapham Junction → Stratford (London)"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-08-10T03:58:42.603Z",
+      "end": "2026-08-10T05:02:45.339Z",
+      "minutes": 64,
+      "minorMin": 0,
+      "severeMin": 64,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Severe delays between Leytonstone and Epping / Hainault via Newbury Park and between Woodford and Hainault via Grange Hill due to a late finish of engineering work. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-10T03:58:42.603Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-10T05:02:45.339Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "line": "victoria",
+      "lineName": "Victoria",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-08-10T04:31:43.787Z",
+      "end": "2026-08-10T04:36:43.916Z",
+      "minutes": 5,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 5,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Victoria Line: No service between Brixton and Victoria due to a late finish of engineering work. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-10T04:31:43.787Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-08-10T04:36:43.916Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
+      ]
+    },
     {
       "line": "mildmay",
       "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
@@ -2416,159 +2522,6 @@
         "Amersham → Aldgate",
         "Aldgate → Chesham",
         "Aldgate → Amersham"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-08T21:02:40.866Z",
-      "end": "2026-08-09T01:51:44.864Z",
-      "minutes": 289,
-      "minorMin": 289,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge due to train cancellations ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-08T21:02:40.866Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-08T22:31:06.945Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-09T01:51:44.864Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Aldgate → Uxbridge",
-        "Uxbridge → Aldgate"
-      ]
-    },
-    {
-      "line": "jubilee",
-      "lineName": "Jubilee",
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-08-08T14:20:39.033Z",
-      "end": "2026-08-09T01:51:44.864Z",
-      "minutes": 691,
-      "minorMin": 29,
-      "severeMin": 660,
-      "suspendedMin": 2,
-      "worstSev": 3,
-      "peakAfterMin": 4,
-      "reason": "Jubilee Line: Minor delays while we respond to a fire alert at Wembley Park.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-08T14:20:39.033Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-08T14:24:38.867Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-08T14:26:45.051Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-08T14:33:07.302Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-08T14:52:08.217Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T16:35:48.173Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T18:39:25.031Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T20:31:39.366Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T21:52:42.866Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T22:31:06.945Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-09T01:51:44.864Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Stratford → Stanmore",
-        "Stanmore → Stratford"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-08T19:59:33.300Z",
-      "end": "2026-08-09T01:51:44.864Z",
-      "minutes": 352,
-      "minorMin": 0,
-      "severeMin": 352,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "District Line: Severe delays between Earl's Court and Kensington Olympia due to train cancellations. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-08T19:59:33.300Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T20:31:39.366Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-08T22:31:06.945Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-09T01:51:44.864Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Kensington (Olympia)",
-        "Kensington (Olympia) → Edgware Road (Circle Line)"
       ]
     }
   ],
