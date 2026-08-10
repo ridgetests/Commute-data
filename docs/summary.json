@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-10T18:35:37.449Z",
+  "generatedAt": "2026-08-10T20:39:59.856Z",
   "rail": {
-    "servicesTracked": 32076,
-    "modelled": 10533,
-    "confident": 9141,
-    "darwinLeadMin": 10.3,
+    "servicesTracked": 32538,
+    "modelled": 10832,
+    "confident": 9409,
+    "darwinLeadMin": 10.2,
     "samples": [
       {
         "crs": "WAT",
@@ -520,23 +520,23 @@
             0,
             1052,
             1395,
-            846,
-            1370,
-            448,
+            121,
             0,
-            0,
-            0,
+            1171,
+            1748,
+            1691,
+            1051,
             0,
             0,
             0,
             0,
             1
           ],
-          "covered": 9
+          "covered": 11
         }
       ],
-      "lastRecord": "2026-08-10T15:17:09.727Z",
-      "minutesSinceLast": 198
+      "lastRecord": "2026-08-10T18:42:56.495Z",
+      "minutesSinceLast": 117
     },
     "tfl": {
       "tz": "UTC",
@@ -958,30 +958,38 @@
             216,
             162,
             216,
+            144,
+            216,
             126,
-            0,
-            0,
             0,
             0,
             0
           ],
-          "covered": 12
+          "covered": 14
         }
       ],
-      "lastRecord": "2026-08-10T18:30:38.191Z",
+      "lastRecord": "2026-08-10T20:34:56.702Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 64162,
-    "usable": 13379,
+    "cells": 64296,
+    "usable": 13577,
     "ready": true,
     "examples": [
       {
         "line": "northern",
         "station": "940GZZLUGDG",
+        "band": "wd-20",
+        "n": 26,
+        "p50": 293,
+        "p90": 698
+      },
+      {
+        "line": "northern",
+        "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 109,
+        "n": 119,
         "p50": 218,
         "p90": 488
       },
@@ -1013,37 +1021,29 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 37,
+        "n": 39,
         "p50": 278,
         "p90": 668
-      },
-      {
-        "line": "piccadilly",
-        "station": "940GZZLUCAR",
-        "band": "wd-22",
-        "n": 40,
-        "p50": 278,
-        "p90": 758
       }
     ]
   },
   "coverage": {
     "days": 30,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-10T18:33:27.461Z",
-    "events": 3970,
+    "lastEvent": "2026-08-10T20:29:49.866Z",
+    "events": 3994,
     "incidents": 452,
     "unplanned": 441,
     "planned": 11,
-    "runObservations": 1683991,
-    "modelCells": 467394
+    "runObservations": 1697736,
+    "modelCells": 469330
   },
   "storage": {
-    "eventsBytes": 1628729,
+    "eventsBytes": 1638510,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 11475066,
-    "perDayBytes": 535443
+    "crowdingBytes": 11532283,
+    "perDayBytes": 537676
   },
   "readiness": [
     {
@@ -1204,92 +1204,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 260732,
+      "n": 262929,
       "ready": true
     },
     {
       "line": "district",
-      "n": 205472,
+      "n": 207091,
       "ready": true
     },
     {
       "line": "central",
-      "n": 202382,
+      "n": 203897,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 169034,
+      "n": 170403,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 144910,
+      "n": 146296,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 117436,
+      "n": 118316,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 87735,
+      "n": 88481,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 83902,
+      "n": 84534,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 80896,
+      "n": 81498,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 77910,
+      "n": 78590,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 71935,
+      "n": 72614,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 66503,
+      "n": 67119,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 37285,
+      "n": 37454,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 35339,
+      "n": 35597,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 23696,
+      "n": 23914,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 16435,
+      "n": 16579,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1760,
+      "n": 1788,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 629,
+      "n": 636,
       "ready": false
     }
   ],
