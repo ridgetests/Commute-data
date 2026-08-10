@@ -1,0 +1,48 @@
+# .github/workflows/backtest.yml
+#
+# Read-only diagnostic. Changes nothing, commits nothing, writes no files to
+# the repo. Run it from the phone: Actions → "Platform prior back-test" →
+# "Run workflow". Results appear in the run summary, formatted for reading on
+# a small screen.
+#
+# It runs the schema probe FIRST, so that if the back-test picks the wrong
+# fields, the evidence for fixing it is in the same output.
+
+name: Platform prior back-test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out the archive
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm ci
+
+      # The probe first — it is the ground truth for the field names the
+      # back-test guesses at. If the back-test is wrong, the answer is here.
+      - name: Schema probe (read-only)
+        run: npx tsx probe.ts >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Separator
+        run: echo -e "\n\n---\n\n" >> "$GITHUB_STEP_SUMMARY"
+
+      # continue-on-error so that a failed back-test still leaves the probe
+      # output visible — a blank summary would be silence, and silence is a bug.
+      - name: Back-test (read-only)
+        continue-on-error: true
+        run: npx tsx backtest.ts >> "$GITHUB_STEP_SUMMARY"
