@@ -16,6 +16,11 @@
 name: Publish platform changes
 
 on:
+  # Daily, after the CIF is generated (~01:00) — keeps docs/platform-changes.json
+  # fresh so the app always sees the next 6 weeks of planned changes. Validated
+  # against a manual run (WAT: 536 changes) before scheduling.
+  schedule:
+    - cron: "0 7 * * *"
   workflow_dispatch:
     inputs:
       stations:
@@ -68,8 +73,9 @@ jobs:
 
       - name: Build docs/platform-changes.json
         env:
-          STATIONS: ${{ inputs.stations }}
-          WEEKS: ${{ inputs.weeks_ahead }}
+          # inputs are empty on a scheduled run — fall back to the defaults
+          STATIONS: ${{ inputs.stations || 'WAT,SUR,CLJ,WIM,VXH,RMD' }}
+          WEEKS: ${{ inputs.weeks_ahead || '6' }}
         run: |
           case "$WEEKS" in ''|*[!0-9]*) echo "::error::weeks_ahead must be a whole number"; exit 1;; esac
           case "$STATIONS" in ''|*[!A-Za-z,]*) echo "::error::stations must be letters and commas only"; exit 1;; esac
