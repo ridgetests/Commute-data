@@ -1,0 +1,91 @@
+# .github/workflows/publish-platform-changes.yml
+#
+# Publishes docs/platform-changes.json — the overlay diff (known-in-advance
+# platform changes) that the app consumes. PURELY schedule-derived (Network Rail
+# CIF), so it is Open Government Licence v3.0 and the file carries the OGL
+# attribution. It does NOT touch the Darwin archive, so the Darwin 1-year
+# retention rule does not apply to it.
+#
+# LICENCE GATE: unlike the read-only diagnostics, this workflow COMMITS
+# schedule-derived data to a public repo (that is the point — the app reads it).
+# That is redistribution, which the OGL permits WITH attribution. Confirm the
+# Network Rail data feeds licence is OGL / redistribution-permitted before the
+# first run. It is intentionally manual (workflow_dispatch) for now; add a daily
+# schedule here once that is confirmed.
+
+name: Publish platform changes
+
+on:
+  workflow_dispatch:
+    inputs:
+      stations:
+        description: "Comma-separated CRS list"
+        default: "WAT,SUR,CLJ,WIM,VXH,RMD"
+        required: true
+      weeks_ahead:
+        description: "Weeks ahead to publish"
+        default: "6"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-platform-changes
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out the archive
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download today's CIF schedule (runtime only — the .gz is never committed)
+        env:
+          NR_USERNAME: ${{ secrets.NR_USERNAME }}
+          NR_PASSWORD: ${{ secrets.NR_PASSWORD }}
+        run: |
+          if [ -z "$NR_USERNAME" ] || [ -z "$NR_PASSWORD" ]; then
+            echo "::error::NR_USERNAME / NR_PASSWORD are not set in repo secrets." ; exit 1
+          fi
+          curl -sS -L --fail --retry 3 --retry-delay 5 \
+            -u "$NR_USERNAME:$NR_PASSWORD" \
+            "https://publicdatafeeds.networkrail.co.uk/ntrod/CifFileAuthenticate?type=CIF_ALL_FULL_DAILY&day=toc-full" \
+            -o toc-full.gz
+          sz=$(stat -c%s toc-full.gz)
+          echo "Downloaded toc-full.gz: $sz bytes"
+          if [ "$sz" -lt 10000000 ]; then
+            echo "::error::schedule download is only $sz bytes — likely an auth error page, not the feed."
+            exit 1
+          fi
+
+      - name: Build docs/platform-changes.json
+        env:
+          STATIONS: ${{ inputs.stations }}
+          WEEKS: ${{ inputs.weeks_ahead }}
+        run: |
+          case "$WEEKS" in ''|*[!0-9]*) echo "::error::weeks_ahead must be a whole number"; exit 1;; esac
+          case "$STATIONS" in ''|*[!A-Za-z,]*) echo "::error::stations must be letters and commas only"; exit 1;; esac
+          START=$(date -u +%F)
+          END=$(date -u -d "+$((WEEKS*7)) days" +%F)
+          python3 publishPlatformChanges.py toc-full.gz "$STATIONS" "$START" "$END" > docs/platform-changes.json
+          echo "wrote docs/platform-changes.json ($(stat -c%s docs/platform-changes.json) bytes)"
+          head -c 400 docs/platform-changes.json
+
+      - name: Commit the published file (schedule-derived, OGL — attribution in the file)
+        run: |
+          git config user.name "archive-bot"
+          git config user.email "archive-bot@users.noreply.github.com"
+          git add docs/platform-changes.json
+          git commit -m "platform-changes $(date -u +%FT%TZ) [skip ci]" || { echo "nothing changed"; exit 0; }
+          for i in 1 2 3; do
+            git pull --rebase -X theirs && git push && break
+            git rebase --abort 2>/dev/null || true
+          done
