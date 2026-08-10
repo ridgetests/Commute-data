@@ -21,7 +21,13 @@ import { dayType } from './calendar';
 
 const HALF_LIFE_DAYS = 21;
 const MIN_WEIGHT = 3;          // a service needs ~3 recent sightings to speak
-const LATE_CLAMP = 90;         // minutes; beyond this it's "a very bad day"
+// Minutes. Bounds a single data artefact from dominating the p90, but must sit
+// ABOVE genuine severe delays or it understates the very "bad day" the p90 is
+// meant to capture. Measured: real peak delays reach ~160 min with zero phantoms
+// in range, so 90 was flattening true 90-160 min delays to 90. 240 (4h) lets the
+// genuine ones through and clamps only true artefacts (a >4h "delay" is really a
+// cancellation/data error).
+const LATE_CLAMP = 240;
 
 interface Outcome {
   crs: string; std: string; dest: string;
