@@ -1,0 +1,64 @@
+# .github/workflows/retention-prune.yml
+#
+# Darwin retention compliance. The Live Departure Board (Darwin) data sharing
+# agreement on the Rail Data Marketplace carries a retention policy:
+#   "Must delete all data received within 1 year."
+# So the raw Darwin event log (data/rail/*.jsonl) may not be kept beyond a year.
+#
+# This deletes data/rail files older than 365 days (by the date in the filename)
+# and commits the deletion. It runs daily and is a NO-OP until the oldest file
+# (2026-07-24) reaches a year old (~2027-07-24) — landed early so it is never
+# forgotten.
+#
+# Scope: ONLY data/rail (Darwin). data/events and data/crowding are TfL Open Data
+# under TfL's own terms, and the derived models in data/model are aggregates, not
+# "raw data received" — neither is pruned here. The R2 raw tier (raw/rail) is
+# covered separately by a 365-day object-lifecycle rule on the bucket, not here.
+
+name: Retention — prune Darwin data over 1 year
+
+on:
+  schedule:
+    - cron: "40 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: retention-prune
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the archive
+        uses: actions/checkout@v4
+
+      - name: Delete data/rail files older than 365 days
+        run: |
+          today=$(date -u +%s)
+          deleted=0
+          shopt -s nullglob
+          for f in data/rail/*.jsonl; do
+            d=$(basename "$f" .jsonl)
+            fs=$(date -u -d "$d" +%s 2>/dev/null) || { echo "skip (unparseable date): $f"; continue; }
+            age=$(( (today - fs) / 86400 ))
+            if [ "$age" -gt 365 ]; then
+              echo "pruning $f (${age} days old)"
+              git rm -q "$f"
+              deleted=$((deleted + 1))
+            fi
+          done
+          echo "pruned $deleted Darwin file(s) older than 365 days"
+          if [ "$deleted" -gt 0 ]; then
+            git config user.name "archive-bot"
+            git config user.email "archive-bot@users.noreply.github.com"
+            git commit -m "retention: prune Darwin data > 1 year [skip ci]"
+            for i in 1 2 3; do
+              git pull --rebase -X theirs && git push && break
+              git rebase --abort 2>/dev/null || true
+            done
+          fi
