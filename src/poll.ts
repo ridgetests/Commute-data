@@ -203,6 +203,21 @@ async function main() {
 
   console.log(`\nDone. ${polls} polls · ${events} events · ${runs} run times · ` +
     `${plats} platforms · ${crowds} crowding rows`);
+
+  // DIAGNOSTIC: run-time bounds rejects. If genuine long hops are being dropped,
+  // the long-reject histogram tapers smoothly just past MAX_RUN (600s); a wall of
+  // rejects far out (>20 min) is vanish/reappear noise, not hops. Tune MIN_RUN/
+  // MAX_RUN in runtimes.ts from this, don't guess.
+  const rj = tracker.rejects;
+  if (rj.short || rj.long) {
+    console.log(`\nRun-time bounds rejects — short (<${40}s): ${rj.short} · ` +
+      `long (>${600}s, <1h): ${rj.long}`);
+    const hist = [...rj.longHist.entries()].sort((a, b) => a[0] - b[0]);
+    console.log('  long-reject histogram (60s buckets, seconds → count):');
+    console.log('   ' + hist.map(([s, c]) => `${s}:${c}`).join('  '));
+    const byLine = [...rj.longByLine.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+    console.log('  long rejects by line: ' + byLine.map(([l, c]) => `${l}:${c}`).join('  '));
+  }
 }
 
 main();
