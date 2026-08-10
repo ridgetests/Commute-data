@@ -1,0 +1,77 @@
+# .github/workflows/overlay-diff.yml
+#
+# TASK 2 — the known-in-advance platform-change feature. Read-only. Downloads the
+# schedule at runtime, lists services whose platform on a specific date differs
+# from their usual platform, and COMMITS NOTHING derived from the feed.
+#
+# Run it from the phone: Actions -> "Overlay diff — planned platform changes" ->
+# "Run workflow" (optionally set the station and how many weeks ahead to scan).
+#
+# This is not a prediction — it is a diff between two published timetables, so it
+# has no error rate. See overlayDiff.py.
+
+name: Overlay diff — planned platform changes
+
+on:
+  workflow_dispatch:
+    inputs:
+      station:
+        description: "Station CRS (e.g. WAT)"
+        default: "WAT"
+        required: true
+      weeks_ahead:
+        description: "How many weeks ahead to scan"
+        default: "6"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out the archive
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download today's CIF schedule (runtime only — never committed)
+        env:
+          NR_USERNAME: ${{ secrets.NR_USERNAME }}
+          NR_PASSWORD: ${{ secrets.NR_PASSWORD }}
+        run: |
+          if [ -z "$NR_USERNAME" ] || [ -z "$NR_PASSWORD" ]; then
+            echo "::error::NR_USERNAME / NR_PASSWORD are not set in repo secrets." ; exit 1
+          fi
+          curl -sS -L --fail --retry 3 --retry-delay 5 \
+            -u "$NR_USERNAME:$NR_PASSWORD" \
+            "https://publicdatafeeds.networkrail.co.uk/ntrod/CifFileAuthenticate?type=CIF_ALL_FULL_DAILY&day=toc-full" \
+            -o toc-full.gz
+          sz=$(stat -c%s toc-full.gz)
+          echo "Downloaded toc-full.gz: $sz bytes"
+          if [ "$sz" -lt 10000000 ]; then
+            echo "::error::schedule download is only $sz bytes — likely an auth error page, not the feed."
+            echo '--- first bytes ---'; head -c 300 toc-full.gz || true
+            exit 1
+          fi
+
+      - name: Overlay diff  ->  job summary
+        env:
+          STATION: ${{ inputs.station }}
+          WEEKS: ${{ inputs.weeks_ahead }}
+        run: |
+          # validate inputs before use (they are interpolated from user input)
+          case "$WEEKS" in ''|*[!0-9]*) echo "::error::weeks_ahead must be a whole number"; exit 1;; esac
+          case "$STATION" in ''|*[!A-Za-z]*) echo "::error::station must be letters only"; exit 1;; esac
+          START=$(date -u +%F)
+          END=$(date -u -d "+$((WEEKS*7)) days" +%F)
+          CRS=$(printf '%s' "$STATION" | tr '[:lower:]' '[:upper:]')
+          echo "Range: $START -> $END · station $CRS"
+          python3 overlayDiff.py toc-full.gz "$CRS" "$START" "$END" >> "$GITHUB_STEP_SUMMARY"
+
+      # toc-full.gz is never committed; it dies with the runner.
