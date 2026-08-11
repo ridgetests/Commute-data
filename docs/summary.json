@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T14:49:39.631Z",
+  "generatedAt": "2026-08-11T16:39:36.884Z",
   "rail": {
     "servicesTracked": 32671,
     "modelled": 11298,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-11T12:39:39.928Z",
-      "minutesSinceLast": 130
+      "minutesSinceLast": 240
     },
     "tfl": {
       "tz": "UTC",
@@ -954,9 +954,9 @@
             216,
             108,
             156,
-            180,
-            0,
-            0,
+            198,
+            216,
+            126,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 9
+          "covered": 11
         }
       ],
-      "lastRecord": "2026-08-11T14:48:38.532Z",
-      "minutesSinceLast": 1
+      "lastRecord": "2026-08-11T16:34:31.695Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 65269,
-    "usable": 13697,
+    "cells": 65564,
+    "usable": 13841,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 31,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-11T14:44:29.374Z",
-    "events": 4209,
-    "incidents": 471,
-    "unplanned": 460,
+    "lastEvent": "2026-08-11T16:28:27.343Z",
+    "events": 4236,
+    "incidents": 472,
+    "unplanned": 461,
     "planned": 11,
-    "runObservations": 1748082,
-    "modelCells": 475436
+    "runObservations": 1763711,
+    "modelCells": 477877
   },
   "storage": {
-    "eventsBytes": 1713501,
+    "eventsBytes": 1727628,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 11893457,
-    "perDayBytes": 534401
+    "crowdingBytes": 11951528,
+    "perDayBytes": 536730
   },
   "readiness": [
     {
@@ -1063,16 +1063,16 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 101,
+      "have": 102,
       "need": 20,
-      "perDay": 3.26,
+      "perDay": 3.29,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 96,
-      "p90Min": 555
+      "medianMin": 97,
+      "p90Min": 629
     },
     {
       "cause": "other",
@@ -1204,92 +1204,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 270766,
+      "n": 273057,
       "ready": true
     },
     {
       "line": "district",
-      "n": 212313,
+      "n": 214248,
       "ready": true
     },
     {
       "line": "central",
-      "n": 209435,
+      "n": 211097,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 177152,
+      "n": 179053,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 150853,
+      "n": 152380,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 122640,
+      "n": 123875,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 90937,
+      "n": 91673,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 87182,
+      "n": 88243,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 83667,
+      "n": 84214,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 80684,
+      "n": 81337,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 75261,
+      "n": 75860,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 68977,
+      "n": 69648,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 37402,
+      "n": 37479,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 36612,
+      "n": 36956,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 24675,
+      "n": 24893,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 17005,
+      "n": 17148,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1864,
+      "n": 1885,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 655,
+      "n": 663,
       "ready": false
     }
   ],
@@ -1302,26 +1302,26 @@
   },
   "windows": {
     "today": {
-      "incidents": 10,
-      "unplanned": 10,
-      "minorMin": 617,
-      "severeMin": 145,
+      "incidents": 11,
+      "unplanned": 11,
+      "minorMin": 637,
+      "severeMin": 845,
       "suspendedMin": 60,
-      "worstLine": "Metropolitan"
+      "worstLine": "Elizabeth line"
     },
     "week": {
-      "incidents": 142,
-      "unplanned": 140,
-      "minorMin": 14836,
-      "severeMin": 6908,
+      "incidents": 143,
+      "unplanned": 141,
+      "minorMin": 14856,
+      "severeMin": 7608,
       "suspendedMin": 1415,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 471,
-      "unplanned": 460,
-      "minorMin": 73967,
-      "severeMin": 32111,
+      "incidents": 472,
+      "unplanned": 461,
+      "minorMin": 73987,
+      "severeMin": 32811,
       "suspendedMin": 10764,
       "worstLine": "Central"
     }
@@ -1373,6 +1373,15 @@
       "medianMin": 144
     },
     {
+      "line": "Elizabeth line",
+      "lineId": "elizabeth",
+      "incidents": 32,
+      "minorMin": 3068,
+      "severeMin": 4072,
+      "suspendedMin": 160,
+      "medianMin": 124
+    },
+    {
       "line": "Victoria",
       "lineId": "victoria",
       "incidents": 39,
@@ -1380,15 +1389,6 @@
       "severeMin": 2682,
       "suspendedMin": 99,
       "medianMin": 110
-    },
-    {
-      "line": "Elizabeth line",
-      "lineId": "elizabeth",
-      "incidents": 31,
-      "minorMin": 3048,
-      "severeMin": 3372,
-      "suspendedMin": 160,
-      "medianMin": 115
     },
     {
       "line": "Bakerloo",
@@ -1491,6 +1491,70 @@
     }
   ],
   "recent": [
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-11T03:19:06.376Z",
+      "end": "2026-08-11T15:19:24.099Z",
+      "minutes": 720,
+      "minorMin": 20,
+      "severeMin": 700,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Severe delays between Hayes & Harlington and Heathrow Airport due to a tunnel being closed for safety reasons. Please use the Piccadilly line to travel to Heathrow Airport and Central London. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-11T03:19:06.376Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T05:28:05.550Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T07:10:48.416Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T08:59:12.521Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T10:51:44.905Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T13:08:53.340Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T13:20:54.427Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-11T14:59:23.161Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-11T15:19:24.099Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
     {
       "line": "hammersmith-city",
       "lineName": "Hammersmith & City",
@@ -2581,42 +2645,6 @@
         "Upminster → Richmond",
         "Richmond → Upminster",
         "Edgware Road (Circle Line) → Richmond"
-      ]
-    },
-    {
-      "line": "northern",
-      "lineName": "Northern",
-      "cause": "obstruction",
-      "planned": false,
-      "start": "2026-08-10T15:50:43.156Z",
-      "end": "2026-08-10T15:51:42.892Z",
-      "minutes": 1,
-      "minorMin": 1,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Northern Line: Minor delays between Camden Town and High Barnet northbound only while we remove an obstruction from the track at Kentish Town. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-10T15:50:43.156Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-10T15:51:42.892Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Morden → High Barnet",
-        "Morden → Mill Hill East",
-        "Battersea Power Station → High Barnet"
       ]
     }
   ],
