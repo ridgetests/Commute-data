@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T20:44:15.492Z",
+  "generatedAt": "2026-08-12T22:28:14.288Z",
   "rail": {
     "servicesTracked": 32839,
     "modelled": 12697,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-12T18:46:32.853Z",
-      "minutesSinceLast": 118
+      "minutesSinceLast": 222
     },
     "tfl": {
       "tz": "UTC",
@@ -960,21 +960,21 @@
             216,
             126,
             216,
-            144,
-            0,
-            0,
+            198,
+            216,
+            90,
             0
           ],
-          "covered": 15
+          "covered": 16
         }
       ],
-      "lastRecord": "2026-08-12T20:39:15.749Z",
+      "lastRecord": "2026-08-12T22:23:09.375Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 67644,
-    "usable": 14583,
+    "cells": 67745,
+    "usable": 14627,
     "ready": true,
     "examples": [
       {
@@ -997,9 +997,9 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 115,
+        "n": 131,
         "p50": 248,
-        "p90": 563
+        "p90": 548
       },
       {
         "line": "northern",
@@ -1021,7 +1021,7 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 55,
+        "n": 56,
         "p50": 278,
         "p90": 638
       }
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 32,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-12T20:30:04.545Z",
-    "events": 4556,
-    "incidents": 497,
-    "unplanned": 486,
+    "lastEvent": "2026-08-12T22:02:03.202Z",
+    "events": 4577,
+    "incidents": 498,
+    "unplanned": 487,
     "planned": 11,
-    "runObservations": 1878887,
-    "modelCells": 493887
+    "runObservations": 1891515,
+    "modelCells": 494645
   },
   "storage": {
-    "eventsBytes": 1839483,
+    "eventsBytes": 1845704,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 12505156,
-    "perDayBytes": 540754
+    "crowdingBytes": 12557639,
+    "perDayBytes": 542588
   },
   "readiness": [
     {
@@ -1119,15 +1119,15 @@
     {
       "cause": "customer-incident",
       "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 11,
+      "have": 12,
       "need": 20,
-      "perDay": 0.34,
+      "perDay": 0.38,
       "ready": false,
       "etaDays": [
-        12,
-        40
+        9,
+        34
       ],
-      "medianMin": 77,
+      "medianMin": 78,
       "p90Min": 276
     },
     {
@@ -1204,92 +1204,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 290817,
+      "n": 292810,
       "ready": true
     },
     {
       "line": "district",
-      "n": 227305,
+      "n": 228730,
       "ready": true
     },
     {
       "line": "central",
-      "n": 223738,
+      "n": 225198,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 193726,
+      "n": 195268,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 162508,
+      "n": 163733,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 132051,
+      "n": 132915,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 97653,
+      "n": 98370,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 94733,
+      "n": 95331,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 88704,
+      "n": 89227,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 86376,
+      "n": 86889,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 81173,
+      "n": 81716,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 74607,
+      "n": 75054,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 39526,
+      "n": 39798,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 38114,
+      "n": 38263,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 26845,
+      "n": 27067,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 18238,
+      "n": 18362,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2065,
+      "n": 2074,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 708,
+      "n": 710,
       "ready": false
     }
   ],
@@ -1302,25 +1302,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 16,
-      "unplanned": 16,
-      "minorMin": 1432,
+      "incidents": 17,
+      "unplanned": 17,
+      "minorMin": 1515,
       "severeMin": 921,
       "suspendedMin": 18,
       "worstLine": "Elizabeth line"
     },
     "week": {
-      "incidents": 148,
-      "unplanned": 147,
-      "minorMin": 16009,
+      "incidents": 147,
+      "unplanned": 146,
+      "minorMin": 15913,
       "severeMin": 8191,
       "suspendedMin": 1065,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 497,
-      "unplanned": 486,
-      "minorMin": 77355,
+      "incidents": 498,
+      "unplanned": 487,
+      "minorMin": 77438,
       "severeMin": 34270,
       "suspendedMin": 10845,
       "worstLine": "Central"
@@ -1420,11 +1420,11 @@
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "lineId": "windrush",
-      "incidents": 14,
-      "minorMin": 474,
+      "incidents": 15,
+      "minorMin": 557,
       "severeMin": 654,
       "suspendedMin": 1680,
-      "medianMin": 101
+      "medianMin": 98
     },
     {
       "line": "Piccadilly",
@@ -1491,6 +1491,46 @@
     }
   ],
   "recent": [
+    {
+      "line": "windrush",
+      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-08-12T19:35:58.609Z",
+      "end": "2026-08-12T20:59:00.617Z",
+      "minutes": 83,
+      "minorMin": 83,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Windrush Line: Minor delays due to an earlier customer incident at Whitechapel. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-12T19:35:58.609Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-12T20:48:00.029Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-12T20:59:00.617Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "West Croydon → Highbury & Islington",
+        "Highbury & Islington → West Croydon",
+        "Clapham Junction → Highbury & Islington"
+      ]
+    },
     {
       "line": "district",
       "lineName": "District",
@@ -2605,62 +2645,6 @@
         "Amersham → Aldgate",
         "Aldgate → Chesham",
         "Aldgate → Amersham"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "trespass",
-      "planned": false,
-      "start": "2026-08-11T14:31:29.023Z",
-      "end": "2026-08-11T16:58:54.880Z",
-      "minutes": 147,
-      "minorMin": 104,
-      "severeMin": 13,
-      "suspendedMin": 31,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "District Line: No service between High Street Kensington and Edgware Road while we deal with a trespasser on the track at Edgware Road. London Buses are accepting valid tickets via any reasonable route. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-11T14:31:29.023Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-11T14:59:23.161Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-11T15:02:23.319Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-11T15:15:23.678Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-11T15:46:24.770Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-11T16:01:25.831Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-11T16:58:54.880Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Ealing Broadway",
-        "Ealing Broadway → Edgware Road (Circle Line)",
-        "Edgware Road (Circle Line) → Richmond"
       ]
     }
   ],
