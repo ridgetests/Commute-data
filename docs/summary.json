@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T20:37:11.282Z",
+  "generatedAt": "2026-08-14T22:23:44.733Z",
   "rail": {
     "servicesTracked": 33027,
     "modelled": 13804,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-14T18:44:22.262Z",
-      "minutesSinceLast": 113
+      "minutesSinceLast": 219
     },
     "tfl": {
       "tz": "UTC",
@@ -962,19 +962,21 @@
             216,
             126,
             0,
-            0,
+            72,
+            216,
+            72,
             0
           ],
           "covered": 15
         }
       ],
-      "lastRecord": "2026-08-14T20:32:13.582Z",
+      "lastRecord": "2026-08-14T22:18:42.236Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 69039,
-    "usable": 15083,
+    "cells": 69012,
+    "usable": 15037,
     "ready": true,
     "examples": [
       {
@@ -989,25 +991,25 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 138,
-        "p50": 218,
+        "n": 137,
+        "p50": 203,
         "p90": 458
       },
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 133,
+        "n": 138,
         "p50": 248,
-        "p90": 548
+        "p90": 578
       },
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 88,
+        "n": 91,
         "p50": 278,
-        "p90": 653
+        "p90": 683
       },
       {
         "line": "northern",
@@ -1021,7 +1023,7 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 57,
+        "n": 56,
         "p50": 278,
         "p90": 653
       }
@@ -1030,34 +1032,34 @@
   "coverage": {
     "days": 34,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-14T20:06:05.096Z",
-    "events": 5181,
+    "lastEvent": "2026-08-14T21:53:33.976Z",
+    "events": 5179,
     "incidents": 554,
     "unplanned": 541,
     "planned": 13,
-    "runObservations": 2008993,
-    "modelCells": 503592
+    "runObservations": 2008057,
+    "modelCells": 503066
   },
   "storage": {
-    "eventsBytes": 2111803,
+    "eventsBytes": 2108801,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 13578184,
-    "perDayBytes": 548514
+    "crowdingBytes": 13575947,
+    "perDayBytes": 548360
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 233,
+      "have": 232,
       "need": 20,
-      "perDay": 6.85,
+      "perDay": 6.82,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 166,
+      "medianMin": 167,
       "p90Min": 727
     },
     {
@@ -1091,15 +1093,15 @@
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
-      "have": 62,
+      "have": 63,
       "need": 20,
-      "perDay": 1.82,
+      "perDay": 1.85,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 96,
+      "medianMin": 97,
       "p90Min": 691
     },
     {
@@ -1204,82 +1206,82 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 309263,
+      "n": 309461,
       "ready": true
     },
     {
       "line": "district",
-      "n": 242031,
+      "n": 241840,
       "ready": true
     },
     {
       "line": "central",
-      "n": 239076,
+      "n": 238915,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 209599,
+      "n": 209454,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 168605,
+      "n": 168619,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 142802,
+      "n": 142721,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 105425,
+      "n": 105380,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 102191,
+      "n": 102129,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 94441,
+      "n": 94449,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 91387,
+      "n": 91308,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 87503,
+      "n": 87385,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 80746,
+      "n": 80599,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 42843,
+      "n": 42829,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 40939,
+      "n": 40894,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 29210,
+      "n": 29179,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 19764,
+      "n": 19737,
       "ready": true
     },
     {
@@ -1289,7 +1291,7 @@
     },
     {
       "line": "liberty",
-      "n": 836,
+      "n": 826,
       "ready": false
     }
   ],
@@ -1304,29 +1306,38 @@
     "today": {
       "incidents": 22,
       "unplanned": 22,
-      "minorMin": 2052,
-      "severeMin": 932,
-      "suspendedMin": 84,
-      "worstLine": "Elizabeth line"
+      "minorMin": 2348,
+      "severeMin": 1097,
+      "suspendedMin": 4,
+      "worstLine": "Central"
     },
     "week": {
-      "incidents": 161,
-      "unplanned": 158,
-      "minorMin": 19841,
-      "severeMin": 11348,
-      "suspendedMin": 2604,
+      "incidents": 157,
+      "unplanned": 154,
+      "minorMin": 20001,
+      "severeMin": 11513,
+      "suspendedMin": 2493,
       "worstLine": "Central"
     },
     "all": {
       "incidents": 554,
       "unplanned": 541,
-      "minorMin": 84225,
-      "severeMin": 39612,
-      "suspendedMin": 12469,
+      "minorMin": 84521,
+      "severeMin": 39777,
+      "suspendedMin": 12389,
       "worstLine": "Central"
     }
   },
   "worstLines": [
+    {
+      "line": "Central",
+      "lineId": "central",
+      "incidents": 55,
+      "minorMin": 16693,
+      "severeMin": 4006,
+      "suspendedMin": 157,
+      "medianMin": 257
+    },
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
@@ -1335,15 +1346,6 @@
       "severeMin": 6508,
       "suspendedMin": 71,
       "medianMin": 97
-    },
-    {
-      "line": "Central",
-      "lineId": "central",
-      "incidents": 54,
-      "minorMin": 16590,
-      "severeMin": 3672,
-      "suspendedMin": 157,
-      "medianMin": 252
     },
     {
       "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
@@ -1403,7 +1405,7 @@
       "line": "District",
       "lineId": "district",
       "incidents": 42,
-      "minorMin": 2657,
+      "minorMin": 2695,
       "severeMin": 976,
       "suspendedMin": 1624,
       "medianMin": 64
@@ -1411,11 +1413,11 @@
     {
       "line": "Northern",
       "lineId": "northern",
-      "incidents": 35,
-      "minorMin": 3644,
+      "incidents": 36,
+      "minorMin": 3874,
       "severeMin": 1915,
       "suspendedMin": 601,
-      "medianMin": 118
+      "medianMin": 119
     },
     {
       "line": "Circle",
@@ -1645,6 +1647,146 @@
         "Clapham Junction → Stratford (London)",
         "Stratford (London) → Clapham Junction",
         "Richmond (London) → Stratford (London)"
+      ]
+    },
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-08-14T17:47:33.595Z",
+      "end": "2026-08-14T21:37:32.862Z",
+      "minutes": 230,
+      "minorMin": 230,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: Minor delays while we respond to a fire alert at Finchley Central  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-14T17:47:33.595Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T20:43:31.683Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T21:37:32.862Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "High Barnet → Morden",
+        "Morden → High Barnet",
+        "Edgware → Morden"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-08-14T14:08:51.012Z",
+      "end": "2026-08-14T21:25:32.878Z",
+      "minutes": 437,
+      "minorMin": 103,
+      "severeMin": 334,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 103,
+      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / Hainault due to train cancellations. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-14T14:08:51.012Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T14:29:51.691Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T14:53:36.911Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T15:51:38.792Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-14T16:55:29.217Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-14T20:43:31.683Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-14T21:25:32.878Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → Ealing Broadway",
+        "Ealing Broadway → Epping",
+        "Hainault → Ealing Broadway"
+      ]
+    },
+    {
+      "line": "district",
+      "lineName": "District",
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-08-14T15:03:37.695Z",
+      "end": "2026-08-14T20:43:31.683Z",
+      "minutes": 340,
+      "minorMin": 340,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "District Line: Minor delays between Turnham Green and Richmond while we respond to a fire alert. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-14T15:03:37.695Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T16:55:29.217Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T18:07:34.271Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T20:43:31.683Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Upminster → Richmond",
+        "Richmond → Upminster",
+        "Edgware Road (Circle Line) → Richmond"
       ]
     },
     {
