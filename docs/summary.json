@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T14:50:01.573Z",
+  "generatedAt": "2026-08-14T16:33:50.393Z",
   "rail": {
     "servicesTracked": 32941,
     "modelled": 13557,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-14T12:48:20.513Z",
-      "minutesSinceLast": 122
+      "minutesSinceLast": 225
     },
     "tfl": {
       "tz": "UTC",
@@ -954,9 +954,9 @@
             216,
             126,
             198,
-            162,
-            0,
-            0,
+            198,
+            216,
+            108,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 9
+          "covered": 11
         }
       ],
-      "lastRecord": "2026-08-14T14:45:01.534Z",
+      "lastRecord": "2026-08-14T16:28:46.419Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 68409,
-    "usable": 14854,
+    "cells": 68675,
+    "usable": 14926,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 34,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-14T14:38:51.575Z",
-    "events": 5082,
-    "incidents": 546,
-    "unplanned": 533,
+    "lastEvent": "2026-08-14T16:13:09.536Z",
+    "events": 5114,
+    "incidents": 547,
+    "unplanned": 534,
     "planned": 13,
-    "runObservations": 1965339,
-    "modelCells": 495121
+    "runObservations": 1980192,
+    "modelCells": 497854
   },
   "storage": {
-    "eventsBytes": 2055226,
+    "eventsBytes": 2073072,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 13368434,
-    "perDayBytes": 540681
+    "crowdingBytes": 13435769,
+    "perDayBytes": 543186
   },
   "readiness": [
     {
@@ -1133,15 +1133,15 @@
     {
       "cause": "security-alert",
       "feature": "Security alert — “is it worth waiting?”",
-      "have": 11,
+      "have": 12,
       "need": 20,
-      "perDay": 0.32,
+      "perDay": 0.35,
       "ready": false,
       "etaDays": [
-        13,
-        43
+        10,
+        36
       ],
-      "medianMin": 110,
+      "medianMin": 91,
       "p90Min": 704
     },
     {
@@ -1204,92 +1204,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 303115,
+      "n": 305199,
       "ready": true
     },
     {
       "line": "district",
-      "n": 236709,
+      "n": 238535,
       "ready": true
     },
     {
       "line": "central",
-      "n": 234281,
+      "n": 235956,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 205290,
+      "n": 206688,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 165397,
+      "n": 166433,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 139288,
+      "n": 140579,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 102890,
+      "n": 103926,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 99613,
+      "n": 100505,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 92611,
+      "n": 93165,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 89631,
+      "n": 90252,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 85179,
+      "n": 85933,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 78642,
+      "n": 79309,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 41852,
+      "n": 42185,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 39970,
+      "n": 40246,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 28528,
+      "n": 28750,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 19299,
+      "n": 19450,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2246,
+      "n": 2274,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 800,
+      "n": 809,
       "ready": false
     }
   ],
@@ -1302,25 +1302,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 14,
-      "unplanned": 14,
-      "minorMin": 992,
+      "incidents": 15,
+      "unplanned": 15,
+      "minorMin": 994,
       "severeMin": 229,
       "suspendedMin": 0,
       "worstLine": "Metropolitan"
     },
     "week": {
-      "incidents": 162,
-      "unplanned": 159,
-      "minorMin": 19344,
-      "severeMin": 11190,
+      "incidents": 158,
+      "unplanned": 155,
+      "minorMin": 19116,
+      "severeMin": 10808,
       "suspendedMin": 2521,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 546,
-      "unplanned": 533,
-      "minorMin": 83165,
+      "incidents": 547,
+      "unplanned": 534,
+      "minorMin": 83167,
       "severeMin": 38909,
       "suspendedMin": 12385,
       "worstLine": "Central"
@@ -1420,11 +1420,11 @@
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 28,
-      "minorMin": 4194,
+      "incidents": 29,
+      "minorMin": 4196,
       "severeMin": 1691,
       "suspendedMin": 266,
-      "medianMin": 131
+      "medianMin": 85
     },
     {
       "line": "Circle",
@@ -1491,6 +1491,42 @@
     }
   ],
   "recent": [
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "security-alert",
+      "planned": false,
+      "start": "2026-08-14T15:56:39.345Z",
+      "end": "2026-08-14T15:58:38.943Z",
+      "minutes": 2,
+      "minorMin": 2,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: No service between Wood Green and Cockfosters and MINOIR DELAYS on the rest of the line while the emergency services help a casualty on the track. Tickets will be accepted on London Buses and Great Northern.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-14T15:56:39.345Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-14T15:58:38.943Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
     {
       "line": "dlr",
       "lineName": "DLR",
@@ -2573,86 +2609,6 @@
         "Edgware Road (Circle Line) → Ealing Broadway",
         "Ealing Broadway → Edgware Road (Circle Line)",
         "Edgware Road (Circle Line) → Richmond"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-08-13T12:34:06.885Z",
-      "end": "2026-08-13T20:50:21.393Z",
-      "minutes": 496,
-      "minorMin": 114,
-      "severeMin": 379,
-      "suspendedMin": 3,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: No service between Baker Street and Aldgate and MINOR DELAYS between Harrow-on-the-Hill and Baker Street while we respond to a fire alert at Farringdon. GOOD SERVICE on the rest of the line. Tickets are being accepted on London Buses.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-13T12:34:06.885Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-13T12:36:07.437Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-13T12:41:06.943Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-13T13:15:15.359Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-13T14:13:25.664Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-13T14:59:31.611Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-13T15:54:34.824Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-13T16:57:49.073Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-13T17:09:49.540Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-13T17:10:49.714Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-13T18:28:53.218Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-13T20:46:21.051Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-13T20:50:21.393Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
       ]
     }
   ],
