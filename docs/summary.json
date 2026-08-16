@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T03:04:35.551Z",
+  "generatedAt": "2026-08-16T04:46:24.663Z",
   "rail": {
     "servicesTracked": 33504,
     "modelled": 15105,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-16T00:10:57.445Z",
-      "minutesSinceLast": 174
+      "minutesSinceLast": 275
     },
     "tfl": {
       "tz": "UTC",
@@ -941,10 +941,10 @@
           "date": "2026-08-16",
           "counts": [
             0,
-            144,
-            216,
             0,
             0,
+            198,
+            162,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-16T02:59:33.388Z",
+      "lastRecord": "2026-08-16T04:41:19.395Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 70379,
-    "usable": 15890,
+    "cells": 70489,
+    "usable": 15883,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 36,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-16T01:24:24.049Z",
-    "events": 5538,
-    "incidents": 595,
-    "unplanned": 578,
+    "lastEvent": "2026-08-16T04:23:15.024Z",
+    "events": 5557,
+    "incidents": 597,
+    "unplanned": 580,
     "planned": 17,
-    "runObservations": 2038624,
-    "modelCells": 515909
+    "runObservations": 2038793,
+    "modelCells": 515923
   },
   "storage": {
-    "eventsBytes": 2263524,
+    "eventsBytes": 2269131,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 14390373,
-    "perDayBytes": 544816
+    "crowdingBytes": 14405208,
+    "perDayBytes": 545384
   },
   "readiness": [
     {
@@ -1057,15 +1057,15 @@
         0,
         0
       ],
-      "medianMin": 164,
+      "medianMin": 166,
       "p90Min": 727
     },
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 125,
+      "have": 126,
       "need": 20,
-      "perDay": 3.47,
+      "perDay": 3.5,
       "ready": true,
       "etaDays": [
         0,
@@ -1091,7 +1091,7 @@
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
-      "have": 67,
+      "have": 68,
       "need": 20,
       "perDay": 1.86,
       "ready": true,
@@ -1099,8 +1099,8 @@
         0,
         0
       ],
-      "medianMin": 95,
-      "p90Min": 710
+      "medianMin": 96,
+      "p90Min": 812
     },
     {
       "cause": "trespass",
@@ -1218,7 +1218,7 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 314050,
+      "n": 314013,
       "ready": true
     },
     {
@@ -1228,32 +1228,32 @@
     },
     {
       "line": "central",
-      "n": 241518,
+      "n": 241515,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 214799,
+      "n": 214983,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 170804,
+      "n": 170814,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 144881,
+      "n": 144888,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 107919,
+      "n": 107924,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 103597,
+      "n": 103600,
       "ready": true
     },
     {
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
+      "incidents": 1,
+      "unplanned": 1,
       "minorMin": 0,
-      "severeMin": 0,
+      "severeMin": 64,
       "suspendedMin": 0,
-      "worstLine": null
+      "worstLine": "Piccadilly"
     },
     "week": {
-      "incidents": 179,
-      "unplanned": 172,
-      "minorMin": 23326,
-      "severeMin": 14201,
-      "suspendedMin": 3800,
+      "incidents": 180,
+      "unplanned": 173,
+      "minorMin": 22686,
+      "severeMin": 14771,
+      "suspendedMin": 3902,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 595,
-      "unplanned": 578,
-      "minorMin": 90011,
-      "severeMin": 43814,
-      "suspendedMin": 13935,
+      "incidents": 597,
+      "unplanned": 580,
+      "minorMin": 90716,
+      "severeMin": 44384,
+      "suspendedMin": 14037,
       "worstLine": "Central"
     }
   },
@@ -1345,7 +1345,7 @@
       "line": "Central",
       "lineId": "central",
       "incidents": 57,
-      "minorMin": 17499,
+      "minorMin": 17601,
       "severeMin": 4240,
       "suspendedMin": 157,
       "medianMin": 257
@@ -1354,7 +1354,7 @@
       "line": "Metropolitan",
       "lineId": "metropolitan",
       "incidents": 86,
-      "minorMin": 12256,
+      "minorMin": 12358,
       "severeMin": 6553,
       "suspendedMin": 142,
       "medianMin": 79
@@ -1365,7 +1365,7 @@
       "incidents": 42,
       "minorMin": 8909,
       "severeMin": 4940,
-      "suspendedMin": 2219,
+      "suspendedMin": 2321,
       "medianMin": 268
     },
     {
@@ -1399,7 +1399,7 @@
       "line": "Victoria",
       "lineId": "victoria",
       "incidents": 46,
-      "minorMin": 6832,
+      "minorMin": 6934,
       "severeMin": 2682,
       "suspendedMin": 99,
       "medianMin": 112
@@ -1414,6 +1414,15 @@
       "medianMin": 190
     },
     {
+      "line": "Piccadilly",
+      "lineId": "piccadilly",
+      "incidents": 36,
+      "minorMin": 4673,
+      "severeMin": 2692,
+      "suspendedMin": 281,
+      "medianMin": 75
+    },
+    {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "lineId": "windrush",
       "incidents": 22,
@@ -1426,7 +1435,7 @@
       "line": "District",
       "lineId": "district",
       "incidents": 46,
-      "minorMin": 2854,
+      "minorMin": 2956,
       "severeMin": 1196,
       "suspendedMin": 1654,
       "medianMin": 67
@@ -1439,15 +1448,6 @@
       "severeMin": 1915,
       "suspendedMin": 601,
       "medianMin": 119
-    },
-    {
-      "line": "Piccadilly",
-      "lineId": "piccadilly",
-      "incidents": 34,
-      "minorMin": 4376,
-      "severeMin": 2122,
-      "suspendedMin": 281,
-      "medianMin": 75
     },
     {
       "line": "Circle",
@@ -1506,14 +1506,122 @@
   ],
   "recent": [
     {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-16T03:19:12.529Z",
+      "end": "2026-08-16T04:23:15.024Z",
+      "minutes": 64,
+      "minorMin": 0,
+      "severeMin": 64,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: Severe delays due to an earlier signal failure at Cockfosters. Tickets are being accepted on London Buses. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-16T03:19:12.529Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-16T04:23:15.024Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-08-15T13:55:36.422Z",
+      "end": "2026-08-16T03:18:12.257Z",
+      "minutes": 803,
+      "minorMin": 297,
+      "severeMin": 506,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: No service between Cockfosters and King's Cross St. Pancras westbound only due to an earlier fire alert at Arnos Grove. SEVERE  DELAYS on the rest of the line. Tickets are being accepted on London Buses, Elizabeth line, Great Northern, Weaver line and South Western railway.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-15T13:55:36.422Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-15T14:24:15.137Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-15T15:11:17.775Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-15T15:55:18.523Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-15T16:26:55.183Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-15T18:32:24.663Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-15T20:23:49.449Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-15T20:51:50.279Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-15T22:23:16.738Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-16T03:06:12.046Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-16T03:18:12.257Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
+    {
       "line": "victoria",
       "lineName": "Victoria",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-08-15T20:09:27.692Z",
-      "end": "2026-08-16T01:24:24.049Z",
-      "minutes": 315,
-      "minorMin": 315,
+      "end": "2026-08-16T03:06:12.046Z",
+      "minutes": 417,
+      "minorMin": 417,
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
@@ -1539,7 +1647,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-16T01:24:24.049Z",
+          "t": "2026-08-16T03:06:12.046Z",
           "sev": 10
         }
       ],
@@ -1554,11 +1662,11 @@
       "cause": "engineering",
       "planned": true,
       "start": "2026-08-15T09:07:10.604Z",
-      "end": "2026-08-16T01:24:24.049Z",
-      "minutes": 977,
+      "end": "2026-08-16T03:06:12.046Z",
+      "minutes": 1079,
       "minorMin": 0,
       "severeMin": 626,
-      "suspendedMin": 351,
+      "suspendedMin": 453,
       "worstSev": 3,
       "peakAfterMin": 0,
       "reason": "Mildmay Line: No service between Willesden Junction and Shepherd's Bush while we fix a track fault at Shepherd's Bush and NO SERVICE between Stratford and Gospel Oak due to emergency engineering work to fix overhead power lines. Tickets are being accepted on London Buses. GOOD SERVICE on the rest of the line.  ",
@@ -1622,7 +1730,7 @@
           "sev": 3
         },
         {
-          "t": "2026-08-16T01:24:24.049Z",
+          "t": "2026-08-16T03:06:12.046Z",
           "sev": 10
         }
       ],
@@ -1638,9 +1746,9 @@
       "cause": "fire-alert",
       "planned": false,
       "start": "2026-08-15T13:33:59.552Z",
-      "end": "2026-08-16T01:24:24.049Z",
-      "minutes": 710,
-      "minorMin": 694,
+      "end": "2026-08-16T03:06:12.046Z",
+      "minutes": 812,
+      "minorMin": 796,
       "severeMin": 17,
       "suspendedMin": 0,
       "worstSev": 6,
@@ -1690,7 +1798,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-16T01:24:24.049Z",
+          "t": "2026-08-16T03:06:12.046Z",
           "sev": 10
         }
       ],
@@ -1706,9 +1814,9 @@
       "cause": "train-fault",
       "planned": false,
       "start": "2026-08-15T22:52:18.015Z",
-      "end": "2026-08-16T01:24:24.049Z",
-      "minutes": 152,
-      "minorMin": 152,
+      "end": "2026-08-16T03:06:12.046Z",
+      "minutes": 254,
+      "minorMin": 254,
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
@@ -1726,7 +1834,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-16T01:24:24.049Z",
+          "t": "2026-08-16T03:06:12.046Z",
           "sev": 10
         }
       ],
@@ -1742,9 +1850,9 @@
       "cause": "train-fault",
       "planned": false,
       "start": "2026-08-15T12:42:57.461Z",
-      "end": "2026-08-16T01:24:24.049Z",
-      "minutes": 761,
-      "minorMin": 761,
+      "end": "2026-08-16T03:06:12.046Z",
+      "minutes": 863,
+      "minorMin": 863,
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
@@ -1782,7 +1890,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-16T01:24:24.049Z",
+          "t": "2026-08-16T03:06:12.046Z",
           "sev": 10
         }
       ],
@@ -2654,86 +2762,6 @@
       "segments": [
         "Barking → Hammersmith (H&C Line)",
         "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-15T06:42:20.259Z",
-      "end": "2026-08-15T07:25:22.395Z",
-      "minutes": 43,
-      "minorMin": 43,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. After the 07:22 departure from Amersham, the next southbound train will be at 08:22. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-15T06:42:20.259Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-15T07:25:22.395Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "engineering",
-      "planned": true,
-      "start": "2026-08-15T04:43:13.232Z",
-      "end": "2026-08-15T06:45:20.441Z",
-      "minutes": 122,
-      "minorMin": 0,
-      "severeMin": 93,
-      "suspendedMin": 29,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "District Line: No service between Earl's Court and Wimbledon due to a late finish of engineering work. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-15T04:43:13.232Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-15T05:12:14.355Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-15T06:40:20.155Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-15T06:45:20.441Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Upminster → Wimbledon",
-        "Wimbledon → Upminster",
-        "Edgware Road (Circle Line) → Wimbledon"
       ]
     }
   ],
