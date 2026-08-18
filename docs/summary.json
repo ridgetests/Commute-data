@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T02:58:40.023Z",
+  "generatedAt": "2026-08-18T04:40:25.122Z",
   "rail": {
     "servicesTracked": 35208,
     "modelled": 16279,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-18T00:14:49.493Z",
-      "minutesSinceLast": 164
+      "minutesSinceLast": 266
     },
     "tfl": {
       "tz": "UTC",
@@ -943,8 +943,8 @@
             18,
             0,
             0,
-            0,
-            0,
+            90,
+            144,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-18T00:01:28.858Z",
-      "minutesSinceLast": 177
+      "lastRecord": "2026-08-18T04:35:22.951Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 72187,
-    "usable": 17025,
+    "cells": 72186,
+    "usable": 17029,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 38,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-18T01:18:28.823Z",
-    "events": 6064,
-    "incidents": 646,
-    "unplanned": 629,
+    "lastEvent": "2026-08-18T04:27:15.932Z",
+    "events": 6089,
+    "incidents": 647,
+    "unplanned": 630,
     "planned": 17,
-    "runObservations": 2179769,
-    "modelCells": 538937
+    "runObservations": 2180587,
+    "modelCells": 538968
   },
   "storage": {
-    "eventsBytes": 2445962,
+    "eventsBytes": 2453151,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 15494065,
-    "perDayBytes": 549987
+    "crowdingBytes": 15521227,
+    "perDayBytes": 550891
   },
   "readiness": [
     {
@@ -1063,9 +1063,9 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 135,
+      "have": 136,
       "need": 20,
-      "perDay": 3.55,
+      "perDay": 3.58,
       "ready": true,
       "etaDays": [
         0,
@@ -1218,57 +1218,57 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 333199,
+      "n": 333258,
       "ready": true
     },
     {
       "line": "central",
-      "n": 258905,
+      "n": 258937,
       "ready": true
     },
     {
       "line": "district",
-      "n": 256053,
+      "n": 256200,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 231881,
+      "n": 231973,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 185838,
+      "n": 185914,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 153661,
+      "n": 153752,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 115399,
+      "n": 115401,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 111222,
+      "n": 111242,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 101647,
+      "n": 101734,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 99218,
+      "n": 99243,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 96806,
+      "n": 96887,
       "ready": true
     },
     {
@@ -1278,22 +1278,22 @@
     },
     {
       "line": "weaver",
-      "n": 46755,
+      "n": 46775,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 46061,
+      "n": 46134,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 32361,
+      "n": 32373,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 21592,
+      "n": 21593,
       "ready": true
     },
     {
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
+      "incidents": 1,
+      "unplanned": 1,
       "minorMin": 0,
       "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "suspendedMin": 6,
+      "worstLine": "District"
     },
     "week": {
       "incidents": 185,
       "unplanned": 179,
-      "minorMin": 20859,
-      "severeMin": 14098,
-      "suspendedMin": 3654,
+      "minorMin": 21043,
+      "severeMin": 13398,
+      "suspendedMin": 3762,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 646,
-      "unplanned": 629,
-      "minorMin": 94209,
+      "incidents": 647,
+      "unplanned": 630,
+      "minorMin": 94413,
       "severeMin": 46064,
-      "suspendedMin": 14358,
+      "suspendedMin": 14466,
       "worstLine": "Central"
     }
   },
@@ -1345,7 +1345,7 @@
       "line": "Central",
       "lineId": "central",
       "incidents": 60,
-      "minorMin": 18099,
+      "minorMin": 18201,
       "severeMin": 4240,
       "suspendedMin": 157,
       "medianMin": 252
@@ -1356,8 +1356,8 @@
       "incidents": 47,
       "minorMin": 9048,
       "severeMin": 5129,
-      "suspendedMin": 2510,
-      "medianMin": 239
+      "suspendedMin": 2612,
+      "medianMin": 246
     },
     {
       "line": "Metropolitan",
@@ -1434,10 +1434,10 @@
     {
       "line": "District",
       "lineId": "district",
-      "incidents": 51,
-      "minorMin": 3150,
+      "incidents": 52,
+      "minorMin": 3252,
       "severeMin": 1331,
-      "suspendedMin": 1664,
+      "suspendedMin": 1670,
       "medianMin": 64
     },
     {
@@ -1515,16 +1515,52 @@
   ],
   "recent": [
     {
+      "line": "district",
+      "lineName": "District",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-18T04:20:15.890Z",
+      "end": "2026-08-18T04:26:15.946Z",
+      "minutes": 6,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 6,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "District Line: No service between Turnham Green and Richmond while we fix a signal failure at Richmond. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-18T04:20:15.890Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-08-18T04:26:15.946Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Upminster → Richmond",
+        "Richmond → Upminster",
+        "Edgware Road (Circle Line) → Richmond"
+      ]
+    },
+    {
       "line": "mildmay",
       "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
       "cause": "other",
       "planned": false,
       "start": "2026-08-17T21:36:39.633Z",
-      "end": "2026-08-18T01:18:28.823Z",
-      "minutes": 222,
+      "end": "2026-08-18T03:00:13.331Z",
+      "minutes": 324,
       "minorMin": 0,
       "severeMin": 0,
-      "suspendedMin": 222,
+      "suspendedMin": 324,
       "worstSev": 3,
       "peakAfterMin": 0,
       "reason": "Mildmay Line: No service between Richmond and South Acton while we fix a track fault at Richmond. GOOD SERVICE on the rest of the line.  ",
@@ -1544,7 +1580,7 @@
           "sev": 3
         },
         {
-          "t": "2026-08-18T01:18:28.823Z",
+          "t": "2026-08-18T03:00:13.331Z",
           "sev": 10
         }
       ],
@@ -1559,9 +1595,9 @@
       "cause": "other",
       "planned": false,
       "start": "2026-08-17T21:28:39.745Z",
-      "end": "2026-08-18T01:18:28.823Z",
-      "minutes": 230,
-      "minorMin": 229,
+      "end": "2026-08-18T03:00:13.331Z",
+      "minutes": 332,
+      "minorMin": 331,
       "severeMin": 0,
       "suspendedMin": 1,
       "worstSev": 3,
@@ -1591,7 +1627,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-18T01:18:28.823Z",
+          "t": "2026-08-18T03:00:13.331Z",
           "sev": 10
         }
       ],
@@ -1607,9 +1643,9 @@
       "cause": "train-fault",
       "planned": false,
       "start": "2026-08-17T16:06:35.824Z",
-      "end": "2026-08-18T01:18:28.823Z",
-      "minutes": 552,
-      "minorMin": 552,
+      "end": "2026-08-18T03:00:13.331Z",
+      "minutes": 654,
+      "minorMin": 654,
       "severeMin": 0,
       "suspendedMin": 0,
       "worstSev": 9,
@@ -1643,7 +1679,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-18T01:18:28.823Z",
+          "t": "2026-08-18T03:00:13.331Z",
           "sev": 10
         }
       ],
@@ -2525,40 +2561,6 @@
       "segments": [
         "Cockfosters → Uxbridge",
         "Uxbridge → Cockfosters"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-17T10:52:02.842Z",
-      "end": "2026-08-17T11:45:04.582Z",
-      "minutes": 53,
-      "minorMin": 53,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Circle Line: Minor delays anticlockwise only due to train cancellations. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-17T10:52:02.842Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-17T11:45:04.582Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)"
       ]
     }
   ],
