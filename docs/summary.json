@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T20:21:30.027Z",
+  "generatedAt": "2026-08-20T22:10:16.057Z",
   "rail": {
     "servicesTracked": 35417,
     "modelled": 16798,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-20T18:26:13.140Z",
-      "minutesSinceLast": 115
+      "minutesSinceLast": 224
     },
     "tfl": {
       "tz": "UTC",
@@ -960,21 +960,21 @@
             216,
             126,
             216,
-            72,
-            0,
-            0,
+            180,
+            216,
+            36,
             0
           ],
-          "covered": 15
+          "covered": 16
         }
       ],
-      "lastRecord": "2026-08-20T20:16:29.790Z",
+      "lastRecord": "2026-08-20T22:05:22.505Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 74181,
-    "usable": 17689,
+    "cells": 74250,
+    "usable": 17706,
     "ready": true,
     "examples": [
       {
@@ -989,7 +989,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 146,
+        "n": 153,
         "p50": 218,
         "p90": 458
       },
@@ -997,15 +997,15 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 138,
+        "n": 151,
         "p50": 233,
-        "p90": 578
+        "p90": 608
       },
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 95,
+        "n": 96,
         "p50": 293,
         "p90": 653
       },
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 40,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-20T19:12:17.868Z",
-    "events": 6846,
-    "incidents": 716,
-    "unplanned": 694,
+    "lastEvent": "2026-08-20T21:47:06.943Z",
+    "events": 6868,
+    "incidents": 717,
+    "unplanned": 695,
     "planned": 22,
-    "runObservations": 2408271,
-    "modelCells": 554790
+    "runObservations": 2419292,
+    "modelCells": 555675
   },
   "storage": {
-    "eventsBytes": 2777215,
+    "eventsBytes": 2785191,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 17108528,
-    "perDayBytes": 571131
+    "crowdingBytes": 17166929,
+    "perDayBytes": 572790
   },
   "readiness": [
     {
@@ -1063,15 +1063,15 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 148,
+      "have": 149,
       "need": 20,
-      "perDay": 3.7,
+      "perDay": 3.73,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 103,
+      "medianMin": 105,
       "p90Min": 646
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 373455,
+      "n": 375571,
       "ready": true
     },
     {
       "line": "central",
-      "n": 289802,
+      "n": 291379,
       "ready": true
     },
     {
       "line": "district",
-      "n": 281186,
+      "n": 282496,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 223807,
+      "n": 223922,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 209615,
+      "n": 210649,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 172933,
+      "n": 173837,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 129079,
+      "n": 129776,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 127135,
-      "ready": true
-    },
-    {
-      "line": "bakerloo",
-      "n": 112652,
+      "n": 127501,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 112139,
+      "n": 112790,
+      "ready": true
+    },
+    {
+      "line": "bakerloo",
+      "n": 112746,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 109982,
+      "n": 110659,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 97591,
+      "n": 98064,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 52439,
+      "n": 52695,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 51607,
+      "n": 52000,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 36600,
+      "n": 36804,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 24172,
+      "n": 24300,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2878,
+      "n": 2902,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1200,
+      "n": 1202,
       "ready": false
     }
   ],
@@ -1316,26 +1316,26 @@
   },
   "windows": {
     "today": {
-      "incidents": 13,
-      "unplanned": 10,
-      "minorMin": 1373,
-      "severeMin": 527,
+      "incidents": 14,
+      "unplanned": 11,
+      "minorMin": 1404,
+      "severeMin": 663,
       "suspendedMin": 162,
-      "worstLine": "Metropolitan"
+      "worstLine": "Jubilee"
     },
     "week": {
-      "incidents": 188,
-      "unplanned": 179,
-      "minorMin": 18819,
-      "severeMin": 11510,
+      "incidents": 187,
+      "unplanned": 178,
+      "minorMin": 18643,
+      "severeMin": 11627,
       "suspendedMin": 3736,
       "worstLine": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)"
     },
     "all": {
-      "incidents": 716,
-      "unplanned": 694,
-      "minorMin": 100638,
-      "severeMin": 50171,
+      "incidents": 717,
+      "unplanned": 695,
+      "minorMin": 100669,
+      "severeMin": 50307,
       "suspendedMin": 16121,
       "worstLine": "Central"
     }
@@ -1371,11 +1371,11 @@
     {
       "line": "Jubilee",
       "lineId": "jubilee",
-      "incidents": 43,
-      "minorMin": 6913,
-      "severeMin": 5858,
+      "incidents": 44,
+      "minorMin": 6944,
+      "severeMin": 5994,
       "suspendedMin": 392,
-      "medianMin": 164
+      "medianMin": 166
     },
     {
       "line": "Elizabeth line",
@@ -1514,6 +1514,49 @@
     }
   ],
   "recent": [
+    {
+      "line": "jubilee",
+      "lineName": "Jubilee",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-20T18:10:18.907Z",
+      "end": "2026-08-20T20:57:04.973Z",
+      "minutes": 167,
+      "minorMin": 31,
+      "severeMin": 136,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 31,
+      "reason": "Jubilee Line: Minor delays westbound/northbound and SEVERE DELAYS eastbound/southbound while we fix a points failure at North Greenwich. Tickets will be accepted on London Buses, Elizabeth line, Southeastern, Thameslink, DLR and Mildmay line services.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-20T18:10:18.907Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-20T18:41:16.319Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-20T20:30:04.507Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-20T20:57:04.973Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stratford → Stanmore",
+        "Stanmore → Stratford"
+      ]
+    },
     {
       "line": "elizabeth",
       "lineName": "Elizabeth line",
@@ -2639,134 +2682,6 @@
         "Upminster → Ealing Broadway",
         "Ealing Broadway → Upminster",
         "Upminster → Richmond"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-19T12:09:56.856Z",
-      "end": "2026-08-19T19:05:57.700Z",
-      "minutes": 416,
-      "minorMin": 416,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / Hainault via Newbury Park due to train cancellations ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-19T12:09:56.856Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T12:50:45.627Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:35:50.597Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:47:49.921Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:48:49.751Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:50:49.873Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:51:50.234Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:52:50.118Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:53:50.050Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:54:50.107Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:57:49.955Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T14:58:50.261Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:03:50.842Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:05:50.444Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:06:50.620Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:07:50.458Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:11:50.657Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:12:50.985Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:13:50.912Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:14:50.913Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:19:51.112Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T15:20:51.267Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T16:33:18.193Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T18:37:42.024Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-19T19:05:57.700Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → Ealing Broadway",
-        "Ealing Broadway → Epping",
-        "Hainault → Ealing Broadway"
       ]
     }
   ],
