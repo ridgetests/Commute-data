@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T20:18:45.686Z",
+  "generatedAt": "2026-08-21T22:07:48.072Z",
   "rail": {
     "servicesTracked": 35475,
     "modelled": 16775,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-21T18:26:30.838Z",
-      "minutesSinceLast": 112
+      "minutesSinceLast": 221
     },
     "tfl": {
       "tz": "UTC",
@@ -960,21 +960,21 @@
             216,
             144,
             216,
-            54,
-            0,
-            0,
+            180,
+            216,
+            18,
             0
           ],
-          "covered": 15
+          "covered": 16
         }
       ],
-      "lastRecord": "2026-08-21T20:13:48.238Z",
+      "lastRecord": "2026-08-21T22:02:44.109Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 74793,
-    "usable": 17772,
+    "cells": 74882,
+    "usable": 17792,
     "ready": true,
     "examples": [
       {
@@ -989,7 +989,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 154,
+        "n": 158,
         "p50": 218,
         "p90": 458
       },
@@ -997,16 +997,16 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 147,
+        "n": 158,
         "p50": 233,
-        "p90": 608
+        "p90": 593
       },
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 98,
-        "p50": 308,
+        "n": 99,
+        "p50": 293,
         "p90": 653
       },
       {
@@ -1021,37 +1021,37 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 52,
+        "n": 57,
         "p50": 278,
-        "p90": 638
+        "p90": 578
       }
     ]
   },
   "coverage": {
     "days": 41,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-21T19:40:33.546Z",
-    "events": 7111,
-    "incidents": 741,
-    "unplanned": 717,
+    "lastEvent": "2026-08-21T22:00:36.329Z",
+    "events": 7136,
+    "incidents": 742,
+    "unplanned": 718,
     "planned": 24,
-    "runObservations": 2474019,
-    "modelCells": 564195
+    "runObservations": 2487544,
+    "modelCells": 566183
   },
   "storage": {
-    "eventsBytes": 2875305,
+    "eventsBytes": 2884122,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 17661514,
-    "perDayBytes": 573081
+    "crowdingBytes": 17716755,
+    "perDayBytes": 574643
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 288,
+      "have": 289,
       "need": 20,
-      "perDay": 7.02,
+      "perDay": 7.05,
       "ready": true,
       "etaDays": [
         0,
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 383389,
+      "n": 385401,
       "ready": true
     },
     {
       "line": "central",
-      "n": 297375,
+      "n": 298928,
       "ready": true
     },
     {
       "line": "district",
-      "n": 289795,
+      "n": 291306,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 230948,
+      "n": 232532,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 216105,
+      "n": 217358,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 177951,
+      "n": 178873,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 132555,
+      "n": 133326,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 127773,
+      "n": 128178,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 115273,
+      "n": 115955,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 114271,
+      "n": 114906,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 114014,
+      "n": 114676,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 100626,
+      "n": 101131,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 53871,
+      "n": 54146,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 53305,
+      "n": 53686,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 37736,
+      "n": 37957,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 24837,
+      "n": 24969,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2970,
+      "n": 2987,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1224,
+      "n": 1228,
       "ready": false
     }
   ],
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 17,
-      "unplanned": 15,
-      "minorMin": 1233,
+      "incidents": 18,
+      "unplanned": 16,
+      "minorMin": 1258,
       "severeMin": 476,
       "suspendedMin": 320,
       "worstLine": "Central"
     },
     "week": {
-      "incidents": 178,
-      "unplanned": 167,
-      "minorMin": 18626,
+      "incidents": 179,
+      "unplanned": 168,
+      "minorMin": 18651,
       "severeMin": 9874,
       "suspendedMin": 3586,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 741,
-      "unplanned": 717,
-      "minorMin": 104697,
+      "incidents": 742,
+      "unplanned": 718,
+      "minorMin": 104722,
       "severeMin": 52100,
       "suspendedMin": 16456,
       "worstLine": "Central"
@@ -1443,11 +1443,11 @@
     {
       "line": "Circle",
       "lineId": "circle",
-      "incidents": 46,
-      "minorMin": 4108,
+      "incidents": 47,
+      "minorMin": 4133,
       "severeMin": 2243,
       "suspendedMin": 1187,
-      "medianMin": 97
+      "medianMin": 95
     },
     {
       "line": "Northern",
@@ -1514,6 +1514,41 @@
     }
   ],
   "recent": [
+    {
+      "line": "circle",
+      "lineName": "Circle",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-08-21T21:25:35.320Z",
+      "end": "2026-08-21T21:50:36.383Z",
+      "minutes": 25,
+      "minorMin": 25,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Circle Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-21T21:25:35.320Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-21T21:50:36.383Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
+      ]
+    },
     {
       "line": "district",
       "lineName": "District",
@@ -2610,49 +2645,6 @@
       "segments": [
         "Bank → Waterloo",
         "Waterloo → Bank"
-      ]
-    },
-    {
-      "line": "jubilee",
-      "lineName": "Jubilee",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-08-20T18:10:18.907Z",
-      "end": "2026-08-20T20:57:04.973Z",
-      "minutes": 167,
-      "minorMin": 31,
-      "severeMin": 136,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 31,
-      "reason": "Jubilee Line: Minor delays westbound/northbound and SEVERE DELAYS eastbound/southbound while we fix a points failure at North Greenwich. Tickets will be accepted on London Buses, Elizabeth line, Southeastern, Thameslink, DLR and Mildmay line services.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-20T18:10:18.907Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-20T18:41:16.319Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-20T20:30:04.507Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-20T20:57:04.973Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Stratford → Stanmore",
-        "Stanmore → Stratford"
       ]
     }
   ],
