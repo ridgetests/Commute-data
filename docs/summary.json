@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T03:06:27.150Z",
+  "generatedAt": "2026-08-23T04:48:10.056Z",
   "rail": {
     "servicesTracked": 36273,
     "modelled": 18252,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-23T00:11:50.391Z",
-      "minutesSinceLast": 175
+      "minutesSinceLast": 276
     },
     "tfl": {
       "tz": "UTC",
@@ -941,10 +941,10 @@
           "date": "2026-08-23",
           "counts": [
             0,
-            126,
-            216,
-            18,
             0,
+            0,
+            198,
+            162,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-23T03:01:25.922Z",
-      "minutesSinceLast": 5
+      "lastRecord": "2026-08-23T04:43:49.431Z",
+      "minutesSinceLast": 4
     }
   },
   "headway": {
-    "cells": 75211,
-    "usable": 18470,
+    "cells": 75272,
+    "usable": 18439,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 43,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-23T02:50:16.141Z",
-    "events": 7478,
+    "lastEvent": "2026-08-23T03:50:59.072Z",
+    "events": 7447,
     "incidents": 771,
     "unplanned": 744,
     "planned": 27,
-    "runObservations": 2467048,
-    "modelCells": 565645
+    "runObservations": 2467044,
+    "modelCells": 565530
   },
   "storage": {
-    "eventsBytes": 3017143,
+    "eventsBytes": 3006125,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 18506680,
-    "perDayBytes": 569379
+    "crowdingBytes": 18521908,
+    "perDayBytes": 569477
   },
   "readiness": [
     {
@@ -1058,7 +1058,7 @@
         0
       ],
       "medianMin": 155,
-      "p90Min": 695
+      "p90Min": 714
     },
     {
       "cause": "signal-failure",
@@ -1142,7 +1142,7 @@
         31
       ],
       "medianMin": 122,
-      "p90Min": 808
+      "p90Min": 910
     },
     {
       "cause": "obstruction",
@@ -1218,32 +1218,32 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 385168,
+      "n": 385113,
       "ready": true
     },
     {
       "line": "central",
-      "n": 295892,
+      "n": 295895,
       "ready": true
     },
     {
       "line": "district",
-      "n": 282219,
+      "n": 282222,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 230343,
+      "n": 230361,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 218672,
+      "n": 218686,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 178199,
+      "n": 178207,
       "ready": true
     },
     {
@@ -1253,7 +1253,7 @@
     },
     {
       "line": "victoria",
-      "n": 127133,
+      "n": 127137,
       "ready": true
     },
     {
@@ -1263,7 +1263,7 @@
     },
     {
       "line": "metropolitan",
-      "n": 113946,
+      "n": 113947,
       "ready": true
     },
     {
@@ -1326,16 +1326,16 @@
     "week": {
       "incidents": 175,
       "unplanned": 165,
-      "minorMin": 21263,
-      "severeMin": 11013,
+      "minorMin": 21603,
+      "severeMin": 11226,
       "suspendedMin": 2529,
       "worstLine": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)"
     },
     "all": {
       "incidents": 771,
       "unplanned": 744,
-      "minorMin": 111571,
-      "severeMin": 55423,
+      "minorMin": 111911,
+      "severeMin": 55636,
       "suspendedMin": 16464,
       "worstLine": "Central"
     }
@@ -1345,7 +1345,7 @@
       "line": "Central",
       "lineId": "central",
       "incidents": 72,
-      "minorMin": 22735,
+      "minorMin": 22837,
       "severeMin": 4319,
       "suspendedMin": 182,
       "medianMin": 263
@@ -1355,7 +1355,7 @@
       "lineId": "metropolitan",
       "incidents": 105,
       "minorMin": 12967,
-      "severeMin": 8327,
+      "severeMin": 8429,
       "suspendedMin": 244,
       "medianMin": 90
     },
@@ -1372,16 +1372,16 @@
       "line": "Jubilee",
       "lineId": "jubilee",
       "incidents": 49,
-      "minorMin": 7577,
-      "severeMin": 6150,
+      "minorMin": 7611,
+      "severeMin": 6261,
       "suspendedMin": 392,
-      "medianMin": 164
+      "medianMin": 167
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "lineId": "windrush",
       "incidents": 30,
-      "minorMin": 4888,
+      "minorMin": 4990,
       "severeMin": 3118,
       "suspendedMin": 2837,
       "medianMin": 187
@@ -1421,6 +1421,15 @@
       "severeMin": 3542,
       "suspendedMin": 333,
       "medianMin": 106
+    },
+    {
+      "line": "Circle",
+      "lineId": "circle",
+      "incidents": 48,
+      "minorMin": 4604,
+      "severeMin": 2522,
+      "suspendedMin": 1188,
+      "medianMin": 97
     },
     {
       "line": "District",
@@ -1515,14 +1524,57 @@
   ],
   "recent": [
     {
+      "line": "jubilee",
+      "lineName": "Jubilee",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-22T22:50:24.984Z",
+      "end": "2026-08-23T03:50:59.072Z",
+      "minutes": 301,
+      "minorMin": 34,
+      "severeMin": 267,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Jubilee Line: Severe delays Southbound / Eastbound only due to a points failure at Wembley Park. GOOD service on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-22T22:50:24.984Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-23T03:08:18.200Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-23T03:16:58.263Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-23T03:50:59.072Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stanmore → Stratford",
+        "Stratford → Stanmore"
+      ]
+    },
+    {
       "line": "windrush",
       "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "cause": "other",
       "planned": false,
       "start": "2026-08-22T07:01:03.165Z",
-      "end": "2026-08-23T01:26:13.683Z",
-      "minutes": 1105,
-      "minorMin": 1104,
+      "end": "2026-08-23T03:08:18.200Z",
+      "minutes": 1207,
+      "minorMin": 1206,
       "severeMin": 0,
       "suspendedMin": 1,
       "worstSev": 3,
@@ -1580,7 +1632,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-23T01:26:13.683Z",
+          "t": "2026-08-23T03:08:18.200Z",
           "sev": 10
         }
       ],
@@ -1596,10 +1648,10 @@
       "cause": "train-fault",
       "planned": false,
       "start": "2026-08-22T18:39:50.591Z",
-      "end": "2026-08-23T01:26:13.683Z",
-      "minutes": 406,
+      "end": "2026-08-23T03:08:18.200Z",
+      "minutes": 508,
       "minorMin": 0,
-      "severeMin": 406,
+      "severeMin": 508,
       "suspendedMin": 0,
       "worstSev": 6,
       "peakAfterMin": 0,
@@ -1624,7 +1676,7 @@
           "sev": 6
         },
         {
-          "t": "2026-08-23T01:26:13.683Z",
+          "t": "2026-08-23T03:08:18.200Z",
           "sev": 10
         }
       ],
@@ -1634,48 +1686,14 @@
       ]
     },
     {
-      "line": "jubilee",
-      "lineName": "Jubilee",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-08-22T22:50:24.984Z",
-      "end": "2026-08-23T01:26:13.683Z",
-      "minutes": 156,
-      "minorMin": 0,
-      "severeMin": 156,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Jubilee Line: Severe delays Southbound / Eastbound only due to a points failure at Wembley Park. GOOD service on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-22T22:50:24.984Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-23T01:26:13.683Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Stanmore → Stratford"
-      ]
-    },
-    {
       "line": "circle",
       "lineName": "Circle",
       "cause": "train-fault",
       "planned": false,
       "start": "2026-08-22T14:37:12.125Z",
-      "end": "2026-08-23T01:26:13.683Z",
-      "minutes": 649,
-      "minorMin": 369,
+      "end": "2026-08-23T03:08:18.200Z",
+      "minutes": 751,
+      "minorMin": 471,
       "severeMin": 279,
       "suspendedMin": 1,
       "worstSev": 3,
@@ -1725,7 +1743,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-23T01:26:13.683Z",
+          "t": "2026-08-23T03:08:18.200Z",
           "sev": 10
         }
       ],
@@ -1740,9 +1758,9 @@
       "cause": "security-alert",
       "planned": false,
       "start": "2026-08-22T11:58:15.857Z",
-      "end": "2026-08-23T01:26:13.683Z",
-      "minutes": 808,
-      "minorMin": 729,
+      "end": "2026-08-23T03:08:18.200Z",
+      "minutes": 910,
+      "minorMin": 831,
       "severeMin": 79,
       "suspendedMin": 0,
       "worstSev": 6,
@@ -1784,7 +1802,7 @@
           "sev": 9
         },
         {
-          "t": "2026-08-23T01:26:13.683Z",
+          "t": "2026-08-23T03:08:18.200Z",
           "sev": 10
         }
       ],
