@@ -1,0 +1,3844 @@
+{
+ "generatedAt": "2026-08-24T14:23:18+00:00",
+ "source": "Network Rail Historic Delay Attribution (2026/27_P02)",
+ "licence": "OGL-3.0",
+ "attribution": "Contains information from Network Rail Infrastructure Limited, licensed under the Open Government Licence v3.0",
+ "minIncidents": 20,
+ "note": "Cause-attributed impact prior: when an incident of this cause family hits, typical (p50) and bad-day (p90) PfPI delay-minutes and trains affected. NOT recovery duration \u2014 HDA start/end is the attribution window. Use the live event log for the recovery curve.",
+ "operators": {
+  "WA": {
+   "name": "WA",
+   "incidents": 3609,
+   "categories": [
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 138,
+     "sharePct": 4,
+     "pfpiP50": 9,
+     "pfpiP90": 120,
+     "trainsP90": 8
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 1533,
+     "sharePct": 42,
+     "pfpiP50": 5,
+     "pfpiP90": 95,
+     "trainsP90": 2
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 175,
+     "sharePct": 5,
+     "pfpiP50": 10,
+     "pfpiP90": 68,
+     "trainsP90": 9
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 418,
+     "sharePct": 12,
+     "pfpiP50": 9,
+     "pfpiP90": 49,
+     "trainsP90": 3
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 316,
+     "sharePct": 9,
+     "pfpiP50": 9,
+     "pfpiP90": 46,
+     "trainsP90": 6
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 271,
+     "sharePct": 8,
+     "pfpiP50": 7,
+     "pfpiP90": 42,
+     "trainsP90": 4
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 52,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 23,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 251,
+     "sharePct": 7,
+     "pfpiP50": 6,
+     "pfpiP90": 18,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 87,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 18,
+     "trainsP90": 2
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 135,
+     "sharePct": 4,
+     "pfpiP50": 5,
+     "pfpiP90": 18,
+     "trainsP90": 3
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 55,
+     "sharePct": 2,
+     "pfpiP50": 4,
+     "pfpiP90": 11,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 178,
+     "sharePct": 5,
+     "pfpiP50": 3,
+     "pfpiP90": 8,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "GA": {
+   "name": "GA",
+   "incidents": 165,
+   "categories": [
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 72,
+     "sharePct": 44,
+     "pfpiP50": 14,
+     "pfpiP90": 256,
+     "trainsP90": 16
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 26,
+     "sharePct": 16,
+     "pfpiP50": 11,
+     "pfpiP90": 118,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 32,
+     "sharePct": 19,
+     "pfpiP50": 0,
+     "pfpiP90": 4,
+     "trainsP90": 6
+    }
+   ]
+  },
+  "HA": {
+   "name": "HA",
+   "incidents": 4238,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 245,
+     "sharePct": 6,
+     "pfpiP50": 22,
+     "pfpiP90": 225,
+     "trainsP90": 31
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 495,
+     "sharePct": 12,
+     "pfpiP50": 13,
+     "pfpiP90": 106,
+     "trainsP90": 15
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 225,
+     "sharePct": 5,
+     "pfpiP50": 14,
+     "pfpiP90": 101,
+     "trainsP90": 18
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 114,
+     "sharePct": 3,
+     "pfpiP50": 16,
+     "pfpiP90": 91,
+     "trainsP90": 22
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 216,
+     "sharePct": 5,
+     "pfpiP50": 8,
+     "pfpiP90": 54,
+     "trainsP90": 8
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 30,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 52,
+     "trainsP90": 11
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 253,
+     "sharePct": 6,
+     "pfpiP50": 5,
+     "pfpiP90": 24,
+     "trainsP90": 6
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 286,
+     "sharePct": 7,
+     "pfpiP50": 4,
+     "pfpiP90": 17,
+     "trainsP90": 48
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 1805,
+     "sharePct": 43,
+     "pfpiP50": 4,
+     "pfpiP90": 15,
+     "trainsP90": 6
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 27,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 15,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 532,
+     "sharePct": 13,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "HB": {
+   "name": "HB",
+   "incidents": 1935,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 101,
+     "sharePct": 5,
+     "pfpiP50": 12,
+     "pfpiP90": 121,
+     "trainsP90": 21
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 231,
+     "sharePct": 12,
+     "pfpiP50": 11,
+     "pfpiP90": 118,
+     "trainsP90": 21
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 153,
+     "sharePct": 8,
+     "pfpiP50": 7,
+     "pfpiP90": 102,
+     "trainsP90": 16
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 317,
+     "sharePct": 16,
+     "pfpiP50": 7,
+     "pfpiP90": 63,
+     "trainsP90": 9
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 126,
+     "sharePct": 7,
+     "pfpiP50": 8,
+     "pfpiP90": 40,
+     "trainsP90": 6
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 275,
+     "sharePct": 14,
+     "pfpiP50": 4,
+     "pfpiP90": 26,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 42,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 17,
+     "trainsP90": 4
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 34,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 14,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 55,
+     "sharePct": 3,
+     "pfpiP50": 4,
+     "pfpiP90": 13,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 179,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 10,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 219,
+     "sharePct": 11,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 16
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 202,
+     "sharePct": 10,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "ES": {
+   "name": "ES",
+   "incidents": 432,
+   "categories": [
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 69,
+     "sharePct": 16,
+     "pfpiP50": 3,
+     "pfpiP90": 93,
+     "trainsP90": 7
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 48,
+     "sharePct": 11,
+     "pfpiP50": 5,
+     "pfpiP90": 44,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 69,
+     "sharePct": 16,
+     "pfpiP50": 4,
+     "pfpiP90": 13,
+     "trainsP90": 2
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 49,
+     "sharePct": 11,
+     "pfpiP50": 0,
+     "pfpiP90": 7,
+     "trainsP90": 14
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 137,
+     "sharePct": 32,
+     "pfpiP50": 3,
+     "pfpiP90": 6,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "P4": {
+   "name": "P4",
+   "incidents": 214,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 26,
+     "sharePct": 12,
+     "pfpiP50": 4,
+     "pfpiP90": 51,
+     "trainsP90": 4
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 33,
+     "sharePct": 15,
+     "pfpiP50": 4,
+     "pfpiP90": 28,
+     "trainsP90": 4
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 29,
+     "sharePct": 14,
+     "pfpiP50": 0,
+     "pfpiP90": 13,
+     "trainsP90": 4
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 70,
+     "sharePct": 33,
+     "pfpiP50": 3,
+     "pfpiP90": 13,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "LF": {
+   "name": "LF",
+   "incidents": 193,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 20,
+     "sharePct": 10,
+     "pfpiP50": 0,
+     "pfpiP90": 10,
+     "trainsP90": 6
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 37,
+     "sharePct": 19,
+     "pfpiP50": 0,
+     "pfpiP90": 6,
+     "trainsP90": 2
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 74,
+     "sharePct": 38,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 6
+    }
+   ]
+  },
+  "R2": {
+   "name": "R2",
+   "incidents": 1787,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 752,
+     "sharePct": 42,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 245,
+     "sharePct": 14,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 35,
+     "sharePct": 2,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 70,
+     "sharePct": 4,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 5
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 106,
+     "sharePct": 6,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 45,
+     "sharePct": 3,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 97,
+     "sharePct": 5,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 224,
+     "sharePct": 13,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 67,
+     "sharePct": 4,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 43,
+     "sharePct": 2,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 30,
+     "sharePct": 2,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 72,
+     "sharePct": 4,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "EA": {
+   "name": "EA",
+   "incidents": 3524,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 149,
+     "sharePct": 4,
+     "pfpiP50": 14,
+     "pfpiP90": 214,
+     "trainsP90": 28
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 328,
+     "sharePct": 9,
+     "pfpiP50": 10,
+     "pfpiP90": 144,
+     "trainsP90": 19
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 260,
+     "sharePct": 7,
+     "pfpiP50": 11,
+     "pfpiP90": 111,
+     "trainsP90": 18
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 765,
+     "sharePct": 22,
+     "pfpiP50": 7,
+     "pfpiP90": 75,
+     "trainsP90": 9
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 184,
+     "sharePct": 5,
+     "pfpiP50": 7,
+     "pfpiP90": 49,
+     "trainsP90": 10
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 48,
+     "sharePct": 1,
+     "pfpiP50": 7,
+     "pfpiP90": 42,
+     "trainsP90": 8
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 725,
+     "sharePct": 21,
+     "pfpiP50": 3,
+     "pfpiP90": 23,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 67,
+     "sharePct": 2,
+     "pfpiP50": 4,
+     "pfpiP90": 15,
+     "trainsP90": 4
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 324,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 12,
+     "trainsP90": 9
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 32,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 12,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 340,
+     "sharePct": 10,
+     "pfpiP50": 3,
+     "pfpiP90": 12,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 300,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "EH": {
+   "name": "EH",
+   "incidents": 4690,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 457,
+     "sharePct": 10,
+     "pfpiP50": 11,
+     "pfpiP90": 123,
+     "trainsP90": 19
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 251,
+     "sharePct": 5,
+     "pfpiP50": 11,
+     "pfpiP90": 120,
+     "trainsP90": 18
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 353,
+     "sharePct": 8,
+     "pfpiP50": 11,
+     "pfpiP90": 106,
+     "trainsP90": 15
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 888,
+     "sharePct": 19,
+     "pfpiP50": 9,
+     "pfpiP90": 102,
+     "trainsP90": 5
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 828,
+     "sharePct": 18,
+     "pfpiP50": 7,
+     "pfpiP90": 69,
+     "trainsP90": 8
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 257,
+     "sharePct": 5,
+     "pfpiP50": 6,
+     "pfpiP90": 37,
+     "trainsP90": 6
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 56,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 26,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 52,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 19,
+     "trainsP90": 3
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 119,
+     "sharePct": 3,
+     "pfpiP50": 4,
+     "pfpiP90": 15,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 559,
+     "sharePct": 12,
+     "pfpiP50": 3,
+     "pfpiP90": 10,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 496,
+     "sharePct": 11,
+     "pfpiP50": 2,
+     "pfpiP90": 8,
+     "trainsP90": 10
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 370,
+     "sharePct": 8,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "HF": {
+   "name": "HF",
+   "incidents": 3236,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 139,
+     "sharePct": 4,
+     "pfpiP50": 14,
+     "pfpiP90": 442,
+     "trainsP90": 52
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 311,
+     "sharePct": 10,
+     "pfpiP50": 13,
+     "pfpiP90": 260,
+     "trainsP90": 49
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 150,
+     "sharePct": 5,
+     "pfpiP50": 11,
+     "pfpiP90": 182,
+     "trainsP90": 33
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 632,
+     "sharePct": 20,
+     "pfpiP50": 5,
+     "pfpiP90": 63,
+     "trainsP90": 10
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 227,
+     "sharePct": 7,
+     "pfpiP50": 8,
+     "pfpiP90": 45,
+     "trainsP90": 9
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 571,
+     "sharePct": 18,
+     "pfpiP50": 3,
+     "pfpiP90": 38,
+     "trainsP90": 5
+    },
+    {
+     "cause": "N",
+     "causeName": "Fleet (non-TRUST)",
+     "incidents": 36,
+     "sharePct": 1,
+     "pfpiP50": 9,
+     "pfpiP90": 34,
+     "trainsP90": 26
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 30,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 18,
+     "trainsP90": 6
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 38,
+     "sharePct": 1,
+     "pfpiP50": 3,
+     "pfpiP90": 16,
+     "trainsP90": 6
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 388,
+     "sharePct": 12,
+     "pfpiP50": 3,
+     "pfpiP90": 13,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 92,
+     "sharePct": 3,
+     "pfpiP50": 4,
+     "pfpiP90": 12,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 298,
+     "sharePct": 9,
+     "pfpiP50": 2,
+     "pfpiP90": 10,
+     "trainsP90": 7
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 324,
+     "sharePct": 10,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "X2": {
+   "name": "X2",
+   "incidents": 142,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 20,
+     "sharePct": 14,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 20,
+     "sharePct": 14,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 11
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 57,
+     "sharePct": 40,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 1
+    }
+   ]
+  },
+  "RG": {
+   "name": "RG",
+   "incidents": 307,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 193,
+     "sharePct": 63,
+     "pfpiP50": 0,
+     "pfpiP90": 95,
+     "trainsP90": 3
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 27,
+     "sharePct": 9,
+     "pfpiP50": 6,
+     "pfpiP90": 35,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "LS": {
+   "name": "LS",
+   "incidents": 167,
+   "categories": [
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 31,
+     "sharePct": 19,
+     "pfpiP50": 0,
+     "pfpiP90": 18,
+     "trainsP90": 3
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 23,
+     "sharePct": 14,
+     "pfpiP50": 3,
+     "pfpiP90": 16,
+     "trainsP90": 4
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 20,
+     "sharePct": 12,
+     "pfpiP50": 3,
+     "pfpiP90": 10,
+     "trainsP90": 3
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 28,
+     "sharePct": 17,
+     "pfpiP50": 3,
+     "pfpiP90": 8,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "DF": {
+   "name": "DF",
+   "incidents": 2678,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 886,
+     "sharePct": 33,
+     "pfpiP50": 4,
+     "pfpiP90": 92,
+     "trainsP90": 2
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 306,
+     "sharePct": 11,
+     "pfpiP50": 11,
+     "pfpiP90": 74,
+     "trainsP90": 8
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 140,
+     "sharePct": 5,
+     "pfpiP50": 9,
+     "pfpiP90": 72,
+     "trainsP90": 7
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 135,
+     "sharePct": 5,
+     "pfpiP50": 9,
+     "pfpiP90": 69,
+     "trainsP90": 10
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 391,
+     "sharePct": 15,
+     "pfpiP50": 11,
+     "pfpiP90": 62,
+     "trainsP90": 3
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 232,
+     "sharePct": 9,
+     "pfpiP50": 7,
+     "pfpiP90": 54,
+     "trainsP90": 4
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 42,
+     "sharePct": 2,
+     "pfpiP50": 8,
+     "pfpiP90": 28,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 60,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 28,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 202,
+     "sharePct": 8,
+     "pfpiP50": 6,
+     "pfpiP90": 24,
+     "trainsP90": 2
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 110,
+     "sharePct": 4,
+     "pfpiP50": 5,
+     "pfpiP90": 19,
+     "trainsP90": 3
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 61,
+     "sharePct": 2,
+     "pfpiP50": 4,
+     "pfpiP90": 13,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 111,
+     "sharePct": 4,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "XH": {
+   "name": "XH",
+   "incidents": 962,
+   "categories": [
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 52,
+     "sharePct": 5,
+     "pfpiP50": 10,
+     "pfpiP90": 109,
+     "trainsP90": 7
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 121,
+     "sharePct": 13,
+     "pfpiP50": 10,
+     "pfpiP90": 56,
+     "trainsP90": 6
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 48,
+     "sharePct": 5,
+     "pfpiP50": 8,
+     "pfpiP90": 43,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 346,
+     "sharePct": 36,
+     "pfpiP50": 4,
+     "pfpiP90": 32,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 49,
+     "sharePct": 5,
+     "pfpiP50": 5,
+     "pfpiP90": 32,
+     "trainsP90": 3
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 61,
+     "sharePct": 6,
+     "pfpiP50": 9,
+     "pfpiP90": 31,
+     "trainsP90": 6
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 111,
+     "sharePct": 12,
+     "pfpiP50": 7,
+     "pfpiP90": 29,
+     "trainsP90": 3
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 31,
+     "sharePct": 3,
+     "pfpiP50": 5,
+     "pfpiP90": 24,
+     "trainsP90": 4
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 22,
+     "sharePct": 2,
+     "pfpiP50": 6,
+     "pfpiP90": 21,
+     "trainsP90": 2
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 57,
+     "sharePct": 6,
+     "pfpiP50": 4,
+     "pfpiP90": 20,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 46,
+     "sharePct": 5,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "P1": {
+   "name": "P1",
+   "incidents": 1110,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 464,
+     "sharePct": 42,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 68,
+     "sharePct": 6,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 5
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 169,
+     "sharePct": 15,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 5
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 95,
+     "sharePct": 9,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 60,
+     "sharePct": 5,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 61,
+     "sharePct": 5,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 33,
+     "sharePct": 3,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 60,
+     "sharePct": 5,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 22,
+     "sharePct": 2,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 1
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 40,
+     "sharePct": 4,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "ZZ": {
+   "name": "ZZ",
+   "incidents": 284,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 51,
+     "sharePct": 18,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 122,
+     "sharePct": 43,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 6
+    }
+   ]
+  },
+  "RD": {
+   "name": "RD",
+   "incidents": 154,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 50,
+     "sharePct": 32,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 33,
+     "sharePct": 21,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 39,
+     "sharePct": 25,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "ED": {
+   "name": "ED",
+   "incidents": 9213,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 267,
+     "sharePct": 3,
+     "pfpiP50": 19,
+     "pfpiP90": 228,
+     "trainsP90": 43
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 548,
+     "sharePct": 6,
+     "pfpiP50": 20,
+     "pfpiP90": 194,
+     "trainsP90": 33
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 1492,
+     "sharePct": 16,
+     "pfpiP50": 16,
+     "pfpiP90": 152,
+     "trainsP90": 17
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 584,
+     "sharePct": 6,
+     "pfpiP50": 13,
+     "pfpiP90": 128,
+     "trainsP90": 20
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 486,
+     "sharePct": 5,
+     "pfpiP50": 8,
+     "pfpiP90": 84,
+     "trainsP90": 13
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 89,
+     "sharePct": 1,
+     "pfpiP50": 7,
+     "pfpiP90": 45,
+     "trainsP90": 7
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 2560,
+     "sharePct": 28,
+     "pfpiP50": 3,
+     "pfpiP90": 44,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 91,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 35,
+     "trainsP90": 9
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 136,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 21,
+     "trainsP90": 6
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 609,
+     "sharePct": 7,
+     "pfpiP50": 4,
+     "pfpiP90": 18,
+     "trainsP90": 19
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 1373,
+     "sharePct": 15,
+     "pfpiP50": 4,
+     "pfpiP90": 14,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 972,
+     "sharePct": 11,
+     "pfpiP50": 4,
+     "pfpiP90": 11,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "PE": {
+   "name": "PE",
+   "incidents": 5033,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 1946,
+     "sharePct": 39,
+     "pfpiP50": 5,
+     "pfpiP90": 95,
+     "trainsP90": 2
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 245,
+     "sharePct": 5,
+     "pfpiP50": 10,
+     "pfpiP90": 84,
+     "trainsP90": 15
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 443,
+     "sharePct": 9,
+     "pfpiP50": 10,
+     "pfpiP90": 64,
+     "trainsP90": 7
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 227,
+     "sharePct": 5,
+     "pfpiP50": 9,
+     "pfpiP90": 57,
+     "trainsP90": 6
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 595,
+     "sharePct": 12,
+     "pfpiP50": 11,
+     "pfpiP90": 53,
+     "trainsP90": 4
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 435,
+     "sharePct": 9,
+     "pfpiP50": 7,
+     "pfpiP90": 51,
+     "trainsP90": 4
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 88,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 28,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 104,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 28,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 372,
+     "sharePct": 7,
+     "pfpiP50": 5,
+     "pfpiP90": 20,
+     "trainsP90": 3
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 246,
+     "sharePct": 5,
+     "pfpiP50": 4,
+     "pfpiP90": 14,
+     "trainsP90": 3
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 88,
+     "sharePct": 2,
+     "pfpiP50": 4,
+     "pfpiP90": 11,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 241,
+     "sharePct": 5,
+     "pfpiP50": 3,
+     "pfpiP90": 8,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "LD": {
+   "name": "LD",
+   "incidents": 262,
+   "categories": [
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 32,
+     "sharePct": 12,
+     "pfpiP50": 9,
+     "pfpiP90": 160,
+     "trainsP90": 13
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 48,
+     "sharePct": 18,
+     "pfpiP50": 8,
+     "pfpiP90": 104,
+     "trainsP90": 14
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 31,
+     "sharePct": 12,
+     "pfpiP50": 4,
+     "pfpiP90": 18,
+     "trainsP90": 3
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 33,
+     "sharePct": 13,
+     "pfpiP50": 5,
+     "pfpiP90": 16,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 22,
+     "sharePct": 8,
+     "pfpiP50": 4,
+     "pfpiP90": 11,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 39,
+     "sharePct": 15,
+     "pfpiP50": 0,
+     "pfpiP90": 7,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "D2": {
+   "name": "D2",
+   "incidents": 3707,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 162,
+     "sharePct": 4,
+     "pfpiP50": 9,
+     "pfpiP90": 69,
+     "trainsP90": 13
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 583,
+     "sharePct": 16,
+     "pfpiP50": 12,
+     "pfpiP90": 57,
+     "trainsP90": 3
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 262,
+     "sharePct": 7,
+     "pfpiP50": 10,
+     "pfpiP90": 57,
+     "trainsP90": 7
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 130,
+     "sharePct": 4,
+     "pfpiP50": 9,
+     "pfpiP90": 53,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 55,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 47,
+     "trainsP90": 5
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 255,
+     "sharePct": 7,
+     "pfpiP50": 8,
+     "pfpiP90": 45,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 147,
+     "sharePct": 4,
+     "pfpiP50": 6,
+     "pfpiP90": 24,
+     "trainsP90": 3
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 1808,
+     "sharePct": 49,
+     "pfpiP50": 0,
+     "pfpiP90": 19,
+     "trainsP90": 2
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 107,
+     "sharePct": 3,
+     "pfpiP50": 6,
+     "pfpiP90": 19,
+     "trainsP90": 3
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 35,
+     "sharePct": 1,
+     "pfpiP50": 3,
+     "pfpiP90": 14,
+     "trainsP90": 2
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 37,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 14,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 124,
+     "sharePct": 3,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "RT": {
+   "name": "RT",
+   "incidents": 225,
+   "categories": [
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 39,
+     "sharePct": 17,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 39,
+     "sharePct": 17,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 93,
+     "sharePct": 41,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "RH": {
+   "name": "RH",
+   "incidents": 199,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 30,
+     "sharePct": 15,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 84,
+     "sharePct": 42,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 35,
+     "sharePct": 18,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "EC": {
+   "name": "EC",
+   "incidents": 507,
+   "categories": [
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 87,
+     "sharePct": 17,
+     "pfpiP50": 6,
+     "pfpiP90": 99,
+     "trainsP90": 6
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 50,
+     "sharePct": 10,
+     "pfpiP50": 6,
+     "pfpiP90": 87,
+     "trainsP90": 10
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 40,
+     "sharePct": 8,
+     "pfpiP50": 5,
+     "pfpiP90": 83,
+     "trainsP90": 13
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 81,
+     "sharePct": 16,
+     "pfpiP50": 8,
+     "pfpiP90": 53,
+     "trainsP90": 9
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 25,
+     "sharePct": 5,
+     "pfpiP50": 5,
+     "pfpiP90": 27,
+     "trainsP90": 7
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 30,
+     "sharePct": 6,
+     "pfpiP50": 3,
+     "pfpiP90": 13,
+     "trainsP90": 3
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 44,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 11,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 52,
+     "sharePct": 10,
+     "pfpiP50": 3,
+     "pfpiP90": 8,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 75,
+     "sharePct": 15,
+     "pfpiP50": 0,
+     "pfpiP90": 5,
+     "trainsP90": 6
+    }
+   ]
+  },
+  "D1": {
+   "name": "D1",
+   "incidents": 481,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 99,
+     "sharePct": 21,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 38,
+     "sharePct": 8,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 22,
+     "sharePct": 5,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 66,
+     "sharePct": 14,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 155,
+     "sharePct": 32,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 5
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 32,
+     "sharePct": 7,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 20,
+     "sharePct": 4,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "PF": {
+   "name": "PF",
+   "incidents": 270,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 52,
+     "sharePct": 19,
+     "pfpiP50": 9,
+     "pfpiP90": 98,
+     "trainsP90": 7
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 35,
+     "sharePct": 13,
+     "pfpiP50": 6,
+     "pfpiP90": 81,
+     "trainsP90": 9
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 27,
+     "sharePct": 10,
+     "pfpiP50": 9,
+     "pfpiP90": 21,
+     "trainsP90": 5
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 38,
+     "sharePct": 14,
+     "pfpiP50": 4,
+     "pfpiP90": 12,
+     "trainsP90": 4
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 21,
+     "sharePct": 8,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 2
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 20,
+     "sharePct": 7,
+     "pfpiP50": 3,
+     "pfpiP90": 4,
+     "trainsP90": 2
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 43,
+     "sharePct": 16,
+     "pfpiP50": 0,
+     "pfpiP90": 3,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "EM": {
+   "name": "EM",
+   "incidents": 3391,
+   "categories": [
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 708,
+     "sharePct": 21,
+     "pfpiP50": 18,
+     "pfpiP90": 177,
+     "trainsP90": 11
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 157,
+     "sharePct": 5,
+     "pfpiP50": 15,
+     "pfpiP90": 159,
+     "trainsP90": 17
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 283,
+     "sharePct": 8,
+     "pfpiP50": 10,
+     "pfpiP90": 109,
+     "trainsP90": 17
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 226,
+     "sharePct": 7,
+     "pfpiP50": 10,
+     "pfpiP90": 86,
+     "trainsP90": 14
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 167,
+     "sharePct": 5,
+     "pfpiP50": 8,
+     "pfpiP90": 66,
+     "trainsP90": 8
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 763,
+     "sharePct": 23,
+     "pfpiP50": 4,
+     "pfpiP90": 33,
+     "trainsP90": 6
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 86,
+     "sharePct": 3,
+     "pfpiP50": 5,
+     "pfpiP90": 20,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 281,
+     "sharePct": 8,
+     "pfpiP50": 4,
+     "pfpiP90": 19,
+     "trainsP90": 5
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 38,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 19,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 24,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 15,
+     "trainsP90": 4
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 277,
+     "sharePct": 8,
+     "pfpiP50": 3,
+     "pfpiP90": 14,
+     "trainsP90": 31
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 379,
+     "sharePct": 11,
+     "pfpiP50": 4,
+     "pfpiP90": 14,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "HL": {
+   "name": "HL",
+   "incidents": 4364,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 204,
+     "sharePct": 5,
+     "pfpiP50": 16,
+     "pfpiP90": 276,
+     "trainsP90": 31
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 349,
+     "sharePct": 8,
+     "pfpiP50": 14,
+     "pfpiP90": 222,
+     "trainsP90": 22
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 715,
+     "sharePct": 16,
+     "pfpiP50": 13,
+     "pfpiP90": 188,
+     "trainsP90": 14
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 273,
+     "sharePct": 6,
+     "pfpiP50": 10,
+     "pfpiP90": 84,
+     "trainsP90": 11
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 242,
+     "sharePct": 6,
+     "pfpiP50": 7,
+     "pfpiP90": 58,
+     "trainsP90": 9
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 379,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 21,
+     "trainsP90": 32
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 1472,
+     "sharePct": 34,
+     "pfpiP50": 3,
+     "pfpiP90": 21,
+     "trainsP90": 4
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 22,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 17,
+     "trainsP90": 3
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 42,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 13,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 33,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 12,
+     "trainsP90": 7
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 229,
+     "sharePct": 5,
+     "pfpiP50": 4,
+     "pfpiP90": 11,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 400,
+     "sharePct": 9,
+     "pfpiP50": 2,
+     "pfpiP90": 6,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "HE": {
+   "name": "HE",
+   "incidents": 855,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 30,
+     "sharePct": 4,
+     "pfpiP50": 41,
+     "pfpiP90": 261,
+     "trainsP90": 98
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 21,
+     "sharePct": 2,
+     "pfpiP50": 14,
+     "pfpiP90": 203,
+     "trainsP90": 37
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 52,
+     "sharePct": 6,
+     "pfpiP50": 10,
+     "pfpiP90": 101,
+     "trainsP90": 15
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 149,
+     "sharePct": 17,
+     "pfpiP50": 13,
+     "pfpiP90": 60,
+     "trainsP90": 12
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 135,
+     "sharePct": 16,
+     "pfpiP50": 5,
+     "pfpiP90": 17,
+     "trainsP90": 9
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 184,
+     "sharePct": 22,
+     "pfpiP50": 3,
+     "pfpiP90": 12,
+     "trainsP90": 6
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 65,
+     "sharePct": 8,
+     "pfpiP50": 0,
+     "pfpiP90": 11,
+     "trainsP90": 26
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 204,
+     "sharePct": 24,
+     "pfpiP50": 3,
+     "pfpiP90": 11,
+     "trainsP90": 7
+    }
+   ]
+  },
+  "EJ": {
+   "name": "EJ",
+   "incidents": 4526,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 175,
+     "sharePct": 4,
+     "pfpiP50": 17,
+     "pfpiP90": 241,
+     "trainsP90": 33
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 359,
+     "sharePct": 8,
+     "pfpiP50": 12,
+     "pfpiP90": 182,
+     "trainsP90": 30
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 229,
+     "sharePct": 5,
+     "pfpiP50": 14,
+     "pfpiP90": 106,
+     "trainsP90": 17
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 684,
+     "sharePct": 15,
+     "pfpiP50": 8,
+     "pfpiP90": 71,
+     "trainsP90": 12
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 331,
+     "sharePct": 7,
+     "pfpiP50": 8,
+     "pfpiP90": 71,
+     "trainsP90": 11
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 1154,
+     "sharePct": 25,
+     "pfpiP50": 4,
+     "pfpiP90": 62,
+     "trainsP90": 6
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 44,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 17,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 104,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 14,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 654,
+     "sharePct": 14,
+     "pfpiP50": 3,
+     "pfpiP90": 12,
+     "trainsP90": 3
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 42,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 12,
+     "trainsP90": 4
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 326,
+     "sharePct": 7,
+     "pfpiP50": 3,
+     "pfpiP90": 11,
+     "trainsP90": 9
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 418,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "ET": {
+   "name": "ET",
+   "incidents": 7324,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 245,
+     "sharePct": 3,
+     "pfpiP50": 14,
+     "pfpiP90": 354,
+     "trainsP90": 72
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 492,
+     "sharePct": 7,
+     "pfpiP50": 17,
+     "pfpiP90": 264,
+     "trainsP90": 52
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 316,
+     "sharePct": 4,
+     "pfpiP50": 17,
+     "pfpiP90": 208,
+     "trainsP90": 34
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 529,
+     "sharePct": 7,
+     "pfpiP50": 13,
+     "pfpiP90": 109,
+     "trainsP90": 16
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 650,
+     "sharePct": 9,
+     "pfpiP50": 7,
+     "pfpiP90": 51,
+     "trainsP90": 9
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 1568,
+     "sharePct": 21,
+     "pfpiP50": 4,
+     "pfpiP90": 49,
+     "trainsP90": 7
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 73,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 37,
+     "trainsP90": 3
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 31,
+     "sharePct": 0,
+     "pfpiP50": 6,
+     "pfpiP90": 28,
+     "trainsP90": 9
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 81,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 28,
+     "trainsP90": 7
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 426,
+     "sharePct": 6,
+     "pfpiP50": 4,
+     "pfpiP90": 23,
+     "trainsP90": 6
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 1267,
+     "sharePct": 17,
+     "pfpiP50": 4,
+     "pfpiP90": 15,
+     "trainsP90": 13
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 1645,
+     "sharePct": 22,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "EB": {
+   "name": "EB",
+   "incidents": 1477,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 106,
+     "sharePct": 7,
+     "pfpiP50": 25,
+     "pfpiP90": 297,
+     "trainsP90": 29
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 221,
+     "sharePct": 15,
+     "pfpiP50": 11,
+     "pfpiP90": 132,
+     "trainsP90": 20
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 177,
+     "sharePct": 12,
+     "pfpiP50": 11,
+     "pfpiP90": 118,
+     "trainsP90": 18
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 158,
+     "sharePct": 11,
+     "pfpiP50": 12,
+     "pfpiP90": 78,
+     "trainsP90": 10
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 27,
+     "sharePct": 2,
+     "pfpiP50": 9,
+     "pfpiP90": 36,
+     "trainsP90": 7
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 97,
+     "sharePct": 7,
+     "pfpiP50": 5,
+     "pfpiP90": 31,
+     "trainsP90": 4
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 99,
+     "sharePct": 7,
+     "pfpiP50": 5,
+     "pfpiP90": 20,
+     "trainsP90": 5
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 211,
+     "sharePct": 14,
+     "pfpiP50": 3,
+     "pfpiP90": 18,
+     "trainsP90": 78
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 183,
+     "sharePct": 12,
+     "pfpiP50": 3,
+     "pfpiP90": 17,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 28,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 14,
+     "trainsP90": 4
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 75,
+     "sharePct": 5,
+     "pfpiP50": 3,
+     "pfpiP90": 10,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 94,
+     "sharePct": 6,
+     "pfpiP50": 2,
+     "pfpiP90": 5,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "EX": {
+   "name": "EX",
+   "incidents": 1138,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 51,
+     "sharePct": 4,
+     "pfpiP50": 9,
+     "pfpiP90": 523,
+     "trainsP90": 87
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 47,
+     "sharePct": 4,
+     "pfpiP50": 12,
+     "pfpiP90": 263,
+     "trainsP90": 64
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 108,
+     "sharePct": 9,
+     "pfpiP50": 14,
+     "pfpiP90": 169,
+     "trainsP90": 42
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 100,
+     "sharePct": 9,
+     "pfpiP50": 7,
+     "pfpiP90": 61,
+     "trainsP90": 17
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 278,
+     "sharePct": 24,
+     "pfpiP50": 4,
+     "pfpiP90": 42,
+     "trainsP90": 21
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 42,
+     "sharePct": 4,
+     "pfpiP50": 6,
+     "pfpiP90": 35,
+     "trainsP90": 14
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 33,
+     "sharePct": 3,
+     "pfpiP50": 4,
+     "pfpiP90": 20,
+     "trainsP90": 7
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 31,
+     "sharePct": 3,
+     "pfpiP50": 4,
+     "pfpiP90": 18,
+     "trainsP90": 6
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 49,
+     "sharePct": 4,
+     "pfpiP50": 4,
+     "pfpiP90": 13,
+     "trainsP90": 5
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 183,
+     "sharePct": 16,
+     "pfpiP50": 3,
+     "pfpiP90": 11,
+     "trainsP90": 28
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 54,
+     "sharePct": 5,
+     "pfpiP50": 3,
+     "pfpiP90": 10,
+     "trainsP90": 3
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 162,
+     "sharePct": 14,
+     "pfpiP50": 3,
+     "pfpiP90": 8,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "HT": {
+   "name": "HT",
+   "incidents": 433,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 36,
+     "sharePct": 8,
+     "pfpiP50": 14,
+     "pfpiP90": 1486,
+     "trainsP90": 138
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 36,
+     "sharePct": 8,
+     "pfpiP50": 10,
+     "pfpiP90": 91,
+     "trainsP90": 19
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 46,
+     "sharePct": 11,
+     "pfpiP50": 10,
+     "pfpiP90": 58,
+     "trainsP90": 7
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 63,
+     "sharePct": 15,
+     "pfpiP50": 5,
+     "pfpiP90": 36,
+     "trainsP90": 7
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 68,
+     "sharePct": 16,
+     "pfpiP50": 7,
+     "pfpiP90": 26,
+     "trainsP90": 7
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 66,
+     "sharePct": 15,
+     "pfpiP50": 3,
+     "pfpiP90": 17,
+     "trainsP90": 30
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 34,
+     "sharePct": 8,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 4
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 46,
+     "sharePct": 11,
+     "pfpiP50": 2,
+     "pfpiP90": 5,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "EK": {
+   "name": "EK",
+   "incidents": 2578,
+   "categories": [
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 106,
+     "sharePct": 4,
+     "pfpiP50": 7,
+     "pfpiP90": 185,
+     "trainsP90": 34
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 79,
+     "sharePct": 3,
+     "pfpiP50": 11,
+     "pfpiP90": 141,
+     "trainsP90": 44
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 192,
+     "sharePct": 7,
+     "pfpiP50": 9,
+     "pfpiP90": 126,
+     "trainsP90": 34
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 233,
+     "sharePct": 9,
+     "pfpiP50": 7,
+     "pfpiP90": 79,
+     "trainsP90": 14
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 31,
+     "sharePct": 1,
+     "pfpiP50": 3,
+     "pfpiP90": 61,
+     "trainsP90": 15
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 134,
+     "sharePct": 5,
+     "pfpiP50": 6,
+     "pfpiP90": 36,
+     "trainsP90": 11
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 792,
+     "sharePct": 31,
+     "pfpiP50": 3,
+     "pfpiP90": 35,
+     "trainsP90": 10
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 32,
+     "sharePct": 1,
+     "pfpiP50": 7,
+     "pfpiP90": 24,
+     "trainsP90": 7
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 86,
+     "sharePct": 3,
+     "pfpiP50": 4,
+     "pfpiP90": 16,
+     "trainsP90": 8
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 429,
+     "sharePct": 17,
+     "pfpiP50": 3,
+     "pfpiP90": 12,
+     "trainsP90": 12
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 334,
+     "sharePct": 13,
+     "pfpiP50": 3,
+     "pfpiP90": 11,
+     "trainsP90": 6
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 130,
+     "sharePct": 5,
+     "pfpiP50": 2,
+     "pfpiP90": 6,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "XE": {
+   "name": "XE",
+   "incidents": 88,
+   "categories": [
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 53,
+     "sharePct": 60,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 76
+    }
+   ]
+  },
+  "RZ": {
+   "name": "RZ",
+   "incidents": 352,
+   "categories": [
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 22,
+     "sharePct": 6,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 2
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 170,
+     "sharePct": 48,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 9
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 67,
+     "sharePct": 19,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "PH": {
+   "name": "PH",
+   "incidents": 337,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 131,
+     "sharePct": 39,
+     "pfpiP50": 0,
+     "pfpiP90": 95,
+     "trainsP90": 2
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 41,
+     "sharePct": 12,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 45,
+     "sharePct": 13,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 21,
+     "sharePct": 6,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 27,
+     "sharePct": 8,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 1
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 24,
+     "sharePct": 7,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "HU": {
+   "name": "HU",
+   "incidents": 3599,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 203,
+     "sharePct": 6,
+     "pfpiP50": 19,
+     "pfpiP90": 636,
+     "trainsP90": 118
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 160,
+     "sharePct": 4,
+     "pfpiP50": 14,
+     "pfpiP90": 190,
+     "trainsP90": 31
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 81,
+     "sharePct": 2,
+     "pfpiP50": 19,
+     "pfpiP90": 155,
+     "trainsP90": 57
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 280,
+     "sharePct": 8,
+     "pfpiP50": 18,
+     "pfpiP90": 150,
+     "trainsP90": 27
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 332,
+     "sharePct": 9,
+     "pfpiP50": 9,
+     "pfpiP90": 69,
+     "trainsP90": 13
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 381,
+     "sharePct": 11,
+     "pfpiP50": 6,
+     "pfpiP90": 43,
+     "trainsP90": 9
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 49,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 29,
+     "trainsP90": 9
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 232,
+     "sharePct": 6,
+     "pfpiP50": 4,
+     "pfpiP90": 20,
+     "trainsP90": 6
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 46,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 17,
+     "trainsP90": 5
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 535,
+     "sharePct": 15,
+     "pfpiP50": 4,
+     "pfpiP90": 14,
+     "trainsP90": 15
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 1292,
+     "sharePct": 36,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 5
+    }
+   ]
+  },
+  "HO": {
+   "name": "HO",
+   "incidents": 1364,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 89,
+     "sharePct": 7,
+     "pfpiP50": 6,
+     "pfpiP90": 156,
+     "trainsP90": 29
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 62,
+     "sharePct": 5,
+     "pfpiP50": 7,
+     "pfpiP90": 103,
+     "trainsP90": 18
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 44,
+     "sharePct": 3,
+     "pfpiP50": 15,
+     "pfpiP90": 101,
+     "trainsP90": 28
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 284,
+     "sharePct": 21,
+     "pfpiP50": 10,
+     "pfpiP90": 73,
+     "trainsP90": 13
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 82,
+     "sharePct": 6,
+     "pfpiP50": 5,
+     "pfpiP90": 30,
+     "trainsP90": 7
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 22,
+     "sharePct": 2,
+     "pfpiP50": 4,
+     "pfpiP90": 28,
+     "trainsP90": 9
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 450,
+     "sharePct": 33,
+     "pfpiP50": 3,
+     "pfpiP90": 13,
+     "trainsP90": 5
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 120,
+     "sharePct": 9,
+     "pfpiP50": 2,
+     "pfpiP90": 8,
+     "trainsP90": 3
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 120,
+     "sharePct": 9,
+     "pfpiP50": 2,
+     "pfpiP90": 7,
+     "trainsP90": 6
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 81,
+     "sharePct": 6,
+     "pfpiP50": 2,
+     "pfpiP90": 6,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "EF": {
+   "name": "EF",
+   "incidents": 5793,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 200,
+     "sharePct": 3,
+     "pfpiP50": 32,
+     "pfpiP90": 464,
+     "trainsP90": 64
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 424,
+     "sharePct": 7,
+     "pfpiP50": 19,
+     "pfpiP90": 286,
+     "trainsP90": 37
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 363,
+     "sharePct": 6,
+     "pfpiP50": 18,
+     "pfpiP90": 172,
+     "trainsP90": 24
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 1335,
+     "sharePct": 23,
+     "pfpiP50": 11,
+     "pfpiP90": 139,
+     "trainsP90": 11
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 894,
+     "sharePct": 15,
+     "pfpiP50": 6,
+     "pfpiP90": 78,
+     "trainsP90": 7
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 300,
+     "sharePct": 5,
+     "pfpiP50": 7,
+     "pfpiP90": 69,
+     "trainsP90": 7
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 97,
+     "sharePct": 2,
+     "pfpiP50": 5,
+     "pfpiP90": 29,
+     "trainsP90": 6
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 69,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 26,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 58,
+     "sharePct": 1,
+     "pfpiP50": 5,
+     "pfpiP90": 21,
+     "trainsP90": 7
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 637,
+     "sharePct": 11,
+     "pfpiP50": 4,
+     "pfpiP90": 17,
+     "trainsP90": 11
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 596,
+     "sharePct": 10,
+     "pfpiP50": 4,
+     "pfpiP90": 15,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 819,
+     "sharePct": 14,
+     "pfpiP50": 3,
+     "pfpiP90": 8,
+     "trainsP90": 3
+    }
+   ]
+  },
+  "XC": {
+   "name": "XC",
+   "incidents": 117,
+   "categories": [
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 50,
+     "sharePct": 43,
+     "pfpiP50": 763,
+     "pfpiP90": 2026,
+     "trainsP90": 179
+    }
+   ]
+  },
+  "HM": {
+   "name": "HM",
+   "incidents": 376,
+   "categories": [
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 28,
+     "sharePct": 7,
+     "pfpiP50": 6,
+     "pfpiP90": 244,
+     "trainsP90": 18
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 65,
+     "sharePct": 17,
+     "pfpiP50": 6,
+     "pfpiP90": 145,
+     "trainsP90": 16
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 27,
+     "sharePct": 7,
+     "pfpiP50": 4,
+     "pfpiP90": 78,
+     "trainsP90": 14
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 54,
+     "sharePct": 14,
+     "pfpiP50": 4,
+     "pfpiP90": 42,
+     "trainsP90": 4
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 63,
+     "sharePct": 17,
+     "pfpiP50": 4,
+     "pfpiP90": 32,
+     "trainsP90": 6
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 72,
+     "sharePct": 19,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 5
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 33,
+     "sharePct": 9,
+     "pfpiP50": 3,
+     "pfpiP90": 5,
+     "trainsP90": 2
+    }
+   ]
+  },
+  "HY": {
+   "name": "South Western Railway",
+   "incidents": 3710,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 321,
+     "sharePct": 9,
+     "pfpiP50": 20,
+     "pfpiP90": 520,
+     "trainsP90": 80
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 167,
+     "sharePct": 5,
+     "pfpiP50": 15,
+     "pfpiP90": 292,
+     "trainsP90": 56
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 190,
+     "sharePct": 5,
+     "pfpiP50": 11,
+     "pfpiP90": 252,
+     "trainsP90": 34
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 296,
+     "sharePct": 8,
+     "pfpiP50": 15,
+     "pfpiP90": 120,
+     "trainsP90": 19
+    },
+    {
+     "cause": "Q",
+     "causeName": "Network Rail non-operational",
+     "incidents": 30,
+     "sharePct": 1,
+     "pfpiP50": 6,
+     "pfpiP90": 50,
+     "trainsP90": 18
+    },
+    {
+     "cause": "V",
+     "causeName": "External \u2014 operator",
+     "incidents": 327,
+     "sharePct": 9,
+     "pfpiP50": 7,
+     "pfpiP90": 41,
+     "trainsP90": 8
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 854,
+     "sharePct": 23,
+     "pfpiP50": 4,
+     "pfpiP90": 34,
+     "trainsP90": 8
+    },
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 44,
+     "sharePct": 1,
+     "pfpiP50": 4,
+     "pfpiP90": 34,
+     "trainsP90": 9
+    },
+    {
+     "cause": "R",
+     "causeName": "Station operations",
+     "incidents": 232,
+     "sharePct": 6,
+     "pfpiP50": 3,
+     "pfpiP90": 17,
+     "trainsP90": 5
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 517,
+     "sharePct": 14,
+     "pfpiP50": 4,
+     "pfpiP90": 13,
+     "trainsP90": 11
+    },
+    {
+     "cause": "Z",
+     "causeName": "Unexplained / pending attribution",
+     "incidents": 719,
+     "sharePct": 19,
+     "pfpiP50": 3,
+     "pfpiP90": 9,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "PO": {
+   "name": "PO",
+   "incidents": 526,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 272,
+     "sharePct": 52,
+     "pfpiP50": 0,
+     "pfpiP90": 95,
+     "trainsP90": 1
+    },
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 52,
+     "sharePct": 10,
+     "pfpiP50": 9,
+     "pfpiP90": 62,
+     "trainsP90": 4
+    },
+    {
+     "cause": "J",
+     "causeName": "Signalling / comms systems",
+     "incidents": 39,
+     "sharePct": 7,
+     "pfpiP50": 8,
+     "pfpiP90": 53,
+     "trainsP90": 9
+    },
+    {
+     "cause": "A",
+     "causeName": "Freight terminal",
+     "incidents": 30,
+     "sharePct": 6,
+     "pfpiP50": 15,
+     "pfpiP90": 53,
+     "trainsP90": 6
+    },
+    {
+     "cause": "O",
+     "causeName": "Network Rail operations",
+     "incidents": 31,
+     "sharePct": 6,
+     "pfpiP50": 5,
+     "pfpiP90": 43,
+     "trainsP90": 3
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 32,
+     "sharePct": 6,
+     "pfpiP50": 6,
+     "pfpiP90": 20,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "MV": {
+   "name": "MV",
+   "incidents": 25,
+   "categories": [
+    {
+     "cause": "F",
+     "causeName": "Freight",
+     "incidents": 25,
+     "sharePct": 100,
+     "pfpiP50": 0,
+     "pfpiP90": 0,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "PG": {
+   "name": "PG",
+   "incidents": 180,
+   "categories": [
+    {
+     "cause": "I",
+     "causeName": "Infrastructure (track/signal/power)",
+     "incidents": 20,
+     "sharePct": 11,
+     "pfpiP50": 5,
+     "pfpiP90": 360,
+     "trainsP90": 36
+    },
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 55,
+     "sharePct": 31,
+     "pfpiP50": 7,
+     "pfpiP90": 102,
+     "trainsP90": 14
+    },
+    {
+     "cause": "M",
+     "causeName": "Fleet / rolling stock",
+     "incidents": 23,
+     "sharePct": 13,
+     "pfpiP50": 7,
+     "pfpiP90": 39,
+     "trainsP90": 4
+    },
+    {
+     "cause": "X",
+     "causeName": "External \u2014 Network Rail (weather/trespass/etc.)",
+     "incidents": 20,
+     "sharePct": 11,
+     "pfpiP50": 5,
+     "pfpiP90": 19,
+     "trainsP90": 4
+    }
+   ]
+  },
+  "SJ": {
+   "name": "SJ",
+   "incidents": 106,
+   "categories": [
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 36,
+     "sharePct": 34,
+     "pfpiP50": 17,
+     "pfpiP90": 79,
+     "trainsP90": 12
+    }
+   ]
+  },
+  "PA": {
+   "name": "PA",
+   "incidents": 111,
+   "categories": [
+    {
+     "cause": "T",
+     "causeName": "Operator (TOC) operations",
+     "incidents": 29,
+     "sharePct": 26,
+     "pfpiP50": 3,
+     "pfpiP90": 7,
+     "trainsP90": 2
+    }
+   ]
+  }
+ }
+}
