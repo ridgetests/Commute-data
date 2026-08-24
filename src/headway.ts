@@ -36,7 +36,14 @@ const N_BUCKETS = MAX_SECONDS / BUCKET_SECONDS;
 const HALF_LIFE_DAYS = 28;
 const DECAY_PER_DAY = Math.pow(0.5, 1 / HALF_LIFE_DAYS);
 
-export interface HeadwayCell { h: Record<string, number>; n: number; }
+// s = last London date this cell was observed (see the ghost sweep in decay()).
+export interface HeadwayCell { h: Record<string, number>; n: number; s?: string; }
+
+// Staleness-guarded ghost sweep — see src/model.ts for the full rationale. A cell
+// seen once and never again ages out fast; one still being observed (near-daily,
+// as any shipping cell is) is never 21 days stale, so is never swept.
+const GHOST_AFTER_DAYS = 21;
+const GHOST_BELOW_N = 2;
 
 export interface HeadwayModel {
   version: 1;
@@ -60,9 +67,25 @@ export function loadHeadwayModel(path: string): HeadwayModel {
   } catch { return emptyHeadwayModel(); }
 }
 
+// Rounded projection — same reasoning as src/model.ts: full float precision was
+// half the file and adds nothing a 15-second-bucket percentile can use.
+const compact = (m: HeadwayModel): HeadwayModel => {
+  const cells: Record<string, HeadwayCell> = {};
+  for (const [key, c] of Object.entries(m.cells)) {
+    const h: Record<string, number> = {};
+    for (const b of Object.keys(c.h)) {
+      const w = Math.round(c.h[b] * 100) / 100;
+      if (w >= 0.05) h[b] = w;
+    }
+    if (Object.keys(h).length === 0) continue;
+    cells[key] = { h, n: Math.round(c.n * 100) / 100, ...(c.s ? { s: c.s } : {}) };
+  }
+  return { ...m, cells };
+};
+
 export const saveHeadwayModel = (path: string, m: HeadwayModel): void => {
   mkdirSync(join(path, '..'), { recursive: true });
-  writeFileSync(path, JSON.stringify(m));
+  writeFileSync(path, JSON.stringify(compact(m)));
 };
 
 const bucketOf = (sec: number) =>
@@ -75,13 +98,18 @@ function decay(model: HeadwayModel, today: string): void {
   model.decayedOn = today;
   if (days === 0) return;
   const f = Math.pow(DECAY_PER_DAY, days);
+  const nowMs = Date.parse(today);
   for (const [k, c] of Object.entries(model.cells)) {
     c.n *= f;
     for (const b of Object.keys(c.h)) {
       c.h[b] *= f;
       if (c.h[b] < 0.01) delete c.h[b];
     }
-    if (c.n < 0.5 || Object.keys(c.h).length === 0) delete model.cells[k];
+    if (!c.s) c.s = today;   // start the clock; don't sweep a cell of unknown age
+    const stale = (nowMs - Date.parse(c.s)) / 86400000;
+    const spent = c.n < 0.5 || Object.keys(c.h).length === 0;
+    const ghost = stale >= GHOST_AFTER_DAYS && c.n < GHOST_BELOW_N;
+    if (spent || ghost) delete model.cells[k];
   }
 }
 
@@ -115,6 +143,7 @@ export function mergeHeadways(model: HeadwayModel, obs: Observation[]): number {
       const b = String(bucketOf(gap));
       cell.h[b] = (cell.h[b] ?? 0) + 1;
       cell.n++;
+      cell.s = dateOf(list[i].dep);   // touched today → immune to the ghost sweep
       model.cells[key] = cell;
       added++;
     }
