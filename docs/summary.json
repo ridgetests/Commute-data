@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T12:19:16.787Z",
+  "generatedAt": "2026-08-24T14:33:34.897Z",
   "rail": {
-    "servicesTracked": 37144,
-    "modelled": 18599,
-    "confident": 15918,
+    "servicesTracked": 37151,
+    "modelled": 18616,
+    "confident": 15908,
     "darwinLeadMin": 9.7,
     "samples": [
       {
@@ -515,11 +515,11 @@
             1156,
             1331,
             1347,
-            1230,
-            0,
-            0,
-            0,
-            0,
+            1429,
+            1633,
+            1473,
+            1364,
+            584,
             0,
             0,
             0,
@@ -532,11 +532,11 @@
             0,
             0
           ],
-          "covered": 3
+          "covered": 7
         }
       ],
-      "lastRecord": "2026-08-24T08:54:39.443Z",
-      "minutesSinceLast": 205
+      "lastRecord": "2026-08-24T12:28:10.599Z",
+      "minutesSinceLast": 125
     },
     "tfl": {
       "tz": "UTC",
@@ -952,9 +952,9 @@
             216,
             198,
             216,
-            54,
-            0,
-            0,
+            90,
+            216,
+            108,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 7
+          "covered": 9
         }
       ],
-      "lastRecord": "2026-08-24T12:14:34.799Z",
+      "lastRecord": "2026-08-24T14:28:31.280Z",
       "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 76710,
-    "usable": 19129,
+    "cells": 76901,
+    "usable": 19159,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 44,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-24T12:08:07.056Z",
-    "events": 7908,
-    "incidents": 811,
-    "unplanned": 782,
+    "lastEvent": "2026-08-24T14:27:22.784Z",
+    "events": 7932,
+    "incidents": 813,
+    "unplanned": 784,
     "planned": 29,
-    "runObservations": 2560320,
-    "modelCells": 580348
+    "runObservations": 2574389,
+    "modelCells": 581241
   },
   "storage": {
-    "eventsBytes": 3184725,
+    "eventsBytes": 3190771,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 19364477,
-    "perDayBytes": 579743
+    "crowdingBytes": 19407154,
+    "perDayBytes": 580850
   },
   "readiness": [
     {
@@ -1091,15 +1091,15 @@
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
-      "have": 94,
+      "have": 95,
       "need": 20,
-      "perDay": 2.14,
+      "perDay": 2.16,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 77,
+      "medianMin": 80,
       "p90Min": 552
     },
     {
@@ -1173,6 +1173,20 @@
       "p90Min": 591
     },
     {
+      "cause": "earlier-incident",
+      "feature": "Knock-on from an earlier incident",
+      "have": 2,
+      "need": 20,
+      "perDay": 0.05,
+      "ready": false,
+      "etaDays": [
+        243,
+        549
+      ],
+      "medianMin": 585,
+      "p90Min": 650
+    },
+    {
       "cause": "weather",
       "feature": "Weather — “how long will this last?”",
       "have": 2,
@@ -1185,20 +1199,6 @@
       ],
       "medianMin": 216,
       "p90Min": 397
-    },
-    {
-      "cause": "earlier-incident",
-      "feature": "Knock-on from an earlier incident",
-      "have": 1,
-      "need": 20,
-      "perDay": 0.02,
-      "ready": false,
-      "etaDays": [
-        521,
-        1151
-      ],
-      "medianMin": 650,
-      "p90Min": 650
     },
     {
       "cause": "engineering",
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 399992,
+      "n": 402026,
       "ready": true
     },
     {
       "line": "central",
-      "n": 304344,
+      "n": 305807,
       "ready": true
     },
     {
       "line": "district",
-      "n": 289550,
+      "n": 291146,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 244235,
+      "n": 245939,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 229402,
+      "n": 230732,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 184456,
+      "n": 185370,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 137311,
+      "n": 138013,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 132148,
+      "n": 132826,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 118579,
+      "n": 119246,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 118407,
+      "n": 119059,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 118163,
+      "n": 118773,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 103528,
+      "n": 104189,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 56358,
+      "n": 56636,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 54302,
+      "n": 54705,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 39574,
+      "n": 39779,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 25810,
+      "n": 25950,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2904,
+      "n": 2928,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1255,
+      "n": 1263,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 15,
-      "unplanned": 13,
+      "incidents": 17,
+      "unplanned": 15,
       "minorMin": 784,
-      "severeMin": 348,
-      "suspendedMin": 90,
-      "worstLine": "Circle"
+      "severeMin": 916,
+      "suspendedMin": 137,
+      "worstLine": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)"
     },
     "week": {
-      "incidents": 184,
-      "unplanned": 172,
-      "minorMin": 20984,
-      "severeMin": 11982,
-      "suspendedMin": 3026,
+      "incidents": 180,
+      "unplanned": 168,
+      "minorMin": 20827,
+      "severeMin": 12341,
+      "suspendedMin": 3003,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 811,
-      "unplanned": 782,
+      "incidents": 813,
+      "unplanned": 784,
       "minorMin": 114033,
-      "severeMin": 57348,
-      "suspendedMin": 17082,
+      "severeMin": 57916,
+      "suspendedMin": 17129,
       "worstLine": "Central"
     }
   },
@@ -1353,11 +1353,11 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 112,
+      "incidents": 113,
       "minorMin": 13314,
-      "severeMin": 8619,
-      "suspendedMin": 250,
-      "medianMin": 88
+      "severeMin": 8668,
+      "suspendedMin": 296,
+      "medianMin": 90
     },
     {
       "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
@@ -1387,6 +1387,15 @@
       "medianMin": 187
     },
     {
+      "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
+      "lineId": "weaver",
+      "incidents": 15,
+      "minorMin": 3790,
+      "severeMin": 2976,
+      "suspendedMin": 3246,
+      "medianMin": 185
+    },
+    {
       "line": "Elizabeth line",
       "lineId": "elizabeth",
       "incidents": 53,
@@ -1394,15 +1403,6 @@
       "severeMin": 6760,
       "suspendedMin": 184,
       "medianMin": 133
-    },
-    {
-      "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
-      "lineId": "weaver",
-      "incidents": 14,
-      "minorMin": 3790,
-      "severeMin": 2457,
-      "suspendedMin": 3245,
-      "medianMin": 172
     },
     {
       "line": "Victoria",
@@ -1514,6 +1514,114 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "fire-alert",
+      "planned": false,
+      "start": "2026-08-24T12:08:07.056Z",
+      "end": "2026-08-24T13:43:19.617Z",
+      "minutes": 95,
+      "minorMin": 0,
+      "severeMin": 49,
+      "suspendedMin": 46,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: No service between Watford and Moor Park while we respond to a fire alert at Watford. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-24T12:08:07.056Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-08-24T12:53:13.758Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-08-24T12:54:14.720Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T13:43:19.617Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Aldgate → Watford",
+        "Watford → Aldgate",
+        "Aldgate → Chesham"
+      ]
+    },
+    {
+      "line": "weaver",
+      "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
+      "cause": "earlier-incident",
+      "planned": false,
+      "start": "2026-08-24T04:47:24.111Z",
+      "end": "2026-08-24T13:27:18.741Z",
+      "minutes": 520,
+      "minorMin": 0,
+      "severeMin": 519,
+      "suspendedMin": 1,
+      "worstSev": 3,
+      "peakAfterMin": 47,
+      "reason": "Weaver Line: No service between Hackney Downs and Enfield Town / Cheshunt, and SEVERE DELAYS on the rest of the line while we fix a fault with the signalling system.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-24T04:47:24.111Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T05:34:26.530Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-08-24T05:35:30.831Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T07:01:31.126Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T08:50:18.101Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T10:38:51.075Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T11:35:05.337Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T12:53:13.758Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-24T13:27:18.741Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cheshunt → London Liverpool Street",
+        "London Liverpool Street → Cheshunt",
+        "Enfield Town → London Liverpool Street"
+      ]
+    },
     {
       "line": "elizabeth",
       "lineName": "Elizabeth line",
@@ -2546,84 +2654,6 @@
       "segments": [
         "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
         "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
-    },
-    {
-      "line": "hammersmith-city",
-      "lineName": "Hammersmith & City",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-23T14:47:03.481Z",
-      "end": "2026-08-23T15:59:11.167Z",
-      "minutes": 72,
-      "minorMin": 0,
-      "severeMin": 72,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Hammersmith and City Line: Severe delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-23T14:47:03.481Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-23T15:59:11.167Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "hammersmith-city",
-      "lineName": "Hammersmith & City",
-      "cause": "other",
-      "planned": false,
-      "start": "2026-08-23T10:52:45.150Z",
-      "end": "2026-08-23T14:46:03.426Z",
-      "minutes": 233,
-      "minorMin": 0,
-      "severeMin": 233,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Hammersmith and City Line: Severe delays while we deal with an operational problem. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-23T10:52:45.150Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-23T12:42:53.538Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-23T14:25:02.832Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-23T14:46:03.426Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Barking"
       ]
     }
   ],
