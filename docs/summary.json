@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T03:34:09.471Z",
+  "generatedAt": "2026-08-26T04:47:01.502Z",
   "rail": {
     "servicesTracked": 37493,
     "modelled": 18461,
@@ -535,8 +535,8 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-26T03:33:02.994Z",
-      "minutesSinceLast": 1
+      "lastRecord": "2026-08-26T00:18:09.472Z",
+      "minutesSinceLast": 269
     },
     "tfl": {
       "tz": "UTC",
@@ -943,8 +943,8 @@
             18,
             144,
             216,
-            0,
-            0,
+            198,
+            162,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-26T00:04:25.084Z",
-      "minutesSinceLast": 210
+      "lastRecord": "2026-08-26T04:41:59.225Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 78018,
-    "usable": 19179,
+    "cells": 78027,
+    "usable": 19191,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 46,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-26T01:23:48.163Z",
-    "events": 8326,
-    "incidents": 845,
+    "lastEvent": "2026-08-26T04:44:51.879Z",
+    "events": 8364,
+    "incidents": 846,
     "unplanned": 814,
-    "planned": 31,
-    "runObservations": 2627917,
-    "modelCells": 589211
+    "planned": 32,
+    "runObservations": 2628993,
+    "modelCells": 589316
   },
   "storage": {
-    "eventsBytes": 3323683,
+    "eventsBytes": 3337353,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 20201424,
-    "perDayBytes": 575752
+    "crowdingBytes": 20246043,
+    "perDayBytes": 577019
   },
   "readiness": [
     {
@@ -1218,57 +1218,57 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 412845,
+      "n": 412947,
       "ready": true
     },
     {
       "line": "central",
-      "n": 312263,
+      "n": 312345,
       "ready": true
     },
     {
       "line": "district",
-      "n": 297619,
+      "n": 297795,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 243099,
+      "n": 243145,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 234026,
+      "n": 234151,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 189684,
+      "n": 189814,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 140991,
+      "n": 141013,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 136413,
+      "n": 136439,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 122991,
+      "n": 123030,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 122860,
+      "n": 122962,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 121934,
+      "n": 122075,
       "ready": true
     },
     {
@@ -1278,27 +1278,27 @@
     },
     {
       "line": "weaver",
-      "n": 57859,
+      "n": 57883,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 56719,
+      "n": 56763,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 40765,
+      "n": 40778,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 26437,
+      "n": 26438,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 3042,
+      "n": 3045,
       "ready": true
     },
     {
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
+      "incidents": 1,
       "unplanned": 0,
       "minorMin": 0,
       "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "suspendedMin": 30,
+      "worstLine": "Lioness (Overground · Euston–Watford)"
     },
     "week": {
       "incidents": 174,
-      "unplanned": 162,
+      "unplanned": 161,
       "minorMin": 20853,
-      "severeMin": 13805,
-      "suspendedMin": 2368,
+      "severeMin": 12924,
+      "suspendedMin": 2044,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 845,
+      "incidents": 846,
       "unplanned": 814,
       "minorMin": 118083,
       "severeMin": 60407,
-      "suspendedMin": 17371,
+      "suspendedMin": 17401,
       "worstLine": "Central"
     }
   },
@@ -1479,11 +1479,11 @@
     {
       "line": "Lioness (Overground · Euston–Watford)",
       "lineId": "lioness",
-      "incidents": 13,
+      "incidents": 14,
       "minorMin": 2281,
       "severeMin": 356,
-      "suspendedMin": 201,
-      "medianMin": 140
+      "suspendedMin": 231,
+      "medianMin": 130
     },
     {
       "line": "DLR",
@@ -1514,6 +1514,41 @@
     }
   ],
   "recent": [
+    {
+      "line": "lioness",
+      "lineName": "Lioness (Overground · Euston–Watford)",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-08-26T04:13:50.832Z",
+      "end": "2026-08-26T04:43:51.776Z",
+      "minutes": 30,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 30,
+      "worstSev": 2,
+      "peakAfterMin": 0,
+      "reason": "Lioness Line: No service on the entire line due to a late finish of engineering work. London Underground are accepting tickets via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-26T04:13:50.832Z",
+          "sev": 2
+        },
+        {
+          "t": "2026-08-26T04:43:51.776Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Watford Junction → London Euston",
+        "London Euston → Watford Junction"
+      ]
+    },
     {
       "line": "suffragette",
       "lineName": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
@@ -2561,82 +2596,6 @@
         "Heathrow Terminal 4 → Shenfield",
         "Heathrow Terminal 5 → Shenfield",
         "Shenfield → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-24T05:30:26.277Z",
-      "end": "2026-08-24T23:07:10.794Z",
-      "minutes": 1057,
-      "minorMin": 805,
-      "severeMin": 252,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 56,
-      "reason": "Central Line: Minor delays due to train cancellations.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-24T05:30:26.277Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T06:26:38.965Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-24T07:01:31.126Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-24T08:50:18.101Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-24T10:38:51.075Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T12:53:13.758Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T14:43:39.276Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T16:39:37.841Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T18:42:15.246Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T20:32:21.926Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T22:28:09.483Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-24T23:07:10.794Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
       ]
     }
   ],
