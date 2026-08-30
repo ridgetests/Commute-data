@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T01:51:59.490Z",
+  "generatedAt": "2026-08-30T05:56:36.394Z",
   "rail": {
     "servicesTracked": 36941,
     "modelled": 18054,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-30T01:41:53.752Z",
-      "minutesSinceLast": 10
+      "minutesSinceLast": 255
     },
     "tfl": {
       "tz": "UTC",
@@ -944,8 +944,8 @@
             126,
             0,
             0,
-            0,
-            0,
+            162,
+            198,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-08-29T22:10:18.184Z",
-      "minutesSinceLast": 222
+      "lastRecord": "2026-08-30T05:51:30.878Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 77726,
-    "usable": 18776,
+    "cells": 77752,
+    "usable": 18807,
     "ready": true,
     "examples": [
       {
@@ -1030,28 +1030,28 @@
   "coverage": {
     "days": 50,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-30T00:24:43.685Z",
-    "events": 8813,
-    "incidents": 903,
-    "unplanned": 869,
+    "lastEvent": "2026-08-30T05:03:24.775Z",
+    "events": 8836,
+    "incidents": 905,
+    "unplanned": 871,
     "planned": 34,
-    "runObservations": 2550440,
-    "modelCells": 588197
+    "runObservations": 2553093,
+    "modelCells": 588459
   },
   "storage": {
-    "eventsBytes": 3507480,
+    "eventsBytes": 3516027,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 21220776,
-    "perDayBytes": 553755
+    "crowdingBytes": 21288978,
+    "perDayBytes": 555290
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 365,
+      "have": 366,
       "need": 20,
-      "perDay": 7.3,
+      "perDay": 7.32,
       "ready": true,
       "etaDays": [
         0,
@@ -1133,16 +1133,16 @@
     {
       "cause": "security-alert",
       "feature": "Security alert — “is it worth waiting?”",
-      "have": 21,
+      "have": 22,
       "need": 20,
-      "perDay": 0.42,
+      "perDay": 0.44,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 84,
-      "p90Min": 704
+      "medianMin": 91,
+      "p90Min": 714
     },
     {
       "cause": "power-failure",
@@ -1218,42 +1218,42 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 400861,
+      "n": 401349,
       "ready": true
     },
     {
       "line": "central",
-      "n": 303889,
+      "n": 304349,
       "ready": true
     },
     {
       "line": "district",
-      "n": 289308,
+      "n": 289449,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 230840,
+      "n": 231527,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 224371,
+      "n": 224771,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 185873,
+      "n": 185950,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 137595,
+      "n": 137737,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 133457,
+      "n": 133638,
       "ready": true
     },
     {
@@ -1263,12 +1263,12 @@
     },
     {
       "line": "metropolitan",
-      "n": 118849,
+      "n": 118861,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 118309,
+      "n": 118354,
       "ready": true
     },
     {
@@ -1278,17 +1278,17 @@
     },
     {
       "line": "weaver",
-      "n": 56545,
+      "n": 56549,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 55552,
+      "n": 55566,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 39932,
+      "n": 39934,
       "ready": true
     },
     {
@@ -1316,26 +1316,26 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
+      "incidents": 1,
+      "unplanned": 1,
+      "minorMin": 6,
       "severeMin": 0,
       "suspendedMin": 0,
-      "worstLine": null
+      "worstLine": "Central"
     },
     "week": {
-      "incidents": 130,
-      "unplanned": 123,
-      "minorMin": 17118,
-      "severeMin": 9200,
-      "suspendedMin": 3190,
+      "incidents": 126,
+      "unplanned": 119,
+      "minorMin": 18128,
+      "severeMin": 9557,
+      "suspendedMin": 2966,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 903,
-      "unplanned": 869,
-      "minorMin": 129536,
-      "severeMin": 65054,
+      "incidents": 905,
+      "unplanned": 871,
+      "minorMin": 129802,
+      "severeMin": 65508,
       "suspendedMin": 19654,
       "worstLine": "Central"
     }
@@ -1344,9 +1344,9 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 83,
-      "minorMin": 27649,
-      "severeMin": 5968,
+      "incidents": 85,
+      "minorMin": 27915,
+      "severeMin": 6422,
       "suspendedMin": 221,
       "medianMin": 269
     },
@@ -1514,6 +1514,90 @@
     }
   ],
   "recent": [
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-08-30T04:57:24.292Z",
+      "end": "2026-08-30T05:03:24.775Z",
+      "minutes": 6,
+      "minorMin": 6,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between North Acton and West Ruislip due to train cancellations. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-30T04:57:24.292Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-30T05:03:24.775Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "security-alert",
+      "planned": false,
+      "start": "2026-08-29T16:22:24.512Z",
+      "end": "2026-08-30T04:16:16.910Z",
+      "minutes": 714,
+      "minorMin": 260,
+      "severeMin": 454,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Central Line: No service between Liverpool Street and Leytonstone and SEVERE DELAYS on the rest of the line while emergency services deal with a casualty on the track. Tickets being accepted on London Buses, Liberty line, Elizabeth line, Chiltern Railways, Great Western Railway and Greater Anglia.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-29T16:22:24.512Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-29T17:01:28.397Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-29T20:35:01.350Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-08-29T23:56:39.633Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-30T04:16:16.910Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
     {
       "line": "hammersmith-city",
       "lineName": "Hammersmith & City",
@@ -2412,98 +2496,6 @@
       "segments": [
         "Barking Riverside → Gospel Oak",
         "Gospel Oak → Barking Riverside"
-      ]
-    },
-    {
-      "line": "mildmay",
-      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-27T08:06:36.276Z",
-      "end": "2026-08-27T20:11:33.485Z",
-      "minutes": 725,
-      "minorMin": 0,
-      "severeMin": 708,
-      "suspendedMin": 17,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Mildmay Line: No service between Willesden Junction and Clapham Junction due to train cancellations. London Underground are accepting tickets via any reasonable route. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-27T08:06:36.276Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-27T08:23:35.465Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-08-27T20:11:33.485Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Clapham Junction → Stratford (London)",
-        "Stratford (London) → Clapham Junction",
-        "Richmond (London) → Stratford (London)"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "fire-alert",
-      "planned": false,
-      "start": "2026-08-27T09:02:37.308Z",
-      "end": "2026-08-27T20:11:33.485Z",
-      "minutes": 669,
-      "minorMin": 664,
-      "severeMin": 0,
-      "suspendedMin": 5,
-      "worstSev": 3,
-      "peakAfterMin": 8,
-      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Baker Street southbound only while we respond to a fire alert at Wembley Park. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-27T09:02:37.308Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-27T09:10:37.089Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-27T09:11:37.421Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-27T09:20:37.375Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-27T09:24:37.678Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-27T20:11:33.485Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Chesham → Aldgate",
-        "Uxbridge → Aldgate"
       ]
     }
   ],
