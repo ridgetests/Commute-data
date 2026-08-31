@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T15:15:02.508Z",
+  "generatedAt": "2026-08-31T19:06:56.524Z",
   "rail": {
     "servicesTracked": 39582,
     "modelled": 18259,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-08-31T15:13:56.701Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 233
     },
     "tfl": {
       "tz": "UTC",
@@ -957,23 +957,23 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            126,
+            216,
+            18,
             0,
             0,
             0,
             0
           ],
-          "covered": 2
+          "covered": 4
         }
       ],
-      "lastRecord": "2026-08-31T09:51:58.807Z",
-      "minutesSinceLast": 323
+      "lastRecord": "2026-08-31T19:02:47.227Z",
+      "minutesSinceLast": 4
     }
   },
   "headway": {
-    "cells": 79334,
+    "cells": 81151,
     "usable": 18787,
     "ready": true,
     "examples": [
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 51,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-08-31T08:35:06.314Z",
-    "events": 8973,
-    "incidents": 916,
-    "unplanned": 882,
+    "lastEvent": "2026-08-31T18:58:42.291Z",
+    "events": 8996,
+    "incidents": 918,
+    "unplanned": 884,
     "planned": 34,
-    "runObservations": 2531475,
-    "modelCells": 591270
+    "runObservations": 2544237,
+    "modelCells": 597415
   },
   "storage": {
-    "eventsBytes": 3570591,
+    "eventsBytes": 3580401,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 21608063,
-    "perDayBytes": 551728
+    "crowdingBytes": 21677017,
+    "perDayBytes": 553273
   },
   "readiness": [
     {
@@ -1063,29 +1063,29 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 170,
+      "have": 171,
       "need": 20,
-      "perDay": 3.33,
+      "perDay": 3.35,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 107,
-      "p90Min": 629
+      "medianMin": 106,
+      "p90Min": 555
     },
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 121,
+      "have": 122,
       "need": 20,
-      "perDay": 2.37,
+      "perDay": 2.39,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 90,
+      "medianMin": 91,
       "p90Min": 585
     },
     {
@@ -1218,82 +1218,82 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 394435,
+      "n": 395457,
       "ready": true
     },
     {
       "line": "central",
-      "n": 301793,
+      "n": 303428,
       "ready": true
     },
     {
       "line": "district",
-      "n": 287618,
+      "n": 289183,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 231925,
+      "n": 233669,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 223868,
+      "n": 225212,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 184661,
+      "n": 185651,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 136473,
+      "n": 137010,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 132425,
+      "n": 133162,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 118881,
+      "n": 119512,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 117267,
+      "n": 117899,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 116601,
+      "n": 117073,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 104560,
+      "n": 105125,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 56219,
+      "n": 56481,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 55148,
+      "n": 55420,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 39794,
+      "n": 40005,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 25725,
+      "n": 25864,
       "ready": true
     },
     {
@@ -1303,7 +1303,7 @@
     },
     {
       "line": "liberty",
-      "n": 1225,
+      "n": 1229,
       "ready": false
     }
   ],
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 1,
-      "unplanned": 1,
-      "minorMin": 19,
+      "incidents": 3,
+      "unplanned": 3,
+      "minorMin": 146,
       "severeMin": 0,
       "suspendedMin": 0,
-      "worstLine": "Metropolitan"
+      "worstLine": "Elizabeth line"
     },
     "week": {
-      "incidents": 100,
-      "unplanned": 95,
-      "minorMin": 18887,
-      "severeMin": 10875,
-      "suspendedMin": 4863,
+      "incidents": 98,
+      "unplanned": 93,
+      "minorMin": 18660,
+      "severeMin": 10132,
+      "suspendedMin": 4810,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 916,
-      "unplanned": 882,
-      "minorMin": 133811,
+      "incidents": 918,
+      "unplanned": 884,
+      "minorMin": 133938,
       "severeMin": 69134,
       "suspendedMin": 21993,
       "worstLine": "Central"
@@ -1389,8 +1389,8 @@
     {
       "line": "Elizabeth line",
       "lineId": "elizabeth",
-      "incidents": 57,
-      "minorMin": 5013,
+      "incidents": 58,
+      "minorMin": 5105,
       "severeMin": 6808,
       "suspendedMin": 687,
       "medianMin": 134
@@ -1425,11 +1425,11 @@
     {
       "line": "Hammersmith & City",
       "lineId": "hammersmith-city",
-      "incidents": 63,
-      "minorMin": 9355,
+      "incidents": 64,
+      "minorMin": 9390,
       "severeMin": 3754,
       "suspendedMin": 695,
-      "medianMin": 134
+      "medianMin": 131
     },
     {
       "line": "District",
@@ -1514,6 +1514,77 @@
     }
   ],
   "recent": [
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-08-31T17:26:27.785Z",
+      "end": "2026-08-31T18:58:42.291Z",
+      "minutes": 92,
+      "minorMin": 92,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Minor delays between Abbey Wood and Heathrow Terminals / Reading while we remove an obstruction from the overhead power lines at Paddington. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-31T17:26:27.785Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-31T18:58:42.291Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
+    {
+      "line": "hammersmith-city",
+      "lineName": "Hammersmith & City",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-08-31T17:26:27.785Z",
+      "end": "2026-08-31T18:01:40.516Z",
+      "minutes": 35,
+      "minorMin": 35,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Hammersmith and City Line: Minor delays due to an earlier signal failure at Westbourne Park. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-08-31T17:26:27.785Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-08-31T18:01:40.516Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Barking"
+      ]
+    },
     {
       "line": "metropolitan",
       "lineName": "Metropolitan",
@@ -2517,76 +2588,6 @@
         "Epping → West Ruislip",
         "West Ruislip → Epping",
         "Hainault → West Ruislip"
-      ]
-    },
-    {
-      "line": "dlr",
-      "lineName": "DLR",
-      "cause": "customer-incident",
-      "planned": false,
-      "start": "2026-08-28T18:53:47.308Z",
-      "end": "2026-08-28T19:29:48.221Z",
-      "minutes": 36,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 36,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Docklands Light Railway: No service between Tower Gateway and Shadwell while we deal with a customer incident at Tower Gateway. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-28T18:53:47.308Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-08-28T19:29:48.221Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Beckton DLR Station → Tower Gateway DLR Station",
-        "Tower Gateway DLR Station → Beckton DLR Station"
-      ]
-    },
-    {
-      "line": "waterloo-city",
-      "lineName": "Waterloo & City",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-08-28T18:32:46.976Z",
-      "end": "2026-08-28T18:54:47.992Z",
-      "minutes": 22,
-      "minorMin": 22,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Waterloo and City Line: Minor delays while we fix a faulty train.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-08-28T18:32:46.976Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-08-28T18:54:47.992Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Bank → Waterloo",
-        "Waterloo → Bank"
       ]
     }
   ],
