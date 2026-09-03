@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T18:00:50.288Z",
+  "generatedAt": "2026-09-03T20:50:45.316Z",
   "rail": {
     "servicesTracked": 40778,
     "modelled": 17822,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-03T17:59:45.393Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 171
     },
     "tfl": {
       "tz": "UTC",
@@ -959,39 +959,39 @@
             0,
             0,
             0,
-            0,
-            0,
+            180,
+            180,
             0,
             0,
             0
           ],
-          "covered": 5
+          "covered": 7
         }
       ],
-      "lastRecord": "2026-09-03T15:48:29.077Z",
-      "minutesSinceLast": 132
+      "lastRecord": "2026-09-03T20:46:26.849Z",
+      "minutesSinceLast": 4
     }
   },
   "headway": {
-    "cells": 82020,
-    "usable": 18340,
+    "cells": 82167,
+    "usable": 18384,
     "ready": true,
     "examples": [
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-20",
-        "n": 83,
-        "p50": 293,
-        "p90": 638
+        "n": 94,
+        "p50": 248,
+        "p90": 608
       },
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 155,
-        "p50": 233,
-        "p90": 473
+        "n": 168,
+        "p50": 218,
+        "p90": 458
       },
       {
         "line": "northern",
@@ -1021,7 +1021,7 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 56,
+        "n": 62,
         "p50": 278,
         "p90": 638
       }
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 54,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-03T15:29:18.958Z",
-    "events": 9407,
+    "lastEvent": "2026-09-03T19:10:15.111Z",
+    "events": 9426,
     "incidents": 965,
     "unplanned": 929,
     "planned": 36,
-    "runObservations": 2494156,
-    "modelCells": 599771
+    "runObservations": 2508578,
+    "modelCells": 600693
   },
   "storage": {
-    "eventsBytes": 3721550,
+    "eventsBytes": 3725914,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 22295236,
-    "perDayBytes": 536598
+    "crowdingBytes": 22337520,
+    "perDayBytes": 537461
   },
   "readiness": [
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 385867,
+      "n": 388124,
       "ready": true
     },
     {
       "line": "central",
-      "n": 296288,
+      "n": 297928,
       "ready": true
     },
     {
       "line": "district",
-      "n": 283047,
+      "n": 284534,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 233487,
+      "n": 235223,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 220930,
+      "n": 222260,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 181559,
+      "n": 182409,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 133894,
+      "n": 134608,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 129563,
+      "n": 130293,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 116978,
+      "n": 117648,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 116227,
+      "n": 116963,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 115171,
+      "n": 115847,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 102703,
+      "n": 103280,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 55089,
+      "n": 55364,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 54854,
+      "n": 55207,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 39279,
+      "n": 39493,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 25205,
+      "n": 25346,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2817,
+      "n": 2844,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1196,
+      "n": 1205,
       "ready": false
     }
   ],
@@ -1324,9 +1324,9 @@
       "worstLine": "Jubilee"
     },
     "week": {
-      "incidents": 81,
-      "unplanned": 79,
-      "minorMin": 18737,
+      "incidents": 80,
+      "unplanned": 78,
+      "minorMin": 18706,
       "severeMin": 6867,
       "suspendedMin": 4328,
       "worstLine": "Metropolitan"
@@ -2511,10 +2511,10 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-09-03T13:36:43.728Z",
+    "generatedAt": "2026-09-03T18:42:14.916Z",
     "days": 42,
-    "servicesSeen": 305349,
-    "cellsReady": 16620,
+    "servicesSeen": 306970,
+    "cellsReady": 16623,
     "worst": [
       {
         "crs": "LBG",
