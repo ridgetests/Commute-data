@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T06:07:46.548Z",
+  "generatedAt": "2026-09-06T10:07:10.971Z",
   "rail": {
     "servicesTracked": 40512,
     "modelled": 18098,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-06T06:06:41.029Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 240
     },
     "tfl": {
       "tz": "UTC",
@@ -948,9 +948,9 @@
             36,
             0,
             0,
-            0,
-            0,
-            0,
+            126,
+            216,
+            18,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 2
         }
       ],
-      "lastRecord": "2026-09-06T01:13:13.128Z",
-      "minutesSinceLast": 295
+      "lastRecord": "2026-09-06T10:02:05.026Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 79938,
-    "usable": 18351,
+    "cells": 80131,
+    "usable": 18427,
     "ready": true,
     "examples": [
       {
@@ -1030,34 +1030,34 @@
   "coverage": {
     "days": 57,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-06T04:49:30.075Z",
-    "events": 9746,
-    "incidents": 1001,
-    "unplanned": 964,
+    "lastEvent": "2026-09-06T09:50:56.585Z",
+    "events": 9766,
+    "incidents": 1002,
+    "unplanned": 965,
     "planned": 37,
-    "runObservations": 2441437,
-    "modelCells": 596011
+    "runObservations": 2454241,
+    "modelCells": 597614
   },
   "storage": {
-    "eventsBytes": 3839812,
+    "eventsBytes": 3845784,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 23041549,
-    "perDayBytes": 523524
+    "crowdingBytes": 23095403,
+    "perDayBytes": 524573
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 417,
+      "have": 418,
       "need": 20,
-      "perDay": 7.32,
+      "perDay": 7.33,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 159,
+      "medianMin": 162,
       "p90Min": 714
     },
     {
@@ -1218,82 +1218,82 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 377782,
+      "n": 379856,
       "ready": true
     },
     {
       "line": "central",
-      "n": 289709,
+      "n": 291254,
       "ready": true
     },
     {
       "line": "district",
-      "n": 276085,
+      "n": 277148,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 231052,
+      "n": 232587,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 216576,
+      "n": 217773,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 177861,
+      "n": 178536,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 130653,
+      "n": 131157,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 126522,
+      "n": 127199,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 113804,
+      "n": 114539,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 113760,
+      "n": 114407,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 112774,
+      "n": 113434,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 100191,
+      "n": 100728,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 53982,
+      "n": 54411,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 53796,
+      "n": 54067,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 38447,
+      "n": 38684,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 24592,
+      "n": 24602,
       "ready": true
     },
     {
@@ -1303,7 +1303,7 @@
     },
     {
       "line": "liberty",
-      "n": 1153,
+      "n": 1161,
       "ready": false
     }
   ],
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 1,
-      "unplanned": 0,
-      "minorMin": 0,
+      "incidents": 2,
+      "unplanned": 1,
+      "minorMin": 217,
       "severeMin": 0,
       "suspendedMin": 1,
-      "worstLine": "Suffragette (Overground · Gospel Oak–Barking Riverside)"
+      "worstLine": "Jubilee"
     },
     "week": {
-      "incidents": 90,
-      "unplanned": 88,
-      "minorMin": 16977,
+      "incidents": 93,
+      "unplanned": 90,
+      "minorMin": 17449,
       "severeMin": 5705,
-      "suspendedMin": 722,
+      "suspendedMin": 723,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1001,
-      "unplanned": 964,
-      "minorMin": 149393,
+      "incidents": 1002,
+      "unplanned": 965,
+      "minorMin": 149610,
       "severeMin": 74570,
       "suspendedMin": 22716,
       "worstLine": "Central"
@@ -1371,11 +1371,11 @@
     {
       "line": "Jubilee",
       "lineId": "jubilee",
-      "incidents": 63,
-      "minorMin": 9785,
+      "incidents": 64,
+      "minorMin": 10002,
       "severeMin": 9431,
       "suspendedMin": 1297,
-      "medianMin": 168
+      "medianMin": 169
     },
     {
       "line": "Elizabeth line",
@@ -1514,6 +1514,41 @@
     }
   ],
   "recent": [
+    {
+      "line": "jubilee",
+      "lineName": "Jubilee",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-06T04:49:30.075Z",
+      "end": "2026-09-06T08:26:53.806Z",
+      "minutes": 217,
+      "minorMin": 217,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Jubilee Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-06T04:49:30.075Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-06T08:26:53.806Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stratford → Stanmore",
+        "Stanmore → Stratford"
+      ]
+    },
     {
       "line": "victoria",
       "lineName": "Victoria",
@@ -2515,56 +2550,20 @@
         "Hainault → West Ruislip",
         "West Ruislip → Hainault"
       ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-04T08:37:27.251Z",
-      "end": "2026-09-04T14:03:54.955Z",
-      "minutes": 326,
-      "minorMin": 326,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "District Line: Minor delays between Earl's Court and Barking Eastbound only due to an earlier faulty train at Westminster. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-04T08:37:27.251Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-04T14:03:54.955Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Ealing Broadway → Upminster",
-        "Richmond → Upminster",
-        "Wimbledon → Upminster"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-09-05T22:56:35.380Z",
-    "days": 44,
-    "servicesSeen": 318264,
-    "cellsReady": 16628,
+    "generatedAt": "2026-09-06T07:57:00.579Z",
+    "days": 45,
+    "servicesSeen": 319301,
+    "cellsReady": 16592,
     "worst": [
       {
         "crs": "LBG",
         "std": "21:16",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 0,
         "p90Late": 211,
         "cancelPct": 11,
@@ -2575,7 +2574,7 @@
         "std": "21:11",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 0,
         "p90Late": 207,
         "cancelPct": 0,
@@ -2586,7 +2585,7 @@
         "std": "21:40",
         "destination": "Sevenoaks",
         "dayType": "wd",
-        "n": 5.3,
+        "n": 5.1,
         "p50Late": 0,
         "p90Late": 198,
         "cancelPct": 0,
@@ -2597,20 +2596,9 @@
         "std": "21:32",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 5.1,
+        "n": 4.9,
         "p50Late": 0,
         "p90Late": 196,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "CHX",
-        "std": "22:51",
-        "destination": "Bromley South",
-        "dayType": "wd",
-        "n": 3,
-        "p50Late": 0,
-        "p90Late": 179,
         "cancelPct": 0,
         "unknownPct": 0
       },
@@ -2619,7 +2607,7 @@
         "std": "21:13",
         "destination": "Dover Priory",
         "dayType": "wd",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 0,
         "p90Late": 164,
         "cancelPct": 0,
@@ -2630,7 +2618,7 @@
         "std": "00:05",
         "destination": "Orpington",
         "dayType": "wd",
-        "n": 3.3,
+        "n": 3.2,
         "p50Late": 0,
         "p90Late": 156,
         "cancelPct": 0,
@@ -2641,7 +2629,7 @@
         "std": "00:02",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 8.1,
+        "n": 7.8,
         "p50Late": 0,
         "p90Late": 130,
         "cancelPct": 6,
@@ -2652,7 +2640,7 @@
         "std": "00:09",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 4.3,
+        "n": 4.1,
         "p50Late": 2,
         "p90Late": 130,
         "cancelPct": 11,
@@ -2663,7 +2651,7 @@
         "std": "16:17",
         "destination": "Horsham",
         "dayType": "wd",
-        "n": 7,
+        "n": 6.8,
         "p50Late": 0,
         "p90Late": 129,
         "cancelPct": 8,
@@ -2674,7 +2662,7 @@
         "std": "01:09",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 3.7,
+        "n": 3.5,
         "p50Late": 7,
         "p90Late": 125,
         "cancelPct": 0,
@@ -2685,10 +2673,21 @@
         "std": "23:55",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 8.8,
+        "n": 8.6,
         "p50Late": 0,
         "p90Late": 122,
         "cancelPct": 4,
+        "unknownPct": 0
+      },
+      {
+        "crs": "STP",
+        "std": "23:46",
+        "destination": "Peterborough",
+        "dayType": "wd",
+        "n": 10.8,
+        "p50Late": 3,
+        "p90Late": 119,
+        "cancelPct": 18,
         "unknownPct": 0
       }
     ]
