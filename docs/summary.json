@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T01:29:04.030Z",
+  "generatedAt": "2026-09-06T05:10:39.905Z",
   "rail": {
     "servicesTracked": 40437,
     "modelled": 18076,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-06T01:24:58.454Z",
-      "minutesSinceLast": 4
+      "minutesSinceLast": 226
     },
     "tfl": {
       "tz": "UTC",
@@ -943,9 +943,9 @@
             216,
             54,
             0,
-            0,
-            0,
-            0,
+            108,
+            216,
+            36,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-09-05T21:39:33.844Z",
-      "minutesSinceLast": 230
+      "lastRecord": "2026-09-06T05:05:37.013Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 79925,
-    "usable": 18329,
+    "cells": 79938,
+    "usable": 18351,
     "ready": true,
     "examples": [
       {
@@ -1030,34 +1030,34 @@
   "coverage": {
     "days": 57,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-06T00:26:58.386Z",
-    "events": 9722,
-    "incidents": 999,
-    "unplanned": 963,
-    "planned": 36,
-    "runObservations": 2439038,
-    "modelCells": 595785
+    "lastEvent": "2026-09-06T04:49:30.075Z",
+    "events": 9746,
+    "incidents": 1001,
+    "unplanned": 964,
+    "planned": 37,
+    "runObservations": 2441437,
+    "modelCells": 596011
   },
   "storage": {
-    "eventsBytes": 3831161,
+    "eventsBytes": 3839812,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 22982353,
-    "perDayBytes": 522333
+    "crowdingBytes": 23041549,
+    "perDayBytes": 523524
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 416,
+      "have": 417,
       "need": 20,
-      "perDay": 7.3,
+      "perDay": 7.32,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 158,
+      "medianMin": 159,
       "p90Min": 714
     },
     {
@@ -1218,42 +1218,42 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 377131,
+      "n": 377782,
       "ready": true
     },
     {
       "line": "central",
-      "n": 289275,
+      "n": 289709,
       "ready": true
     },
     {
       "line": "district",
-      "n": 276084,
+      "n": 276085,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 230425,
+      "n": 231052,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 216240,
+      "n": 216576,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 177852,
+      "n": 177861,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 130504,
+      "n": 130653,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 126330,
+      "n": 126522,
       "ready": true
     },
     {
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
+      "incidents": 1,
       "unplanned": 0,
       "minorMin": 0,
       "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "suspendedMin": 1,
+      "worstLine": "Suffragette (Overground · Gospel Oak–Barking Riverside)"
     },
     "week": {
-      "incidents": 93,
-      "unplanned": 91,
-      "minorMin": 18862,
-      "severeMin": 6203,
-      "suspendedMin": 722,
+      "incidents": 92,
+      "unplanned": 89,
+      "minorMin": 17232,
+      "severeMin": 5705,
+      "suspendedMin": 723,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 999,
-      "unplanned": 963,
-      "minorMin": 149138,
+      "incidents": 1001,
+      "unplanned": 964,
+      "minorMin": 149393,
       "severeMin": 74570,
-      "suspendedMin": 22715,
+      "suspendedMin": 22716,
       "worstLine": "Central"
     }
   },
@@ -1407,11 +1407,11 @@
     {
       "line": "Victoria",
       "lineId": "victoria",
-      "incidents": 76,
-      "minorMin": 12770,
+      "incidents": 77,
+      "minorMin": 13025,
       "severeMin": 4149,
       "suspendedMin": 99,
-      "medianMin": 112
+      "medianMin": 113
     },
     {
       "line": "Hammersmith & City",
@@ -1470,11 +1470,11 @@
     {
       "line": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
       "lineId": "suffragette",
-      "incidents": 24,
+      "incidents": 25,
       "minorMin": 1511,
       "severeMin": 1023,
-      "suspendedMin": 1911,
-      "medianMin": 49
+      "suspendedMin": 1912,
+      "medianMin": 41
     },
     {
       "line": "Lioness (Overground · Euston–Watford)",
@@ -1514,6 +1514,80 @@
     }
   ],
   "recent": [
+    {
+      "line": "victoria",
+      "lineName": "Victoria",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-05T23:36:38.163Z",
+      "end": "2026-09-06T03:51:27.468Z",
+      "minutes": 255,
+      "minorMin": 255,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Victoria Line: Minor delays due to an earlier faulty train at Seven Sisters. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-05T23:36:38.163Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-06T03:29:49.587Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-06T03:51:27.468Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
+      ]
+    },
+    {
+      "line": "suffragette",
+      "lineName": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-09-06T03:29:49.587Z",
+      "end": "2026-09-06T03:30:49.804Z",
+      "minutes": 1,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 1,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Suffragette Line: No service between Gospel Oak and Woodgrange Park due to planned engineering work. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-06T03:29:49.587Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-06T03:30:49.804Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking Riverside → Gospel Oak",
+        "Gospel Oak → Barking Riverside"
+      ]
+    },
     {
       "line": "piccadilly",
       "lineName": "Piccadilly",
@@ -2476,77 +2550,6 @@
         "Ealing Broadway → Upminster",
         "Richmond → Upminster",
         "Wimbledon → Upminster"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-04T09:41:27.746Z",
-      "end": "2026-09-04T14:03:54.955Z",
-      "minutes": 262,
-      "minorMin": 262,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between Liverpool Street and Epping / Hainault via Newbury Park due to an earlier faulty train at Shepherd's Bush.  GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-04T09:41:27.746Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-04T14:03:54.955Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
-      ]
-    },
-    {
-      "line": "bakerloo",
-      "lineName": "Bakerloo",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-04T08:36:25.122Z",
-      "end": "2026-09-04T14:03:54.955Z",
-      "minutes": 327,
-      "minorMin": 327,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Bakerloo Line: Minor delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-04T08:36:25.122Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-04T14:03:54.955Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Harrow & Wealdstone → Elephant & Castle",
-        "Elephant & Castle → Harrow & Wealdstone"
       ]
     }
   ],
