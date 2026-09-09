@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T06:16:32.493Z",
+  "generatedAt": "2026-09-09T10:27:27.226Z",
   "rail": {
     "servicesTracked": 40806,
     "modelled": 18055,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-09T06:15:26.575Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 252
     },
     "tfl": {
       "tz": "UTC",
@@ -948,9 +948,9 @@
             54,
             0,
             0,
-            0,
-            0,
-            0,
+            54,
+            216,
+            90,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 3
         }
       ],
-      "lastRecord": "2026-09-09T00:01:29.186Z",
-      "minutesSinceLast": 375
+      "lastRecord": "2026-09-09T10:22:19.821Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 76992,
-    "usable": 18179,
+    "cells": 77156,
+    "usable": 18193,
     "ready": true,
     "examples": [
       {
@@ -1030,48 +1030,48 @@
   "coverage": {
     "days": 60,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-09T05:17:43.757Z",
-    "events": 10207,
-    "incidents": 1045,
-    "unplanned": 1007,
+    "lastEvent": "2026-09-09T10:18:12.507Z",
+    "events": 10233,
+    "incidents": 1049,
+    "unplanned": 1011,
     "planned": 38,
-    "runObservations": 2403672,
-    "modelCells": 568504
+    "runObservations": 2418472,
+    "modelCells": 569182
   },
   "storage": {
-    "eventsBytes": 3995520,
+    "eventsBytes": 4004326,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 23773876,
-    "perDayBytes": 512148
+    "crowdingBytes": 23824422,
+    "perDayBytes": 513137
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 432,
+      "have": 435,
       "need": 20,
-      "perDay": 7.2,
+      "perDay": 7.25,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 166,
+      "medianMin": 164,
       "p90Min": 714
     },
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 202,
+      "have": 203,
       "need": 20,
-      "perDay": 3.37,
+      "perDay": 3.38,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 110,
+      "medianMin": 112,
       "p90Min": 555
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 370777,
+      "n": 372935,
       "ready": true
     },
     {
       "line": "central",
-      "n": 283180,
+      "n": 285058,
       "ready": true
     },
     {
       "line": "district",
-      "n": 268974,
+      "n": 270493,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 231277,
+      "n": 233012,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 213330,
+      "n": 214698,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 176610,
+      "n": 177575,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 127784,
+      "n": 128512,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 123646,
+      "n": 124389,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 112699,
+      "n": 113398,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 112115,
+      "n": 112862,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 111780,
+      "n": 112450,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 98777,
+      "n": 99393,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 53937,
+      "n": 54241,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 53074,
+      "n": 53360,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 38154,
+      "n": 38376,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 23788,
+      "n": 23924,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2637,
+      "n": 2655,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1131,
+      "n": 1139,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 2,
-      "unplanned": 1,
-      "minorMin": 71,
+      "incidents": 6,
+      "unplanned": 5,
+      "minorMin": 203,
       "severeMin": 15,
-      "suspendedMin": 0,
-      "worstLine": "District"
+      "suspendedMin": 219,
+      "worstLine": "Suffragette (Overground · Gospel Oak–Barking Riverside)"
     },
     "week": {
-      "incidents": 96,
-      "unplanned": 94,
-      "minorMin": 17790,
-      "severeMin": 7402,
-      "suspendedMin": 437,
+      "incidents": 100,
+      "unplanned": 97,
+      "minorMin": 17263,
+      "severeMin": 7417,
+      "suspendedMin": 656,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1045,
-      "unplanned": 1007,
-      "minorMin": 157493,
+      "incidents": 1049,
+      "unplanned": 1011,
+      "minorMin": 157625,
       "severeMin": 77306,
-      "suspendedMin": 22740,
+      "suspendedMin": 22959,
       "worstLine": "Central"
     }
   },
@@ -1344,11 +1344,11 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 105,
-      "minorMin": 33687,
+      "incidents": 107,
+      "minorMin": 33743,
       "severeMin": 6852,
       "suspendedMin": 221,
-      "medianMin": 257
+      "medianMin": 252
     },
     {
       "line": "Metropolitan",
@@ -1398,11 +1398,11 @@
     {
       "line": "Victoria",
       "lineId": "victoria",
-      "incidents": 81,
-      "minorMin": 14479,
+      "incidents": 82,
+      "minorMin": 14555,
       "severeMin": 4540,
       "suspendedMin": 99,
-      "medianMin": 124
+      "medianMin": 119
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -1470,11 +1470,11 @@
     {
       "line": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
       "lineId": "suffragette",
-      "incidents": 25,
+      "incidents": 26,
       "minorMin": 1511,
       "severeMin": 1023,
-      "suspendedMin": 1912,
-      "medianMin": 41
+      "suspendedMin": 2131,
+      "medianMin": 49
     },
     {
       "line": "Lioness (Overground · Euston–Watford)",
@@ -1514,6 +1514,148 @@
     }
   ],
   "recent": [
+    {
+      "line": "victoria",
+      "lineName": "Victoria",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-09T08:46:38.866Z",
+      "end": "2026-09-09T10:02:12.029Z",
+      "minutes": 76,
+      "minorMin": 76,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Victoria Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T08:46:38.866Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-09T10:02:12.029Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-09T09:21:38.288Z",
+      "end": "2026-09-09T09:44:11.095Z",
+      "minutes": 23,
+      "minorMin": 23,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway/ West Ruislip and MINOIR DELAYS between Leytonstone and Epping/ Hainault via Newbury Park due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T09:21:38.288Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-09T09:44:11.095Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-09T08:46:38.866Z",
+      "end": "2026-09-09T09:19:38.533Z",
+      "minutes": 33,
+      "minorMin": 33,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T08:46:38.866Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-09T09:19:38.533Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "line": "suffragette",
+      "lineName": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-09-09T05:07:43.457Z",
+      "end": "2026-09-09T08:46:38.866Z",
+      "minutes": 219,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 219,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Suffragette Line: No service between Barking and Barking Riverside while we fix a signal failure. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T05:07:43.457Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-09T08:46:38.866Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking Riverside → Gospel Oak",
+        "Gospel Oak → Barking Riverside"
+      ]
+    },
     {
       "line": "district",
       "lineName": "District",
@@ -2374,175 +2516,20 @@
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
       ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-07T10:27:40.465Z",
-      "end": "2026-09-07T19:40:26.447Z",
-      "minutes": 553,
-      "minorMin": 553,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Watford/ Amersham/ Chesham while we fix a signal failure at Watford and MINOR DELAYS between Harrow-on-the-Hill and Uxbridge while we fix a signal failure at Rayners Lane. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-07T10:27:40.465Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-07T15:35:03.596Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-07T19:40:26.447Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "security-alert",
-      "planned": false,
-      "start": "2026-09-07T16:54:06.447Z",
-      "end": "2026-09-07T19:40:26.447Z",
-      "minutes": 166,
-      "minorMin": 0,
-      "severeMin": 166,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "District Line: Severe delays between Tower Hill and Upminster eastbound only due to an earlier security alert. Tickets being accepted on London Buses. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-07T16:54:06.447Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-07T19:40:26.447Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Ealing Broadway → Upminster",
-        "Richmond → Upminster",
-        "Wimbledon → Upminster"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "security-alert",
-      "planned": false,
-      "start": "2026-09-07T16:24:05.793Z",
-      "end": "2026-09-07T19:40:26.447Z",
-      "minutes": 196,
-      "minorMin": 146,
-      "severeMin": 40,
-      "suspendedMin": 10,
-      "worstSev": 2,
-      "peakAfterMin": 0,
-      "reason": "Circle Line: No service while we respond to a security alert.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-07T16:24:05.793Z",
-          "sev": 2
-        },
-        {
-          "t": "2026-09-07T16:34:06.074Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-07T17:14:13.535Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-07T19:40:26.447Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "security-alert",
-      "planned": false,
-      "start": "2026-09-07T16:32:05.436Z",
-      "end": "2026-09-07T16:52:06.942Z",
-      "minutes": 20,
-      "minorMin": 0,
-      "severeMin": 20,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "District Line: Severe delays between Earl's Court and Tower Hill due to an earlier security alert. Tickets being accepted on London Buses. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-07T16:32:05.436Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-07T16:52:06.942Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Upminster → Ealing Broadway",
-        "Ealing Broadway → Upminster",
-        "Upminster → Richmond"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-09-08T23:25:40.724Z",
-    "days": 47,
-    "servicesSeen": 332189,
-    "cellsReady": 17033,
+    "generatedAt": "2026-09-09T08:11:37.083Z",
+    "days": 48,
+    "servicesSeen": 333395,
+    "cellsReady": 16472,
     "worst": [
       {
         "crs": "LBG",
         "std": "21:16",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 5.5,
+        "n": 5.3,
         "p50Late": 3,
         "p90Late": 211,
         "cancelPct": 9,
@@ -2553,7 +2540,7 @@
         "std": "21:40",
         "destination": "Sevenoaks",
         "dayType": "wd",
-        "n": 4.8,
+        "n": 4.6,
         "p50Late": 0,
         "p90Late": 198,
         "cancelPct": 0,
@@ -2564,7 +2551,7 @@
         "std": "21:32",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 4.6,
+        "n": 4.4,
         "p50Late": 0,
         "p90Late": 196,
         "cancelPct": 0,
@@ -2575,7 +2562,7 @@
         "std": "00:05",
         "destination": "Orpington",
         "dayType": "wd",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 0,
         "p90Late": 156,
         "cancelPct": 0,
@@ -2586,7 +2573,7 @@
         "std": "00:09",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 4.8,
+        "n": 4.7,
         "p50Late": 2,
         "p90Late": 130,
         "cancelPct": 9,
@@ -2597,7 +2584,7 @@
         "std": "16:17",
         "destination": "Horsham",
         "dayType": "wd",
-        "n": 6.4,
+        "n": 6.2,
         "p50Late": 0,
         "p90Late": 129,
         "cancelPct": 8,
@@ -2608,7 +2595,7 @@
         "std": "01:09",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 3.3,
+        "n": 3.2,
         "p50Late": 7,
         "p90Late": 125,
         "cancelPct": 0,
@@ -2619,7 +2606,7 @@
         "std": "23:55",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 8,
+        "n": 7.7,
         "p50Late": 0,
         "p90Late": 122,
         "cancelPct": 4,
@@ -2630,7 +2617,7 @@
         "std": "00:01",
         "destination": "Dartford",
         "dayType": "wd",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 0,
         "p90Late": 119,
         "cancelPct": 0,
@@ -2641,7 +2628,7 @@
         "std": "23:13",
         "destination": "Dover Priory",
         "dayType": "wd",
-        "n": 7.9,
+        "n": 7.6,
         "p50Late": 0,
         "p90Late": 118,
         "cancelPct": 11,
@@ -2652,7 +2639,7 @@
         "std": "23:44",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 7.2,
+        "n": 7,
         "p50Late": 3,
         "p90Late": 117,
         "cancelPct": 5,
@@ -2663,7 +2650,7 @@
         "std": "23:53",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 8,
+        "n": 7.7,
         "p50Late": 0,
         "p90Late": 116,
         "cancelPct": 4,
