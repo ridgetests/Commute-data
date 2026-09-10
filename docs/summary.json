@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T08:56:08.591Z",
+  "generatedAt": "2026-09-10T10:25:16.271Z",
   "rail": {
     "servicesTracked": 40793,
     "modelled": 17864,
@@ -535,8 +535,8 @@
           "covered": 2
         }
       ],
-      "lastRecord": "2026-09-10T08:55:03.300Z",
-      "minutesSinceLast": 1
+      "lastRecord": "2026-09-10T01:45:02.901Z",
+      "minutesSinceLast": 520
     },
     "tfl": {
       "tz": "UTC",
@@ -948,9 +948,9 @@
             54,
             0,
             0,
-            0,
-            0,
-            0,
+            72,
+            206,
+            82,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 3
         }
       ],
-      "lastRecord": "2026-09-10T05:14:42.606Z",
-      "minutesSinceLast": 221
+      "lastRecord": "2026-09-10T10:19:58.826Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 76446,
-    "usable": 18049,
+    "cells": 76611,
+    "usable": 18063,
     "ready": true,
     "examples": [
       {
@@ -1030,34 +1030,34 @@
   "coverage": {
     "days": 61,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-10T05:09:38.966Z",
-    "events": 10366,
-    "incidents": 1074,
-    "unplanned": 1035,
-    "planned": 39,
-    "runObservations": 2396227,
-    "modelCells": 565890
+    "lastEvent": "2026-09-10T10:14:54.698Z",
+    "events": 10393,
+    "incidents": 1078,
+    "unplanned": 1038,
+    "planned": 40,
+    "runObservations": 2410338,
+    "modelCells": 566603
   },
   "storage": {
-    "eventsBytes": 4066047,
+    "eventsBytes": 4076588,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 24035511,
-    "perDayBytes": 509197
+    "crowdingBytes": 24093875,
+    "perDayBytes": 510327
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 438,
+      "have": 440,
       "need": 20,
-      "perDay": 7.18,
+      "perDay": 7.21,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 165,
+      "medianMin": 162,
       "p90Min": 714
     },
     {
@@ -1133,16 +1133,16 @@
     {
       "cause": "customer-incident",
       "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 30,
+      "have": 31,
       "need": 20,
-      "perDay": 0.49,
+      "perDay": 0.51,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 120,
-      "p90Min": 466
+      "medianMin": 119,
+      "p90Min": 287
     },
     {
       "cause": "power-failure",
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 368627,
+      "n": 370817,
       "ready": true
     },
     {
       "line": "central",
-      "n": 282549,
+      "n": 284224,
       "ready": true
     },
     {
       "line": "district",
-      "n": 267441,
+      "n": 269134,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 231874,
+      "n": 233594,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 213134,
+      "n": 214536,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 175912,
+      "n": 176896,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 127380,
+      "n": 128138,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 123177,
+      "n": 124002,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 112464,
+      "n": 112821,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 111729,
+      "n": 112449,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 111601,
+      "n": 111973,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 98362,
+      "n": 98968,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 53647,
+      "n": 53788,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 52860,
+      "n": 53151,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 38016,
+      "n": 38221,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 23690,
+      "n": 23831,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2636,
+      "n": 2660,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1127,
+      "n": 1134,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 6,
-      "unplanned": 5,
-      "minorMin": 22,
-      "severeMin": 37,
-      "suspendedMin": 149,
-      "worstLine": "Circle"
+      "incidents": 10,
+      "unplanned": 8,
+      "minorMin": 130,
+      "severeMin": 276,
+      "suspendedMin": 153,
+      "worstLine": "District"
     },
     "week": {
-      "incidents": 110,
-      "unplanned": 107,
-      "minorMin": 17152,
-      "severeMin": 6944,
-      "suspendedMin": 1601,
+      "incidents": 113,
+      "unplanned": 109,
+      "minorMin": 17013,
+      "severeMin": 7183,
+      "suspendedMin": 1605,
       "worstLine": "Elizabeth line"
     },
     "all": {
-      "incidents": 1074,
-      "unplanned": 1035,
-      "minorMin": 160682,
-      "severeMin": 77979,
-      "suspendedMin": 24237,
+      "incidents": 1078,
+      "unplanned": 1038,
+      "minorMin": 160790,
+      "severeMin": 78218,
+      "suspendedMin": 24241,
       "worstLine": "Central"
     }
   },
@@ -1344,11 +1344,11 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 109,
-      "minorMin": 34019,
+      "incidents": 110,
+      "minorMin": 34109,
       "severeMin": 6852,
       "suspendedMin": 221,
-      "medianMin": 252
+      "medianMin": 249
     },
     {
       "line": "Metropolitan",
@@ -1398,11 +1398,11 @@
     {
       "line": "Victoria",
       "lineId": "victoria",
-      "incidents": 84,
-      "minorMin": 14767,
+      "incidents": 85,
+      "minorMin": 14784,
       "severeMin": 4540,
       "suspendedMin": 99,
-      "medianMin": 119
+      "medianMin": 113
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -1434,11 +1434,11 @@
     {
       "line": "District",
       "lineId": "district",
-      "incidents": 87,
-      "minorMin": 6635,
-      "severeMin": 2901,
+      "incidents": 88,
+      "minorMin": 6636,
+      "severeMin": 3140,
       "suspendedMin": 2613,
-      "medianMin": 70
+      "medianMin": 72
     },
     {
       "line": "Piccadilly",
@@ -1452,11 +1452,11 @@
     {
       "line": "Bakerloo",
       "lineId": "bakerloo",
-      "incidents": 50,
+      "incidents": 51,
       "minorMin": 7197,
       "severeMin": 3412,
-      "suspendedMin": 898,
-      "medianMin": 142
+      "suspendedMin": 902,
+      "medianMin": 127
     },
     {
       "line": "Northern",
@@ -1514,6 +1514,152 @@
     }
   ],
   "recent": [
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-10T08:44:51.484Z",
+      "end": "2026-09-10T10:14:54.698Z",
+      "minutes": 90,
+      "minorMin": 90,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip, and MINOR DELAYS between Leytonstone and Epping/Hainault via Newbury Park due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T08:44:51.484Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-10T10:14:54.698Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
+    {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-09-10T10:02:54.460Z",
+      "end": "2026-09-10T10:06:55.112Z",
+      "minutes": 4,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 4,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone while we deal with a customer incident at Stonebridge Park. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T10:02:54.460Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T10:06:55.112Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
+    {
+      "line": "victoria",
+      "lineName": "Victoria",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-10T08:44:51.484Z",
+      "end": "2026-09-10T09:01:52.378Z",
+      "minutes": 17,
+      "minorMin": 17,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Victoria Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T08:44:51.484Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-10T09:01:52.378Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Walthamstow Central → Brixton",
+        "Brixton → Walthamstow Central"
+      ]
+    },
+    {
+      "line": "district",
+      "lineName": "District",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-09-10T04:44:29.605Z",
+      "end": "2026-09-10T08:44:51.484Z",
+      "minutes": 240,
+      "minorMin": 1,
+      "severeMin": 239,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 1,
+      "reason": "District Line: No service between Wimbledon and Edgware Road while we fix infrastructure damage on the track at Baker Street. MINOR DELAYS between Earl's Court and Upminster eastbound only following a late finish of engineering work. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T04:44:29.605Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-10T04:45:30.356Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-10T08:44:51.484Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Ealing Broadway → Upminster",
+        "Richmond → Upminster",
+        "Wimbledon → Upminster"
+      ]
+    },
     {
       "line": "elizabeth",
       "lineName": "Elizabeth line",
@@ -2360,162 +2506,20 @@
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
       ]
-    },
-    {
-      "line": "piccadilly",
-      "lineName": "Piccadilly",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-09T14:14:02.204Z",
-      "end": "2026-09-09T15:10:10.501Z",
-      "minutes": 56,
-      "minorMin": 56,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Piccadilly Line: Minor delays between Acton Town and Uxbridge due to an earlier signal failure at Chiswick Park. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T14:14:02.204Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T15:10:10.501Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cockfosters → Uxbridge",
-        "Uxbridge → Cockfosters"
-      ]
-    },
-    {
-      "line": "windrush",
-      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
-      "cause": "security-alert",
-      "planned": false,
-      "start": "2026-09-09T09:54:11.789Z",
-      "end": "2026-09-09T14:14:02.204Z",
-      "minutes": 260,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 260,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Windrush Line: No service between New Cross Gate and Crystal Palace/West Croydon while emergency services deal with a casualty on the track. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T09:54:11.789Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-09T14:14:02.204Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "West Croydon → Highbury & Islington",
-        "Highbury & Islington → West Croydon",
-        "Crystal Palace → Highbury & Islington"
-      ]
-    },
-    {
-      "line": "weaver",
-      "lineName": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-09T10:18:12.507Z",
-      "end": "2026-09-09T14:14:02.204Z",
-      "minutes": 236,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 236,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Weaver Line: No service between Edmonton Green and Cheshunt while we fix a points failure at Cheshunt. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T10:18:12.507Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-09T14:14:02.204Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cheshunt → London Liverpool Street",
-        "London Liverpool Street → Cheshunt"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-09T09:45:11.448Z",
-      "end": "2026-09-09T14:14:02.204Z",
-      "minutes": 269,
-      "minorMin": 269,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway/ West Ruislip and MINOR DELAYS between Leytonstone and Epping/ Hainault via Newbury Park due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T09:45:11.448Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T14:14:02.204Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → Ealing Broadway",
-        "Ealing Broadway → Epping",
-        "Hainault → Ealing Broadway"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-09-09T23:17:38.024Z",
-    "days": 48,
-    "servicesSeen": 337456,
-    "cellsReady": 16502,
+    "generatedAt": "2026-09-10T08:11:23.501Z",
+    "days": 49,
+    "servicesSeen": 337497,
+    "cellsReady": 16045,
     "worst": [
       {
         "crs": "LBG",
         "std": "21:16",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 5.3,
+        "n": 5.1,
         "p50Late": 3,
         "p90Late": 211,
         "cancelPct": 9,
@@ -2526,7 +2530,7 @@
         "std": "21:40",
         "destination": "Sevenoaks",
         "dayType": "wd",
-        "n": 4.6,
+        "n": 4.5,
         "p50Late": 0,
         "p90Late": 198,
         "cancelPct": 0,
@@ -2537,7 +2541,7 @@
         "std": "21:32",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 4.4,
+        "n": 4.3,
         "p50Late": 0,
         "p90Late": 196,
         "cancelPct": 0,
@@ -2548,7 +2552,7 @@
         "std": "10:49",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 8.2,
+        "n": 8,
         "p50Late": 0,
         "p90Late": 160,
         "cancelPct": 0,
@@ -2559,7 +2563,7 @@
         "std": "00:05",
         "destination": "Orpington",
         "dayType": "wd",
-        "n": 4.8,
+        "n": 4.7,
         "p50Late": 0,
         "p90Late": 156,
         "cancelPct": 0,
@@ -2570,7 +2574,7 @@
         "std": "00:09",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 4.7,
+        "n": 4.5,
         "p50Late": 2,
         "p90Late": 130,
         "cancelPct": 9,
@@ -2581,7 +2585,7 @@
         "std": "16:17",
         "destination": "Horsham",
         "dayType": "wd",
-        "n": 6.2,
+        "n": 6,
         "p50Late": 0,
         "p90Late": 129,
         "cancelPct": 8,
@@ -2592,7 +2596,7 @@
         "std": "01:09",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 3.2,
+        "n": 3.1,
         "p50Late": 7,
         "p90Late": 125,
         "cancelPct": 0,
@@ -2603,7 +2607,7 @@
         "std": "23:55",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 7.7,
+        "n": 7.5,
         "p50Late": 0,
         "p90Late": 122,
         "cancelPct": 4,
@@ -2614,7 +2618,7 @@
         "std": "00:01",
         "destination": "Dartford",
         "dayType": "wd",
-        "n": 4.8,
+        "n": 4.7,
         "p50Late": 0,
         "p90Late": 119,
         "cancelPct": 0,
@@ -2625,7 +2629,7 @@
         "std": "23:13",
         "destination": "Dover Priory",
         "dayType": "wd",
-        "n": 8.6,
+        "n": 8.3,
         "p50Late": 0,
         "p90Late": 118,
         "cancelPct": 10,
@@ -2636,7 +2640,7 @@
         "std": "23:44",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 7,
+        "n": 6.8,
         "p50Late": 3,
         "p90Late": 117,
         "cancelPct": 5,
