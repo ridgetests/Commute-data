@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T01:48:08.068Z",
+  "generatedAt": "2026-09-10T05:17:49.232Z",
   "rail": {
     "servicesTracked": 40740,
     "modelled": 17813,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-10T01:45:02.901Z",
-      "minutesSinceLast": 3
+      "minutesSinceLast": 213
     },
     "tfl": {
       "tz": "UTC",
@@ -547,36 +547,6 @@
       "serviceHours": 16,
       "coveredFloor": 20,
       "days": [
-        {
-          "date": "2026-08-27",
-          "counts": [
-            108,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            198,
-            162,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            180,
-            180,
-            0,
-            0
-          ],
-          "covered": 4
-        },
         {
           "date": "2026-08-28",
           "counts": [
@@ -966,22 +936,52 @@
             216
           ],
           "covered": 7
+        },
+        {
+          "date": "2026-09-10",
+          "counts": [
+            0,
+            0,
+            0,
+            90,
+            216,
+            54,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "covered": 0
         }
       ],
-      "lastRecord": "2026-09-09T23:56:54.896Z",
-      "minutesSinceLast": 111
+      "lastRecord": "2026-09-10T05:14:42.606Z",
+      "minutesSinceLast": 3
     }
   },
   "headway": {
-    "cells": 77526,
-    "usable": 18302,
+    "cells": 76446,
+    "usable": 18049,
     "ready": true,
     "examples": [
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-20",
-        "n": 104,
+        "n": 101,
         "p50": 248,
         "p90": 608
       },
@@ -989,7 +989,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 183,
+        "n": 179,
         "p50": 218,
         "p90": 473
       },
@@ -997,7 +997,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 136,
+        "n": 132,
         "p50": 233,
         "p90": 548
       },
@@ -1005,7 +1005,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 96,
+        "n": 94,
         "p50": 278,
         "p90": 638
       },
@@ -1013,7 +1013,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-00",
-        "n": 73,
+        "n": 71,
         "p50": 338,
         "p90": 788
       },
@@ -1021,29 +1021,29 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 66,
+        "n": 65,
         "p50": 278,
         "p90": 578
       }
     ]
   },
   "coverage": {
-    "days": 60,
+    "days": 61,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-09T23:30:06.576Z",
-    "events": 10313,
-    "incidents": 1064,
-    "unplanned": 1026,
-    "planned": 38,
-    "runObservations": 2454856,
-    "modelCells": 571109
+    "lastEvent": "2026-09-10T05:09:38.966Z",
+    "events": 10366,
+    "incidents": 1074,
+    "unplanned": 1035,
+    "planned": 39,
+    "runObservations": 2396227,
+    "modelCells": 565890
   },
   "storage": {
-    "eventsBytes": 4036108,
+    "eventsBytes": 4066047,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 23983753,
-    "perDayBytes": 516322
+    "crowdingBytes": 24035511,
+    "perDayBytes": 509197
   },
   "readiness": [
     {
@@ -1051,7 +1051,7 @@
       "feature": "Broken-down train — “how long will this last?”",
       "have": 438,
       "need": 20,
-      "perDay": 7.3,
+      "perDay": 7.18,
       "ready": true,
       "etaDays": [
         0,
@@ -1063,37 +1063,37 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 210,
+      "have": 212,
       "need": 20,
-      "perDay": 3.5,
+      "perDay": 3.48,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 110,
-      "p90Min": 629
+      "medianMin": 113,
+      "p90Min": 555
     },
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 135,
+      "have": 140,
       "need": 20,
-      "perDay": 2.25,
+      "perDay": 2.3,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 92,
-      "p90Min": 681
+      "medianMin": 91,
+      "p90Min": 696
     },
     {
       "cause": "fire-alert",
       "feature": "Fire alert — “is it worth waiting?”",
       "have": 112,
       "need": 20,
-      "perDay": 1.87,
+      "perDay": 1.84,
       "ready": true,
       "etaDays": [
         0,
@@ -1107,7 +1107,7 @@
       "feature": "Trespass — “is it worth waiting?”",
       "have": 39,
       "need": 20,
-      "perDay": 0.65,
+      "perDay": 0.64,
       "ready": true,
       "etaDays": [
         0,
@@ -1119,7 +1119,7 @@
     {
       "cause": "security-alert",
       "feature": "Security alert — “is it worth waiting?”",
-      "have": 31,
+      "have": 32,
       "need": 20,
       "perDay": 0.52,
       "ready": true,
@@ -1127,29 +1127,29 @@
         0,
         0
       ],
-      "medianMin": 133,
+      "medianMin": 122,
       "p90Min": 808
     },
     {
       "cause": "customer-incident",
       "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 29,
+      "have": 30,
       "need": 20,
-      "perDay": 0.48,
+      "perDay": 0.49,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 119,
-      "p90Min": 287
+      "medianMin": 120,
+      "p90Min": 466
     },
     {
       "cause": "power-failure",
       "feature": "Power failure — “how long will this last?”",
       "have": 19,
       "need": 20,
-      "perDay": 0.32,
+      "perDay": 0.31,
       "ready": false,
       "etaDays": [
         1,
@@ -1166,8 +1166,8 @@
       "perDay": 0.13,
       "ready": false,
       "etaDays": [
-        47,
-        133
+        48,
+        135
       ],
       "medianMin": 83,
       "p90Min": 591
@@ -1180,8 +1180,8 @@
       "perDay": 0.03,
       "ready": false,
       "etaDays": [
-        331,
-        749
+        337,
+        761
       ],
       "medianMin": 585,
       "p90Min": 650
@@ -1194,8 +1194,8 @@
       "perDay": 0.03,
       "ready": false,
       "etaDays": [
-        331,
-        749
+        337,
+        761
       ],
       "medianMin": 216,
       "p90Min": 397
@@ -1208,8 +1208,8 @@
       "perDay": 0.02,
       "ready": false,
       "etaDays": [
-        711,
-        1569
+        723,
+        1595
       ],
       "medianMin": 262,
       "p90Min": 262
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 377917,
+      "n": 368627,
       "ready": true
     },
     {
       "line": "central",
-      "n": 289629,
+      "n": 282549,
       "ready": true
     },
     {
       "line": "district",
-      "n": 274040,
+      "n": 267441,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 237490,
+      "n": 231874,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 218197,
+      "n": 213134,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 179999,
+      "n": 175912,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 130450,
+      "n": 127380,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 126227,
+      "n": 123177,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 115156,
+      "n": 112464,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 114500,
+      "n": 111729,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 114208,
+      "n": 111601,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 100811,
+      "n": 98362,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 55030,
+      "n": 53647,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 54121,
+      "n": 52860,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 38954,
+      "n": 38016,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 24263,
+      "n": 23690,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2707,
+      "n": 2636,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1155,
+      "n": 1127,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "incidents": 6,
+      "unplanned": 5,
+      "minorMin": 22,
+      "severeMin": 37,
+      "suspendedMin": 149,
+      "worstLine": "Circle"
     },
     "week": {
-      "incidents": 106,
-      "unplanned": 103,
-      "minorMin": 17029,
-      "severeMin": 6744,
-      "suspendedMin": 1491,
+      "incidents": 115,
+      "unplanned": 112,
+      "minorMin": 18781,
+      "severeMin": 6944,
+      "suspendedMin": 1601,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1064,
-      "unplanned": 1026,
-      "minorMin": 158704,
-      "severeMin": 77446,
-      "suspendedMin": 24088,
+      "incidents": 1074,
+      "unplanned": 1035,
+      "minorMin": 160682,
+      "severeMin": 77979,
+      "suspendedMin": 24237,
       "worstLine": "Central"
     }
   },
@@ -1353,10 +1353,10 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 135,
+      "incidents": 136,
       "minorMin": 17584,
       "severeMin": 10031,
-      "suspendedMin": 1939,
+      "suspendedMin": 1965,
       "medianMin": 91
     },
     {
@@ -1380,20 +1380,20 @@
     {
       "line": "Elizabeth line",
       "lineId": "elizabeth",
-      "incidents": 70,
-      "minorMin": 6314,
+      "incidents": 72,
+      "minorMin": 7487,
       "severeMin": 8919,
-      "suspendedMin": 721,
+      "suspendedMin": 757,
       "medianMin": 147
     },
     {
       "line": "Circle",
       "lineId": "circle",
-      "incidents": 79,
+      "incidents": 81,
       "minorMin": 10105,
-      "severeMin": 4421,
-      "suspendedMin": 1763,
-      "medianMin": 124
+      "severeMin": 4433,
+      "suspendedMin": 1831,
+      "medianMin": 122
     },
     {
       "line": "Victoria",
@@ -1416,11 +1416,11 @@
     {
       "line": "Hammersmith & City",
       "lineId": "hammersmith-city",
-      "incidents": 76,
+      "incidents": 77,
       "minorMin": 11803,
-      "severeMin": 4114,
-      "suspendedMin": 697,
-      "medianMin": 146
+      "severeMin": 4139,
+      "suspendedMin": 716,
+      "medianMin": 143
     },
     {
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
@@ -1434,8 +1434,8 @@
     {
       "line": "District",
       "lineId": "district",
-      "incidents": 85,
-      "minorMin": 6147,
+      "incidents": 87,
+      "minorMin": 6635,
       "severeMin": 2901,
       "suspendedMin": 2613,
       "medianMin": 70
@@ -1452,18 +1452,18 @@
     {
       "line": "Bakerloo",
       "lineId": "bakerloo",
-      "incidents": 49,
-      "minorMin": 6880,
-      "severeMin": 3220,
+      "incidents": 50,
+      "minorMin": 7197,
+      "severeMin": 3412,
       "suspendedMin": 898,
-      "medianMin": 127
+      "medianMin": 142
     },
     {
       "line": "Northern",
       "lineId": "northern",
-      "incidents": 46,
+      "incidents": 47,
       "minorMin": 4720,
-      "severeMin": 2833,
+      "severeMin": 3137,
       "suspendedMin": 850,
       "medianMin": 119
     },
@@ -1514,6 +1514,438 @@
     }
   ],
   "recent": [
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "security-alert",
+      "planned": false,
+      "start": "2026-09-10T04:28:29.406Z",
+      "end": "2026-09-10T05:04:31.353Z",
+      "minutes": 36,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 36,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "No service between Hayes & Harlington and Heathrow Airport/Reading while emergency services carry out an investigation on the track. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T04:28:29.406Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:30:29.166Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:32:29.164Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:40:29.926Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:42:29.706Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:48:29.796Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:51:30.007Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:53:30.077Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:59:30.259Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T05:00:33.132Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T05:04:31.353Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
+    {
+      "line": "circle",
+      "lineName": "Circle",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-10T04:14:28.653Z",
+      "end": "2026-09-10T05:04:31.353Z",
+      "minutes": 50,
+      "minorMin": 0,
+      "severeMin": 12,
+      "suspendedMin": 38,
+      "worstSev": 2,
+      "peakAfterMin": 12,
+      "reason": "Circle Line: No service between Edgware Road and Baker Street via Embankment while we fix infrastructure damage on the track at Baker Street. SEVERE DELAYS on the rest of the line. Tickets will be accepted on London Buses via reasonable routes. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T04:14:28.653Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-10T04:26:30.157Z",
+          "sev": 2
+        },
+        {
+          "t": "2026-09-10T05:04:31.353Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
+      ]
+    },
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-10T04:26:30.157Z",
+      "end": "2026-09-10T04:52:30.155Z",
+      "minutes": 26,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 26,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: No service between Baker Street and Aldgate while we fix infrastructure damage to the track at Baker Street. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T04:26:30.157Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:52:30.155Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "line": "district",
+      "lineName": "District",
+      "cause": "engineering",
+      "planned": true,
+      "start": "2026-09-10T04:20:29.404Z",
+      "end": "2026-09-10T04:42:29.706Z",
+      "minutes": 22,
+      "minorMin": 22,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "District Line: No service between High Street Kensington and Edgware Road while we fix infrastructure damage on the track at Baker Street. Minor delays between Earl's Court and Tower Hill eastbound only following a late finish of engineering work. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T04:20:29.404Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-10T04:42:29.706Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Ealing Broadway → Upminster",
+        "Richmond → Upminster",
+        "Wimbledon → Upminster"
+      ]
+    },
+    {
+      "line": "hammersmith-city",
+      "lineName": "Hammersmith & City",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-10T03:43:27.355Z",
+      "end": "2026-09-10T04:27:29.382Z",
+      "minutes": 44,
+      "minorMin": 0,
+      "severeMin": 25,
+      "suspendedMin": 19,
+      "worstSev": 2,
+      "peakAfterMin": 0,
+      "reason": "Hammersmith and City Line: No service while we fix infrastructure damage on the track at Baker Street. Tickets will be accepted on London Buses via reasonable routes. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T03:43:27.355Z",
+          "sev": 2
+        },
+        {
+          "t": "2026-09-10T04:01:28.324Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-10T04:02:28.286Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-10T04:27:29.382Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Barking"
+      ]
+    },
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-09T08:46:38.866Z",
+      "end": "2026-09-10T04:19:28.769Z",
+      "minutes": 1173,
+      "minorMin": 1173,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 7,
+      "peakAfterMin": 393,
+      "reason": "Minor delays between Paddington and Heathrow Terminal 4 due to vandalism to equipment in the Paddington area. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T08:46:38.866Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-09T14:14:02.204Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-09T15:19:50.798Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-09-09T19:08:12.846Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-09-09T22:20:21.677Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-09-10T03:37:27.104Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-09-10T04:19:28.769Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
+    {
+      "line": "circle",
+      "lineName": "Circle",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-10T03:42:28.569Z",
+      "end": "2026-09-10T04:12:28.532Z",
+      "minutes": 30,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 30,
+      "worstSev": 2,
+      "peakAfterMin": 0,
+      "reason": "Circle Line: No service while we fix infrastructure damage on the track at Baker Street. Tickets will be accepted on London Buses via reasonable routes. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-10T03:42:28.569Z",
+          "sev": 2
+        },
+        {
+          "t": "2026-09-10T04:12:28.532Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
+      ]
+    },
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-09-09T22:33:17.753Z",
+      "end": "2026-09-10T03:37:27.104Z",
+      "minutes": 304,
+      "minorMin": 0,
+      "severeMin": 304,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: Severe delays while we fix a points failure at Hampstead. Tickets are being accepted on London Buses, Trams, Southeastern, Thameslink and South Western Railway services via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T22:33:17.753Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-10T03:37:27.104Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "High Barnet → Morden",
+        "Morden → High Barnet",
+        "Edgware → Morden"
+      ]
+    },
+    {
+      "line": "district",
+      "lineName": "District",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-09-09T19:51:14.390Z",
+      "end": "2026-09-10T03:37:27.104Z",
+      "minutes": 466,
+      "minorMin": 466,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "District Line: No service between High Street Kensington and Edgware Road due to a points failure at High Street Kensington. Please change at High Street Kensington to continue your journey on the Circle line. MINOR DELAYS on the rest of the line due to an earlier customer incident. Tickets are being accepted on London Buses.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T19:51:14.390Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-09T22:20:21.677Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-10T03:37:27.104Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Upminster → Ealing Broadway",
+        "Ealing Broadway → Upminster",
+        "Upminster → Richmond"
+      ]
+    },
+    {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-09-09T19:08:12.846Z",
+      "end": "2026-09-10T03:37:27.104Z",
+      "minutes": 509,
+      "minorMin": 317,
+      "severeMin": 192,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Severe delays while we fix a signal failure at Embankment.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-09T19:08:12.846Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-09T22:20:21.677Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-10T03:37:27.104Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
     {
       "line": "northern",
       "lineName": "Northern",
@@ -2069,414 +2501,6 @@
         "Epping → Ealing Broadway",
         "Ealing Broadway → Epping",
         "Hainault → Ealing Broadway"
-      ]
-    },
-    {
-      "line": "victoria",
-      "lineName": "Victoria",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-09T08:46:38.866Z",
-      "end": "2026-09-09T10:02:12.029Z",
-      "minutes": 76,
-      "minorMin": 76,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Victoria Line: Minor delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T08:46:38.866Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T10:02:12.029Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Walthamstow Central → Brixton",
-        "Brixton → Walthamstow Central"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-09T09:21:38.288Z",
-      "end": "2026-09-09T09:44:11.095Z",
-      "minutes": 23,
-      "minorMin": 23,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway/ West Ruislip and MINOIR DELAYS between Leytonstone and Epping/ Hainault via Newbury Park due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T09:21:38.288Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T09:44:11.095Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-09T08:46:38.866Z",
-      "end": "2026-09-09T09:19:38.533Z",
-      "minutes": 33,
-      "minorMin": 33,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T08:46:38.866Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T09:19:38.533Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
-      ]
-    },
-    {
-      "line": "suffragette",
-      "lineName": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-09T05:07:43.457Z",
-      "end": "2026-09-09T08:46:38.866Z",
-      "minutes": 219,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 219,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Suffragette Line: No service between Barking and Barking Riverside while we fix a signal failure. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T05:07:43.457Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-09T08:46:38.866Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking Riverside → Gospel Oak",
-        "Gospel Oak → Barking Riverside"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "engineering",
-      "planned": true,
-      "start": "2026-09-09T04:12:41.238Z",
-      "end": "2026-09-09T05:17:43.757Z",
-      "minutes": 65,
-      "minorMin": 50,
-      "severeMin": 15,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "District Line: Severe delays between Wimbledon and Earl's Court eastbound only following a late finish of engineering work. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T04:12:41.238Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-09T04:27:42.614Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T04:37:45.588Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T05:17:43.757Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Wimbledon → Upminster",
-        "Wimbledon → Edgware Road (Circle Line)",
-        "Upminster → Wimbledon"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-09T04:48:43.396Z",
-      "end": "2026-09-09T05:09:43.645Z",
-      "minutes": 21,
-      "minorMin": 21,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between Leytonstone and Epping while we fix a signal failure at Woodford. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-09T04:48:43.396Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T05:09:43.645Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-08T23:49:22.304Z",
-      "end": "2026-09-09T03:39:40.131Z",
-      "minutes": 230,
-      "minorMin": 230,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Circle Line: Minor delays due to train cancellations ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-08T23:49:22.304Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-09T03:39:40.131Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-08T14:13:52.381Z",
-      "end": "2026-09-08T23:44:22.402Z",
-      "minutes": 571,
-      "minorMin": 532,
-      "severeMin": 38,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 310,
-      "reason": "Circle Line: Minor delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-08T14:13:52.381Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T19:18:41.191Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T19:23:41.190Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-08T20:01:45.237Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T22:26:20.505Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T23:44:22.402Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
-    },
-    {
-      "line": "piccadilly",
-      "lineName": "Piccadilly",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-08T19:18:41.191Z",
-      "end": "2026-09-08T22:30:20.029Z",
-      "minutes": 192,
-      "minorMin": 113,
-      "severeMin": 79,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Piccadilly Line: Severe delays due to an earlier signal failure at Oakwood. Tickets being accepted by London Buses. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-08T19:18:41.191Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-08T19:54:41.945Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-08T19:58:42.247Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-08T20:37:46.736Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T22:26:20.505Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T22:30:20.029Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cockfosters → Uxbridge",
-        "Uxbridge → Cockfosters",
-        "Cockfosters → Heathrow Terminal 5"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-08T08:41:17.292Z",
-      "end": "2026-09-08T22:26:20.505Z",
-      "minutes": 825,
-      "minorMin": 825,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainault via Newbury Park due to train cancellations. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-08T08:41:17.292Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T08:52:17.724Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T14:13:52.381Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T19:18:41.191Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-08T22:26:20.505Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
       ]
     }
   ],
