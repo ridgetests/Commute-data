@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T22:34:31.717Z",
+  "generatedAt": "2026-09-11T23:59:35.707Z",
   "rail": {
     "servicesTracked": 40819,
     "modelled": 17718,
@@ -535,8 +535,8 @@
           "covered": 8
         }
       ],
-      "lastRecord": "2026-09-11T22:33:25.773Z",
-      "minutesSinceLast": 1
+      "lastRecord": "2026-09-11T18:02:19.562Z",
+      "minutesSinceLast": 357
     },
     "tfl": {
       "tz": "UTC",
@@ -962,19 +962,19 @@
             216,
             144,
             0,
-            0,
-            0
+            162,
+            198
           ],
           "covered": 7
         }
       ],
-      "lastRecord": "2026-09-11T20:37:13.406Z",
-      "minutesSinceLast": 117
+      "lastRecord": "2026-09-11T23:54:29.934Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 76424,
-    "usable": 17931,
+    "cells": 76493,
+    "usable": 17987,
     "ready": true,
     "examples": [
       {
@@ -1005,9 +1005,9 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 99,
+        "n": 104,
         "p50": 278,
-        "p90": 623
+        "p90": 638
       },
       {
         "line": "northern",
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 62,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-11T19:52:35.127Z",
-    "events": 10563,
-    "incidents": 1096,
-    "unplanned": 1054,
+    "lastEvent": "2026-09-11T23:53:23.278Z",
+    "events": 10594,
+    "incidents": 1098,
+    "unplanned": 1056,
     "planned": 42,
-    "runObservations": 2428100,
-    "modelCells": 568702
+    "runObservations": 2436208,
+    "modelCells": 569825
   },
   "storage": {
-    "eventsBytes": 4137971,
+    "eventsBytes": 4155986,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 24470424,
-    "perDayBytes": 509159
+    "crowdingBytes": 24532955,
+    "perDayBytes": 510458
   },
   "readiness": [
     {
@@ -1077,9 +1077,9 @@
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 148,
+      "have": 149,
       "need": 20,
-      "perDay": 2.39,
+      "perDay": 2.4,
       "ready": true,
       "etaDays": [
         0,
@@ -1117,6 +1117,20 @@
       "p90Min": 278
     },
     {
+      "cause": "customer-incident",
+      "feature": "Customer taken ill — “is it worth waiting?”",
+      "have": 32,
+      "need": 20,
+      "perDay": 0.52,
+      "ready": true,
+      "etaDays": [
+        0,
+        0
+      ],
+      "medianMin": 120,
+      "p90Min": 292
+    },
+    {
       "cause": "security-alert",
       "feature": "Security alert — “is it worth waiting?”",
       "have": 32,
@@ -1129,20 +1143,6 @@
       ],
       "medianMin": 122,
       "p90Min": 808
-    },
-    {
-      "cause": "customer-incident",
-      "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 31,
-      "need": 20,
-      "perDay": 0.5,
-      "ready": true,
-      "etaDays": [
-        0,
-        0
-      ],
-      "medianMin": 119,
-      "p90Min": 287
     },
     {
       "cause": "power-failure",
@@ -1218,87 +1218,87 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 373669,
+      "n": 374995,
       "ready": true
     },
     {
       "line": "central",
-      "n": 285765,
+      "n": 286611,
       "ready": true
     },
     {
       "line": "district",
-      "n": 271742,
+      "n": 272966,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 236300,
+      "n": 237190,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 216470,
+      "n": 217197,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 177902,
+      "n": 178287,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 129017,
+      "n": 129463,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 124820,
+      "n": 125091,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 113605,
+      "n": 114049,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 113362,
+      "n": 113811,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 111760,
+      "n": 112087,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 99746,
+      "n": 99931,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 54148,
+      "n": 54378,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 53451,
+      "n": 53624,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 38545,
+      "n": 38672,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 23980,
+      "n": 24029,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2685,
+      "n": 2694,
       "ready": true
     },
     {
@@ -1316,26 +1316,26 @@
   },
   "windows": {
     "today": {
-      "incidents": 9,
-      "unplanned": 8,
-      "minorMin": 1080,
-      "severeMin": 359,
+      "incidents": 11,
+      "unplanned": 10,
+      "minorMin": 1093,
+      "severeMin": 654,
       "suspendedMin": 0,
-      "worstLine": "Elizabeth line"
+      "worstLine": "Piccadilly"
     },
     "week": {
-      "incidents": 112,
-      "unplanned": 106,
-      "minorMin": 18488,
-      "severeMin": 8144,
+      "incidents": 113,
+      "unplanned": 107,
+      "minorMin": 18238,
+      "severeMin": 8439,
       "suspendedMin": 2221,
       "worstLine": "Elizabeth line"
     },
     "all": {
-      "incidents": 1096,
-      "unplanned": 1054,
-      "minorMin": 164979,
-      "severeMin": 80882,
+      "incidents": 1098,
+      "unplanned": 1056,
+      "minorMin": 164992,
+      "severeMin": 81177,
       "suspendedMin": 24863,
       "worstLine": "Central"
     }
@@ -1443,11 +1443,11 @@
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 69,
-      "minorMin": 7746,
-      "severeMin": 4697,
+      "incidents": 70,
+      "minorMin": 7759,
+      "severeMin": 4976,
       "suspendedMin": 397,
-      "medianMin": 106
+      "medianMin": 112
     },
     {
       "line": "Bakerloo",
@@ -1461,11 +1461,11 @@
     {
       "line": "Northern",
       "lineId": "northern",
-      "incidents": 48,
+      "incidents": 49,
       "minorMin": 4754,
-      "severeMin": 3137,
+      "severeMin": 3153,
       "suspendedMin": 850,
-      "medianMin": 119
+      "medianMin": 118
     },
     {
       "line": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
@@ -1514,6 +1514,90 @@
     }
   ],
   "recent": [
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-09-11T19:01:33.269Z",
+      "end": "2026-09-11T23:53:23.278Z",
+      "minutes": 292,
+      "minorMin": 13,
+      "severeMin": 279,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: Severe delays due to an earlier customer incident. Tickets are being accepted on London Buses, Great Northern, London Overground and South Western Railway services. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-11T19:01:33.269Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-11T22:19:19.129Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-11T22:48:20.704Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-11T23:01:21.427Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-11T23:53:23.278Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-11T22:35:20.138Z",
+      "end": "2026-09-11T22:51:20.962Z",
+      "minutes": 16,
+      "minorMin": 0,
+      "severeMin": 16,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: No service between Stockwell and Morden southbound only and SEVERE DELAYS on the rest of the line while we fix a track fault at Balham. London Buses are accepting tickets via any reasonable route.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-11T22:35:20.138Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-11T22:51:20.962Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "High Barnet → Morden",
+        "Morden → High Barnet",
+        "Edgware → Morden"
+      ]
+    },
     {
       "line": "district",
       "lineName": "District",
@@ -2489,81 +2573,6 @@
         "Heathrow Terminal 4 → Shenfield",
         "Heathrow Terminal 5 → Shenfield",
         "Shenfield → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "other",
-      "planned": false,
-      "start": "2026-09-10T04:14:28.653Z",
-      "end": "2026-09-10T05:04:31.353Z",
-      "minutes": 50,
-      "minorMin": 0,
-      "severeMin": 12,
-      "suspendedMin": 38,
-      "worstSev": 2,
-      "peakAfterMin": 12,
-      "reason": "Circle Line: No service between Edgware Road and Baker Street via Embankment while we fix infrastructure damage on the track at Baker Street. SEVERE DELAYS on the rest of the line. Tickets will be accepted on London Buses via reasonable routes. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-10T04:14:28.653Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-10T04:26:30.157Z",
-          "sev": 2
-        },
-        {
-          "t": "2026-09-10T05:04:31.353Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "other",
-      "planned": false,
-      "start": "2026-09-10T04:26:30.157Z",
-      "end": "2026-09-10T04:52:30.155Z",
-      "minutes": 26,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 26,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: No service between Baker Street and Aldgate while we fix infrastructure damage to the track at Baker Street. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-10T04:26:30.157Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-10T04:52:30.155Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
       ]
     }
   ],
