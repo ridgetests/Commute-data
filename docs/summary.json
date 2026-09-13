@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T22:23:03.697Z",
+  "generatedAt": "2026-09-13T23:52:17.137Z",
   "rail": {
     "servicesTracked": 40952,
     "modelled": 18250,
@@ -535,8 +535,8 @@
           "covered": 9
         }
       ],
-      "lastRecord": "2026-09-13T22:21:58.150Z",
-      "minutesSinceLast": 1
+      "lastRecord": "2026-09-13T17:49:18.213Z",
+      "minutesSinceLast": 363
     },
     "tfl": {
       "tz": "UTC",
@@ -962,19 +962,19 @@
             198,
             54,
             0,
-            0,
-            0
+            180,
+            180
           ],
           "covered": 7
         }
       ],
-      "lastRecord": "2026-09-13T20:11:29.021Z",
-      "minutesSinceLast": 132
+      "lastRecord": "2026-09-13T23:47:16.021Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 75246,
-    "usable": 18259,
+    "cells": 75279,
+    "usable": 18333,
     "ready": true,
     "examples": [
       {
@@ -1030,62 +1030,62 @@
   "coverage": {
     "days": 64,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-13T19:53:20.118Z",
-    "events": 10834,
-    "incidents": 1123,
-    "unplanned": 1081,
+    "lastEvent": "2026-09-13T23:49:09.741Z",
+    "events": 10872,
+    "incidents": 1127,
+    "unplanned": 1085,
     "planned": 42,
-    "runObservations": 2391923,
-    "modelCells": 548534
+    "runObservations": 2396089,
+    "modelCells": 548838
   },
   "storage": {
-    "eventsBytes": 4274838,
+    "eventsBytes": 4295692,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 25233435,
-    "perDayBytes": 507309
+    "crowdingBytes": 25305125,
+    "perDayBytes": 508755
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 450,
+      "have": 451,
       "need": 20,
-      "perDay": 7.03,
+      "perDay": 7.05,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 167,
+      "medianMin": 168,
       "p90Min": 714
     },
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 220,
+      "have": 221,
       "need": 20,
-      "perDay": 3.44,
+      "perDay": 3.45,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
       "medianMin": 124,
-      "p90Min": 646
+      "p90Min": 645
     },
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 158,
+      "have": 159,
       "need": 20,
-      "perDay": 2.47,
+      "perDay": 2.48,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 96,
+      "medianMin": 97,
       "p90Min": 857
     },
     {
@@ -1203,82 +1203,82 @@
     {
       "cause": "engineering",
       "feature": "Engineering work",
-      "have": 1,
+      "have": 2,
       "need": 20,
-      "perDay": 0.02,
+      "perDay": 0.03,
       "ready": false,
       "etaDays": [
-        758,
-        1674
+        353,
+        799
       ],
-      "medianMin": 262,
-      "p90Min": 262
+      "medianMin": 732,
+      "p90Min": 1201
     }
   ],
   "runReadiness": [
     {
       "line": "northern",
-      "n": 370194,
+      "n": 370856,
       "ready": true
     },
     {
       "line": "central",
-      "n": 282061,
+      "n": 282476,
       "ready": true
     },
     {
       "line": "district",
-      "n": 258288,
+      "n": 258363,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 235582,
+      "n": 236117,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 215947,
+      "n": 216511,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 176401,
+      "n": 176612,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 128835,
+      "n": 129063,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 123454,
+      "n": 123535,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 111983,
+      "n": 112472,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 111011,
+      "n": 111224,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 110228,
+      "n": 110519,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 98212,
+      "n": 98326,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 53002,
+      "n": 53135,
       "ready": true
     },
     {
@@ -1288,7 +1288,7 @@
     },
     {
       "line": "lioness",
-      "n": 38435,
+      "n": 38590,
       "ready": true
     },
     {
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 5,
-      "unplanned": 5,
-      "minorMin": 1099,
-      "severeMin": 427,
-      "suspendedMin": 2,
-      "worstLine": "Bakerloo"
+      "incidents": 9,
+      "unplanned": 9,
+      "minorMin": 2075,
+      "severeMin": 1756,
+      "suspendedMin": 330,
+      "worstLine": "Elizabeth line"
     },
     "week": {
-      "incidents": 107,
-      "unplanned": 102,
-      "minorMin": 22485,
-      "severeMin": 10495,
-      "suspendedMin": 2190,
+      "incidents": 111,
+      "unplanned": 106,
+      "minorMin": 23461,
+      "severeMin": 11824,
+      "suspendedMin": 2518,
       "worstLine": "Elizabeth line"
     },
     "all": {
-      "incidents": 1123,
-      "unplanned": 1081,
-      "minorMin": 174495,
-      "severeMin": 85475,
-      "suspendedMin": 24906,
+      "incidents": 1127,
+      "unplanned": 1085,
+      "minorMin": 175471,
+      "severeMin": 86804,
+      "suspendedMin": 25234,
       "worstLine": "Central"
     }
   },
@@ -1344,11 +1344,11 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 115,
-      "minorMin": 36429,
-      "severeMin": 6852,
+      "incidents": 116,
+      "minorMin": 36814,
+      "severeMin": 7338,
       "suspendedMin": 221,
-      "medianMin": 252
+      "medianMin": 255
     },
     {
       "line": "Metropolitan",
@@ -1369,6 +1369,15 @@
       "medianMin": 230
     },
     {
+      "line": "Elizabeth line",
+      "lineId": "elizabeth",
+      "incidents": 77,
+      "minorMin": 9873,
+      "severeMin": 10838,
+      "suspendedMin": 1303,
+      "medianMin": 164
+    },
+    {
       "line": "Jubilee",
       "lineId": "jubilee",
       "incidents": 66,
@@ -1376,15 +1385,6 @@
       "severeMin": 9831,
       "suspendedMin": 1297,
       "medianMin": 179
-    },
-    {
-      "line": "Elizabeth line",
-      "lineId": "elizabeth",
-      "incidents": 76,
-      "minorMin": 9531,
-      "severeMin": 10306,
-      "suspendedMin": 976,
-      "medianMin": 163
     },
     {
       "line": "Circle",
@@ -1443,11 +1443,11 @@
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 71,
+      "incidents": 72,
       "minorMin": 8036,
-      "severeMin": 5344,
-      "suspendedMin": 397,
-      "medianMin": 118
+      "severeMin": 5655,
+      "suspendedMin": 398,
+      "medianMin": 121
     },
     {
       "line": "Bakerloo",
@@ -1479,11 +1479,11 @@
     {
       "line": "Lioness (Overground · Euston–Watford)",
       "lineId": "lioness",
-      "incidents": 18,
-      "minorMin": 4553,
+      "incidents": 19,
+      "minorMin": 4802,
       "severeMin": 425,
       "suspendedMin": 210,
-      "medianMin": 141
+      "medianMin": 142
     },
     {
       "line": "DLR",
@@ -1514,6 +1514,221 @@
     }
   ],
   "recent": [
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-09-13T18:36:02.355Z",
+      "end": "2026-09-13T23:48:10.264Z",
+      "minutes": 312,
+      "minorMin": 0,
+      "severeMin": 311,
+      "suspendedMin": 1,
+      "worstSev": 3,
+      "peakAfterMin": 11,
+      "reason": "Piccadilly Line: No service between Hounslow central and Heathrow Terminals and SEVERE DELAYS between Acton Town and Hounslow Central while we fix a signal failure at Hatton Cross. Tickets are being accepted on London Buses, Elizabeth line and South Western Railway services. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-13T18:36:02.355Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T18:47:13.005Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-13T18:48:13.135Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T19:21:18.175Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T19:40:20.074Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T19:53:20.118Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T22:12:05.763Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T23:01:08.019Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T23:48:10.264Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Heathrow Terminal 5",
+        "Heathrow Terminal 4 → Cockfosters",
+        "Heathrow Terminal 5 → Cockfosters"
+      ]
+    },
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "engineering",
+      "planned": false,
+      "start": "2026-09-13T03:47:04.534Z",
+      "end": "2026-09-13T23:48:10.264Z",
+      "minutes": 1201,
+      "minorMin": 342,
+      "severeMin": 532,
+      "suspendedMin": 327,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "No service between Paddington and Heathrow due to vandalism to equipment in the Paddington area. Tickets are being accepted on London Buses and the Piccadilly line via any reasonable route. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-13T03:47:04.534Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-13T03:50:04.729Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-13T09:14:31.089Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T14:09:16.680Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T18:36:02.355Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T22:12:05.763Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T23:01:08.019Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T23:48:10.264Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
+    {
+      "line": "lioness",
+      "lineName": "Lioness (Overground · Euston–Watford)",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-09-13T19:38:19.519Z",
+      "end": "2026-09-13T23:47:10.199Z",
+      "minutes": 249,
+      "minorMin": 249,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Lioness Line: No service between Willesden Junction and Watford Junction due to a sewage leak on the track at Watford High Street. MINOR DELAYS on the rest of the line. London Underground are accepting tickets via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-13T19:38:19.519Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T22:12:05.763Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T23:47:10.199Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Watford Junction → London Euston",
+        "London Euston → Watford Junction"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-13T09:14:31.089Z",
+      "end": "2026-09-13T23:46:09.697Z",
+      "minutes": 872,
+      "minorMin": 385,
+      "severeMin": 486,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 75,
+      "reason": "Central Line: Minor delays due to train cancellations.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-13T09:14:31.089Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T10:29:40.193Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T14:09:16.680Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-13T18:36:02.355Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T22:12:05.763Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-13T23:46:09.697Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Hainault → West Ruislip"
+      ]
+    },
     {
       "line": "windrush",
       "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -2447,233 +2662,6 @@
         "Richmond (London) → Stratford (London)",
         "Clapham Junction → Stratford (London)",
         "Stratford (London) → Richmond (London)"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-11T03:46:24.518Z",
-      "end": "2026-09-12T03:39:59.711Z",
-      "minutes": 1434,
-      "minorMin": 1345,
-      "severeMin": 81,
-      "suspendedMin": 8,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: No service between Baker Street and Aldgate due to a collapsed drain on the track at Baker Street. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-11T03:46:24.518Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-11T03:53:24.916Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T08:43:03.410Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T08:45:03.612Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-11T10:06:07.446Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T14:06:56.577Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T14:12:57.182Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T19:01:33.269Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T22:19:19.129Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-11T22:20:19.536Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-12T03:39:59.711Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
-      ]
-    },
-    {
-      "line": "lioness",
-      "lineName": "Lioness (Overground · Euston–Watford)",
-      "cause": "other",
-      "planned": false,
-      "start": "2026-09-11T14:06:56.577Z",
-      "end": "2026-09-12T03:39:59.711Z",
-      "minutes": 813,
-      "minorMin": 797,
-      "severeMin": 12,
-      "suspendedMin": 4,
-      "worstSev": 3,
-      "peakAfterMin": 12,
-      "reason": "Lioness Line: No service between Harrow & Wealdstone and Watford Junction and SEVERE DELAYS on the rest of the line due to a sewage leak on the track at Watford High Street. London Underground is accepting tickets via reasonable routes, but Bakerloo line services are also disrupted. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-11T14:06:56.577Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-11T14:18:57.122Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-11T14:20:59.641Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T14:32:57.744Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-09-11T14:34:57.547Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T19:01:33.269Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T22:19:19.129Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-12T03:39:59.711Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Watford Junction → London Euston",
-        "London Euston → Watford Junction"
-      ]
-    },
-    {
-      "line": "elizabeth",
-      "lineName": "Elizabeth line",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-09-11T15:23:58.840Z",
-      "end": "2026-09-12T03:39:59.711Z",
-      "minutes": 736,
-      "minorMin": 518,
-      "severeMin": 218,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Severe delays between Paddington and Heathrow Terminal 4 and MINOR DELAYS between Hayes & Harlington and Reading due to vandalism to railway equipment in the Paddington area. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-11T15:23:58.840Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-11T19:01:33.269Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T19:33:33.972Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T22:19:19.129Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-12T03:39:59.711Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Heathrow Terminal 4 → Shenfield",
-        "Heathrow Terminal 5 → Shenfield",
-        "Shenfield → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-11T14:06:56.577Z",
-      "end": "2026-09-12T03:39:59.711Z",
-      "minutes": 813,
-      "minorMin": 813,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / Hainault due to train cancellations. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-11T14:06:56.577Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T14:07:56.773Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T19:01:33.269Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-11T22:19:19.129Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-12T03:39:59.711Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Hainault → West Ruislip",
-        "West Ruislip → Hainault",
-        "Hainault → Ealing Broadway"
       ]
     }
   ],
