@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T01:46:45.485Z",
+  "generatedAt": "2026-09-14T05:36:10.992Z",
   "rail": {
     "servicesTracked": 40911,
     "modelled": 17916,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-14T01:45:40.582Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 231
     },
     "tfl": {
       "tz": "UTC",
@@ -547,36 +547,6 @@
       "serviceHours": 16,
       "coveredFloor": 20,
       "days": [
-        {
-          "date": "2026-08-31",
-          "counts": [
-            162,
-            198,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            162,
-            198,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            126,
-            216,
-            18,
-            0,
-            0,
-            90,
-            216
-          ],
-          "covered": 4
-        },
         {
           "date": "2026-09-01",
           "counts": [
@@ -966,22 +936,52 @@
             180
           ],
           "covered": 7
+        },
+        {
+          "date": "2026-09-14",
+          "counts": [
+            0,
+            0,
+            0,
+            18,
+            216,
+            126,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "covered": 0
         }
       ],
-      "lastRecord": "2026-09-13T23:47:16.021Z",
-      "minutesSinceLast": 119
+      "lastRecord": "2026-09-14T05:31:03.035Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 75279,
-    "usable": 18333,
+    "cells": 73091,
+    "usable": 18064,
     "ready": true,
     "examples": [
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-20",
-        "n": 108,
+        "n": 106,
         "p50": 248,
         "p90": 578
       },
@@ -989,7 +989,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-21",
-        "n": 178,
+        "n": 174,
         "p50": 233,
         "p90": 488
       },
@@ -997,7 +997,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 123,
+        "n": 120,
         "p50": 233,
         "p90": 548
       },
@@ -1005,7 +1005,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 99,
+        "n": 96,
         "p50": 278,
         "p90": 638
       },
@@ -1013,7 +1013,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-00",
-        "n": 74,
+        "n": 72,
         "p50": 338,
         "p90": 728
       },
@@ -1021,29 +1021,29 @@
         "line": "piccadilly",
         "station": "940GZZLUCAR",
         "band": "wd-21",
-        "n": 63,
+        "n": 61,
         "p50": 278,
         "p90": 593
       }
     ]
   },
   "coverage": {
-    "days": 64,
+    "days": 65,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-13T23:49:09.741Z",
-    "events": 10872,
+    "lastEvent": "2026-09-14T05:32:57.934Z",
+    "events": 10895,
     "incidents": 1127,
     "unplanned": 1085,
     "planned": 42,
-    "runObservations": 2396089,
-    "modelCells": 548838
+    "runObservations": 2330255,
+    "modelCells": 527962
   },
   "storage": {
-    "eventsBytes": 4295692,
+    "eventsBytes": 4301141,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 25305125,
-    "perDayBytes": 508755
+    "crowdingBytes": 25347679,
+    "perDayBytes": 501666
   },
   "readiness": [
     {
@@ -1051,7 +1051,7 @@
       "feature": "Broken-down train — “how long will this last?”",
       "have": 451,
       "need": 20,
-      "perDay": 7.05,
+      "perDay": 6.94,
       "ready": true,
       "etaDays": [
         0,
@@ -1065,7 +1065,7 @@
       "feature": "Signal failure — “how long will this last?”",
       "have": 221,
       "need": 20,
-      "perDay": 3.45,
+      "perDay": 3.4,
       "ready": true,
       "etaDays": [
         0,
@@ -1079,7 +1079,7 @@
       "feature": "Unclassified disruption",
       "have": 159,
       "need": 20,
-      "perDay": 2.48,
+      "perDay": 2.45,
       "ready": true,
       "etaDays": [
         0,
@@ -1093,7 +1093,7 @@
       "feature": "Fire alert — “is it worth waiting?”",
       "have": 114,
       "need": 20,
-      "perDay": 1.78,
+      "perDay": 1.75,
       "ready": true,
       "etaDays": [
         0,
@@ -1107,7 +1107,7 @@
       "feature": "Trespass — “is it worth waiting?”",
       "have": 42,
       "need": 20,
-      "perDay": 0.66,
+      "perDay": 0.65,
       "ready": true,
       "etaDays": [
         0,
@@ -1121,7 +1121,7 @@
       "feature": "Customer taken ill — “is it worth waiting?”",
       "have": 32,
       "need": 20,
-      "perDay": 0.5,
+      "perDay": 0.49,
       "ready": true,
       "etaDays": [
         0,
@@ -1135,7 +1135,7 @@
       "feature": "Security alert — “is it worth waiting?”",
       "have": 32,
       "need": 20,
-      "perDay": 0.5,
+      "perDay": 0.49,
       "ready": true,
       "etaDays": [
         0,
@@ -1163,11 +1163,11 @@
       "feature": "obstruction",
       "have": 8,
       "need": 20,
-      "perDay": 0.13,
+      "perDay": 0.12,
       "ready": false,
       "etaDays": [
         51,
-        141
+        144
       ],
       "medianMin": 83,
       "p90Min": 591
@@ -1180,8 +1180,8 @@
       "perDay": 0.03,
       "ready": false,
       "etaDays": [
-        353,
-        799
+        359,
+        811
       ],
       "medianMin": 585,
       "p90Min": 650
@@ -1194,8 +1194,8 @@
       "perDay": 0.03,
       "ready": false,
       "etaDays": [
-        353,
-        799
+        359,
+        811
       ],
       "medianMin": 216,
       "p90Min": 397
@@ -1208,8 +1208,8 @@
       "perDay": 0.03,
       "ready": false,
       "etaDays": [
-        353,
-        799
+        359,
+        811
       ],
       "medianMin": 732,
       "p90Min": 1201
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 370856,
+      "n": 360170,
       "ready": true
     },
     {
       "line": "central",
-      "n": 282476,
+      "n": 273494,
       "ready": true
     },
     {
       "line": "district",
-      "n": 258363,
+      "n": 250112,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 236117,
+      "n": 229581,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 216511,
+      "n": 211007,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 176612,
+      "n": 172777,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 129063,
+      "n": 126143,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 123535,
+      "n": 119855,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 112472,
-      "ready": true
-    },
-    {
-      "line": "bakerloo",
-      "n": 111224,
+      "n": 109541,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 110519,
+      "n": 107999,
+      "ready": true
+    },
+    {
+      "line": "bakerloo",
+      "n": 107845,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 98326,
+      "n": 95987,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 53135,
+      "n": 51944,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 51211,
+      "n": 49636,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 38590,
+      "n": 37733,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 23405,
+      "n": 22865,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 2560,
+      "n": 2477,
       "ready": true
     },
     {
       "line": "liberty",
-      "n": 1117,
+      "n": 1089,
       "ready": false
     }
   ],
