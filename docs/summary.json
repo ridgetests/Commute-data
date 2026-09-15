@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-15T09:02:25.138Z",
+  "generatedAt": "2026-09-15T13:17:33.934Z",
   "rail": {
     "servicesTracked": 40746,
-    "modelled": 17707,
-    "confident": 15241,
+    "modelled": 17718,
+    "confident": 15261,
     "darwinLeadMin": 9.7,
     "samples": [
       {
@@ -518,9 +518,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            603,
+            1140,
+            289,
             0,
             0,
             0,
@@ -532,11 +532,11 @@
             0,
             0
           ],
-          "covered": 1
+          "covered": 4
         }
       ],
-      "lastRecord": "2026-09-15T06:25:07.886Z",
-      "minutesSinceLast": 157
+      "lastRecord": "2026-09-15T13:16:31.333Z",
+      "minutesSinceLast": 1
     },
     "tfl": {
       "tz": "UTC",
@@ -969,7 +969,7 @@
         }
       ],
       "lastRecord": "2026-09-15T08:57:23.280Z",
-      "minutesSinceLast": 5
+      "minutesSinceLast": 260
     }
   },
   "headway": {
@@ -1324,11 +1324,11 @@
       "worstLine": "District"
     },
     "week": {
-      "incidents": 110,
-      "unplanned": 105,
-      "minorMin": 22057,
-      "severeMin": 11264,
-      "suspendedMin": 2571,
+      "incidents": 106,
+      "unplanned": 101,
+      "minorMin": 21773,
+      "severeMin": 10944,
+      "suspendedMin": 2570,
       "worstLine": "Elizabeth line"
     },
     "all": {
@@ -2519,30 +2519,19 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-09-14T23:53:36.233Z",
-    "days": 53,
-    "servicesSeen": 360532,
-    "cellsReady": 16553,
+    "generatedAt": "2026-09-15T08:43:54.676Z",
+    "days": 54,
+    "servicesSeen": 361953,
+    "cellsReady": 16095,
     "worst": [
       {
         "crs": "ECR",
         "std": "10:49",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 7,
+        "n": 6.8,
         "p50Late": 0,
         "p90Late": 160,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "CST",
-        "std": "00:05",
-        "destination": "Orpington",
-        "dayType": "wd",
-        "n": 4.1,
-        "p50Late": 0,
-        "p90Late": 156,
         "cancelPct": 0,
         "unknownPct": 0
       },
@@ -2551,10 +2540,10 @@
         "std": "00:09",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 4,
-        "p50Late": 2,
+        "n": 4.8,
+        "p50Late": 13,
         "p90Late": 130,
-        "cancelPct": 9,
+        "cancelPct": 7,
         "unknownPct": 0
       },
       {
@@ -2562,7 +2551,7 @@
         "std": "16:17",
         "destination": "Horsham",
         "dayType": "wd",
-        "n": 5.2,
+        "n": 5.1,
         "p50Late": 0,
         "p90Late": 129,
         "cancelPct": 8,
@@ -2573,21 +2562,10 @@
         "std": "23:55",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 6.6,
+        "n": 6.4,
         "p50Late": 0,
         "p90Late": 122,
         "cancelPct": 4,
-        "unknownPct": 0
-      },
-      {
-        "crs": "CST",
-        "std": "00:01",
-        "destination": "Dartford",
-        "dayType": "wd",
-        "n": 4.1,
-        "p50Late": 0,
-        "p90Late": 119,
-        "cancelPct": 0,
         "unknownPct": 0
       },
       {
@@ -2595,7 +2573,7 @@
         "std": "23:44",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 6.8,
+        "n": 6.6,
         "p50Late": 2,
         "p90Late": 117,
         "cancelPct": 4,
@@ -2606,20 +2584,9 @@
         "std": "00:25",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 3.7,
+        "n": 3.6,
         "p50Late": 3,
         "p90Late": 115,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "LST",
-        "std": "00:18",
-        "destination": "Colchester",
-        "dayType": "wd",
-        "n": 6.3,
-        "p50Late": 0,
-        "p90Late": 112,
         "cancelPct": 0,
         "unknownPct": 0
       },
@@ -2628,7 +2595,7 @@
         "std": "21:15",
         "destination": "Inverness",
         "dayType": "wd",
-        "n": 8.2,
+        "n": 7.9,
         "p50Late": 0,
         "p90Late": 111,
         "cancelPct": 0,
@@ -2639,7 +2606,7 @@
         "std": "23:45",
         "destination": "Hastings",
         "dayType": "wd",
-        "n": 6.2,
+        "n": 6,
         "p50Late": 0,
         "p90Late": 110,
         "cancelPct": 14,
@@ -2650,10 +2617,43 @@
         "std": "23:58",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 7.5,
+        "n": 7.3,
         "p50Late": 0,
         "p90Late": 110,
         "cancelPct": 7,
+        "unknownPct": 0
+      },
+      {
+        "crs": "LBG",
+        "std": "23:54",
+        "destination": "Hastings",
+        "dayType": "wd",
+        "n": 3.5,
+        "p50Late": 0,
+        "p90Late": 108,
+        "cancelPct": 0,
+        "unknownPct": 0
+      },
+      {
+        "crs": "LST",
+        "std": "19:10",
+        "destination": "London Paddington",
+        "dayType": "we",
+        "n": 3.6,
+        "p50Late": 102,
+        "p90Late": 108,
+        "cancelPct": 0,
+        "unknownPct": 0
+      },
+      {
+        "crs": "LBG",
+        "std": "23:33",
+        "destination": "Dartford",
+        "dayType": "wd",
+        "n": 4.7,
+        "p50Late": 0,
+        "p90Late": 107,
+        "cancelPct": 0,
         "unknownPct": 0
       }
     ]
