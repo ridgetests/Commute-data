@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T21:00:08.463Z",
+  "generatedAt": "2026-09-21T23:27:54.168Z",
   "rail": {
     "servicesTracked": 38712,
     "modelled": 17250,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-21T20:59:03.847Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 149
     },
     "tfl": {
       "tz": "UTC",
@@ -961,20 +961,20 @@
             0,
             0,
             0,
-            0,
-            0,
-            0
+            54,
+            216,
+            90
           ],
-          "covered": 4
+          "covered": 5
         }
       ],
-      "lastRecord": "2026-09-21T17:53:46.896Z",
-      "minutesSinceLast": 186
+      "lastRecord": "2026-09-21T23:22:48.011Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 53174,
-    "usable": 17824,
+    "cells": 53290,
+    "usable": 17872,
     "ready": true,
     "examples": [
       {
@@ -997,7 +997,7 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-22",
-        "n": 117,
+        "n": 118,
         "p50": 233,
         "p90": 563
       },
@@ -1005,15 +1005,15 @@
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-23",
-        "n": 119,
-        "p50": 263,
-        "p90": 608
+        "n": 130,
+        "p50": 248,
+        "p90": 638
       },
       {
         "line": "northern",
         "station": "940GZZLUGDG",
         "band": "wd-00",
-        "n": 62,
+        "n": 66,
         "p50": 338,
         "p90": 728
       },
@@ -1030,35 +1030,35 @@
   "coverage": {
     "days": 72,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-21T17:52:36.521Z",
-    "events": 11915,
-    "incidents": 1226,
-    "unplanned": 1178,
+    "lastEvent": "2026-09-21T23:00:43.105Z",
+    "events": 11936,
+    "incidents": 1228,
+    "unplanned": 1180,
     "planned": 48,
-    "runObservations": 2098940,
-    "modelCells": 315237
+    "runObservations": 2110150,
+    "modelCells": 316319
   },
   "storage": {
-    "eventsBytes": 4658565,
+    "eventsBytes": 4662859,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 27181666,
-    "perDayBytes": 483329
+    "crowdingBytes": 27224861,
+    "perDayBytes": 483989
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 499,
+      "have": 501,
       "need": 20,
-      "perDay": 6.93,
+      "perDay": 6.96,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
       "medianMin": 173,
-      "p90Min": 695
+      "p90Min": 692
     },
     {
       "cause": "signal-failure",
@@ -1218,87 +1218,87 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 319952,
+      "n": 321922,
       "ready": true
     },
     {
       "line": "central",
-      "n": 229551,
+      "n": 230871,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 205199,
+      "n": 206601,
       "ready": true
     },
     {
       "line": "district",
-      "n": 203017,
+      "n": 204330,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 196050,
+      "n": 197049,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 169045,
+      "n": 169622,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 124353,
+      "n": 124956,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 105191,
+      "n": 105673,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 104260,
+      "n": 104610,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 100662,
+      "n": 101185,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 93641,
+      "n": 93925,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 92585,
+      "n": 93098,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 49542,
+      "n": 49790,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 44062,
+      "n": 44404,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 36697,
+      "n": 36881,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 22549,
+      "n": 22636,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1566,
+      "n": 1579,
       "ready": false
     },
     {
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 6,
-      "unplanned": 6,
-      "minorMin": 580,
+      "incidents": 8,
+      "unplanned": 8,
+      "minorMin": 1257,
       "severeMin": 279,
       "suspendedMin": 85,
-      "worstLine": "Metropolitan"
+      "worstLine": "Hammersmith & City"
     },
     "week": {
-      "incidents": 87,
-      "unplanned": 81,
-      "minorMin": 12683,
+      "incidents": 85,
+      "unplanned": 79,
+      "minorMin": 12937,
       "severeMin": 5901,
       "suspendedMin": 627,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1226,
-      "unplanned": 1178,
-      "minorMin": 190237,
+      "incidents": 1228,
+      "unplanned": 1180,
+      "minorMin": 190914,
       "severeMin": 94019,
       "suspendedMin": 25937,
       "worstLine": "Central"
@@ -1389,11 +1389,11 @@
     {
       "line": "Hammersmith & City",
       "lineId": "hammersmith-city",
-      "incidents": 93,
-      "minorMin": 13548,
+      "incidents": 94,
+      "minorMin": 13950,
       "severeMin": 6692,
       "suspendedMin": 716,
-      "medianMin": 149
+      "medianMin": 150
     },
     {
       "line": "Circle",
@@ -1425,11 +1425,11 @@
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 77,
-      "minorMin": 8463,
+      "incidents": 78,
+      "minorMin": 8738,
       "severeMin": 6924,
       "suspendedMin": 409,
-      "medianMin": 118
+      "medianMin": 121
     },
     {
       "line": "District",
@@ -1514,6 +1514,81 @@
     }
   ],
   "recent": [
+    {
+      "line": "hammersmith-city",
+      "lineName": "Hammersmith & City",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-21T16:18:32.823Z",
+      "end": "2026-09-21T23:00:43.105Z",
+      "minutes": 402,
+      "minorMin": 402,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Hammersmith and City Line: Minor delays due to train cancellations.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-21T16:18:32.823Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-21T21:47:40.672Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-21T23:00:43.105Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking → Hammersmith (H&C Line)",
+        "Hammersmith (H&C Line) → Barking"
+      ]
+    },
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-21T17:12:35.014Z",
+      "end": "2026-09-21T21:47:40.672Z",
+      "minutes": 275,
+      "minorMin": 275,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: Minor delays while we fix a faulty train at Alperton.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-21T17:12:35.014Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-21T21:47:40.672Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
     {
       "line": "metropolitan",
       "lineName": "Metropolitan",
@@ -2412,80 +2487,6 @@
       "segments": [
         "Barking → Hammersmith (H&C Line)",
         "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-19T13:44:29.216Z",
-      "end": "2026-09-19T20:12:06.931Z",
-      "minutes": 388,
-      "minorMin": 388,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Metropolitan Line: Minor delays between Moor Park and Watford due to train cancellations. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-19T13:44:29.216Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-19T17:02:29.738Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-19T20:12:06.931Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Aldgate → Watford",
-        "Watford → Aldgate"
-      ]
-    },
-    {
-      "line": "mildmay",
-      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
-      "cause": "customer-incident",
-      "planned": false,
-      "start": "2026-09-19T10:12:22.435Z",
-      "end": "2026-09-19T13:44:29.216Z",
-      "minutes": 212,
-      "minorMin": 212,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Mildmay Line: Minor delays between Willesden Junction and Clapham Junction due to an earlier customer incident at Kensal Rise. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-19T10:12:22.435Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-19T13:44:29.216Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Clapham Junction → Stratford (London)",
-        "Stratford (London) → Clapham Junction"
       ]
     }
   ],
