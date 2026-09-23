@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T02:02:53.080Z",
+  "generatedAt": "2026-09-23T09:09:55.910Z",
   "rail": {
     "servicesTracked": 38452,
     "modelled": 16719,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-09-23T02:01:48.983Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 428
     },
     "tfl": {
       "tz": "UTC",
@@ -947,9 +947,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            126,
+            216,
+            18,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 2
         }
       ],
-      "lastRecord": "2026-09-22T22:46:57.434Z",
-      "minutesSinceLast": 196
+      "lastRecord": "2026-09-23T09:04:50.239Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 52638,
-    "usable": 17454,
+    "cells": 52882,
+    "usable": 17494,
     "ready": true,
     "examples": [
       {
@@ -1030,28 +1030,28 @@
   "coverage": {
     "days": 74,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-09-23T00:17:20.315Z",
-    "events": 12097,
-    "incidents": 1240,
-    "unplanned": 1191,
+    "lastEvent": "2026-09-23T09:07:44.324Z",
+    "events": 12129,
+    "incidents": 1243,
+    "unplanned": 1194,
     "planned": 49,
-    "runObservations": 2047768,
-    "modelCells": 310126
+    "runObservations": 2063472,
+    "modelCells": 312252
   },
   "storage": {
-    "eventsBytes": 4720902,
+    "eventsBytes": 4735944,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 27388067,
-    "perDayBytes": 473898
+    "crowdingBytes": 27433994,
+    "perDayBytes": 474722
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 507,
+      "have": 508,
       "need": 20,
-      "perDay": 6.85,
+      "perDay": 6.86,
       "ready": true,
       "etaDays": [
         0,
@@ -1063,15 +1063,15 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 238,
+      "have": 239,
       "need": 20,
-      "perDay": 3.22,
+      "perDay": 3.23,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 128,
+      "medianMin": 124,
       "p90Min": 677
     },
     {
@@ -1119,15 +1119,15 @@
     {
       "cause": "customer-incident",
       "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 37,
+      "have": 38,
       "need": 20,
-      "perDay": 0.5,
+      "perDay": 0.51,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 83,
+      "medianMin": 81,
       "p90Min": 292
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 312319,
+      "n": 314553,
       "ready": true
     },
     {
       "line": "central",
-      "n": 222548,
+      "n": 224411,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 201675,
+      "n": 203562,
       "ready": true
     },
     {
       "line": "district",
-      "n": 196906,
+      "n": 198411,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 191744,
+      "n": 193265,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 165083,
+      "n": 166283,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 121647,
+      "n": 122387,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 102911,
+      "n": 103730,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 101226,
+      "n": 102122,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 98229,
+      "n": 98827,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 91526,
+      "n": 92206,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 89947,
+      "n": 90686,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 48449,
+      "n": 48778,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 43123,
+      "n": 43446,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 35898,
+      "n": 36113,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 22046,
+      "n": 22179,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1504,
+      "n": 1522,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 985,
+      "n": 989,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "incidents": 3,
+      "unplanned": 3,
+      "minorMin": 178,
+      "severeMin": 26,
+      "suspendedMin": 4,
+      "worstLine": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)"
     },
     "week": {
-      "incidents": 86,
-      "unplanned": 79,
-      "minorMin": 13154,
-      "severeMin": 5292,
-      "suspendedMin": 475,
+      "incidents": 83,
+      "unplanned": 77,
+      "minorMin": 12214,
+      "severeMin": 4945,
+      "suspendedMin": 479,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1240,
-      "unplanned": 1191,
-      "minorMin": 192867,
-      "severeMin": 94334,
-      "suspendedMin": 26081,
+      "incidents": 1243,
+      "unplanned": 1194,
+      "minorMin": 193045,
+      "severeMin": 94360,
+      "suspendedMin": 26085,
       "worstLine": "Central"
     }
   },
@@ -1344,8 +1344,8 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 128,
-      "minorMin": 40716,
+      "incidents": 129,
+      "minorMin": 40811,
       "severeMin": 8652,
       "suspendedMin": 229,
       "medianMin": 269
@@ -1416,11 +1416,11 @@
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "lineId": "windrush",
-      "incidents": 46,
-      "minorMin": 6641,
-      "severeMin": 3762,
-      "suspendedMin": 3701,
-      "medianMin": 171
+      "incidents": 47,
+      "minorMin": 6708,
+      "severeMin": 3788,
+      "suspendedMin": 3705,
+      "medianMin": 158
     },
     {
       "line": "Piccadilly",
@@ -1443,11 +1443,11 @@
     {
       "line": "Bakerloo",
       "lineId": "bakerloo",
-      "incidents": 58,
-      "minorMin": 8634,
+      "incidents": 59,
+      "minorMin": 8650,
       "severeMin": 4822,
       "suspendedMin": 1187,
-      "medianMin": 166
+      "medianMin": 161
     },
     {
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
@@ -1514,6 +1514,125 @@
     }
   ],
   "recent": [
+    {
+      "line": "windrush",
+      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-09-23T07:29:39.798Z",
+      "end": "2026-09-23T09:06:44.473Z",
+      "minutes": 97,
+      "minorMin": 67,
+      "severeMin": 26,
+      "suspendedMin": 4,
+      "worstSev": 3,
+      "peakAfterMin": 89,
+      "reason": "Windrush Line: Minor delays between Highbury & Islington and Crystal Palace/West Croydon while we fix a signal failure at Norwood Junction. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-23T07:29:39.798Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-23T08:36:43.418Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-23T08:58:44.634Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-09-23T09:02:43.395Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-09-23T09:06:44.473Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "West Croydon → Highbury & Islington",
+        "Highbury & Islington → West Croydon",
+        "Clapham Junction → Highbury & Islington"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-09-23T07:29:39.798Z",
+      "end": "2026-09-23T09:04:42.951Z",
+      "minutes": 95,
+      "minorMin": 95,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainault via Newbury Park due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-23T07:29:39.798Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-23T09:04:42.951Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Hainault → West Ruislip",
+        "West Ruislip → Hainault",
+        "Hainault → Ealing Broadway"
+      ]
+    },
+    {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-09-23T07:29:39.798Z",
+      "end": "2026-09-23T07:45:40.034Z",
+      "minutes": 16,
+      "minorMin": 16,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Minor delays between Queen's Park and Elephant & Castle due to an earlier customer incident at Queen's Park. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-09-23T07:29:39.798Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-09-23T07:45:40.034Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
     {
       "line": "central",
       "lineName": "Central",
@@ -2388,122 +2507,6 @@
       "segments": [
         "Aldgate → Chesham",
         "Chesham → Aldgate"
-      ]
-    },
-    {
-      "line": "hammersmith-city",
-      "lineName": "Hammersmith & City",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-20T18:49:37.838Z",
-      "end": "2026-09-20T23:55:41.153Z",
-      "minutes": 306,
-      "minorMin": 306,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Hammersmith and City Line: Minor delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-20T18:49:37.838Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-20T20:28:49.337Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-20T23:55:41.153Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-20T20:48:49.900Z",
-      "end": "2026-09-20T23:55:41.153Z",
-      "minutes": 187,
-      "minorMin": 187,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Circle Line: Minor delays Anti-clockwise only due to train cancellations. GOOD service on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-20T20:48:49.900Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-20T23:55:41.153Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)"
-      ]
-    },
-    {
-      "line": "bakerloo",
-      "lineName": "Bakerloo",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-20T17:23:35.287Z",
-      "end": "2026-09-20T23:55:41.153Z",
-      "minutes": 392,
-      "minorMin": 375,
-      "severeMin": 17,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Bakerloo Line: Severe delays while we fix a track fault at Oxford Circus. Tickets will be accepted on London Buses, Lioness line and Thameslink via reasonable routes. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-20T17:23:35.287Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-20T17:40:36.430Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-20T20:28:49.337Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-20T23:55:41.153Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Harrow & Wealdstone → Elephant & Castle",
-        "Elephant & Castle → Harrow & Wealdstone"
       ]
     }
   ],
