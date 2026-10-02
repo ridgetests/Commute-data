@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T01:31:43.825Z",
+  "generatedAt": "2026-10-02T06:17:02.853Z",
   "rail": {
     "servicesTracked": 38470,
     "modelled": 15905,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-02T01:30:40.557Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 286
     },
     "tfl": {
       "tz": "UTC",
@@ -944,9 +944,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            36,
+            216,
+            54,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 1
         }
       ],
-      "lastRecord": "2026-10-01T20:55:01.679Z",
-      "minutesSinceLast": 277
+      "lastRecord": "2026-10-02T06:12:01.867Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 50329,
-    "usable": 16827,
+    "cells": 50422,
+    "usable": 16876,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 83,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-02T00:31:03.213Z",
-    "events": 13133,
+    "lastEvent": "2026-10-02T06:10:53.660Z",
+    "events": 13165,
     "incidents": 1340,
     "unplanned": 1286,
     "planned": 54,
-    "runObservations": 1897258,
-    "modelCells": 289387
+    "runObservations": 1907661,
+    "modelCells": 291176
   },
   "storage": {
-    "eventsBytes": 5088273,
+    "eventsBytes": 5099218,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 29074283,
-    "perDayBytes": 447253
+    "crowdingBytes": 29112502,
+    "perDayBytes": 447846
   },
   "readiness": [
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 288747,
+      "n": 290130,
       "ready": true
     },
     {
       "line": "central",
-      "n": 198984,
+      "n": 200039,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 186070,
+      "n": 187295,
       "ready": true
     },
     {
       "line": "district",
-      "n": 180721,
+      "n": 181842,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 179505,
+      "n": 180369,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 154211,
+      "n": 155080,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 115446,
+      "n": 116017,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 98292,
+      "n": 98989,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 94406,
+      "n": 94925,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 89032,
+      "n": 89489,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 85964,
+      "n": 86366,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 83405,
+      "n": 83866,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 44472,
+      "n": 44717,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 41102,
+      "n": 41343,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 34094,
+      "n": 34278,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 20692,
+      "n": 20790,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1220,
+      "n": 1230,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 894,
+      "n": 895,
       "ready": false
     }
   ],
@@ -1324,11 +1324,11 @@
       "worstLine": null
     },
     "week": {
-      "incidents": 61,
-      "unplanned": 58,
-      "minorMin": 12758,
-      "severeMin": 4560,
-      "suspendedMin": 998,
+      "incidents": 63,
+      "unplanned": 60,
+      "minorMin": 13186,
+      "severeMin": 5433,
+      "suspendedMin": 1086,
       "worstLine": "Victoria"
     },
     "all": {
@@ -2479,17 +2479,17 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-01T20:22:28.300Z",
+    "generatedAt": "2026-10-02T00:49:54.786Z",
     "days": 70,
-    "servicesSeen": 434160,
-    "cellsReady": 15445,
+    "servicesSeen": 435468,
+    "cellsReady": 14887,
     "worst": [
       {
         "crs": "STP",
         "std": "00:24",
         "destination": "Three Bridges",
         "dayType": "we",
-        "n": 6.3,
+        "n": 6.1,
         "p50Late": 0,
         "p90Late": 139,
         "cancelPct": 5,
@@ -2500,7 +2500,7 @@
         "std": "00:09",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 4.1,
+        "n": 4,
         "p50Late": 13,
         "p90Late": 130,
         "cancelPct": 5,
@@ -2511,7 +2511,7 @@
         "std": "14:08",
         "destination": "London Victoria",
         "dayType": "we",
-        "n": 3.4,
+        "n": 3.3,
         "p50Late": 0,
         "p90Late": 119,
         "cancelPct": 0,
@@ -2522,7 +2522,7 @@
         "std": "08:01",
         "destination": "Cambridge",
         "dayType": "wd",
-        "n": 6.5,
+        "n": 6.2,
         "p50Late": 4,
         "p90Late": 118,
         "cancelPct": 9,
@@ -2533,7 +2533,7 @@
         "std": "00:25",
         "destination": "Sutton (London)",
         "dayType": "wd",
-        "n": 3.6,
+        "n": 3.5,
         "p50Late": 2,
         "p90Late": 115,
         "cancelPct": 0,
@@ -2544,7 +2544,7 @@
         "std": "00:01",
         "destination": "London Charing Cross",
         "dayType": "wd",
-        "n": 3.4,
+        "n": 3.3,
         "p50Late": 3,
         "p90Late": 113,
         "cancelPct": 0,
@@ -2555,7 +2555,7 @@
         "std": "23:49",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 10.6,
+        "n": 10.2,
         "p50Late": 0,
         "p90Late": 108,
         "cancelPct": 9,
@@ -2566,7 +2566,7 @@
         "std": "23:58",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 8.4,
+        "n": 8.1,
         "p50Late": 0,
         "p90Late": 108,
         "cancelPct": 4,
@@ -2577,7 +2577,7 @@
         "std": "23:40",
         "destination": "Sevenoaks",
         "dayType": "wd",
-        "n": 3.2,
+        "n": 3.1,
         "p50Late": 0,
         "p90Late": 106,
         "cancelPct": 0,
@@ -2588,20 +2588,9 @@
         "std": "08:00",
         "destination": "London Victoria",
         "dayType": "wd",
-        "n": 6.7,
+        "n": 6.5,
         "p50Late": 4,
         "p90Late": 106,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "LBG",
-        "std": "23:57",
-        "destination": "London Charing Cross",
-        "dayType": "wd",
-        "n": 3.1,
-        "p50Late": 0,
-        "p90Late": 102,
         "cancelPct": 0,
         "unknownPct": 0
       },
@@ -2610,10 +2599,21 @@
         "std": "08:24",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 7.3,
+        "n": 7,
         "p50Late": 5,
         "p90Late": 101,
         "cancelPct": 11,
+        "unknownPct": 0
+      },
+      {
+        "crs": "STP",
+        "std": "22:31",
+        "destination": "Cambridge",
+        "dayType": "wd",
+        "n": 13.3,
+        "p50Late": 5,
+        "p90Late": 97,
+        "cancelPct": 19,
         "unknownPct": 0
       }
     ]
