@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T13:14:01.653Z",
+  "generatedAt": "2026-10-03T17:34:12.472Z",
   "rail": {
     "servicesTracked": 38407,
     "modelled": 16007,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-03T13:12:59.368Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 261
     },
     "tfl": {
       "tz": "UTC",
@@ -955,9 +955,9 @@
             198,
             0,
             0,
-            0,
-            0,
-            0,
+            36,
+            216,
+            108,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 2
+          "covered": 5
         }
       ],
-      "lastRecord": "2026-10-03T05:54:38.441Z",
-      "minutesSinceLast": 439
+      "lastRecord": "2026-10-03T17:29:08.549Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 50226,
-    "usable": 16955,
+    "cells": 50366,
+    "usable": 17153,
     "ready": true,
     "examples": [
       {
@@ -1030,28 +1030,28 @@
   "coverage": {
     "days": 84,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-03T12:07:02.652Z",
-    "events": 13294,
-    "incidents": 1355,
-    "unplanned": 1301,
+    "lastEvent": "2026-10-03T17:22:01.005Z",
+    "events": 13323,
+    "incidents": 1358,
+    "unplanned": 1304,
     "planned": 54,
-    "runObservations": 1898905,
-    "modelCells": 290731
+    "runObservations": 1910868,
+    "modelCells": 293828
   },
   "storage": {
-    "eventsBytes": 5135883,
+    "eventsBytes": 5145389,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 29348039,
-    "perDayBytes": 445755
+    "crowdingBytes": 29407476,
+    "perDayBytes": 446576
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 558,
+      "have": 559,
       "need": 20,
-      "perDay": 6.64,
+      "perDay": 6.65,
       "ready": true,
       "etaDays": [
         0,
@@ -1063,9 +1063,9 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 259,
+      "have": 260,
       "need": 20,
-      "perDay": 3.08,
+      "perDay": 3.1,
       "ready": true,
       "etaDays": [
         0,
@@ -1105,15 +1105,15 @@
     {
       "cause": "trespass",
       "feature": "Trespass — “is it worth waiting?”",
-      "have": 47,
+      "have": 48,
       "need": 20,
-      "perDay": 0.56,
+      "perDay": 0.57,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 77,
+      "medianMin": 76,
       "p90Min": 358
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 288823,
+      "n": 290704,
       "ready": true
     },
     {
       "line": "central",
-      "n": 198778,
+      "n": 200270,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 186814,
+      "n": 188504,
       "ready": true
     },
     {
       "line": "district",
-      "n": 181840,
+      "n": 183215,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 177866,
+      "n": 178191,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 154680,
+      "n": 155728,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 115766,
+      "n": 116416,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 98753,
+      "n": 99330,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 94850,
+      "n": 95473,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 87713,
+      "n": 87973,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 86354,
+      "n": 86839,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 83354,
+      "n": 84016,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 44597,
+      "n": 44842,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 41690,
+      "n": 41997,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 34168,
+      "n": 34375,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 20751,
+      "n": 20881,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1216,
+      "n": 1218,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 892,
+      "n": 896,
       "ready": false
     }
   ],
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 5,
-      "unplanned": 5,
-      "minorMin": 549,
+      "incidents": 8,
+      "unplanned": 8,
+      "minorMin": 878,
       "severeMin": 389,
       "suspendedMin": 0,
-      "worstLine": "District"
+      "worstLine": "Metropolitan"
     },
     "week": {
-      "incidents": 60,
-      "unplanned": 57,
-      "minorMin": 11382,
-      "severeMin": 6038,
+      "incidents": 66,
+      "unplanned": 63,
+      "minorMin": 12047,
+      "severeMin": 6172,
       "suspendedMin": 1481,
       "worstLine": "Victoria"
     },
     "all": {
-      "incidents": 1355,
-      "unplanned": 1301,
-      "minorMin": 210926,
+      "incidents": 1358,
+      "unplanned": 1304,
+      "minorMin": 211255,
       "severeMin": 103428,
       "suspendedMin": 27933,
       "worstLine": "Central"
@@ -1344,20 +1344,20 @@
     {
       "line": "Central",
       "lineId": "central",
-      "incidents": 144,
-      "minorMin": 44159,
+      "incidents": 145,
+      "minorMin": 44169,
       "severeMin": 8988,
       "suspendedMin": 242,
-      "medianMin": 267
+      "medianMin": 265
     },
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 169,
-      "minorMin": 24833,
+      "incidents": 170,
+      "minorMin": 25147,
       "severeMin": 11662,
       "suspendedMin": 2259,
-      "medianMin": 90
+      "medianMin": 91
     },
     {
       "line": "Jubilee",
@@ -1488,11 +1488,11 @@
     {
       "line": "DLR",
       "lineId": "dlr",
-      "incidents": 32,
-      "minorMin": 2451,
+      "incidents": 33,
+      "minorMin": 2456,
       "severeMin": 409,
       "suspendedMin": 403,
-      "medianMin": 53
+      "medianMin": 51
     },
     {
       "line": "Waterloo & City",
@@ -1514,6 +1514,117 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-03T12:00:02.462Z",
+      "end": "2026-10-03T17:14:01.261Z",
+      "minutes": 314,
+      "minorMin": 314,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-03T12:00:02.462Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-03T15:53:57.943Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-03T17:14:01.261Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Aldgate → Uxbridge",
+        "Uxbridge → Aldgate"
+      ]
+    },
+    {
+      "line": "central",
+      "lineName": "Central",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-10-03T15:53:57.943Z",
+      "end": "2026-10-03T16:03:58.184Z",
+      "minutes": 10,
+      "minorMin": 10,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Central Line: Minor delays between Loughton and Epping while we fix a signal failure at Loughton. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-03T15:53:57.943Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-03T16:03:58.184Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Epping → West Ruislip",
+        "West Ruislip → Epping",
+        "Epping → Ealing Broadway"
+      ]
+    },
+    {
+      "line": "dlr",
+      "lineName": "DLR",
+      "cause": "trespass",
+      "planned": false,
+      "start": "2026-10-03T15:53:57.943Z",
+      "end": "2026-10-03T15:58:57.898Z",
+      "minutes": 5,
+      "minorMin": 5,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Docklands Light Railway: Minor delays between Poplar and Beckton / Woolwich Arsenal while we deal with trespassers on the track at Canning Town. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-03T15:53:57.943Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-03T15:58:57.898Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Beckton DLR Station → Tower Gateway DLR Station",
+        "Tower Gateway DLR Station → Beckton DLR Station",
+        "Woolwich Arsenal DLR Station → Bank DLR Station"
+      ]
+    },
     {
       "line": "northern",
       "lineName": "Northern",
@@ -2384,128 +2495,13 @@
         "Morden → High Barnet",
         "Edgware → Morden"
       ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-01T06:02:36.453Z",
-      "end": "2026-10-01T12:40:25.042Z",
-      "minutes": 398,
-      "minorMin": 398,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays due to train cancellations. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-01T06:02:36.453Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-01T12:40:25.042Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → West Ruislip",
-        "West Ruislip → Epping",
-        "Hainault → West Ruislip"
-      ]
-    },
-    {
-      "line": "victoria",
-      "lineName": "Victoria",
-      "cause": "other",
-      "planned": false,
-      "start": "2026-09-30T05:55:18.927Z",
-      "end": "2026-09-30T23:32:50.963Z",
-      "minutes": 1058,
-      "minorMin": 371,
-      "severeMin": 686,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 371,
-      "reason": "Victoria Line: Minor delays due to infrastructure damage at Brixton. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-30T05:55:18.927Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-30T12:06:33.190Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-30T18:52:33.834Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-09-30T23:32:50.963Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Walthamstow Central → Brixton",
-        "Brixton → Walthamstow Central"
-      ]
-    },
-    {
-      "line": "central",
-      "lineName": "Central",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-09-30T18:52:33.834Z",
-      "end": "2026-09-30T23:32:50.963Z",
-      "minutes": 280,
-      "minorMin": 280,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Central Line: Minor delays between North Acton and West Ruislip / Ealing Broadway and between Leytonstone and Epping / Hainault due to train cancellations. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-09-30T18:52:33.834Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-09-30T23:32:50.963Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Epping → Ealing Broadway",
-        "Ealing Broadway → Epping",
-        "Hainault → Ealing Broadway"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-03T09:12:40.202Z",
+    "generatedAt": "2026-10-03T14:20:35.132Z",
     "days": 72,
-    "servicesSeen": 440886,
-    "cellsReady": 14818,
+    "servicesSeen": 442264,
+    "cellsReady": 15422,
     "worst": [
       {
         "crs": "STP",
@@ -2534,8 +2530,8 @@
         "std": "14:08",
         "destination": "London Victoria",
         "dayType": "we",
-        "n": 3.1,
-        "p50Late": 0,
+        "n": 5.1,
+        "p50Late": 2,
         "p90Late": 119,
         "cancelPct": 0,
         "unknownPct": 0
