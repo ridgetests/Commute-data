@@ -30,9 +30,18 @@ export const RAIL_BASE =
 
 // London termini + the big commuter interchanges. These are where people get
 // stranded, and where the platform question actually matters.
+//
+// EAD (Earlsfield) and PUT (Putney) are the exceptions, and deliberately so:
+// they are small intermediate stations, not interchanges, but they are the
+// ESCAPE HATCHES from the unreliable District line Wimbledon branch. Southfields
+// commuters walk/cycle to Earlsfield for SWR to Waterloo; East Putney maps to
+// Putney. Without these we can tell someone how bad the District is but not
+// whether the alternative they're switching to is any better — which is the one
+// decision the app exists to answer.
 export const DEFAULT_CRS = [
   'WAT', 'VIC', 'LST', 'PAD', 'KGX', 'EUS', 'STP', 'CHX', 'CST', 'FST',
   'LBG', 'MYB', 'BFR', 'CLJ', 'ECR', 'SRA', 'WIM', 'SUR', 'RMD', 'VXH',
+  'EAD', 'PUT',
 ];
 
 export interface Service {
