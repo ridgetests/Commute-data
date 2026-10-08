@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-08T01:43:06.723Z",
+  "generatedAt": "2026-10-08T07:33:30.582Z",
   "rail": {
-    "servicesTracked": 39018,
-    "modelled": 16038,
-    "confident": 13876,
+    "servicesTracked": 39043,
+    "modelled": 16083,
+    "confident": 13927,
     "darwinLeadMin": 9.7,
     "samples": [
       {
@@ -512,9 +512,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            333,
+            1666,
+            1230,
             0,
             0,
             0,
@@ -532,11 +532,11 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 2
         }
       ],
-      "lastRecord": "2026-10-07T19:03:07.808Z",
-      "minutesSinceLast": 400
+      "lastRecord": "2026-10-08T07:32:26.025Z",
+      "minutesSinceLast": 1
     },
     "tfl": {
       "tz": "UTC",
@@ -969,7 +969,7 @@
         }
       ],
       "lastRecord": "2026-10-08T00:23:07.228Z",
-      "minutesSinceLast": 80
+      "minutesSinceLast": 430
     }
   },
   "headway": {
@@ -1324,10 +1324,10 @@
       "worstLine": null
     },
     "week": {
-      "incidents": 66,
-      "unplanned": 65,
-      "minorMin": 12231,
-      "severeMin": 5390,
+      "incidents": 63,
+      "unplanned": 62,
+      "minorMin": 11014,
+      "severeMin": 4725,
       "suspendedMin": 1337,
       "worstLine": "Victoria"
     },
@@ -2466,17 +2466,17 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-07T20:39:34.570Z",
-    "days": 76,
-    "servicesSeen": 459269,
-    "cellsReady": 15813,
+    "generatedAt": "2026-10-08T01:02:33.972Z",
+    "days": 77,
+    "servicesSeen": 459485,
+    "cellsReady": 15404,
     "worst": [
       {
         "crs": "STP",
         "std": "00:24",
         "destination": "Three Bridges",
         "dayType": "we",
-        "n": 6,
+        "n": 5.8,
         "p50Late": 0,
         "p90Late": 139,
         "cancelPct": 19,
@@ -2487,7 +2487,7 @@
         "std": "00:09",
         "destination": "Worthing",
         "dayType": "wd",
-        "n": 3.4,
+        "n": 3.2,
         "p50Late": 13,
         "p90Late": 130,
         "cancelPct": 5,
@@ -2498,7 +2498,7 @@
         "std": "14:08",
         "destination": "London Victoria",
         "dayType": "we",
-        "n": 4.5,
+        "n": 4.4,
         "p50Late": 2,
         "p90Late": 119,
         "cancelPct": 0,
@@ -2509,7 +2509,7 @@
         "std": "23:49",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 8.7,
+        "n": 8.4,
         "p50Late": 0,
         "p90Late": 108,
         "cancelPct": 9,
@@ -2520,7 +2520,7 @@
         "std": "23:58",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 6.9,
+        "n": 6.7,
         "p50Late": 0,
         "p90Late": 108,
         "cancelPct": 4,
@@ -2531,7 +2531,7 @@
         "std": "08:24",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 6.9,
+        "n": 6.7,
         "p50Late": 5,
         "p90Late": 101,
         "cancelPct": 9,
@@ -2542,32 +2542,10 @@
         "std": "22:31",
         "destination": "Cambridge",
         "dayType": "wd",
-        "n": 12.2,
+        "n": 11.8,
         "p50Late": 5,
         "p90Late": 97,
         "cancelPct": 25,
-        "unknownPct": 0
-      },
-      {
-        "crs": "STP",
-        "std": "19:02",
-        "destination": "Rainham (Kent)",
-        "dayType": "we",
-        "n": 3.1,
-        "p50Late": 0,
-        "p90Late": 94,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "LBG",
-        "std": "00:05",
-        "destination": "London Charing Cross",
-        "dayType": "wd",
-        "n": 3.2,
-        "p50Late": 0,
-        "p90Late": 91,
-        "cancelPct": 0,
         "unknownPct": 0
       },
       {
@@ -2575,7 +2553,7 @@
         "std": "11:16",
         "destination": "London Victoria",
         "dayType": "wd",
-        "n": 3.5,
+        "n": 3.4,
         "p50Late": 2,
         "p90Late": 90,
         "cancelPct": 0,
@@ -2586,7 +2564,7 @@
         "std": "01:28",
         "destination": "Brighton",
         "dayType": "we",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 3,
         "p90Late": 90,
         "cancelPct": 0,
@@ -2597,10 +2575,32 @@
         "std": "22:25",
         "destination": "London Charing Cross",
         "dayType": "we",
-        "n": 3.1,
+        "n": 3,
         "p50Late": 13,
         "p90Late": 85,
         "cancelPct": 0,
+        "unknownPct": 0
+      },
+      {
+        "crs": "BFR",
+        "std": "09:07",
+        "destination": "Peterborough",
+        "dayType": "wd",
+        "n": 5.5,
+        "p50Late": 6,
+        "p90Late": 83,
+        "cancelPct": 7,
+        "unknownPct": 0
+      },
+      {
+        "crs": "LBG",
+        "std": "09:01",
+        "destination": "Peterborough",
+        "dayType": "wd",
+        "n": 5.5,
+        "p50Late": 6,
+        "p90Late": 83,
+        "cancelPct": 7,
         "unknownPct": 0
       }
     ]
