@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T01:08:54.442Z",
+  "generatedAt": "2026-10-11T06:19:59.046Z",
   "rail": {
     "servicesTracked": 38981,
     "modelled": 15963,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-11T01:03:50.694Z",
-      "minutesSinceLast": 5
+      "minutesSinceLast": 316
     },
     "tfl": {
       "tz": "UTC",
@@ -944,9 +944,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            90,
+            216,
+            54,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 1
         }
       ],
-      "lastRecord": "2026-10-10T19:51:37.854Z",
-      "minutesSinceLast": 317
+      "lastRecord": "2026-10-11T06:15:04.429Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 47724,
-    "usable": 16446,
+    "cells": 47764,
+    "usable": 16482,
     "ready": true,
     "examples": [
       {
@@ -1030,42 +1030,42 @@
   "coverage": {
     "days": 92,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-11T00:23:35.157Z",
-    "events": 14021,
-    "incidents": 1426,
-    "unplanned": 1370,
+    "lastEvent": "2026-10-11T06:00:51.676Z",
+    "events": 14041,
+    "incidents": 1428,
+    "unplanned": 1372,
     "planned": 56,
-    "runObservations": 1737943,
-    "modelCells": 259192
+    "runObservations": 1741402,
+    "modelCells": 259641
   },
   "storage": {
-    "eventsBytes": 5393480,
+    "eventsBytes": 5402755,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 30703563,
-    "perDayBytes": 424527
+    "crowdingBytes": 30774046,
+    "perDayBytes": 425394
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 595,
+      "have": 596,
       "need": 20,
-      "perDay": 6.47,
+      "perDay": 6.48,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 180,
+      "medianMin": 181,
       "p90Min": 714
     },
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 274,
+      "have": 275,
       "need": 20,
-      "perDay": 2.98,
+      "perDay": 2.99,
       "ready": true,
       "etaDays": [
         0,
@@ -1218,62 +1218,62 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 261201,
+      "n": 262001,
       "ready": true
     },
     {
       "line": "central",
-      "n": 178761,
+      "n": 179272,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 175047,
+      "n": 175905,
       "ready": true
     },
     {
       "line": "district",
-      "n": 162516,
+      "n": 162558,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 161003,
+      "n": 161417,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 144524,
+      "n": 144656,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 107659,
+      "n": 107818,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 92399,
+      "n": 92545,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 89181,
+      "n": 89341,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 80952,
+      "n": 80954,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 76693,
+      "n": 76847,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 75086,
+      "n": 75146,
       "ready": true
     },
     {
@@ -1283,12 +1283,12 @@
     },
     {
       "line": "circle",
-      "n": 37931,
+      "n": 37932,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 31934,
+      "n": 31953,
       "ready": true
     },
     {
@@ -1298,7 +1298,7 @@
     },
     {
       "line": "waterloo-city",
-      "n": 1003,
+      "n": 1004,
       "ready": false
     },
     {
@@ -1324,18 +1324,18 @@
       "worstLine": null
     },
     "week": {
-      "incidents": 57,
-      "unplanned": 55,
-      "minorMin": 12999,
-      "severeMin": 5313,
+      "incidents": 62,
+      "unplanned": 60,
+      "minorMin": 14431,
+      "severeMin": 6298,
       "suspendedMin": 130,
-      "worstLine": "Central"
+      "worstLine": "Victoria"
     },
     "all": {
-      "incidents": 1426,
-      "unplanned": 1370,
-      "minorMin": 227952,
-      "severeMin": 109616,
+      "incidents": 1428,
+      "unplanned": 1372,
+      "minorMin": 228575,
+      "severeMin": 109900,
       "suspendedMin": 28820,
       "worstLine": "Central"
     }
@@ -1416,11 +1416,11 @@
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
       "lineId": "windrush",
-      "incidents": 52,
-      "minorMin": 6783,
+      "incidents": 53,
+      "minorMin": 7406,
       "severeMin": 4098,
       "suspendedMin": 4927,
-      "medianMin": 171
+      "medianMin": 183
     },
     {
       "line": "District",
@@ -1434,11 +1434,11 @@
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 86,
+      "incidents": 87,
       "minorMin": 8917,
-      "severeMin": 7976,
+      "severeMin": 8260,
       "suspendedMin": 483,
-      "medianMin": 112
+      "medianMin": 118
     },
     {
       "line": "Bakerloo",
@@ -1514,6 +1514,90 @@
     }
   ],
   "recent": [
+    {
+      "line": "windrush",
+      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-10T18:16:24.936Z",
+      "end": "2026-10-11T04:39:18.101Z",
+      "minutes": 623,
+      "minorMin": 623,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 7,
+      "peakAfterMin": 303,
+      "reason": "Windrush Line: Minor delays due to train cancellations. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-10T18:16:24.936Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-10T23:19:32.672Z",
+          "sev": 7
+        },
+        {
+          "t": "2026-10-10T23:45:33.466Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-11T04:39:18.101Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "West Croydon → Highbury & Islington",
+        "Highbury & Islington → West Croydon",
+        "Clapham Junction → Highbury & Islington"
+      ]
+    },
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-10-10T23:55:34.387Z",
+      "end": "2026-10-11T04:39:18.101Z",
+      "minutes": 284,
+      "minorMin": 0,
+      "severeMin": 284,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: Severe delays between King's Cross St. Pancras and Hammersmith Westbound only due to a signalling problem at King's Cross St. Pancras. GOOD service on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-10T23:55:34.387Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-11T00:13:34.483Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-11T04:39:18.101Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Cockfosters → Heathrow Terminal 5",
+        "Cockfosters → Heathrow Terminal 4"
+      ]
+    },
     {
       "line": "bakerloo",
       "lineName": "Bakerloo",
@@ -2452,91 +2536,20 @@
         "Richmond → Upminster",
         "Edgware Road (Circle Line) → Richmond"
       ]
-    },
-    {
-      "line": "elizabeth",
-      "lineName": "Elizabeth line",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-08T17:15:33.181Z",
-      "end": "2026-10-08T23:03:24.780Z",
-      "minutes": 348,
-      "minorMin": 348,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Minor delays between Shenfield and Paddington due to an earlier faulty train at Stratford. GOOD SERVICE on the rest of the line  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-08T17:15:33.181Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-08T23:03:24.780Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Heathrow Terminal 4 → Shenfield",
-        "Heathrow Terminal 5 → Shenfield",
-        "Shenfield → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "line": "victoria",
-      "lineName": "Victoria",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-08T08:32:44.002Z",
-      "end": "2026-10-08T17:15:33.181Z",
-      "minutes": 523,
-      "minorMin": 523,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Victoria Line: Minor delays due to train cancellations.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-08T08:32:44.002Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-08T17:15:33.181Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Walthamstow Central → Brixton",
-        "Brixton → Walthamstow Central"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-10T19:18:55.670Z",
+    "generatedAt": "2026-10-11T00:16:03.921Z",
     "days": 79,
-    "servicesSeen": 470075,
-    "cellsReady": 15702,
+    "servicesSeen": 471368,
+    "cellsReady": 15293,
     "worst": [
       {
         "crs": "STP",
         "std": "00:24",
         "destination": "Three Bridges",
         "dayType": "we",
-        "n": 5.5,
+        "n": 5.3,
         "p50Late": 0,
         "p90Late": 139,
         "cancelPct": 19,
@@ -2544,21 +2557,10 @@
       },
       {
         "crs": "CLJ",
-        "std": "00:09",
-        "destination": "Worthing",
-        "dayType": "wd",
-        "n": 3,
-        "p50Late": 13,
-        "p90Late": 130,
-        "cancelPct": 5,
-        "unknownPct": 15
-      },
-      {
-        "crs": "CLJ",
         "std": "14:08",
         "destination": "London Victoria",
         "dayType": "we",
-        "n": 6.1,
+        "n": 5.9,
         "p50Late": 2,
         "p90Late": 119,
         "cancelPct": 0,
@@ -2569,7 +2571,7 @@
         "std": "23:49",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 7.9,
+        "n": 7.6,
         "p50Late": 0,
         "p90Late": 108,
         "cancelPct": 9,
@@ -2580,7 +2582,7 @@
         "std": "23:58",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 6.3,
+        "n": 6.1,
         "p50Late": 0,
         "p90Late": 108,
         "cancelPct": 4,
@@ -2591,7 +2593,7 @@
         "std": "22:31",
         "destination": "Cambridge",
         "dayType": "wd",
-        "n": 12,
+        "n": 11.6,
         "p50Late": 6,
         "p90Late": 97,
         "cancelPct": 23,
@@ -2602,7 +2604,7 @@
         "std": "01:28",
         "destination": "Brighton",
         "dayType": "we",
-        "n": 4.5,
+        "n": 4.4,
         "p50Late": 3,
         "p90Late": 90,
         "cancelPct": 0,
@@ -2613,7 +2615,7 @@
         "std": "09:07",
         "destination": "Peterborough",
         "dayType": "wd",
-        "n": 5.2,
+        "n": 5,
         "p50Late": 6,
         "p90Late": 83,
         "cancelPct": 7,
@@ -2624,7 +2626,7 @@
         "std": "09:01",
         "destination": "Peterborough",
         "dayType": "wd",
-        "n": 5.2,
+        "n": 5,
         "p50Late": 6,
         "p90Late": 83,
         "cancelPct": 7,
@@ -2635,21 +2637,10 @@
         "std": "09:16",
         "destination": "Peterborough",
         "dayType": "wd",
-        "n": 5.9,
+        "n": 5.7,
         "p50Late": 4,
         "p90Late": 83,
         "cancelPct": 6,
-        "unknownPct": 0
-      },
-      {
-        "crs": "SUR",
-        "std": "23:31",
-        "destination": "London Waterloo",
-        "dayType": "we",
-        "n": 3,
-        "p50Late": 0,
-        "p90Late": 79,
-        "cancelPct": 0,
         "unknownPct": 0
       },
       {
@@ -2657,10 +2648,32 @@
         "std": "09:21",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 5.8,
+        "n": 5.6,
         "p50Late": 3,
         "p90Late": 79,
         "cancelPct": 3,
+        "unknownPct": 0
+      },
+      {
+        "crs": "WIM",
+        "std": "22:43",
+        "destination": "London Waterloo",
+        "dayType": "we",
+        "n": 3.2,
+        "p50Late": 0,
+        "p90Late": 77,
+        "cancelPct": 6,
+        "unknownPct": 0
+      },
+      {
+        "crs": "ECR",
+        "std": "23:49",
+        "destination": "London Victoria",
+        "dayType": "wd",
+        "n": 4,
+        "p50Late": 0,
+        "p90Late": 77,
+        "cancelPct": 0,
         "unknownPct": 0
       }
     ]
