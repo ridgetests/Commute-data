@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T07:17:22.707Z",
+  "generatedAt": "2026-10-11T13:58:32.246Z",
   "rail": {
     "servicesTracked": 39229,
     "modelled": 15991,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-11T07:16:19.433Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 402
     },
     "tfl": {
       "tz": "UTC",
@@ -952,8 +952,8 @@
             0,
             0,
             0,
-            0,
-            0,
+            162,
+            198,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 1
+          "covered": 3
         }
       ],
-      "lastRecord": "2026-10-11T00:54:40.539Z",
-      "minutesSinceLast": 383
+      "lastRecord": "2026-10-11T13:53:34.461Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 47764,
-    "usable": 16482,
+    "cells": 47991,
+    "usable": 16567,
     "ready": true,
     "examples": [
       {
@@ -1030,34 +1030,34 @@
   "coverage": {
     "days": 92,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-11T06:00:51.676Z",
-    "events": 14041,
-    "incidents": 1428,
-    "unplanned": 1372,
+    "lastEvent": "2026-10-11T13:54:21.341Z",
+    "events": 14066,
+    "incidents": 1430,
+    "unplanned": 1374,
     "planned": 56,
-    "runObservations": 1741402,
-    "modelCells": 259641
+    "runObservations": 1753357,
+    "modelCells": 262420
   },
   "storage": {
-    "eventsBytes": 5402755,
+    "eventsBytes": 5414781,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 30774046,
-    "perDayBytes": 425394
+    "crowdingBytes": 30850665,
+    "perDayBytes": 426358
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 596,
+      "have": 598,
       "need": 20,
-      "perDay": 6.48,
+      "perDay": 6.5,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 181,
+      "medianMin": 180,
       "p90Min": 714
     },
     {
@@ -1218,67 +1218,67 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 262001,
+      "n": 264255,
       "ready": true
     },
     {
       "line": "central",
-      "n": 179272,
+      "n": 180681,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 175905,
-      "ready": true
-    },
-    {
-      "line": "district",
-      "n": 162558,
+      "n": 177270,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 161417,
+      "n": 162953,
+      "ready": true
+    },
+    {
+      "line": "district",
+      "n": 162718,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 144656,
+      "n": 145487,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 107818,
+      "n": 108566,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 92545,
+      "n": 93006,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 89341,
+      "n": 90125,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 80954,
+      "n": 81507,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 76847,
+      "n": 77434,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 75146,
+      "n": 75810,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 41830,
+      "n": 42090,
       "ready": true
     },
     {
@@ -1288,22 +1288,22 @@
     },
     {
       "line": "lioness",
-      "n": 31953,
+      "n": 32162,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 19417,
+      "n": 19542,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 1004,
+      "n": 1006,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 806,
+      "n": 813,
       "ready": false
     }
   ],
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
+      "incidents": 2,
+      "unplanned": 2,
+      "minorMin": 87,
       "severeMin": 0,
       "suspendedMin": 0,
-      "worstLine": null
+      "worstLine": "Metropolitan"
     },
     "week": {
-      "incidents": 60,
-      "unplanned": 58,
-      "minorMin": 13808,
-      "severeMin": 6014,
+      "incidents": 61,
+      "unplanned": 59,
+      "minorMin": 13441,
+      "severeMin": 6247,
       "suspendedMin": 130,
       "worstLine": "Victoria"
     },
     "all": {
-      "incidents": 1428,
-      "unplanned": 1372,
-      "minorMin": 228575,
+      "incidents": 1430,
+      "unplanned": 1374,
+      "minorMin": 228662,
       "severeMin": 109900,
       "suspendedMin": 28820,
       "worstLine": "Central"
@@ -1353,11 +1353,11 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 178,
-      "minorMin": 27357,
+      "incidents": 179,
+      "minorMin": 27406,
       "severeMin": 11713,
       "suspendedMin": 2259,
-      "medianMin": 92
+      "medianMin": 91
     },
     {
       "line": "Victoria",
@@ -1443,11 +1443,11 @@
     {
       "line": "Bakerloo",
       "lineId": "bakerloo",
-      "incidents": 69,
-      "minorMin": 10693,
+      "incidents": 70,
+      "minorMin": 10731,
       "severeMin": 5547,
       "suspendedMin": 1204,
-      "medianMin": 156
+      "medianMin": 142
     },
     {
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
@@ -1514,6 +1514,76 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-11T12:18:18.381Z",
+      "end": "2026-10-11T13:07:20.178Z",
+      "minutes": 49,
+      "minorMin": 49,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge and between Moor Park and Amersham due to train cancellations. The next southbound train from Amersham will be at 13:48. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-11T12:18:18.381Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-11T13:07:20.178Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
+    {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-11T12:18:18.381Z",
+      "end": "2026-10-11T12:56:20.736Z",
+      "minutes": 38,
+      "minorMin": 38,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Minor delays between Queen's Park and Elephant & Castle southbound only while we fix a faulty train at Warwick Avenue. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-11T12:18:18.381Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-11T12:56:20.736Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle"
+      ]
+    },
     {
       "line": "windrush",
       "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -2457,92 +2527,13 @@
         "Richmond (London) → Stratford (London)",
         "Stratford (London) → Richmond (London)"
       ]
-    },
-    {
-      "line": "bakerloo",
-      "lineName": "Bakerloo",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-08T17:15:33.181Z",
-      "end": "2026-10-09T00:16:17.634Z",
-      "minutes": 421,
-      "minorMin": 421,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Bakerloo Line: Minor delays due to train cancellations.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-08T17:15:33.181Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-08T23:03:24.780Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-09T00:16:17.634Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Harrow & Wealdstone → Elephant & Castle",
-        "Elephant & Castle → Harrow & Wealdstone"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "obstruction",
-      "planned": false,
-      "start": "2026-10-08T23:03:24.780Z",
-      "end": "2026-10-08T23:28:24.756Z",
-      "minutes": 25,
-      "minorMin": 15,
-      "severeMin": 0,
-      "suspendedMin": 10,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "District Line: No service between Turnham Green and Richmond while we remove an obstruction from the track at Kew Gardens. London Underground tickets will be accepted on London buses. GOOD service on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-08T23:03:24.780Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-08T23:13:24.499Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-08T23:28:24.756Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Upminster → Richmond",
-        "Richmond → Upminster",
-        "Edgware Road (Circle Line) → Richmond"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-11T00:16:03.921Z",
-    "days": 79,
-    "servicesSeen": 471368,
-    "cellsReady": 15293,
+    "generatedAt": "2026-10-11T10:04:01.971Z",
+    "days": 80,
+    "servicesSeen": 472089,
+    "cellsReady": 15346,
     "worst": [
       {
         "crs": "STP",
