@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T12:59:32.011Z",
+  "generatedAt": "2026-10-15T16:24:28.238Z",
   "rail": {
     "servicesTracked": 39631,
     "modelled": 15792,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-15T12:58:27.942Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 206
     },
     "tfl": {
       "tz": "UTC",
@@ -954,9 +954,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            72,
+            216,
+            72,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 2
+          "covered": 5
         }
       ],
-      "lastRecord": "2026-10-15T10:33:05.239Z",
-      "minutesSinceLast": 146
+      "lastRecord": "2026-10-15T16:19:28.509Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 46526,
-    "usable": 16058,
+    "cells": 46762,
+    "usable": 16121,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 96,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-15T10:34:57.700Z",
-    "events": 14482,
-    "incidents": 1470,
-    "unplanned": 1414,
+    "lastEvent": "2026-10-15T16:07:19.174Z",
+    "events": 14504,
+    "incidents": 1471,
+    "unplanned": 1415,
     "planned": 56,
-    "runObservations": 1699758,
-    "modelCells": 252838
+    "runObservations": 1714750,
+    "modelCells": 255587
   },
   "storage": {
-    "eventsBytes": 5567810,
+    "eventsBytes": 5573401,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 31436225,
-    "perDayBytes": 416287
+    "crowdingBytes": 31479996,
+    "perDayBytes": 416801
   },
   "readiness": [
     {
@@ -1063,15 +1063,15 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 279,
+      "have": 280,
       "need": 20,
-      "perDay": 2.91,
+      "perDay": 2.92,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 124,
+      "medianMin": 128,
       "p90Min": 647
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 255458,
+      "n": 257590,
       "ready": true
     },
     {
       "line": "central",
-      "n": 173463,
+      "n": 175202,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 172945,
+      "n": 174635,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 158429,
+      "n": 159799,
       "ready": true
     },
     {
       "line": "district",
-      "n": 156260,
+      "n": 157902,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 141780,
+      "n": 142903,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 105885,
+      "n": 106623,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 91417,
+      "n": 92130,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 87784,
+      "n": 88409,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 79325,
+      "n": 80016,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 74522,
+      "n": 75344,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 73185,
+      "n": 73864,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 41008,
+      "n": 41339,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 36426,
+      "n": 36762,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 31181,
+      "n": 31386,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 19001,
+      "n": 19142,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 914,
+      "n": 928,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 777,
+      "n": 778,
       "ready": false
     }
   ],
@@ -1316,25 +1316,25 @@
   },
   "windows": {
     "today": {
-      "incidents": 5,
-      "unplanned": 5,
-      "minorMin": 67,
+      "incidents": 6,
+      "unplanned": 6,
+      "minorMin": 316,
       "severeMin": 261,
       "suspendedMin": 276,
       "worstLine": "District"
     },
     "week": {
-      "incidents": 67,
-      "unplanned": 66,
-      "minorMin": 14884,
+      "incidents": 68,
+      "unplanned": 67,
+      "minorMin": 15133,
       "severeMin": 5586,
       "suspendedMin": 440,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1470,
-      "unplanned": 1414,
-      "minorMin": 235335,
+      "incidents": 1471,
+      "unplanned": 1415,
+      "minorMin": 235584,
       "severeMin": 112896,
       "suspendedMin": 29170,
       "worstLine": "Central"
@@ -1434,11 +1434,11 @@
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 89,
-      "minorMin": 9419,
+      "incidents": 90,
+      "minorMin": 9668,
       "severeMin": 8281,
       "suspendedMin": 483,
-      "medianMin": 118
+      "medianMin": 121
     },
     {
       "line": "Bakerloo",
@@ -1514,6 +1514,42 @@
     }
   ],
   "recent": [
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-10-15T10:34:57.700Z",
+      "end": "2026-10-15T14:44:16.557Z",
+      "minutes": 249,
+      "minorMin": 249,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: Minor delays between Cockfosters and Acton Town westbound only while we fix a signal failure at Finsbury Park. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-15T10:34:57.700Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-15T14:44:16.557Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Cockfosters → Heathrow Terminal 5",
+        "Cockfosters → Heathrow Terminal 4"
+      ]
+    },
     {
       "line": "victoria",
       "lineName": "Victoria",
@@ -2515,60 +2551,20 @@
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
       ]
-    },
-    {
-      "line": "elizabeth",
-      "lineName": "Elizabeth line",
-      "cause": "trespass",
-      "planned": false,
-      "start": "2026-10-12T22:46:55.636Z",
-      "end": "2026-10-13T00:17:15.474Z",
-      "minutes": 90,
-      "minorMin": 0,
-      "severeMin": 31,
-      "suspendedMin": 59,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "No service between Whitechapel and Shenfield while we deal with trespassers on the track at Romford. GOOD SERVICE on the rest of the line. Tickets are being accepted on London Buses, London Underground, C2C and Greater Anglia.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-12T22:46:55.636Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-12T23:45:57.939Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-13T00:17:15.474Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Heathrow Terminal 4 → Shenfield",
-        "Heathrow Terminal 5 → Shenfield",
-        "Shenfield → Heathrow Terminal 4"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-15T08:22:02.217Z",
+    "generatedAt": "2026-10-15T14:12:20.983Z",
     "days": 84,
-    "servicesSeen": 488455,
-    "cellsReady": 14634,
+    "servicesSeen": 489866,
+    "cellsReady": 14642,
     "worst": [
       {
         "crs": "RMD",
         "std": "12:25",
         "destination": "Upminster Underground",
         "dayType": "wd",
-        "n": 5.8,
+        "n": 6.8,
         "p50Late": 0,
         "p90Late": 191,
         "cancelPct": 0,
