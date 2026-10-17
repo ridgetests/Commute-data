@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T08:31:54.177Z",
+  "generatedAt": "2026-10-17T10:00:04.530Z",
   "rail": {
     "servicesTracked": 39410,
     "modelled": 15467,
@@ -535,8 +535,8 @@
           "covered": 3
         }
       ],
-      "lastRecord": "2026-10-17T08:30:49.729Z",
-      "minutesSinceLast": 1
+      "lastRecord": "2026-10-17T02:01:16.168Z",
+      "minutesSinceLast": 479
     },
     "tfl": {
       "tz": "UTC",
@@ -948,8 +948,8 @@
             18,
             0,
             0,
-            0,
-            0,
+            159,
+            201,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 2
         }
       ],
-      "lastRecord": "2026-10-17T05:02:47.564Z",
-      "minutesSinceLast": 209
+      "lastRecord": "2026-10-17T09:55:06.349Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 46599,
-    "usable": 15841,
+    "cells": 46837,
+    "usable": 15964,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 98,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-17T03:30:29.035Z",
-    "events": 14729,
+    "lastEvent": "2026-10-17T09:54:56.483Z",
+    "events": 14754,
     "incidents": 1498,
     "unplanned": 1440,
     "planned": 58,
-    "runObservations": 1685254,
-    "modelCells": 248954
+    "runObservations": 1697559,
+    "modelCells": 252438
   },
   "storage": {
-    "eventsBytes": 5651192,
+    "eventsBytes": 5660200,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 31859103,
-    "perDayBytes": 412957
+    "crowdingBytes": 31915135,
+    "perDayBytes": 413621
   },
   "readiness": [
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 252809,
+      "n": 254827,
       "ready": true
     },
     {
       "line": "central",
-      "n": 172321,
+      "n": 174031,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 172275,
+      "n": 172726,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 156203,
+      "n": 157505,
       "ready": true
     },
     {
       "line": "district",
-      "n": 155434,
+      "n": 156543,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 140561,
+      "n": 141457,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 105219,
+      "n": 105954,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 90827,
+      "n": 91473,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 87158,
+      "n": 87791,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 78570,
-      "ready": true
-    },
-    {
-      "line": "victoria",
-      "n": 72846,
+      "n": 79116,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 72681,
+      "n": 73410,
+      "ready": true
+    },
+    {
+      "line": "victoria",
+      "n": 73399,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 40703,
+      "n": 40961,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 36198,
+      "n": 36544,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 30961,
+      "n": 31176,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 18795,
+      "n": 18936,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 935,
+      "n": 944,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 756,
+      "n": 764,
       "ready": false
     }
   ],
@@ -2545,17 +2545,39 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-16T23:38:44.510Z",
-    "days": 85,
-    "servicesSeen": 498605,
-    "cellsReady": 14593,
+    "generatedAt": "2026-10-17T07:51:21.421Z",
+    "days": 86,
+    "servicesSeen": 498649,
+    "cellsReady": 14280,
     "worst": [
+      {
+        "crs": "ECR",
+        "std": "23:00",
+        "destination": "London Victoria",
+        "dayType": "wd",
+        "n": 9.3,
+        "p50Late": 0,
+        "p90Late": 204,
+        "cancelPct": 6,
+        "unknownPct": 0
+      },
+      {
+        "crs": "CLJ",
+        "std": "23:11",
+        "destination": "London Victoria",
+        "dayType": "wd",
+        "n": 8,
+        "p50Late": 3,
+        "p90Late": 204,
+        "cancelPct": 0,
+        "unknownPct": 0
+      },
       {
         "crs": "RMD",
         "std": "12:25",
         "destination": "Upminster Underground",
         "dayType": "wd",
-        "n": 6.6,
+        "n": 6.4,
         "p50Late": 0,
         "p90Late": 191,
         "cancelPct": 0,
@@ -2566,7 +2588,7 @@
         "std": "00:24",
         "destination": "Three Bridges",
         "dayType": "we",
-        "n": 4.5,
+        "n": 4.3,
         "p50Late": 0,
         "p90Late": 139,
         "cancelPct": 19,
@@ -2577,7 +2599,7 @@
         "std": "14:08",
         "destination": "London Victoria",
         "dayType": "we",
-        "n": 5,
+        "n": 4.8,
         "p50Late": 2,
         "p90Late": 119,
         "cancelPct": 0,
@@ -2588,7 +2610,7 @@
         "std": "22:50",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 11.4,
+        "n": 11,
         "p50Late": 2,
         "p90Late": 91,
         "cancelPct": 1,
@@ -2599,7 +2621,7 @@
         "std": "22:59",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 11.4,
+        "n": 11,
         "p50Late": 0,
         "p90Late": 90,
         "cancelPct": 1,
@@ -2610,7 +2632,7 @@
         "std": "23:05",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 11.1,
+        "n": 10.7,
         "p50Late": 0,
         "p90Late": 90,
         "cancelPct": 1,
@@ -2621,8 +2643,8 @@
         "std": "01:28",
         "destination": "Brighton",
         "dayType": "we",
-        "n": 3.7,
-        "p50Late": 3,
+        "n": 4.6,
+        "p50Late": 2,
         "p90Late": 90,
         "cancelPct": 0,
         "unknownPct": 0
@@ -2632,7 +2654,7 @@
         "std": "23:19",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 11.1,
+        "n": 10.8,
         "p50Late": 2,
         "p90Late": 89,
         "cancelPct": 1,
@@ -2643,7 +2665,7 @@
         "std": "23:49",
         "destination": "London Victoria",
         "dayType": "wd",
-        "n": 3.4,
+        "n": 3.3,
         "p50Late": 0,
         "p90Late": 77,
         "cancelPct": 0,
@@ -2654,32 +2676,10 @@
         "std": "20:51",
         "destination": "Stansted Airport",
         "dayType": "we",
-        "n": 4.8,
+        "n": 4.7,
         "p50Late": 0,
         "p90Late": 74,
         "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "SRA",
-        "std": "23:23",
-        "destination": "London Liverpool Street",
-        "dayType": "wd",
-        "n": 8.7,
-        "p50Late": 4,
-        "p90Late": 63,
-        "cancelPct": 1,
-        "unknownPct": 1
-      },
-      {
-        "crs": "LST",
-        "std": "21:06",
-        "destination": "Stansted Airport",
-        "dayType": "we",
-        "n": 4.3,
-        "p50Late": 0,
-        "p90Late": 61,
-        "cancelPct": 3,
         "unknownPct": 0
       }
     ]
