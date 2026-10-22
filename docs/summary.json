@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T13:21:23.108Z",
+  "generatedAt": "2026-10-22T16:36:00.035Z",
   "rail": {
     "servicesTracked": 39917,
     "modelled": 15609,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-22T13:20:18.629Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 196
     },
     "tfl": {
       "tz": "UTC",
@@ -954,9 +954,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            18,
+            216,
+            126,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 2
+          "covered": 4
         }
       ],
-      "lastRecord": "2026-10-22T10:10:40.126Z",
-      "minutesSinceLast": 191
+      "lastRecord": "2026-10-22T16:31:00.935Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 47416,
-    "usable": 15811,
+    "cells": 47604,
+    "usable": 15854,
     "ready": true,
     "examples": [
       {
@@ -1030,48 +1030,48 @@
   "coverage": {
     "days": 103,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-22T10:13:41.181Z",
-    "events": 15458,
-    "incidents": 1566,
-    "unplanned": 1508,
+    "lastEvent": "2026-10-22T16:31:48.308Z",
+    "events": 15488,
+    "incidents": 1571,
+    "unplanned": 1513,
     "planned": 58,
-    "runObservations": 1699253,
-    "modelCells": 263288
+    "runObservations": 1713825,
+    "modelCells": 265559
   },
   "storage": {
-    "eventsBytes": 5938772,
+    "eventsBytes": 5947625,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 33246367,
-    "perDayBytes": 409171
+    "crowdingBytes": 33289622,
+    "perDayBytes": 409677
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 666,
+      "have": 667,
       "need": 20,
-      "perDay": 6.47,
+      "perDay": 6.48,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 189,
+      "medianMin": 187,
       "p90Min": 714
     },
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 297,
+      "have": 300,
       "need": 20,
-      "perDay": 2.88,
+      "perDay": 2.91,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 133,
+      "medianMin": 128,
       "p90Min": 645
     },
     {
@@ -1119,15 +1119,15 @@
     {
       "cause": "customer-incident",
       "feature": "Customer taken ill — “is it worth waiting?”",
-      "have": 53,
+      "have": 54,
       "need": 20,
-      "perDay": 0.51,
+      "perDay": 0.52,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 72,
+      "medianMin": 73,
       "p90Min": 334
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 256812,
+      "n": 258987,
       "ready": true
     },
     {
       "line": "central",
-      "n": 175632,
+      "n": 177506,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 170382,
+      "n": 171376,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 160379,
+      "n": 161672,
       "ready": true
     },
     {
       "line": "district",
-      "n": 155186,
+      "n": 156823,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 140638,
+      "n": 141804,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 105376,
+      "n": 106095,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 90773,
+      "n": 91480,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 88484,
+      "n": 89199,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 78500,
+      "n": 79208,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 73883,
+      "n": 74547,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 72754,
+      "n": 73609,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 40810,
+      "n": 41149,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 37813,
+      "n": 38151,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 31137,
+      "n": 31354,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 18955,
+      "n": 19097,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 981,
+      "n": 1004,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 758,
+      "n": 764,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 5,
-      "unplanned": 5,
-      "minorMin": 605,
-      "severeMin": 40,
-      "suspendedMin": 0,
+      "incidents": 10,
+      "unplanned": 10,
+      "minorMin": 699,
+      "severeMin": 118,
+      "suspendedMin": 1,
       "worstLine": "Elizabeth line"
     },
     "week": {
-      "incidents": 93,
-      "unplanned": 91,
-      "minorMin": 14531,
-      "severeMin": 8444,
-      "suspendedMin": 1473,
+      "incidents": 96,
+      "unplanned": 94,
+      "minorMin": 14165,
+      "severeMin": 8252,
+      "suspendedMin": 1474,
       "worstLine": "Victoria"
     },
     "all": {
-      "incidents": 1566,
-      "unplanned": 1508,
-      "minorMin": 250803,
-      "severeMin": 121946,
-      "suspendedMin": 30643,
+      "incidents": 1571,
+      "unplanned": 1513,
+      "minorMin": 250897,
+      "severeMin": 122024,
+      "suspendedMin": 30644,
       "worstLine": "Central"
     }
   },
@@ -1434,20 +1434,20 @@
     {
       "line": "Bakerloo",
       "lineId": "bakerloo",
-      "incidents": 75,
-      "minorMin": 11254,
+      "incidents": 76,
+      "minorMin": 11328,
       "severeMin": 6613,
       "suspendedMin": 1506,
-      "medianMin": 161
+      "medianMin": 159
     },
     {
       "line": "Piccadilly",
       "lineId": "piccadilly",
-      "incidents": 93,
+      "incidents": 96,
       "minorMin": 10062,
-      "severeMin": 8661,
-      "suspendedMin": 509,
-      "medianMin": 138
+      "severeMin": 8739,
+      "suspendedMin": 510,
+      "medianMin": 121
     },
     {
       "line": "Weaver (Overground · Liverpool St–Chingford/Enfield/Cheshunt)",
@@ -1461,11 +1461,11 @@
     {
       "line": "Northern",
       "lineId": "northern",
-      "incidents": 78,
-      "minorMin": 7745,
+      "incidents": 79,
+      "minorMin": 7765,
       "severeMin": 5212,
       "suspendedMin": 1451,
-      "medianMin": 112
+      "medianMin": 110
     },
     {
       "line": "Suffragette (Overground · Gospel Oak–Barking Riverside)",
@@ -1514,6 +1514,189 @@
     }
   ],
   "recent": [
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-22T16:11:47.647Z",
+      "end": "2026-10-22T16:31:48.308Z",
+      "minutes": 20,
+      "minorMin": 20,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: Minor delays between Camden Town and Kennington (via Bank) northbound only due to train cancellations.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-22T16:11:47.647Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-22T16:31:48.308Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Morden → High Barnet",
+        "Morden → Edgware",
+        "Morden → Mill Hill East"
+      ]
+    },
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-10-22T16:08:47.501Z",
+      "end": "2026-10-22T16:17:48.397Z",
+      "minutes": 9,
+      "minorMin": 0,
+      "severeMin": 8,
+      "suspendedMin": 1,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: No service between Acton Town and Cockfosters Eastbound only. SEVERE DELAYS rest of the line while we fix a signal failure at Leicester Square. Tickets are being accepted on London Buses, Elizabeth Line, Great Northern and Weaver line via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-22T16:08:47.501Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-10-22T16:09:47.668Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-22T16:17:48.397Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Uxbridge → Cockfosters",
+        "Heathrow Terminal 4 → Cockfosters",
+        "Heathrow Terminal 5 → Cockfosters"
+      ]
+    },
+    {
+      "line": "bakerloo",
+      "lineName": "Bakerloo",
+      "cause": "customer-incident",
+      "planned": false,
+      "start": "2026-10-22T14:55:45.466Z",
+      "end": "2026-10-22T16:09:47.668Z",
+      "minutes": 74,
+      "minorMin": 74,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Bakerloo Line: Minor delays between Harrow and Wealdstone and Queen's Park due to an earlier customer incident at Maida Vale. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-22T14:55:45.466Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-22T16:09:47.668Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Harrow & Wealdstone → Elephant & Castle",
+        "Elephant & Castle → Harrow & Wealdstone"
+      ]
+    },
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-10-22T14:59:45.343Z",
+      "end": "2026-10-22T16:07:12.020Z",
+      "minutes": 67,
+      "minorMin": 0,
+      "severeMin": 67,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: SEVERE DELAYS while we fix a signal failure at Leicester Square. Tickets are being accepted on London Buses, Elizabeth Line, Great Northern and Weaver line via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-22T14:59:45.343Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-22T16:07:12.020Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
+    {
+      "line": "piccadilly",
+      "lineName": "Piccadilly",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-10-22T14:55:45.466Z",
+      "end": "2026-10-22T14:58:45.049Z",
+      "minutes": 3,
+      "minorMin": 0,
+      "severeMin": 3,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Piccadilly Line: No service between Hammersmith and Cockfosters eastbound only while we fix signal failure at Leicester Square. SEVERE DELAYS on the rest of the line. Tickets are being accepted on London Buses, Elizabeth Line, Great Northern and Weaver line via any reasonable route. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-22T14:55:45.466Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-22T14:58:45.049Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Cockfosters → Uxbridge",
+        "Uxbridge → Cockfosters",
+        "Cockfosters → Heathrow Terminal 5"
+      ]
+    },
     {
       "line": "elizabeth",
       "lineName": "Elizabeth line",
@@ -2305,300 +2488,13 @@
         "Upminster → Richmond",
         "Upminster → Wimbledon"
       ]
-    },
-    {
-      "line": "victoria",
-      "lineName": "Victoria",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-21T04:16:44.351Z",
-      "end": "2026-10-21T05:02:44.352Z",
-      "minutes": 46,
-      "minorMin": 46,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Victoria Line: Minor delays between Seven Sisters and Walthamstow Central due to train cancellations. GOOD SERVICE on the rest of the line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-21T04:16:44.351Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-21T05:02:44.352Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Walthamstow Central → Brixton",
-        "Brixton → Walthamstow Central"
-      ]
-    },
-    {
-      "line": "northern",
-      "lineName": "Northern",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-21T04:34:43.646Z",
-      "end": "2026-10-21T04:49:43.948Z",
-      "minutes": 15,
-      "minorMin": 15,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Northern Line: Minor delays between Morden and East Finchley / Golders Green northbound only due to an earlier faulty train at Morden. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-21T04:34:43.646Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-21T04:49:43.948Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Morden → High Barnet",
-        "Morden → Edgware",
-        "Morden → Mill Hill East"
-      ]
-    },
-    {
-      "line": "piccadilly",
-      "lineName": "Piccadilly",
-      "cause": "security-alert",
-      "planned": false,
-      "start": "2026-10-20T19:53:13.844Z",
-      "end": "2026-10-21T00:16:13.747Z",
-      "minutes": 263,
-      "minorMin": 76,
-      "severeMin": 182,
-      "suspendedMin": 5,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Piccadilly Line: No service between Hammersmith and Cockfosters Eastbound and between Cockfosters and King's Cross St. Pancras Westbound while we respond to a security alert. GOOD SERVICE on the rest of the line. Tickets are being accepted on London Buses, Elizabeth line and Weaver Line.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-20T19:53:13.844Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T19:54:13.872Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T19:55:13.678Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T19:56:14.452Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T19:57:14.214Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T20:01:14.504Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T20:02:16.591Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T22:59:10.673Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T23:00:10.868Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T23:37:12.094Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-21T00:16:13.747Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Cockfosters → Uxbridge",
-        "Cockfosters → Heathrow Terminal 5",
-        "Cockfosters → Heathrow Terminal 4"
-      ]
-    },
-    {
-      "line": "mildmay",
-      "lineName": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-10-20T19:53:13.844Z",
-      "end": "2026-10-21T00:16:13.747Z",
-      "minutes": 263,
-      "minorMin": 0,
-      "severeMin": 242,
-      "suspendedMin": 21,
-      "worstSev": 3,
-      "peakAfterMin": 0,
-      "reason": "Mildmay Line: Part suspended between Willesden Junction and Richmond while we fix a points failure at Acton Central. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-20T19:53:13.844Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T20:14:14.831Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T22:59:10.673Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-21T00:16:13.747Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Richmond (London) → Stratford (London)",
-        "Stratford (London) → Richmond (London)",
-        "Clapham Junction → Stratford (London)"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-20T04:27:59.914Z",
-      "end": "2026-10-21T00:16:13.747Z",
-      "minutes": 1188,
-      "minorMin": 429,
-      "severeMin": 755,
-      "suspendedMin": 4,
-      "worstSev": 3,
-      "peakAfterMin": 295,
-      "reason": "District Line: Severe delays between Parsons Green and Wimbledon due to train cancellations. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-20T04:27:59.914Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T05:08:02.949Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T05:34:04.941Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T09:16:02.216Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T09:23:03.081Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T09:25:03.025Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T09:30:02.632Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T09:31:02.963Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T09:34:02.966Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T14:47:04.218Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T15:00:06.035Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-10-20T15:01:05.065Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T19:53:13.844Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-20T21:04:16.373Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T22:59:10.673Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T23:02:10.960Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-20T23:29:11.859Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-21T00:16:13.747Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Upminster → Wimbledon",
-        "Wimbledon → Upminster",
-        "Edgware Road (Circle Line) → Wimbledon"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-22T08:40:10.592Z",
+    "generatedAt": "2026-10-22T14:33:13.943Z",
     "days": 91,
-    "servicesSeen": 522664,
-    "cellsReady": 15039,
+    "servicesSeen": 524090,
+    "cellsReady": 15060,
     "worst": [
       {
         "crs": "CLJ",
