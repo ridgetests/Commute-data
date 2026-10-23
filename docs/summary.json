@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T02:15:33.241Z",
+  "generatedAt": "2026-10-23T05:29:56.131Z",
   "rail": {
     "servicesTracked": 39795,
     "modelled": 15380,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-23T02:14:29.731Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 195
     },
     "tfl": {
       "tz": "UTC",
@@ -943,9 +943,9 @@
             72,
             0,
             0,
-            0,
-            0,
-            0,
+            54,
+            216,
+            90,
             0,
             0,
             0,
@@ -968,13 +968,13 @@
           "covered": 0
         }
       ],
-      "lastRecord": "2026-10-22T21:23:58.748Z",
-      "minutesSinceLast": 292
+      "lastRecord": "2026-10-23T05:24:57.334Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 47327,
-    "usable": 15591,
+    "cells": 47352,
+    "usable": 15616,
     "ready": true,
     "examples": [
       {
@@ -1030,28 +1030,28 @@
   "coverage": {
     "days": 104,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-23T00:20:41.179Z",
-    "events": 15552,
-    "incidents": 1576,
-    "unplanned": 1518,
+    "lastEvent": "2026-10-23T05:27:47.574Z",
+    "events": 15613,
+    "incidents": 1577,
+    "unplanned": 1519,
     "planned": 58,
-    "runObservations": 1681249,
-    "modelCells": 259188
+    "runObservations": 1686359,
+    "modelCells": 259831
   },
   "storage": {
-    "eventsBytes": 5970011,
+    "eventsBytes": 6007220,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 33371356,
-    "perDayBytes": 406739
+    "crowdingBytes": 33420577,
+    "perDayBytes": 407570
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 669,
+      "have": 670,
       "need": 20,
-      "perDay": 6.43,
+      "perDay": 6.44,
       "ready": true,
       "etaDays": [
         0,
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 254069,
+      "n": 254717,
       "ready": true
     },
     {
       "line": "central",
-      "n": 173949,
+      "n": 174301,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 167299,
+      "n": 167808,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 158639,
+      "n": 159127,
       "ready": true
     },
     {
       "line": "district",
-      "n": 153895,
+      "n": 154620,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 139349,
+      "n": 139787,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 104271,
+      "n": 104492,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 89771,
+      "n": 90099,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 87920,
+      "n": 88301,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 77745,
+      "n": 77845,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 73015,
+      "n": 73255,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 72018,
+      "n": 72258,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 40477,
+      "n": 40593,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 37496,
+      "n": 37696,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 30833,
+      "n": 30919,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 18769,
+      "n": 18801,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 986,
+      "n": 991,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 747,
+      "n": 748,
       "ready": false
     }
   ],
@@ -1316,26 +1316,26 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
+      "incidents": 1,
+      "unplanned": 1,
       "minorMin": 0,
-      "severeMin": 0,
+      "severeMin": 30,
       "suspendedMin": 0,
-      "worstLine": null
+      "worstLine": "District"
     },
     "week": {
       "incidents": 93,
-      "unplanned": 91,
-      "minorMin": 13803,
-      "severeMin": 7791,
-      "suspendedMin": 1474,
+      "unplanned": 93,
+      "minorMin": 13806,
+      "severeMin": 8214,
+      "suspendedMin": 1415,
       "worstLine": "Central"
     },
     "all": {
-      "incidents": 1576,
-      "unplanned": 1518,
+      "incidents": 1577,
+      "unplanned": 1519,
       "minorMin": 251442,
-      "severeMin": 122502,
+      "severeMin": 122532,
       "suspendedMin": 30645,
       "worstLine": "Central"
     }
@@ -1416,11 +1416,11 @@
     {
       "line": "District",
       "lineId": "district",
-      "incidents": 131,
+      "incidents": 132,
       "minorMin": 11518,
-      "severeMin": 6257,
+      "severeMin": 6287,
       "suspendedMin": 3067,
-      "medianMin": 73
+      "medianMin": 72
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -1514,6 +1514,42 @@
     }
   ],
   "recent": [
+    {
+      "line": "district",
+      "lineName": "District",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-23T03:53:44.062Z",
+      "end": "2026-10-23T04:23:45.208Z",
+      "minutes": 30,
+      "minorMin": 0,
+      "severeMin": 30,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "District Line: Severe delays between Acton town and Ealing Broadway due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-23T03:53:44.062Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-23T04:23:45.208Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Upminster → Ealing Broadway",
+        "Ealing Broadway → Upminster",
+        "Edgware Road (Circle Line) → Ealing Broadway"
+      ]
+    },
     {
       "line": "piccadilly",
       "lineName": "Piccadilly",
@@ -2454,50 +2490,6 @@
       "segments": [
         "Stratford → Stanmore",
         "Stanmore → Stratford"
-      ]
-    },
-    {
-      "line": "district",
-      "lineName": "District",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-10-21T14:55:28.015Z",
-      "end": "2026-10-21T15:04:28.678Z",
-      "minutes": 9,
-      "minorMin": 8,
-      "severeMin": 1,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 8,
-      "reason": "District Line: No service between High Street Kensington and Edgware Road. Tickets will be accepted on London Buses on any reasonable route. MINOR DELAYS High street Kensington to Wimbledon due to a points failure at High Street Kensington. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-21T14:55:28.015Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-21T14:58:28.304Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-21T15:03:28.421Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-21T15:04:28.678Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Upminster → Wimbledon",
-        "Wimbledon → Upminster",
-        "Edgware Road (Circle Line) → Ealing Broadway"
       ]
     }
   ],
