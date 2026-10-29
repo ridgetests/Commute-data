@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T07:17:39.950Z",
+  "generatedAt": "2026-10-29T09:51:05.747Z",
   "rail": {
     "servicesTracked": 40379,
     "modelled": 15694,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-29T07:16:36.640Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 154
     },
     "tfl": {
       "tz": "UTC",
@@ -948,8 +948,8 @@
             0,
             0,
             0,
-            0,
-            0,
+            180,
+            180,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 2
         }
       ],
-      "lastRecord": "2026-10-29T03:13:48.284Z",
-      "minutesSinceLast": 244
+      "lastRecord": "2026-10-29T09:46:09.795Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 47817,
-    "usable": 15441,
+    "cells": 48027,
+    "usable": 15500,
     "ready": true,
     "examples": [
       {
@@ -1030,26 +1030,26 @@
   "coverage": {
     "days": 110,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-29T01:37:53.171Z",
-    "events": 16417,
-    "incidents": 1672,
-    "unplanned": 1608,
+    "lastEvent": "2026-10-29T09:39:53.786Z",
+    "events": 16442,
+    "incidents": 1674,
+    "unplanned": 1610,
     "planned": 64,
-    "runObservations": 1658062,
-    "modelCells": 266901
+    "runObservations": 1672011,
+    "modelCells": 269438
   },
   "storage": {
-    "eventsBytes": 6364376,
+    "eventsBytes": 6373359,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 35008161,
-    "perDayBytes": 403018
+    "crowdingBytes": 35065057,
+    "perDayBytes": 403617
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 709,
+      "have": 710,
       "need": 20,
       "perDay": 6.45,
       "ready": true,
@@ -1057,7 +1057,7 @@
         0,
         0
       ],
-      "medianMin": 199,
+      "medianMin": 196,
       "p90Min": 714
     },
     {
@@ -1077,15 +1077,15 @@
     {
       "cause": "other",
       "feature": "Unclassified disruption",
-      "have": 249,
+      "have": 250,
       "need": 20,
-      "perDay": 2.26,
+      "perDay": 2.27,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 106,
+      "medianMin": 103,
       "p90Min": 886
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 252386,
+      "n": 254778,
       "ready": true
     },
     {
       "line": "central",
-      "n": 172471,
+      "n": 174227,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 165197,
+      "n": 165317,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 158497,
+      "n": 160039,
       "ready": true
     },
     {
       "line": "district",
-      "n": 145013,
+      "n": 146580,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 138079,
+      "n": 139252,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 102530,
+      "n": 103264,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 88428,
+      "n": 89091,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 87908,
+      "n": 88571,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 76046,
+      "n": 76712,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 72752,
+      "n": 73711,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 72517,
+      "n": 73267,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 40319,
+      "n": 40651,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 35462,
+      "n": 35803,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 30765,
+      "n": 30961,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 18034,
+      "n": 18102,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 949,
+      "n": 973,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 708,
+      "n": 711,
       "ready": false
     }
   ],
@@ -1316,26 +1316,26 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
-      "severeMin": 0,
+      "incidents": 2,
+      "unplanned": 2,
+      "minorMin": 39,
+      "severeMin": 6,
       "suspendedMin": 0,
-      "worstLine": null
+      "worstLine": "Metropolitan"
     },
     "week": {
-      "incidents": 107,
-      "unplanned": 101,
-      "minorMin": 20718,
-      "severeMin": 7844,
+      "incidents": 108,
+      "unplanned": 102,
+      "minorMin": 20745,
+      "severeMin": 7850,
       "suspendedMin": 3194,
       "worstLine": "Suffragette (Overground · Gospel Oak–Barking Riverside)"
     },
     "all": {
-      "incidents": 1672,
-      "unplanned": 1608,
-      "minorMin": 271509,
-      "severeMin": 129790,
+      "incidents": 1674,
+      "unplanned": 1610,
+      "minorMin": 271548,
+      "severeMin": 129796,
       "suspendedMin": 33837,
       "worstLine": "Central"
     }
@@ -1353,8 +1353,8 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 207,
-      "minorMin": 32471,
+      "incidents": 208,
+      "minorMin": 32494,
       "severeMin": 13062,
       "suspendedMin": 2273,
       "medianMin": 99
@@ -1380,11 +1380,11 @@
     {
       "line": "Jubilee",
       "lineId": "jubilee",
-      "incidents": 98,
-      "minorMin": 14605,
-      "severeMin": 13786,
+      "incidents": 99,
+      "minorMin": 14621,
+      "severeMin": 13792,
       "suspendedMin": 1357,
-      "medianMin": 217
+      "medianMin": 216
     },
     {
       "line": "Mildmay (Overground · Richmond/Clapham Jn–Stratford)",
@@ -1514,6 +1514,81 @@
     }
   ],
   "recent": [
+    {
+      "line": "jubilee",
+      "lineName": "Jubilee",
+      "cause": "other",
+      "planned": false,
+      "start": "2026-10-29T09:02:52.657Z",
+      "end": "2026-10-29T09:24:53.276Z",
+      "minutes": 22,
+      "minorMin": 16,
+      "severeMin": 6,
+      "suspendedMin": 0,
+      "worstSev": 6,
+      "peakAfterMin": 0,
+      "reason": "Jubilee Line: Severe delays while we help a person ill on a train at Kilburn. Tickets will be accepted on London Buses, Mildmay line, DLR, Elizabeth line, c2c, Southeastern and Thameslink services. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-29T09:02:52.657Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-29T09:08:52.752Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-29T09:24:53.276Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Stratford → Stanmore",
+        "Stanmore → Stratford"
+      ]
+    },
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-29T08:10:50.877Z",
+      "end": "2026-10-29T08:33:51.346Z",
+      "minutes": 23,
+      "minorMin": 23,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Baker Street and Aldgate due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-29T08:10:50.877Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-29T08:33:51.346Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Amersham → Aldgate",
+        "Aldgate → Chesham",
+        "Aldgate → Amersham"
+      ]
+    },
     {
       "line": "northern",
       "lineName": "Northern",
@@ -2449,76 +2524,6 @@
       "segments": [
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
-      ]
-    },
-    {
-      "line": "hammersmith-city",
-      "lineName": "Hammersmith & City",
-      "cause": "signal-failure",
-      "planned": false,
-      "start": "2026-10-27T17:39:52.092Z",
-      "end": "2026-10-27T21:55:02.864Z",
-      "minutes": 255,
-      "minorMin": 255,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstSev": 9,
-      "peakAfterMin": 0,
-      "reason": "Hammersmith and City Line: Minor delays between Edgware Road and Hammersmith due to an earlier points failure at Hammersmith. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-27T17:39:52.092Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-27T21:55:02.864Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-27T18:48:55.400Z",
-      "end": "2026-10-27T21:55:02.864Z",
-      "minutes": 186,
-      "minorMin": 0,
-      "severeMin": 186,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 0,
-      "reason": "Circle Line: Severe delays due to an earlier faulty train at Monument. Tickets will be accepted via any reasonable route. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-27T18:48:55.400Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-27T21:55:02.864Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
       ]
     }
   ],
