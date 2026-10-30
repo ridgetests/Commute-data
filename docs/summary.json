@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T07:16:15.173Z",
+  "generatedAt": "2026-10-30T14:00:58.935Z",
   "rail": {
     "servicesTracked": 40297,
     "modelled": 15436,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-10-30T07:15:10.852Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 406
     },
     "tfl": {
       "tz": "UTC",
@@ -952,8 +952,8 @@
             0,
             0,
             0,
-            0,
-            0,
+            144,
+            216,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 1
+          "covered": 3
         }
       ],
-      "lastRecord": "2026-10-30T00:07:20.445Z",
-      "minutesSinceLast": 429
+      "lastRecord": "2026-10-30T13:55:56.208Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 47875,
-    "usable": 15321,
+    "cells": 48034,
+    "usable": 15401,
     "ready": true,
     "examples": [
       {
@@ -1030,28 +1030,28 @@
   "coverage": {
     "days": 111,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-10-30T06:24:43.055Z",
-    "events": 16519,
-    "incidents": 1686,
-    "unplanned": 1622,
+    "lastEvent": "2026-10-30T13:41:47.291Z",
+    "events": 16545,
+    "incidents": 1689,
+    "unplanned": 1625,
     "planned": 64,
-    "runObservations": 1652253,
-    "modelCells": 264795
+    "runObservations": 1664313,
+    "modelCells": 267789
   },
   "storage": {
-    "eventsBytes": 6400950,
+    "eventsBytes": 6409271,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 35232177,
-    "perDayBytes": 401735
+    "crowdingBytes": 35283423,
+    "perDayBytes": 402272
   },
   "readiness": [
     {
       "cause": "train-fault",
       "feature": "Broken-down train — “how long will this last?”",
-      "have": 718,
+      "have": 720,
       "need": 20,
-      "perDay": 6.47,
+      "perDay": 6.49,
       "ready": true,
       "etaDays": [
         0,
@@ -1147,15 +1147,15 @@
     {
       "cause": "power-failure",
       "feature": "Power failure — “how long will this last?”",
-      "have": 23,
+      "have": 24,
       "need": 20,
-      "perDay": 0.21,
+      "perDay": 0.22,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 188,
+      "medianMin": 193,
       "p90Min": 576
     },
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 252013,
+      "n": 254124,
       "ready": true
     },
     {
       "line": "central",
-      "n": 172111,
+      "n": 173632,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 160416,
+      "n": 160548,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 158401,
+      "n": 159578,
       "ready": true
     },
     {
       "line": "district",
-      "n": 145238,
+      "n": 146719,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 138201,
+      "n": 139051,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 102269,
+      "n": 102971,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 88368,
+      "n": 89075,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 87699,
+      "n": 88228,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 75841,
+      "n": 76380,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 72998,
+      "n": 73706,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 72454,
+      "n": 73104,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 40364,
+      "n": 40624,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 35695,
+      "n": 36053,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 30692,
+      "n": 30906,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 17812,
+      "n": 17913,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 981,
+      "n": 994,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 697,
+      "n": 704,
       "ready": false
     }
   ],
@@ -1316,27 +1316,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 1,
-      "unplanned": 1,
-      "minorMin": 23,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": "Victoria"
+      "incidents": 4,
+      "unplanned": 4,
+      "minorMin": 409,
+      "severeMin": 356,
+      "suspendedMin": 39,
+      "worstLine": "Elizabeth line"
     },
     "week": {
-      "incidents": 102,
-      "unplanned": 97,
-      "minorMin": 21926,
-      "severeMin": 7156,
-      "suspendedMin": 2867,
+      "incidents": 103,
+      "unplanned": 98,
+      "minorMin": 22233,
+      "severeMin": 7032,
+      "suspendedMin": 2896,
       "worstLine": "Suffragette (Overground · Gospel Oak–Barking Riverside)"
     },
     "all": {
-      "incidents": 1686,
-      "unplanned": 1622,
-      "minorMin": 275216,
-      "severeMin": 130174,
-      "suspendedMin": 33837,
+      "incidents": 1689,
+      "unplanned": 1625,
+      "minorMin": 275602,
+      "severeMin": 130530,
+      "suspendedMin": 33876,
       "worstLine": "Central"
     }
   },
@@ -1353,8 +1353,8 @@
     {
       "line": "Metropolitan",
       "lineId": "metropolitan",
-      "incidents": 211,
-      "minorMin": 32992,
+      "incidents": 212,
+      "minorMin": 32999,
       "severeMin": 13440,
       "suspendedMin": 2273,
       "medianMin": 99
@@ -1371,11 +1371,11 @@
     {
       "line": "Elizabeth line",
       "lineId": "elizabeth",
-      "incidents": 112,
+      "incidents": 113,
       "minorMin": 15861,
-      "severeMin": 13881,
-      "suspendedMin": 1399,
-      "medianMin": 191
+      "severeMin": 14237,
+      "suspendedMin": 1438,
+      "medianMin": 193
     },
     {
       "line": "Jubilee",
@@ -1416,11 +1416,11 @@
     {
       "line": "Hammersmith & City",
       "lineId": "hammersmith-city",
-      "incidents": 116,
-      "minorMin": 16571,
+      "incidents": 117,
+      "minorMin": 16950,
       "severeMin": 7927,
       "suspendedMin": 746,
-      "medianMin": 150
+      "medianMin": 151
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -1514,6 +1514,115 @@
     }
   ],
   "recent": [
+    {
+      "line": "metropolitan",
+      "lineName": "Metropolitan",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-30T12:57:43.954Z",
+      "end": "2026-10-30T13:04:44.184Z",
+      "minutes": 7,
+      "minorMin": 7,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Metropolitan Line: Minor delays between Moor Park and Watford due to a train cancellation. The next southbound departure from Watford will be at 13:23. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-30T12:57:43.954Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-30T13:04:44.184Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Aldgate → Watford",
+        "Watford → Aldgate"
+      ]
+    },
+    {
+      "line": "hammersmith-city",
+      "lineName": "Hammersmith & City",
+      "cause": "train-fault",
+      "planned": false,
+      "start": "2026-10-30T06:01:42.231Z",
+      "end": "2026-10-30T12:20:42.562Z",
+      "minutes": 379,
+      "minorMin": 379,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstSev": 9,
+      "peakAfterMin": 0,
+      "reason": "Hammersmith and City Line: Minor delays between Barking and Liverpool Street westbound only due to train cancellations. GOOD SERVICE on the rest of the line. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-30T06:01:42.231Z",
+          "sev": 9
+        },
+        {
+          "t": "2026-10-30T12:20:42.562Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Barking → Hammersmith (H&C Line)"
+      ]
+    },
+    {
+      "line": "elizabeth",
+      "lineName": "Elizabeth line",
+      "cause": "power-failure",
+      "planned": false,
+      "start": "2026-10-30T05:45:41.515Z",
+      "end": "2026-10-30T12:20:42.562Z",
+      "minutes": 395,
+      "minorMin": 0,
+      "severeMin": 356,
+      "suspendedMin": 39,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "No service between Paddington and Abbey Wood due to a power supply failure. London Underground are accepting tickets via any reasonable route. GOOD SERVICE on the rest of the line.  ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-10-30T05:45:41.515Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-10-30T06:24:43.055Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-10-30T12:20:42.562Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "Heathrow Terminal 4 → Shenfield",
+        "Heathrow Terminal 5 → Shenfield",
+        "Shenfield → Heathrow Terminal 4"
+      ]
+    },
     {
       "line": "victoria",
       "lineName": "Victoria",
@@ -2356,131 +2465,13 @@
         "Walthamstow Central → Brixton",
         "Brixton → Walthamstow Central"
       ]
-    },
-    {
-      "line": "metropolitan",
-      "lineName": "Metropolitan",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-28T09:20:54.157Z",
-      "end": "2026-10-28T15:01:53.480Z",
-      "minutes": 341,
-      "minorMin": 5,
-      "severeMin": 336,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 5,
-      "reason": "Metropolitan Line: Minor delays between Harrow-on-the-Hill and Aldgate while we fix a faulty train at Moorgate. GOOD SERVICE on the rest of the line. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-28T09:20:54.157Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-28T09:25:54.684Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-28T15:01:53.480Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Amersham → Aldgate",
-        "Aldgate → Chesham",
-        "Aldgate → Amersham"
-      ]
-    },
-    {
-      "line": "hammersmith-city",
-      "lineName": "Hammersmith & City",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-28T09:20:54.157Z",
-      "end": "2026-10-28T15:01:53.480Z",
-      "minutes": 341,
-      "minorMin": 5,
-      "severeMin": 336,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 5,
-      "reason": "Hammersmith and City Line: Minor delays while we fix a faulty train at Moorgate. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-28T09:20:54.157Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-28T09:25:54.684Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-28T15:01:53.480Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Barking → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "circle",
-      "lineName": "Circle",
-      "cause": "train-fault",
-      "planned": false,
-      "start": "2026-10-28T09:20:54.157Z",
-      "end": "2026-10-28T15:01:53.480Z",
-      "minutes": 341,
-      "minorMin": 5,
-      "severeMin": 336,
-      "suspendedMin": 0,
-      "worstSev": 6,
-      "peakAfterMin": 5,
-      "reason": "Circle Line: Minor delays while we fix a faulty train at Moorgate. ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-10-28T09:20:54.157Z",
-          "sev": 9
-        },
-        {
-          "t": "2026-10-28T09:25:54.684Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-10-28T15:01:53.480Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "Edgware Road (Circle Line) → Hammersmith (H&C Line)",
-        "Hammersmith (H&C Line) → Edgware Road (Circle Line)"
-      ]
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-10-30T01:03:59.708Z",
-    "days": 98,
-    "servicesSeen": 558077,
-    "cellsReady": 14465,
+    "generatedAt": "2026-10-30T10:05:41.827Z",
+    "days": 99,
+    "servicesSeen": 559592,
+    "cellsReady": 14499,
     "worst": [
       {
         "crs": "RMD",
