@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-06T10:56:01.044Z",
+  "generatedAt": "2026-11-06T17:32:47.610Z",
   "rail": {
-    "servicesTracked": 39487,
-    "modelled": 15323,
-    "confident": 13429,
+    "servicesTracked": 39499,
+    "modelled": 15567,
+    "confident": 13645,
     "darwinLeadMin": 9.9,
     "samples": [
       {
@@ -522,9 +522,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            401,
+            1696,
+            1063,
             0,
             0,
             0,
@@ -532,11 +532,11 @@
             0,
             0
           ],
-          "covered": 3
+          "covered": 6
         }
       ],
-      "lastRecord": "2026-11-06T08:07:23.066Z",
-      "minutesSinceLast": 169
+      "lastRecord": "2026-11-06T17:31:43.920Z",
+      "minutesSinceLast": 1
     },
     "tfl": {
       "tz": "UTC",
@@ -969,7 +969,7 @@
         }
       ],
       "lastRecord": "2026-11-06T10:51:11.994Z",
-      "minutesSinceLast": 5
+      "minutesSinceLast": 402
     }
   },
   "headway": {
@@ -1324,11 +1324,11 @@
       "worstLine": "Victoria"
     },
     "week": {
-      "incidents": 81,
-      "unplanned": 81,
-      "minorMin": 14958,
-      "severeMin": 7524,
-      "suspendedMin": 1169,
+      "incidents": 77,
+      "unplanned": 77,
+      "minorMin": 14209,
+      "severeMin": 6880,
+      "suspendedMin": 1166,
       "worstLine": "District"
     },
     "all": {
@@ -2487,17 +2487,17 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-11-05T21:29:55.103Z",
-    "days": 105,
-    "servicesSeen": 584421,
-    "cellsReady": 15182,
+    "generatedAt": "2026-11-06T10:58:04.021Z",
+    "days": 106,
+    "servicesSeen": 586400,
+    "cellsReady": 14958,
     "worst": [
       {
         "crs": "SUR",
         "std": "17:16",
         "destination": "London Waterloo",
         "dayType": "wd",
-        "n": 6.2,
+        "n": 6,
         "p50Late": 2,
         "p90Late": 142,
         "cancelPct": 19,
@@ -2508,7 +2508,7 @@
         "std": "17:28",
         "destination": "London Waterloo",
         "dayType": "wd",
-        "n": 5.3,
+        "n": 5.2,
         "p50Late": 3,
         "p90Late": 142,
         "cancelPct": 23,
@@ -2519,7 +2519,7 @@
         "std": "17:38",
         "destination": "London Victoria",
         "dayType": "wd",
-        "n": 6.5,
+        "n": 6.3,
         "p50Late": 11,
         "p90Late": 129,
         "cancelPct": 0,
@@ -2530,7 +2530,7 @@
         "std": "23:50",
         "destination": "Ebbsfleet International",
         "dayType": "wd",
-        "n": 4.6,
+        "n": 4.4,
         "p50Late": 0,
         "p90Late": 99,
         "cancelPct": 0,
@@ -2541,7 +2541,7 @@
         "std": "12:42",
         "destination": "Gillingham (Kent)",
         "dayType": "wd",
-        "n": 7.5,
+        "n": 7.3,
         "p50Late": 0,
         "p90Late": 91,
         "cancelPct": 0,
@@ -2552,7 +2552,7 @@
         "std": "09:47",
         "destination": "York",
         "dayType": "wd",
-        "n": 7.4,
+        "n": 7.1,
         "p50Late": 0,
         "p90Late": 82,
         "cancelPct": 3,
@@ -2563,7 +2563,7 @@
         "std": "18:21",
         "destination": "Abbey Wood",
         "dayType": "wd",
-        "n": 7.4,
+        "n": 7.2,
         "p50Late": 4,
         "p90Late": 81,
         "cancelPct": 1,
@@ -2574,32 +2574,21 @@
         "std": "23:51",
         "destination": "Guildford",
         "dayType": "wd",
-        "n": 8.2,
+        "n": 8.9,
         "p50Late": 0,
         "p90Late": 75,
-        "cancelPct": 6,
-        "unknownPct": 8
+        "cancelPct": 5,
+        "unknownPct": 7
       },
       {
         "crs": "PAD",
         "std": "17:48",
         "destination": "Carmarthen",
         "dayType": "wd",
-        "n": 6.7,
+        "n": 6.4,
         "p50Late": 0,
         "p90Late": 75,
         "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "EAD",
-        "std": "23:54",
-        "destination": "Guildford",
-        "dayType": "wd",
-        "n": 8.2,
-        "p50Late": 0,
-        "p90Late": 75,
-        "cancelPct": 6,
         "unknownPct": 0
       },
       {
@@ -2607,7 +2596,7 @@
         "std": "18:58",
         "destination": "Enfield Town",
         "dayType": "we",
-        "n": 3.8,
+        "n": 3.7,
         "p50Late": 0,
         "p90Late": 74,
         "cancelPct": 0,
@@ -2618,10 +2607,21 @@
         "std": "20:51",
         "destination": "Stansted Airport",
         "dayType": "we",
-        "n": 3.2,
+        "n": 3.1,
         "p50Late": 0,
         "p90Late": 74,
         "cancelPct": 0,
+        "unknownPct": 0
+      },
+      {
+        "crs": "KGX",
+        "std": "09:40",
+        "destination": "Bradford Forster Square",
+        "dayType": "wd",
+        "n": 7.4,
+        "p50Late": 0,
+        "p90Late": 73,
+        "cancelPct": 3,
         "unknownPct": 0
       }
     ]
