@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-07T13:51:15+00:00",
+  "generatedAt": "2026-11-08T14:12:04+00:00",
   "source": "Network Rail SCHEDULE feed (CIF)",
   "licence": "OGL-3.0",
   "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
   "attribution": "Contains information from Network Rail Infrastructure Limited, licensed under the Open Government Licence v3.0",
   "note": "Planned platform changes vs each service's usual platform over the range, STP-resolved. A published fact, not a prediction. destTiploc is the schedule TIPLOC; resolve to a station name app-side.",
   "range": {
-    "from": "2026-11-07",
-    "to": "2026-12-19"
+    "from": "2026-11-08",
+    "to": "2026-12-20"
   },
   "stations": {
     "WAT": {
@@ -438,16 +438,16 @@
         {
           "date": "2026-11-14",
           "std": "22:30",
-          "destTiploc": "PHBR",
-          "usualPlatform": "9",
-          "platform": "16"
+          "destTiploc": "WATRLMN",
+          "usualPlatform": "17",
+          "platform": "18"
         },
         {
           "date": "2026-11-14",
           "std": "22:30",
-          "destTiploc": "WATRLMN",
-          "usualPlatform": "17",
-          "platform": "18"
+          "destTiploc": "PHBR",
+          "usualPlatform": "9",
+          "platform": "16"
         },
         {
           "date": "2026-11-14",
@@ -1271,17 +1271,17 @@
         {
           "date": "2026-12-05",
           "std": "22:30",
-          "destTiploc": "PHBR",
-          "usualPlatform": "9",
-          "platform": "10",
-          "reroutedToTiploc": "HASLEMR"
+          "destTiploc": "WATRLMN",
+          "usualPlatform": "17",
+          "platform": "18"
         },
         {
           "date": "2026-12-05",
           "std": "22:30",
-          "destTiploc": "WATRLMN",
-          "usualPlatform": "17",
-          "platform": "18"
+          "destTiploc": "PHBR",
+          "usualPlatform": "9",
+          "platform": "10",
+          "reroutedToTiploc": "HASLEMR"
         },
         {
           "date": "2026-12-05",
@@ -2052,9 +2052,9 @@
         }
       ],
       "wholeDayRetimings": [
-        "2026-11-07",
         "2026-11-15",
-        "2026-11-22"
+        "2026-11-22",
+        "2026-12-20"
       ]
     },
     "SUR": {
@@ -2062,7 +2062,23 @@
       "wholeDayRetimings": []
     },
     "CLJ": {
-      "changes": [],
+      "changes": [
+        {
+          "date": "2026-12-20",
+          "std": "08:14",
+          "destTiploc": "WATFDJ",
+          "usualPlatform": "17",
+          "platform": "16",
+          "reroutedToTiploc": "SHPDSB"
+        },
+        {
+          "date": "2026-12-20",
+          "std": "09:09",
+          "destTiploc": "SHPDSB",
+          "usualPlatform": "16",
+          "platform": "17"
+        }
+      ],
       "wholeDayRetimings": []
     },
     "WIM": {
