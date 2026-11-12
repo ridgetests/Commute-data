@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T11:23:18.476Z",
+  "generatedAt": "2026-11-12T13:58:51.480Z",
   "rail": {
     "servicesTracked": 39018,
     "modelled": 15434,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-11-12T11:22:15.931Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 157
     },
     "tfl": {
       "tz": "UTC",
@@ -547,36 +547,6 @@
       "serviceHours": 16,
       "coveredFloor": 20,
       "days": [
-        {
-          "date": "2026-10-29",
-          "counts": [
-            0,
-            90,
-            216,
-            54,
-            0,
-            0,
-            0,
-            0,
-            180,
-            180,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            72,
-            216,
-            72,
-            0,
-            0,
-            0,
-            108,
-            216
-          ],
-          "covered": 5
-        },
         {
           "date": "2026-10-30",
           "counts": [
@@ -966,15 +936,45 @@
             0
           ],
           "covered": 5
+        },
+        {
+          "date": "2026-11-12",
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            143,
+            216,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "covered": 2
         }
       ],
-      "lastRecord": "2026-11-11T22:41:05.619Z",
-      "minutesSinceLast": 762
+      "lastRecord": "2026-11-12T13:56:02.558Z",
+      "minutesSinceLast": 3
     }
   },
   "headway": {
-    "cells": 45504,
-    "usable": 14523,
+    "cells": 45787,
+    "usable": 14603,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 124,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-11-12T04:13:50.270Z",
-    "events": 17727,
+    "lastEvent": "2026-11-12T13:38:43.678Z",
+    "events": 17749,
     "incidents": 1840,
     "unplanned": 1771,
     "planned": 69,
-    "runObservations": 1491639,
-    "modelCells": 250647
+    "runObservations": 1505098,
+    "modelCells": 253620
   },
   "storage": {
-    "eventsBytes": 6903481,
+    "eventsBytes": 6910766,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 37762060,
-    "perDayBytes": 384073
+    "crowdingBytes": 37806089,
+    "perDayBytes": 384487
   },
   "readiness": [
     {
@@ -1218,92 +1218,92 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 228603,
+      "n": 230217,
       "ready": true
     },
     {
       "line": "central",
-      "n": 154048,
+      "n": 155646,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 146489,
+      "n": 147643,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 139949,
+      "n": 141427,
       "ready": true
     },
     {
       "line": "district",
-      "n": 132049,
+      "n": 133505,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 125469,
+      "n": 126389,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 92180,
+      "n": 93360,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 80436,
+      "n": 81035,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 79925,
+      "n": 80398,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 67526,
+      "n": 68073,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 66343,
+      "n": 67066,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 64633,
+      "n": 65338,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 37099,
+      "n": 37376,
       "ready": true
     },
     {
       "line": "circle",
-      "n": 33700,
+      "n": 34055,
       "ready": true
     },
     {
       "line": "lioness",
-      "n": 28003,
+      "n": 28226,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 13711,
+      "n": 13849,
       "ready": true
     },
     {
       "line": "waterloo-city",
-      "n": 866,
+      "n": 880,
       "ready": false
     },
     {
       "line": "liberty",
-      "n": 609,
+      "n": 614,
       "ready": false
     }
   ],
@@ -2528,17 +2528,17 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-11-11T21:59:37.116Z",
-    "days": 111,
-    "servicesSeen": 605611,
-    "cellsReady": 14863,
+    "generatedAt": "2026-11-12T11:18:20.973Z",
+    "days": 112,
+    "servicesSeen": 605705,
+    "cellsReady": 14649,
     "worst": [
       {
         "crs": "SUR",
         "std": "17:16",
         "destination": "London Waterloo",
         "dayType": "wd",
-        "n": 6,
+        "n": 5.8,
         "p50Late": 2,
         "p90Late": 142,
         "cancelPct": 16,
@@ -2549,7 +2549,7 @@
         "std": "17:28",
         "destination": "London Waterloo",
         "dayType": "wd",
-        "n": 5.2,
+        "n": 5.1,
         "p50Late": 3,
         "p90Late": 142,
         "cancelPct": 20,
@@ -2560,10 +2560,54 @@
         "std": "17:38",
         "destination": "London Victoria",
         "dayType": "wd",
-        "n": 5.3,
+        "n": 5.2,
         "p50Late": 11,
         "p90Late": 129,
         "cancelPct": 0,
+        "unknownPct": 0
+      },
+      {
+        "crs": "BFR",
+        "std": "22:56",
+        "destination": "Bedford",
+        "dayType": "wd",
+        "n": 9.3,
+        "p50Late": 0,
+        "p90Late": 122,
+        "cancelPct": 3,
+        "unknownPct": 0
+      },
+      {
+        "crs": "STP",
+        "std": "23:08",
+        "destination": "Bedford",
+        "dayType": "wd",
+        "n": 9.7,
+        "p50Late": 0,
+        "p90Late": 119,
+        "cancelPct": 2,
+        "unknownPct": 1
+      },
+      {
+        "crs": "LBG",
+        "std": "23:38",
+        "destination": "Brighton",
+        "dayType": "wd",
+        "n": 8.4,
+        "p50Late": 0,
+        "p90Late": 105,
+        "cancelPct": 1,
+        "unknownPct": 0
+      },
+      {
+        "crs": "BFR",
+        "std": "23:32",
+        "destination": "Brighton",
+        "dayType": "wd",
+        "n": 8.3,
+        "p50Late": 0,
+        "p90Late": 99,
+        "cancelPct": 1,
         "unknownPct": 0
       },
       {
@@ -2571,7 +2615,7 @@
         "std": "23:50",
         "destination": "Ebbsfleet International",
         "dayType": "wd",
-        "n": 3.8,
+        "n": 3.6,
         "p50Late": 0,
         "p90Late": 99,
         "cancelPct": 0,
@@ -2582,88 +2626,44 @@
         "std": "09:47",
         "destination": "York",
         "dayType": "wd",
-        "n": 8,
+        "n": 7.7,
         "p50Late": 0,
         "p90Late": 82,
         "cancelPct": 2,
         "unknownPct": 0
       },
       {
+        "crs": "BFR",
+        "std": "23:24",
+        "destination": "Horsham",
+        "dayType": "wd",
+        "n": 9.6,
+        "p50Late": 3,
+        "p90Late": 79,
+        "cancelPct": 1,
+        "unknownPct": 1
+      },
+      {
+        "crs": "LBG",
+        "std": "23:30",
+        "destination": "Horsham",
+        "dayType": "wd",
+        "n": 8.8,
+        "p50Late": 0,
+        "p90Late": 79,
+        "cancelPct": 1,
+        "unknownPct": 1
+      },
+      {
         "crs": "CLJ",
         "std": "23:51",
         "destination": "Guildford",
         "dayType": "wd",
-        "n": 7.5,
+        "n": 7.3,
         "p50Late": 0,
         "p90Late": 75,
         "cancelPct": 5,
         "unknownPct": 7
-      },
-      {
-        "crs": "PAD",
-        "std": "17:48",
-        "destination": "Carmarthen",
-        "dayType": "wd",
-        "n": 5.5,
-        "p50Late": 0,
-        "p90Late": 75,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "LST",
-        "std": "18:58",
-        "destination": "Enfield Town",
-        "dayType": "we",
-        "n": 3.1,
-        "p50Late": 0,
-        "p90Late": 74,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "KGX",
-        "std": "09:40",
-        "destination": "Bradford Forster Square",
-        "dayType": "wd",
-        "n": 8.3,
-        "p50Late": 0,
-        "p90Late": 73,
-        "cancelPct": 2,
-        "unknownPct": 0
-      },
-      {
-        "crs": "PAD",
-        "std": "09:09",
-        "destination": "Abbey Wood",
-        "dayType": "wd",
-        "n": 5.7,
-        "p50Late": 0,
-        "p90Late": 72,
-        "cancelPct": 1,
-        "unknownPct": 0
-      },
-      {
-        "crs": "STP",
-        "std": "23:40",
-        "destination": "Margate",
-        "dayType": "we",
-        "n": 3.6,
-        "p50Late": 0,
-        "p90Late": 69,
-        "cancelPct": 0,
-        "unknownPct": 0
-      },
-      {
-        "crs": "VIC",
-        "std": "23:10",
-        "destination": "Faversham",
-        "dayType": "we",
-        "n": 3.5,
-        "p50Late": 0,
-        "p90Late": 67,
-        "cancelPct": 0,
-        "unknownPct": 0
       }
     ]
   }
