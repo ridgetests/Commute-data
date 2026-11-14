@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-13T21:01:07.703Z",
+  "generatedAt": "2026-11-14T01:08:41.273Z",
   "rail": {
-    "servicesTracked": 38947,
-    "modelled": 15225,
-    "confident": 13329,
+    "servicesTracked": 38960,
+    "modelled": 15273,
+    "confident": 13356,
     "darwinLeadMin": 10,
     "samples": [
       {
@@ -114,36 +114,6 @@
       "serviceHours": 16,
       "coveredFloor": 20,
       "days": [
-        {
-          "date": "2026-10-31",
-          "counts": [
-            564,
-            30,
-            0,
-            0,
-            0,
-            737,
-            1196,
-            155,
-            0,
-            0,
-            0,
-            0,
-            1360,
-            1458,
-            0,
-            0,
-            0,
-            0,
-            1178,
-            1887,
-            230,
-            0,
-            0,
-            1094
-          ],
-          "covered": 7
-        },
         {
           "date": "2026-11-01",
           "counts": [
@@ -530,13 +500,43 @@
             0,
             0,
             0,
-            0
+            889
           ],
           "covered": 6
+        },
+        {
+          "date": "2026-11-14",
+          "counts": [
+            436,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "covered": 0
         }
       ],
-      "lastRecord": "2026-11-13T11:05:40.980Z",
-      "minutesSinceLast": 595
+      "lastRecord": "2026-11-14T01:06:38.705Z",
+      "minutesSinceLast": 2
     },
     "tfl": {
       "tz": "UTC",
@@ -969,7 +969,7 @@
         }
       ],
       "lastRecord": "2026-11-13T20:56:10.102Z",
-      "minutesSinceLast": 5
+      "minutesSinceLast": 253
     }
   },
   "headway": {
@@ -1316,12 +1316,12 @@
   },
   "windows": {
     "today": {
-      "incidents": 6,
-      "unplanned": 6,
-      "minorMin": 498,
-      "severeMin": 31,
-      "suspendedMin": 72,
-      "worstLine": "Bakerloo"
+      "incidents": 0,
+      "unplanned": 0,
+      "minorMin": 0,
+      "severeMin": 0,
+      "suspendedMin": 0,
+      "worstLine": null
     },
     "week": {
       "incidents": 81,
@@ -2468,10 +2468,10 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-11-13T11:08:51.186Z",
+    "generatedAt": "2026-11-13T21:27:19.713Z",
     "days": 113,
-    "servicesSeen": 608830,
-    "cellsReady": 14648,
+    "servicesSeen": 611997,
+    "cellsReady": 14667,
     "worst": [
       {
         "crs": "SUR",
@@ -2493,17 +2493,6 @@
         "p50Late": 3,
         "p90Late": 142,
         "cancelPct": 20,
-        "unknownPct": 0
-      },
-      {
-        "crs": "CLJ",
-        "std": "17:38",
-        "destination": "London Victoria",
-        "dayType": "wd",
-        "n": 5,
-        "p50Late": 11,
-        "p90Late": 129,
-        "cancelPct": 0,
         "unknownPct": 0
       },
       {
@@ -2604,6 +2593,17 @@
         "p90Late": 82,
         "cancelPct": 1,
         "unknownPct": 0
+      },
+      {
+        "crs": "BFR",
+        "std": "00:02",
+        "destination": "Brighton",
+        "dayType": "wd",
+        "n": 10,
+        "p50Late": 0,
+        "p90Late": 81,
+        "cancelPct": 2,
+        "unknownPct": 10
       }
     ]
   }
