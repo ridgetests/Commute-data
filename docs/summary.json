@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-21T11:00:30.119Z",
+  "generatedAt": "2026-11-21T14:11:19.156Z",
   "rail": {
-    "servicesTracked": 37793,
-    "modelled": 14006,
-    "confident": 12257,
+    "servicesTracked": 37962,
+    "modelled": 14221,
+    "confident": 12446,
     "darwinLeadMin": 10,
     "samples": [
       {
@@ -519,9 +519,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            1068,
+            1775,
+            336,
             0,
             0,
             0,
@@ -532,11 +532,11 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 3
         }
       ],
-      "lastRecord": "2026-11-21T04:47:21.940Z",
-      "minutesSinceLast": 373
+      "lastRecord": "2026-11-21T14:10:15.870Z",
+      "minutesSinceLast": 1
     },
     "tfl": {
       "tz": "UTC",
@@ -969,7 +969,7 @@
         }
       ],
       "lastRecord": "2026-11-21T10:55:37.671Z",
-      "minutesSinceLast": 5
+      "minutesSinceLast": 196
     }
   },
   "headway": {
@@ -2482,17 +2482,17 @@
     }
   ],
   "railReliability": {
-    "generatedAt": "2026-11-20T22:15:49.665Z",
-    "days": 120,
-    "servicesSeen": 631908,
-    "cellsReady": 14226,
+    "generatedAt": "2026-11-21T11:08:55.381Z",
+    "days": 121,
+    "servicesSeen": 633394,
+    "cellsReady": 14039,
     "worst": [
       {
         "crs": "RMD",
         "std": "10:25",
         "destination": "Upminster Underground",
         "dayType": "wd",
-        "n": 8.1,
+        "n": 7.9,
         "p50Late": 0,
         "p90Late": 189,
         "cancelPct": 0,
@@ -2500,21 +2500,10 @@
       },
       {
         "crs": "STP",
-        "std": "23:08",
-        "destination": "Bedford",
-        "dayType": "wd",
-        "n": 7.4,
-        "p50Late": 0,
-        "p90Late": 119,
-        "cancelPct": 2,
-        "unknownPct": 1
-      },
-      {
-        "crs": "STP",
         "std": "17:31",
         "destination": "Paris Nord",
         "dayType": "wd",
-        "n": 5.4,
+        "n": 5.2,
         "p50Late": 0,
         "p90Late": 113,
         "cancelPct": 0,
@@ -2525,7 +2514,7 @@
         "std": "23:38",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 7.3,
+        "n": 7,
         "p50Late": 0,
         "p90Late": 105,
         "cancelPct": 1,
@@ -2536,10 +2525,10 @@
         "std": "23:32",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 7.2,
+        "n": 7.9,
         "p50Late": 0,
         "p90Late": 99,
-        "cancelPct": 1,
+        "cancelPct": 0,
         "unknownPct": 0
       },
       {
@@ -2547,7 +2536,7 @@
         "std": "08:21",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 5.7,
+        "n": 5.5,
         "p50Late": 15,
         "p90Late": 99,
         "cancelPct": 3,
@@ -2558,7 +2547,7 @@
         "std": "08:27",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 6,
+        "n": 5.8,
         "p50Late": 15,
         "p90Late": 99,
         "cancelPct": 3,
@@ -2569,7 +2558,7 @@
         "std": "08:36",
         "destination": "Bedford",
         "dayType": "wd",
-        "n": 5.4,
+        "n": 5.3,
         "p50Late": 14,
         "p90Late": 98,
         "cancelPct": 2,
@@ -2580,29 +2569,18 @@
         "std": "23:54",
         "destination": "Brighton",
         "dayType": "wd",
-        "n": 8.3,
+        "n": 8,
         "p50Late": 0,
         "p90Late": 82,
         "cancelPct": 0,
         "unknownPct": 0
       },
       {
-        "crs": "BFR",
-        "std": "00:02",
-        "destination": "Brighton",
-        "dayType": "wd",
-        "n": 8.8,
-        "p50Late": 0,
-        "p90Late": 81,
-        "cancelPct": 2,
-        "unknownPct": 9
-      },
-      {
         "crs": "CLJ",
         "std": "08:22",
         "destination": "London Victoria",
         "dayType": "wd",
-        "n": 5.5,
+        "n": 5.3,
         "p50Late": 6,
         "p90Late": 81,
         "cancelPct": 0,
@@ -2613,11 +2591,33 @@
         "std": "08:53",
         "destination": "Portsmouth Harbour",
         "dayType": "wd",
-        "n": 4.9,
+        "n": 4.7,
         "p50Late": 0,
         "p90Late": 78,
         "cancelPct": 0,
         "unknownPct": 0
+      },
+      {
+        "crs": "BFR",
+        "std": "08:57",
+        "destination": "Bedford",
+        "dayType": "wd",
+        "n": 3.2,
+        "p50Late": 7,
+        "p90Late": 78,
+        "cancelPct": 0,
+        "unknownPct": 0
+      },
+      {
+        "crs": "BFR",
+        "std": "00:02",
+        "destination": "Brighton",
+        "dayType": "wd",
+        "n": 9.4,
+        "p50Late": 0,
+        "p90Late": 77,
+        "cancelPct": 2,
+        "unknownPct": 8
       }
     ]
   }
