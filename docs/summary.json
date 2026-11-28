@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T03:04:13.858Z",
+  "generatedAt": "2026-11-28T11:34:56.558Z",
   "rail": {
     "servicesTracked": 36675,
     "modelled": 13499,
@@ -536,7 +536,7 @@
         }
       ],
       "lastRecord": "2026-11-28T03:03:11.393Z",
-      "minutesSinceLast": 1
+      "minutesSinceLast": 512
     },
     "tfl": {
       "tz": "UTC",
@@ -949,9 +949,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            36,
+            207,
+            117,
             0,
             0,
             0,
@@ -965,16 +965,16 @@
             0,
             0
           ],
-          "covered": 0
+          "covered": 3
         }
       ],
-      "lastRecord": "2026-11-27T19:30:26.180Z",
-      "minutesSinceLast": 454
+      "lastRecord": "2026-11-28T11:30:01.442Z",
+      "minutesSinceLast": 5
     }
   },
   "headway": {
-    "cells": 42746,
-    "usable": 12672,
+    "cells": 43025,
+    "usable": 12755,
     "ready": true,
     "examples": [
       {
@@ -1030,20 +1030,20 @@
   "coverage": {
     "days": 140,
     "firstEvent": "2026-07-12T10:30:30.915Z",
-    "lastEvent": "2026-11-28T02:51:00.918Z",
-    "events": 19181,
-    "incidents": 2055,
-    "unplanned": 1984,
+    "lastEvent": "2026-11-28T11:31:51.453Z",
+    "events": 19202,
+    "incidents": 2056,
+    "unplanned": 1985,
     "planned": 71,
-    "runObservations": 1243102,
-    "modelCells": 203882
+    "runObservations": 1253736,
+    "modelCells": 207662
   },
   "storage": {
-    "eventsBytes": 7541853,
+    "eventsBytes": 7553411,
     "runtimesBytes": 2959483,
     "platformsBytes": 0,
-    "crowdingBytes": 40118844,
-    "perDayBytes": 361573
+    "crowdingBytes": 40194203,
+    "perDayBytes": 362194
   },
   "readiness": [
     {
@@ -1063,15 +1063,15 @@
     {
       "cause": "signal-failure",
       "feature": "Signal failure — “how long will this last?”",
-      "have": 392,
+      "have": 393,
       "need": 20,
-      "perDay": 2.8,
+      "perDay": 2.81,
       "ready": true,
       "etaDays": [
         0,
         0
       ],
-      "medianMin": 178,
+      "medianMin": 180,
       "p90Min": 677
     },
     {
@@ -1232,67 +1232,67 @@
   "runReadiness": [
     {
       "line": "northern",
-      "n": 182383,
+      "n": 184175,
       "ready": true
     },
     {
       "line": "jubilee",
-      "n": 125568,
+      "n": 126849,
       "ready": true
     },
     {
       "line": "central",
-      "n": 124054,
+      "n": 125644,
       "ready": true
     },
     {
       "line": "piccadilly",
-      "n": 117583,
+      "n": 119088,
       "ready": true
     },
     {
       "line": "district",
-      "n": 109854,
+      "n": 111420,
       "ready": true
     },
     {
       "line": "elizabeth",
-      "n": 108585,
+      "n": 108590,
       "ready": true
     },
     {
       "line": "windrush",
-      "n": 80343,
+      "n": 80412,
       "ready": true
     },
     {
       "line": "metropolitan",
-      "n": 66643,
+      "n": 66950,
       "ready": true
     },
     {
       "line": "hammersmith-city",
-      "n": 65930,
+      "n": 66061,
       "ready": true
     },
     {
       "line": "mildmay",
-      "n": 59016,
+      "n": 59541,
       "ready": true
     },
     {
       "line": "victoria",
-      "n": 54854,
+      "n": 55539,
       "ready": true
     },
     {
       "line": "bakerloo",
-      "n": 51207,
+      "n": 51798,
       "ready": true
     },
     {
       "line": "weaver",
-      "n": 32193,
+      "n": 32444,
       "ready": true
     },
     {
@@ -1302,12 +1302,12 @@
     },
     {
       "line": "lioness",
-      "n": 23369,
+      "n": 23574,
       "ready": true
     },
     {
       "line": "suffragette",
-      "n": 12417,
+      "n": 12548,
       "ready": true
     },
     {
@@ -1330,27 +1330,27 @@
   },
   "windows": {
     "today": {
-      "incidents": 0,
-      "unplanned": 0,
-      "minorMin": 0,
-      "severeMin": 0,
-      "suspendedMin": 0,
-      "worstLine": null
+      "incidents": 3,
+      "unplanned": 3,
+      "minorMin": 53,
+      "severeMin": 28,
+      "suspendedMin": 424,
+      "worstLine": "Northern"
     },
     "week": {
-      "incidents": 72,
-      "unplanned": 72,
-      "minorMin": 14371,
-      "severeMin": 15322,
-      "suspendedMin": 8887,
+      "incidents": 78,
+      "unplanned": 78,
+      "minorMin": 15649,
+      "severeMin": 16301,
+      "suspendedMin": 9312,
       "worstLine": "Northern"
     },
     "all": {
-      "incidents": 2055,
-      "unplanned": 1984,
+      "incidents": 2056,
+      "unplanned": 1985,
       "minorMin": 352863,
-      "severeMin": 171075,
-      "suspendedMin": 51383,
+      "severeMin": 171103,
+      "suspendedMin": 51807,
       "worstLine": "Central"
     }
   },
@@ -1457,11 +1457,11 @@
     {
       "line": "Northern",
       "lineId": "northern",
-      "incidents": 115,
+      "incidents": 116,
       "minorMin": 16401,
-      "severeMin": 9429,
-      "suspendedMin": 2338,
-      "medianMin": 129
+      "severeMin": 9457,
+      "suspendedMin": 2762,
+      "medianMin": 133
     },
     {
       "line": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
@@ -1528,6 +1528,46 @@
     }
   ],
   "recent": [
+    {
+      "line": "northern",
+      "lineName": "Northern",
+      "cause": "signal-failure",
+      "planned": false,
+      "start": "2026-11-28T02:51:00.918Z",
+      "end": "2026-11-28T10:22:48.864Z",
+      "minutes": 452,
+      "minorMin": 0,
+      "severeMin": 28,
+      "suspendedMin": 424,
+      "worstSev": 3,
+      "peakAfterMin": 0,
+      "reason": "Northern Line: No service between Stockwell and Kennington due to a points failure at Kennington. GOOD SERVICE on the rest of the line. Tickets are being accepted on London Buses. ",
+      "impact": {
+        "during": 0,
+        "expected": null,
+        "pctLost": null,
+        "baselineDays": 0
+      },
+      "trace": [
+        {
+          "t": "2026-11-28T02:51:00.918Z",
+          "sev": 3
+        },
+        {
+          "t": "2026-11-28T09:54:47.877Z",
+          "sev": 6
+        },
+        {
+          "t": "2026-11-28T10:22:48.864Z",
+          "sev": 10
+        }
+      ],
+      "segments": [
+        "High Barnet → Morden",
+        "Morden → High Barnet",
+        "Edgware → Morden"
+      ]
+    },
     {
       "line": "jubilee",
       "lineName": "Jubilee",
@@ -2628,58 +2668,6 @@
       "segments": [
         "Barking → Hammersmith (H&C Line)",
         "Hammersmith (H&C Line) → Barking"
-      ]
-    },
-    {
-      "line": "windrush",
-      "lineName": "Windrush (Overground · Highbury–New Cross/Croydon/Crystal Palace)",
-      "cause": "trespass",
-      "planned": false,
-      "start": "2026-11-26T13:43:35.689Z",
-      "end": "2026-11-27T07:16:37.648Z",
-      "minutes": 1053,
-      "minorMin": 445,
-      "severeMin": 548,
-      "suspendedMin": 60,
-      "worstSev": 3,
-      "peakAfterMin": 548,
-      "reason": "Windrush Line: No service between Highbury & Islington and Dalston Junction, between Surrey Quays and New Cross and between Crystal Palace and West Croydon while we deal with a trespasser on the track at Highbury & Islington. SEVERE DELAYS on the rest of the line. London Underground are accepting tickets via any reasonable route.  ",
-      "impact": {
-        "during": 0,
-        "expected": null,
-        "pctLost": null,
-        "baselineDays": 0
-      },
-      "trace": [
-        {
-          "t": "2026-11-26T13:43:35.689Z",
-          "sev": 6
-        },
-        {
-          "t": "2026-11-26T22:51:41.548Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-11-26T23:27:43.884Z",
-          "sev": 3
-        },
-        {
-          "t": "2026-11-26T23:51:44.248Z",
-          "sev": 7
-        },
-        {
-          "t": "2026-11-27T00:06:44.321Z",
-          "sev": 7
-        },
-        {
-          "t": "2026-11-27T07:16:37.648Z",
-          "sev": 10
-        }
-      ],
-      "segments": [
-        "West Croydon → Highbury & Islington",
-        "Highbury & Islington → West Croydon",
-        "Clapham Junction → Highbury & Islington"
       ]
     }
   ],
